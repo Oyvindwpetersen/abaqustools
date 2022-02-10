@@ -1,0 +1,190 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2017 replay file
+# Internal Version: 2016_09_27-23.54.59 126836
+# Run by oyvinpet on Thu Feb 10 07:49:55 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=307.999969482422, 
+    height=173.0)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='TestSulafjorden.odb')
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestSulafjorden.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       244
+#: Number of Node Sets:          85
+#: Number of Steps:              5
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7536.72, 
+    farPlane=11400.9, width=3586.52, height=1651.67, cameraPosition=(4824.97, 
+    -2724.61, -7479.27), cameraUpVector=(-0.303655, 0.947031, -0.104531), 
+    cameraTarget=(182.449, -105.885, 123.447))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7541.72, 
+    farPlane=11395.9, width=3588.9, height=1652.77, cameraPosition=(4824.97, 
+    -2724.61, -7479.27), cameraUpVector=(0.394188, 0.847298, 0.355952), 
+    cameraTarget=(182.449, -105.885, 123.447))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7824.09, 
+    farPlane=10900.5, width=3723.29, height=1714.65, cameraPosition=(-3224.05, 
+    8015.53, -3407.62), cameraUpVector=(-0.47928, -0.197899, 0.85506), 
+    cameraTarget=(26.2267, 102.569, 202.473))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7800.42, 
+    farPlane=10924.2, width=3712.03, height=1709.47, cameraPosition=(-3224.05, 
+    8015.53, -3407.62), cameraUpVector=(-0.699046, -0.411446, 0.584848), 
+    cameraTarget=(26.2267, 102.569, 202.473))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7800.22, 
+    farPlane=10924.4, width=3711.94, height=1709.43, cameraPosition=(-3224.05, 
+    8015.53, -3407.62), cameraUpVector=(0.861557, 0.179416, 0.4749), 
+    cameraTarget=(26.2268, 102.569, 202.473))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7006.33, 
+    farPlane=11852.3, width=3334.15, height=1535.45, cameraPosition=(7435.28, 
+    5745.13, 989.506), cameraUpVector=(-0.542826, 0.0440559, 0.838689), 
+    cameraTarget=(114.204, 83.8301, 238.765))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7072.89, 
+    farPlane=11785.8, width=3365.83, height=1550.04, cameraPosition=(7435.28, 
+    5745.13, 989.506), cameraUpVector=(-0.373329, -0.18448, 0.909171), 
+    cameraTarget=(114.204, 83.8301, 238.765))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7721.3, 
+    farPlane=11137.4, width=32.8926, height=15.1477, viewOffsetX=-758.621, 
+    viewOffsetY=-311.123)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7777.15, 
+    farPlane=10728.2, width=33.1305, height=15.2573, cameraPosition=(6190.61, 
+    6737.36, 1577.12), cameraUpVector=(-0.407074, -0.260875, 0.875349), 
+    cameraTarget=(-36.019, -12.4605, 205.625), viewOffsetX=-764.108, 
+    viewOffsetY=-313.374)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7709.35, 
+    farPlane=10796, width=385.784, height=177.661, viewOffsetX=-773.413, 
+    viewOffsetY=-329.745)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7708.65, 
+    farPlane=10796.7, width=385.749, height=177.645, viewOffsetX=-834.55, 
+    viewOffsetY=-410.463)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7780.08, 
+    farPlane=10725.2, width=16.7254, height=7.70241, viewOffsetX=-925.403, 
+    viewOffsetY=-398.518)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=-927.793, 
+    viewOffsetY=-399.95)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7625.79, 
+    farPlane=11729.7, width=16.3937, height=7.54966, cameraPosition=(9134.76, 
+    3269.94, 243.819), cameraUpVector=(-0.3353, 0.0136165, 0.942013), 
+    cameraTarget=(199.931, 747.895, 385.553), viewOffsetX=-909.37, 
+    viewOffsetY=-392.008)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7625.85, 
+    farPlane=11729.6, width=16.3939, height=7.54972, cameraPosition=(9160.63, 
+    3189.61, 445.609), cameraUpVector=(-0.283326, -0.170414, 0.943761), 
+    cameraTarget=(225.806, 667.568, 587.343), viewOffsetX=-909.377, 
+    viewOffsetY=-392.011)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7598.65, 
+    farPlane=11841.5, width=16.3354, height=7.5228, cameraPosition=(9636.09, 
+    1474.4, 761.661), cameraUpVector=(-0.335971, -0.176737, 0.925142), 
+    cameraTarget=(372.653, 856.425, 624.992), viewOffsetX=-906.133, 
+    viewOffsetY=-390.613)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7598.66, 
+    width=16.3354, height=7.52281, viewOffsetX=-905.631, viewOffsetY=-389.487)
+#: 
+#: Node: SUSPENSIONBRIDGE.2701
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  1.40123e+003,  1.49850e+001,  5.82292e+001,      -      
+#: No deformed coordinates for current plot.
+#: 
+#: Node: SUSPENSIONBRIDGE.4701
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  1.40124e+003,  6.99997e+000,  5.76680e+001,      -      
+#: No deformed coordinates for current plot.
+#: 
+#: Node: SUSPENSIONBRIDGE.401101
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  1.40123e+003,  9.49804e+000,  5.82094e+001,      -      
+#: No deformed coordinates for current plot.
+#: 
+#: Nodes for distance: SUSPENSIONBRIDGE.4701, SUSPENSIONBRIDGE.401101
+#:                                        1             2             3        Magnitude
+#: Base distance:                    -1.57471e-002,  2.49806e+000,  5.41382e-001,  2.55610e+000
+#: No deformed coordinates for current plot.
+#: 
+#: Node: SUSPENSIONBRIDGE.401103
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  1.40123e+003,  2.04980e+001,  5.82491e+001,      -      
+#: No deformed coordinates for current plot.
+#: 
+#: Node: SUSPENSIONBRIDGE.12701
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  1.40122e+003,  2.29967e+001,  5.85904e+001,      -      
+#: No deformed coordinates for current plot.
+#: 
+#: Nodes for distance: SUSPENSIONBRIDGE.401103, SUSPENSIONBRIDGE.12701
+#:                                        1             2             3        Magnitude
+#: Base distance:                    -9.76563e-003,  2.49879e+000,  3.41278e-001,  2.52200e+000
+#: No deformed coordinates for current plot.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7596.54, 
+    farPlane=11843.6, width=25.5825, height=11.7813, viewOffsetX=-899.364, 
+    viewOffsetY=-393.998)
+session.viewports['Viewport: 1'].odbDisplay.basicOptions.setValues(
+    renderBeamProfiles=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7586.49, 
+    farPlane=11853.8, width=80.8211, height=37.2198, viewOffsetX=-898.139, 
+    viewOffsetY=-395.246)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7553.11, 
+    farPlane=11750.1, width=80.4655, height=37.056, cameraPosition=(9517.36, 
+    -911.118, 1984.45), cameraUpVector=(-0.51045, -0.148631, 0.846965), 
+    cameraTarget=(553.1, 1060.54, 582.11), viewOffsetX=-894.187, 
+    viewOffsetY=-393.507)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7588.14, 
+    farPlane=11864.9, width=80.8387, height=37.2279, cameraPosition=(9755.5, 
+    702.201, 473.169), cameraUpVector=(-0.316915, -0.165536, 0.933897), 
+    cameraTarget=(475.646, 934.057, 679.273), viewOffsetX=-898.334, 
+    viewOffsetY=-395.332)
+session.viewports['Viewport: 1'].view.setValues(farPlane=11864.9, 
+    viewOffsetX=-900.513, viewOffsetY=-392.242)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7585.42, 
+    farPlane=11239.7, width=80.8097, height=37.2146, cameraPosition=(8454.79, 
+    -3047.67, 3421.14), cameraUpVector=(-0.636544, 0.14155, 0.758139), 
+    cameraTarget=(877.857, 1334.93, 323.58), viewOffsetX=-900.199, 
+    viewOffsetY=-392.105)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7526.46, 
+    farPlane=11515.1, width=80.1816, height=36.9253, cameraPosition=(8518, 
+    2761.51, 3557.56), cameraUpVector=(-0.703277, 0.0549614, 0.708789), 
+    cameraTarget=(227.83, 831.322, -151.813), viewOffsetX=-893.201, 
+    viewOffsetY=-389.057)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7752.98, 
+    farPlane=10269.1, width=82.5947, height=38.0366, cameraPosition=(4907.86, 
+    6391.68, 4238.85), cameraUpVector=(-0.528964, -0.520696, 0.670129), 
+    cameraTarget=(-22.1678, -157.032, -122.482), viewOffsetX=-920.083, 
+    viewOffsetY=-400.766)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7564.02, 
+    farPlane=10458.1, width=1641.03, height=755.729, viewOffsetX=-963.877, 
+    viewOffsetY=-275.712)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7454.78, 
+    farPlane=10567.3, width=1617.33, height=744.814, viewOffsetX=-910.169, 
+    viewOffsetY=-225.926)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7723.12, 
+    farPlane=10299, width=265.725, height=122.372, viewOffsetX=-916.603, 
+    viewOffsetY=-348.942)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7603.42, 
+    farPlane=11640.2, width=261.607, height=120.476, cameraPosition=(8598.13, 
+    4300.57, -465.848), cameraUpVector=(-0.393298, 0.215821, 0.893721), 
+    cameraTarget=(93.7262, 624.022, 142.569), viewOffsetX=-902.398, 
+    viewOffsetY=-343.534)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7495.19, 
+    farPlane=11441.5, width=257.884, height=118.761, cameraPosition=(8568.2, 
+    -1384.43, 4195.44), cameraUpVector=(-0.730658, -0.0291067, 0.682123), 
+    cameraTarget=(555.8, 1168.99, 259.261), viewOffsetX=-889.552, 
+    viewOffsetY=-338.644)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7489.88, 
+    farPlane=11782.7, width=257.701, height=118.677, cameraPosition=(9324.59, 
+    507.107, 2781.58), cameraUpVector=(-0.571772, -0.113932, 0.812463), 
+    cameraTarget=(373.914, 985.178, 359.027), viewOffsetX=-888.921, 
+    viewOffsetY=-338.404)
+#: Warning: The output database 'C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestSulafjorden.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results

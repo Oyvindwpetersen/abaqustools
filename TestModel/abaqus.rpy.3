@@ -1,0 +1,175 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2017 replay file
+# Internal Version: 2016_09_27-23.54.59 126836
+# Run by oyvinpet on Wed Feb 09 21:23:24 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=307.999969482422, 
+    height=173.0)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='TestSulafjorden.odb')
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestSulafjorden.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       245
+#: Number of Node Sets:          85
+#: Number of Steps:              5
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7494.28, 
+    farPlane=11075.8, width=4431.46, height=3134.02, viewOffsetX=529.447, 
+    viewOffsetY=-231.673)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7349.13, 
+    farPlane=11606.7, width=4345.63, height=3073.32, cameraPosition=(6448.82, 
+    -264.741, 7152.14), cameraUpVector=(-0.5388, 0.842098, 0.0237672), 
+    cameraTarget=(232.413, -372.194, 255.993), viewOffsetX=519.193, 
+    viewOffsetY=-227.185)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7524.72, 
+    farPlane=11684.6, width=4449.46, height=3146.76, cameraPosition=(6229.98, 
+    -3594.87, 6594.58), cameraUpVector=(-0.559609, 0.737156, 0.378733), 
+    cameraTarget=(215.555, -656.213, 160.064), viewOffsetX=531.598, 
+    viewOffsetY=-232.613)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=7137.1, 
+    farPlane=10556.3, width=4220.26, height=2984.66, cameraPosition=(-4411.08, 
+    -2781.38, 7392.6), cameraUpVector=(-0.382843, 0.85765, -0.343318), 
+    cameraTarget=(-209.596, -481.246, -561.58), viewOffsetX=504.213, 
+    viewOffsetY=-220.63)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6086.44, 
+    farPlane=11103.8, width=3598.99, height=2545.29, cameraPosition=(-7928.57, 
+    849.532, 3499.68), cameraUpVector=(0.261354, 0.824541, -0.501823), 
+    cameraTarget=(260.977, -521.43, -655.299), viewOffsetX=429.987, 
+    viewOffsetY=-188.151)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6069.72, 
+    farPlane=10806.9, width=3589.11, height=2538.3, cameraPosition=(-7680.01, 
+    3525.57, 785.042), cameraUpVector=(0.640507, 0.629768, -0.43948), 
+    cameraTarget=(463.709, -743.491, -506.076), viewOffsetX=428.806, 
+    viewOffsetY=-187.634)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6636.09, 
+    farPlane=10944.5, width=3924.02, height=2775.15, cameraPosition=(-6935.05, 
+    -4117.03, 3751.85), cameraUpVector=(-0.0817494, 0.983906, 0.158888), 
+    cameraTarget=(14.706, 298.963, -539.061), viewOffsetX=468.818, 
+    viewOffsetY=-205.142)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6095.48, 
+    farPlane=11189.8, width=3604.35, height=2549.07, cameraPosition=(-8188.65, 
+    2743.88, -503.87), cameraUpVector=(0.547674, 0.715441, 0.433817), 
+    cameraTarget=(719.663, 133.051, -310.136), viewOffsetX=430.625, 
+    viewOffsetY=-188.43)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6434.25, 
+    farPlane=11070.1, width=3804.67, height=2690.75, cameraPosition=(-7726.23, 
+    -3850.4, 1750.55), cameraUpVector=(0.187318, 0.653823, 0.733095), 
+    cameraTarget=(150.724, 703.207, -101.517), viewOffsetX=454.558, 
+    viewOffsetY=-198.902)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6413.05, 
+    farPlane=11091.3, width=3792.14, height=2681.88, viewOffsetX=797.236, 
+    viewOffsetY=-576.939)
+session.viewports['Viewport: 1'].view.setValues(width=3830.36, height=2708.92, 
+    viewOffsetX=802.716, viewOffsetY=-587.022)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=5773.19, 
+    farPlane=10969.1, width=3448.26, height=2438.69, cameraPosition=(-8187.61, 
+    168.425, 2040.32), cameraUpVector=(0.487363, 0.522384, 0.699709), 
+    cameraTarget=(820.257, 638.743, -161.72), viewOffsetX=722.64, 
+    viewOffsetY=-528.464)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6215.29, 
+    farPlane=11111.6, width=3712.33, height=2625.44, cameraPosition=(-8277.66, 
+    -2586.42, -288.397), cameraUpVector=(0.164717, 0.251039, 0.953859), 
+    cameraTarget=(361.117, 699.077, 599.845), viewOffsetX=777.979, 
+    viewOffsetY=-568.933)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6644.78, 
+    farPlane=10682.1, width=140.466, height=99.3404, viewOffsetX=2.14955, 
+    viewOffsetY=-348.756)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6549.93, 
+    farPlane=10719.9, width=138.461, height=97.9224, cameraPosition=(-8255.81, 
+    -1163.65, 2462.1), cameraUpVector=(0.56526, 0.144478, 0.812162), 
+    cameraTarget=(541.603, 314.893, -113.057), viewOffsetX=2.11886, 
+    viewOffsetY=-343.777)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=6585.85, 
+    farPlane=10152.5, width=139.22, height=98.4597, cameraPosition=(-6903.78, 
+    -2296.19, 4384.33), cameraUpVector=(0.754987, 0.243455, 0.608871), 
+    cameraTarget=(321.795, 627.396, -661.031), viewOffsetX=2.13048, 
+    viewOffsetY=-345.662)
+#: 
+#: Mass properties for Whole model:
+#:   Area of shell faces (one side only):  1.51376e+005
+#:   Area centroid of shell faces:  5.59949e-001, -1.68460e+000,  8.88055e+001
+#:   Volume:  8.13989e+004
+#:   Volume centroid:  1.04133e-002, -3.13282e-002,  2.03062e+002
+#:   Mass:  2.01127e+008
+#:   Center of mass: -7.11247e-015, -4.29616e-017,  2.04400e+002
+#:   Moment of inertia about the origin (Ixx, Iyy, Izz, Ixy, Iyz, Izx):  1.09364e+013,  4.02380e+014,  3.91672e+014,  3.84255e-008, -7.84277e-007,  0.00000e+000
+#:   Moment of inertia about the center of mass:  2.53340e+012,  3.93977e+014,  3.91672e+014,  3.84255e-008, -2.55045e-006, -2.92397e-004
+#: 
+#:   The selected elements contain sections unsupported for Mass/Volume/Area computations.
+#:   These elements have been ignored.
+#: 
+#: Element: SUSPENSIONBRIDGE.910003
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 11009, 1009, 2015, 11015
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.911003
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 4009, 1009, 1015, 3015
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.910001
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 11001, 1001, 2003, 11003
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.910001
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 11001, 1001, 2003, 11003
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.911001
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 4001, 1001, 1003, 3003
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.910001
+#:   Type: S4R
+#:   Material: SOFT
+#:   Section: BRIDGEDECK_SHELL.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_BRIDGEDECK_SHELL, Homogeneous Shell Section,Thickness = 0.01, num Int Pts = 3, poisson = 0.5, integration rule = SIMPSON
+#: 
+#:   Connect: 11001, 1001, 2003, 11003
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.400107
+#:   Type: B31
+#:   Material: 
+#:   Section: 
+#:   Connect: 101006, 400105
+#:   Results: Integration Point values not available
+#: 
+#: Element: SUSPENSIONBRIDGE.400108
+#:   Type: B31
+#:   Material: 
+#:   Section: 
+#:   Connect: 101007, 400106
+#:   Results: Integration Point values not available
