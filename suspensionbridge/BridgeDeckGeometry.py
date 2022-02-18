@@ -366,7 +366,7 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
             gen.BeamGeneralSection(fid,'LatConnGap',0,[0.1,1,0,1,10],[1,0,0],[210e9*100,81e9*100])
 
     
-    gen.ShellSection(fid,'Bridgedeck_shell','SOFT','OFFSET=SNEG',[0.01 , 2])
+    gen.ShellSection(fid,'Bridgedeck_shell','SOFT','OFFSET=SNEG',[0.01 , 3])
 
     
 

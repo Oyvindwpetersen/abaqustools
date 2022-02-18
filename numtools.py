@@ -10,7 +10,7 @@ Created on
 
 import numpy as np
 import time
-import re
+import numba as nb
 
 #%%
 
@@ -223,7 +223,6 @@ def num2stre(a,digits=6,delimeter=', '):
     #format_exp='{:.6e}'
     format_exp='{:.' + str(digits) + 'e}'
     
-    
     str_out='Empty_string'
     
     if isinstance(a,int):
@@ -308,7 +307,7 @@ def writematrix(fid,matrix,digits=3,delimeter=', ',list_format='e'):
     # matrix: vector or matrix with numbers 
     # digits: digits
     # delimeter: delimeter
-    # list_format: e,f, or int
+    # list_format: e,f, or int (or [int,e,e] )
     
     matrix=np.atleast_2d(matrix)
     (n_row,n_col)=np.shape(matrix)
@@ -468,11 +467,6 @@ def str2num(a_list,numformat='float',n_col=''):
         
         a_row=a_list[k].split(',')
         
-        # if len(a_row)>n_col:
-        #     print('***** Row k = ' + str(k))
-        #     print('***** ' + a_row)
-        #     raise Exception('Number of columns not consistent')
-        
         for j in np.arange(n_col):
         
             if a_row[j]=='' or a_row[j]==' ' or a_row[j]=='  ':
@@ -488,4 +482,76 @@ def str2num(a_list,numformat='float',n_col=''):
     
     return M
 
+#%%
+
+def genlabel(number,dof,midfix='_'):
     
+    if isinstance(dof,str):
+        if dof=='all':
+            dof=['U1','U2','U3','UR1','UR2','UR3']
+        else:
+            dof=[dof]
+        
+    if isinstance(number,int):
+        number=[number]
+        
+    if isinstance(number,np.int32):
+        number=[number]
+        
+    if isinstance(number,float):
+        number=[number]    
+
+    A_label=[ str(int(number_sub)) + midfix + dof_sub for number_sub in number for dof_sub in dof]
+        
+    return A_label
+
+#%%
+
+def norm_fast(a):
+    return sum(a*a)**0.5
+    
+#%%
+
+#@nb.njit(fastmath=True)
+def norm_fast_old(a):
+    s = 0.
+    for i in range(a.shape[0]):
+        s += a[i]**2
+    return np.sqrt(s)
+    
+#%%
+
+def cross_fast(a,b):
+    c=np.array([
+        a[1]*b[2] - a[2]*b[1] ,
+        a[2]*b[0] - a[0]*b[2] ,
+        a[0]*b[1] - a[1]*b[0] ,
+        ])
+    
+    return c
+
+#%%
+
+def block_diag_rep_old(A,n):
+    
+    a=np.shape(A)[0]
+    shapes=[a]*n
+    r=0
+    B=np.zeros((a*n,a*n))
+    for i, rr in enumerate(shapes):
+        B[r:r + rr, r:r + rr] = A
+        r += rr
+    return B
+    
+#%%
+
+def block_diag_rep(A,r):
+
+    m,n = A.shape
+    out = np.zeros((r,m,r,n), dtype=A.dtype)
+    diag = np.einsum('ijik->ijk',out)
+    diag[:] = A
+    
+    return out.reshape(-1,n*r)
+
+

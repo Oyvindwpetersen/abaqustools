@@ -92,7 +92,7 @@ def BearingGeometry(fid,meta,geo,bearing):
             # New node above
             x_node[0]=meta.crossbeamlow.NodeCoordBearing[n][j][0,0]+dx_bearing_base
             y_node[0]=meta.crossbeamlow.NodeCoordBearing[n][j][1,0]
-            z_node[0]=meta.crossbeamlow.NodeCoordBearing[n][j][2,0]+meta.bearing.H_stiffbeam;
+            z_node[0]=meta.crossbeamlow.NodeCoordBearing[n][j][2,0]+meta.bearing.H_stiffbeam
             
             # New node above
             x_node[1]=meta.crossbeamlow.NodeCoordBearing[n][j][0,1]+dx_bearing_base
@@ -102,7 +102,7 @@ def BearingGeometry(fid,meta,geo,bearing):
             # New node above
             x_node[2]=meta.crossbeamlow.NodeCoordBearing[n][j][0,2]+dx_bearing_base
             y_node[2]=meta.crossbeamlow.NodeCoordBearing[n][j][1,2]
-            z_node[2]=meta.crossbeamlow.NodeCoordBearing[n][j][2,2]+meta.bearing.H_stiffbeam;
+            z_node[2]=meta.crossbeamlow.NodeCoordBearing[n][j][2,2]+meta.bearing.H_stiffbeam
             
             
             z_node[1]=z_node[1]-geo.dz_cog_south_deflection*(j==0)-geo.dz_cog_north_deflection*(j==1)

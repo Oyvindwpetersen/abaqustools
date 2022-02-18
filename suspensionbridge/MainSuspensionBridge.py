@@ -25,6 +25,7 @@ from .SadleGeometry import *
 from .BridgeDeckGeometry import *
 from .HangerGeometry import *
 from .BearingGeometry import *
+from .ElementNormal import *
 
 #%%
 
@@ -37,11 +38,23 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 
     (abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower)=ProcessUserParameters(UserParameterFile)
 
+#%%  Generate some structures
+
+    meta=struct()
+    meta.bridgedeck=struct()
+    meta.cable=struct()
+    meta.bearing=struct()
+    meta.crossbeamlow=struct()
+    meta.tower=struct()
+    
+    
+    
 #%%  Estimate pullback force
 
     if np.isnan(tower.F_pullback_south) and np.isnan(tower.F_pullback_north):
         
-        numtools.starprint(['Estimating force for retraction of towers'],1)
+        dummy=2
+        #numtools.starprint(['Estimating force for retraction of towers'],1)
         
         #raise Exception('***** OPTION NOT IMPLEMENTED YET')
         
@@ -67,15 +80,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     
     GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time)
 
-#%%  Generate some structures
 
-    meta=struct()
-    meta.bridgedeck=struct()
-    meta.cable=struct()
-    meta.bearing=struct()
-    meta.crossbeamlow=struct()
-    meta.tower=struct()
-    
 #%%  Materials
     gen.Comment(fid,'MATERIALS',True)
     

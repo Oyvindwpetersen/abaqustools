@@ -1,6 +1,6 @@
 **********
 ** Parametrized suspension bridge model
-** Model input generated 2022-02-10T14:13:18
+** Model input generated 2022-02-11T16:05:11
 **********
 **********
 ** Part of abaqtus tools package
@@ -9787,7 +9787,7 @@ LATCONNGAP
 1.000, 0.000, 0.000
 **
 *SHELL SECTION, ELSET=BRIDGEDECK_SHELL, MATERIAL=SOFT, OFFSET=SNEG
-0.010,2
+0.010,3
 **
 ***********************************************************
 ** HANGER

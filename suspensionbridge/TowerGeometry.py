@@ -151,7 +151,7 @@ def TowerGeometry(fid,meta,geo,tower):
             L_crossbeam=L_cc_towers-b_tower
             
             if L_crossbeam<0:
-                warnings.warn('***** Cross-beam length smaller than 0 m. Set to 0.5 m.')
+                warnings.warn('***** Cross-beam length smaller than 0.5 m. Set to 0.5 m.')
                 L_crossbeam=0.5
             
             y_crossbeam=np.array([-L_crossbeam/2,-L_crossbeam/4,0,L_crossbeam/4,L_crossbeam/2])

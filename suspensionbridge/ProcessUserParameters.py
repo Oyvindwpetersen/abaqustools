@@ -203,7 +203,7 @@ def ProcessUserParameters(UserParameterFile):
         tower.cs.h_vec=np.hstack((tower.cs.h_vec[0] , tower.cs.h_vec))
     
 
-    # Distance between cable and tower sadle
+    # Mass
     if any(bridgedeck.cs.rho>0):
         warnings.warn('***** Rho of bridge deck should be set to zero if beam added inertia is used (avoid double mass)', stacklevel=2)
 
@@ -211,8 +211,8 @@ def ProcessUserParameters(UserParameterFile):
     if np.abs(geo.z_cable_top_south-geo.z_tower_top_south)>3 or np.abs(geo.z_cable_top_north-geo.z_tower_top_north)>3:
         warnings.warn('***** Distance between cable top and tower top larger than 3 m', stacklevel=2)
 
-    # Distance between cable and tower sadle
-    dz_cb=(geo.z_cable_midspan+geo.dz_cable_deflection)-(geo.z_cog_midspan+geo.dz_cog_midspan_deflection);
+    # Distance between cable and and bridge
+    dz_cb=(geo.z_cable_midspan+geo.dz_cable_deflection)-(geo.z_cog_midspan+geo.dz_cog_midspan_deflection)
     if dz_cb<0:
         warnings.warn('***** Main cable is below bridge deck COG at midspan', stacklevel=2)
 
@@ -221,9 +221,13 @@ def ProcessUserParameters(UserParameterFile):
         warnings.warn('***** Crossbeam elevation higher than tower top', stacklevel=2)
 
     # Check if cable is inclined and temp supports
-    if abs(geo.dy_cable_top_south-geo.dy_cable_midspan)>1e-3 or abs(geo.dy_cable_top_north-geo.dy_cable_midspan)>1e-3:
+    if abs(geo.dy_cable_top_south-geo.dy_cable_midspan)>10e-3 or abs(geo.dy_cable_top_north-geo.dy_cable_midspan)>10e-3:
        if cable.tempsupport==False:
-        warnings.warn('***** Cable distance not equal at midspan and towers. Consider to turn on temporary cable supports (cable.tempsupport=True)', stacklevel=2)
+            warnings.warn('***** Cable distance not equal at midspan and towers. Consider to turn on temporary cable supports (cable.tempsupport=True)', stacklevel=2)
+
+    # Check if crossbeams is above tower
+    if np.max(tower.z_crossbeam_south)>geo.z_tower_top_south or np.max(tower.z_crossbeam_north)>geo.z_tower_top_north:
+        warnings.warn('***** Crossbeam elevation above tower top', stacklevel=2)
 
 
     # Lateral coordinate of roller and pendulum
@@ -233,16 +237,16 @@ def ProcessUserParameters(UserParameterFile):
         
         # East pendulum, roller middle, west pendulum
         geo.y_bearing[0][0]=-geo.dy_cog_hanger+geo.dy_pendulum
-        geo.y_bearing[0][1]=0;
+        geo.y_bearing[0][1]=0
         geo.y_bearing[0][2]=geo.dy_cog_hanger-geo.dy_pendulum;
     elif bridgedeck.N_box==2:
         geo.y_bearing[0]=[None]*3
         geo.y_bearing[1]=[None]*3
         
         # East pendulum outer, roller east, east pendulum inner
-        geo.y_bearing[0][0]=-geo.gap/2-geo.dy_cog_hanger+geo.dy_pendulum;
-        geo.y_bearing[0][1]=-geo.gap/2;
-        geo.y_bearing[0][2]=-geo.gap/2+geo.dy_cog_inner-geo.dy_pendulum;
+        geo.y_bearing[0][0]=-geo.gap/2-geo.dy_cog_hanger+geo.dy_pendulum
+        geo.y_bearing[0][1]=-geo.gap/2
+        geo.y_bearing[0][2]=-geo.gap/2+geo.dy_cog_inner-geo.dy_pendulum
         
         # West pendulum inner, roller west, west pendulum outer
         geo.y_bearing[1][0]=-geo.y_bearing[0][2]

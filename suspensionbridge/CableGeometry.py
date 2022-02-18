@@ -71,7 +71,7 @@ def CableGeometry(fid,meta,geo,cable):
     else:
         x_hat=x_hanger/(geo.L_bridgedeck/2) # axis from -1 to 1 along bridge deck
         dx_hanger_eff=np.polyval(cable.polycoeff_hanger_adjust,x_hat)
-        x_hanger_eff=x_hanger-dx_hanger_eff;
+        x_hanger_eff=x_hanger-dx_hanger_eff
     
     x_mainspan=np.hstack((x_sidespan_south[-1] , x_hanger_eff , x_sidespan_north[0]))
 
@@ -159,22 +159,26 @@ def CableGeometry(fid,meta,geo,cable):
     cablemesh.ElementSetName.append('Cable_main')
     
     # Node set mainspan
-    IndexMainEast=np.flatnonzero(np.abs(x_east)<geo.L_bridgedeck/2)
-    IndexMainWest=np.flatnonzero(np.abs(x_west)<geo.L_bridgedeck/2)
+    # IndexMainEast=np.flatnonzero(np.abs(x_east)<geo.L_bridgedeck/2)
+    # IndexMainWest=np.flatnonzero(np.abs(x_west)<geo.L_bridgedeck/2)
+    
+    IndexMainEast=np.arange(len(x_mainspan))-1+len(x_sidespan_south)
+    IndexMainWest=IndexMainEast
     
     cablemesh.NodeSet.append(np.hstack((NodeNumber_east[IndexMainEast],NodeNumber_west[IndexMainWest])))
     cablemesh.NodeSetName.append('Cable_main_span')
     
     # El set mainspan
-    IndexMainEast2=[IndexMainEast[0]-1]+IndexMainEast
-    cablemesh.ElementSet.append(np.hstack((ElementNumber_east[IndexMainEast2],ElementNumber_west[IndexMainEast2])))
+    IndexMainEast2=IndexMainEast[:-1]
+    IndexMainWest2=IndexMainWest[:-1]
+    
+    cablemesh.ElementSet.append(np.hstack((ElementNumber_east[IndexMainEast2],ElementNumber_west[IndexMainWest2])))
     cablemesh.ElementSetName.append('Cable_main_span')
-
 
 #%% Meta
 
-    meta.cable.NodeNumberEastHanger=NodeNumber_east[IndexMainEast]
-    meta.cable.NodeNumberWestHanger=NodeNumber_west[IndexMainWest]
+    meta.cable.NodeNumberEastHanger=NodeNumber_east[IndexMainEast[1:-1]]
+    meta.cable.NodeNumberWestHanger=NodeNumber_west[IndexMainWest[1:-1]]
     
     meta.x_hanger=x_hanger
 
@@ -190,9 +194,8 @@ def CableGeometry(fid,meta,geo,cable):
             cable.N_tempsupport
             raise Exception('***** Number of temp cable support must be odd')
         
-        
-        n_per_side=(cable.N_tempsupport-1)/2;
-        ind_temp=np.arange(1,n_per_side+1)*n_hanger_space;
+        n_per_side=(cable.N_tempsupport-1)/2
+        ind_temp=np.arange(1,n_per_side+1)*n_hanger_space
         index_tempsupport=np.hstack((-np.flip(ind_temp),0,ind_temp))+(len(x_hanger)+1)/2
         index_tempsupport=index_tempsupport.astype('int')
         
