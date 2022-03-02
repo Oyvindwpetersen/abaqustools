@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 18-Feb-2022   Time 13:25:55
+   Abaqus 3DEXPERIENCE R2017x                                  Date 28-Feb-2022   Time 13:21:05
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -93,7 +93,7 @@
 
      LINEAR EXTRAPOLATION WILL BE USED
 
-     CHARACTERISTIC ELEMENT LENGTH      14.8    
+     CHARACTERISTIC ELEMENT LENGTH      15.4    
 
      DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
 
@@ -118,10 +118,10 @@
  
      INITIAL ELEMENT LOAD BALANCE
         COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
-                              1            301
+                              1            0
                               2            512
-                              3            512
-                              4            256
+                              3            477
+                              4            512
 
  ***WARNING: THERE ARE 2 UNCONNECTED REGIONS IN THE MODEL.
 
@@ -133,9 +133,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
@@ -167,10 +167,10 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.90000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.90000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
@@ -212,10 +212,10 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.40000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
@@ -258,10 +258,10 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED USER TIME (SEC)      =  0.80000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.90000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
@@ -304,9 +304,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.50000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.50000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
@@ -339,9 +339,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.60000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.60000    
        ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
@@ -383,9 +383,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
@@ -417,10 +417,10 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.80000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.80000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
@@ -460,10 +460,10 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.50000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.50000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
@@ -495,9 +495,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
@@ -528,7 +528,7 @@
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 18-Feb-2022   Time 13:25:57
+   Abaqus 3DEXPERIENCE R2017x                                  Date 28-Feb-2022   Time 13:21:12
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -621,7 +621,7 @@
 
      LINEAR EXTRAPOLATION WILL BE USED
 
-     CHARACTERISTIC ELEMENT LENGTH      14.8    
+     CHARACTERISTIC ELEMENT LENGTH      15.4    
 
      DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
 
@@ -641,89 +641,12 @@
  
      INITIAL ELEMENT LOAD BALANCE
         COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
-                              1            512
-                              2            301
-                              3            256
-                              4            512
+                              1            256
+                              2            0
+                              3            512
+                              4            733
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             -2.27       AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.012E-03   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.012E-03   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.103       AT NODE      10128   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.220E-05   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.220E-05   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             8.892E-02   AT NODE     101103   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.012E-03   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.375E-07   AT NODE      20056   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -5.418E-02   AT NODE     101004   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.220E-05   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.694E-08   AT NODE      20051   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.000E-08,  FRACTION OF STEP COMPLETED  1.000E-08
- STEP TIME COMPLETED       1.000E-08,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-08
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -740,20 +663,97 @@
 
 
  AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             7.348E-02   AT NODE     100042   DOF  1
+ LARGEST RESIDUAL FORCE             -2.32       AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.011E-03   AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.012E-03   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.224E-07   AT NODE      10103   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.012E-03   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT           -0.103       AT NODE      10108   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.220E-05   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.220E-05   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -0.102       AT NODE     101103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.011E-03   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        5.364E-07   AT NODE      20036   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            5.530E-02   AT NODE     100042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.219E-05   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.711E-08   AT NODE      20031   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-08,  FRACTION OF STEP COMPLETED  1.000E-08
+ STEP TIME COMPLETED       1.000E-08,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-08
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.50000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.50000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -6.207E-02   AT NODE     210042   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.011E-03   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        7.242E-07   AT NODE      10083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -8.075E-02   AT NODE     100042   DOF  6
+ LARGEST RESIDUAL MOMENT           -8.100E-02   AT NODE     210042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.220E-05   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.219E-05   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.746E-09   AT NODE      10205   DOF  5
+ LARGEST CORRECTION TO ROTATION    -5.757E-09   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
           TIME INCREMENT MAY NOW INCREASE TO    1.500E-08
@@ -767,7 +767,7 @@
 
   INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.500E-08
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -775,29 +775,29 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.80000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.80000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             8.469E-02   AT NODE     101103   DOF  1
+ LARGEST RESIDUAL FORCE             9.687E-02   AT NODE     200042   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.516E-03   AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.515E-03   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.366E-06   AT NODE      20103   DOF  3
+ LARGEST CORRECTION TO DISP.        1.370E-06   AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
  AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT            8.737E-02   AT NODE     200042   DOF  6
+ LARGEST RESIDUAL MOMENT            0.113       AT NODE     210042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.828E-05   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.827E-05   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.111E-08   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.113E-08   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
           TIME INCREMENT MAY NOW INCREASE TO    2.250E-08
@@ -811,7 +811,7 @@
 
   INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.250E-08
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -820,28 +820,28 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             7.542E-02   AT NODE     110042   DOF  1
+ LARGEST RESIDUAL FORCE             0.114       AT NODE     201103   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.272E-03   AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -2.271E-03   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.121E-06   AT NODE      10103   DOF  3
+ LARGEST CORRECTION TO DISP.        3.128E-06   AT NODE      10083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
  AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT            0.104       AT NODE     110042   DOF  6
+ LARGEST RESIDUAL MOMENT           -0.105       AT NODE     100042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.740E-05   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.738E-05   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.610E-08   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -2.615E-08   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
           TIME INCREMENT MAY NOW INCREASE TO    3.375E-08
@@ -855,365 +855,7 @@
 
   INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.375E-08
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE            -9.493E-02   AT NODE     110042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.403E-03   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.171E-06   AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.123       AT NODE     110042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.103E-05   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -6.237E-08   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    5.063E-08
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.375E-08,  FRACTION OF STEP COMPLETED  9.125E-08
- STEP TIME COMPLETED       9.125E-08,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.063E-08
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE            -8.244E-02   AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -5.091E-03   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.663E-05   AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.109       AT NODE     100042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      6.140E-05   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.524E-07   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    7.594E-08
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.063E-08,  FRACTION OF STEP COMPLETED  1.419E-07
- STEP TIME COMPLETED       1.419E-07,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.594E-08
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE            -0.146       AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -7.604E-03   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.901E-05   AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.138       AT NODE     200042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      9.171E-05   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.830E-07   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    1.139E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.594E-08,  FRACTION OF STEP COMPLETED  2.178E-07
- STEP TIME COMPLETED       2.178E-07,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.139E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             9.259E-02   AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.132E-02   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.286E-05   AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -9.659E-02   AT NODE     100042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.366E-04   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -9.913E-07   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    1.709E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.139E-07,  FRACTION OF STEP COMPLETED  3.317E-07
- STEP TIME COMPLETED       3.317E-07,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.709E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE            -0.134       AT NODE      20144   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.676E-02   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.244E-04   AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    2.848E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.165       AT NODE     200013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.022E-04   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.637E-06   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    2.563E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.709E-07,  FRACTION OF STEP COMPLETED  5.026E-07
- STEP TIME COMPLETED       5.026E-07,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.563E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE            -0.856       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.454E-02   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.996E-04   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    2.216E-07
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.241       AT NODE     110013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.962E-04   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -7.129E-06   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    3.844E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.563E-07,  FRACTION OF STEP COMPLETED  7.589E-07
- STEP TIME COMPLETED       7.589E-07,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.844E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             -5.86       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.521E-02   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.600E-03   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.893E-06
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT           -0.505       AT NODE      20128   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.253E-04   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.908E-05   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -4.522E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    5.767E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.844E-07,  FRACTION OF STEP COMPLETED  1.143E-06
- STEP TIME COMPLETED       1.143E-06,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.767E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
- LARGEST RESIDUAL FORCE             -36.2       AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.878E-02   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        4.036E-03   AT NODE      20024   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.435E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.956E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT            -2.81       AT NODE      20128   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.897E-04   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.818E-05   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -3.211E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    8.650E-07
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.767E-07,  FRACTION OF STEP COMPLETED  1.720E-06
- STEP TIME COMPLETED       1.720E-06,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.650E-07
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1229,22 +871,380 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      7.806E+06   TIME AVG. FORCE       8.127E+06
- LARGEST RESIDUAL FORCE             -175.       AT NODE      20051   DOF  3
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE             0.106       AT NODE     101102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -6.420E-02   AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -3.401E-03   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        8.975E-03   AT NODE      10024   DOF  3
+ LARGEST CORRECTION TO DISP.        7.187E-06   AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    8.015E-05
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            0.122       AT NODE     100042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.101E-05   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -6.246E-08   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    5.063E-08
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.375E-08,  FRACTION OF STEP COMPLETED  9.125E-08
+ STEP TIME COMPLETED       9.125E-08,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.063E-08
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -0.108       AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -5.088E-03   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.666E-05   AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT           -0.108       AT NODE     210042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.136E-05   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.526E-07   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    7.594E-08
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.063E-08,  FRACTION OF STEP COMPLETED  1.419E-07
+ STEP TIME COMPLETED       1.419E-07,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.594E-08
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -9.853E-02   AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.599E-03   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.908E-05   AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT           -7.797E-02   AT NODE     200013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      9.166E-05   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.832E-07   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    1.139E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.594E-08,  FRACTION OF STEP COMPLETED  2.178E-07
+ STEP TIME COMPLETED       2.178E-07,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.139E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE             9.806E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.132E-02   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        9.301E-05   AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            9.540E-02   AT NODE     110042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.365E-04   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.916E-07   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    1.709E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.139E-07,  FRACTION OF STEP COMPLETED  3.317E-07
+ STEP TIME COMPLETED       3.317E-07,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.709E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -0.131       AT NODE      20124   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.675E-02   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.247E-04   AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.719E-08
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT           -0.166       AT NODE     200013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      2.021E-04   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.637E-06   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    2.563E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.709E-07,  FRACTION OF STEP COMPLETED  5.026E-07
+ STEP TIME COMPLETED       5.026E-07,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.563E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE            -0.870       AT NODE      20031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.453E-02   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        5.992E-04   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.195E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            0.240       AT NODE     100013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      2.960E-04   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -7.124E-06   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    3.844E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.563E-07,  FRACTION OF STEP COMPLETED  7.589E-07
+ STEP TIME COMPLETED       7.589E-07,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.844E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE             -5.96       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -3.519E-02   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.599E-03   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.877E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.955E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            0.504       AT NODE     210013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.250E-04   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.906E-05   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.524E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    5.767E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.844E-07,  FRACTION OF STEP COMPLETED  1.143E-06
+ STEP TIME COMPLETED       1.143E-06,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.767E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.154E+06   TIME AVG. FORCE       8.154E+06
+ LARGEST RESIDUAL FORCE             -36.9       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -4.875E-02   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.032E-03   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.422E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  AVERAGE MOMENT                     2.956E+07   TIME AVG. MOMENT      2.955E+07
- LARGEST RESIDUAL MOMENT            -12.4       AT NODE      10128   DOF  5
+ LARGEST RESIDUAL MOMENT            -2.80       AT NODE      20108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      7.774E-04   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      5.893E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.071E-04   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -4.813E-05   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -3.210E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    8.650E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.767E-07,  FRACTION OF STEP COMPLETED  1.720E-06
+ STEP TIME COMPLETED       1.720E-06,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.650E-07
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.933E+06   TIME AVG. FORCE       8.137E+06
+ LARGEST RESIDUAL FORCE             -178.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -6.416E-02   AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        8.966E-03   AT NODE      20015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    7.948E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.956E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            -12.4       AT NODE      20108   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.770E-04   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.070E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
  ESTIMATE OF ROTATION CORRECTION   -1.744E-06
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
@@ -1259,7 +1259,7 @@
 
   INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.297E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1267,32 +1267,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      5.608E+06   TIME AVG. FORCE       7.947E+06
- LARGEST RESIDUAL FORCE             -572.       AT NODE      20051   DOF  3
+ AVERAGE FORCE                      6.111E+06   TIME AVG. FORCE       7.992E+06
+ LARGEST RESIDUAL FORCE             -583.       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -7.997E-02   AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -7.992E-02   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.634E-02   AT NODE      20024   DOF  3
+ LARGEST CORRECTION TO DISP.        1.632E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    2.730E-04
+ ESTIMATE OF DISP.    CORRECTION    2.709E-04
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  AVERAGE MOMENT                     2.957E+07   TIME AVG. MOMENT      2.956E+07
- LARGEST RESIDUAL MOMENT            -37.7       AT NODE      10128   DOF  5
+ LARGEST RESIDUAL MOMENT            -37.6       AT NODE      20108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      9.722E-04   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      9.718E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.939E-04   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.938E-04   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -6.027E-06
+ ESTIMATE OF ROTATION CORRECTION   -6.029E-06
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    1.946E-06
 
@@ -1305,7 +1305,7 @@
 
   INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.946E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1313,34 +1313,34 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      4.669E+06   TIME AVG. FORCE       7.728E+06
- LARGEST RESIDUAL FORCE            -1.302E+03   AT NODE      10051   DOF  3
+ AVERAGE FORCE                      5.493E+06   TIME AVG. FORCE       7.825E+06
+ LARGEST RESIDUAL FORCE            -1.329E+03   AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -9.523E-02   AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -9.517E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.472E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        2.471E-02   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    5.969E-04
+ ESTIMATE OF DISP.    CORRECTION    5.922E-04
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  AVERAGE MOMENT                     2.959E+07   TIME AVG. MOMENT      2.956E+07
- LARGEST RESIDUAL MOMENT            -80.0       AT NODE      10128   DOF  5
+ LARGEST RESIDUAL MOMENT            -79.8       AT NODE      10108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.167E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.167E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.909E-04   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -2.908E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1348,32 +1348,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      6.323E+06   TIME AVG. FORCE       7.839E+06
- LARGEST RESIDUAL FORCE             -6.66       AT NODE      20051   DOF  3
+ AVERAGE FORCE                      6.920E+06   TIME AVG. FORCE       7.920E+06
+ LARGEST RESIDUAL FORCE             -6.68       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -9.367E-02   AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -9.361E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.595E-03   AT NODE      10021   DOF  3
+ LARGEST CORRECTION TO DISP.        1.587E-03   AT NODE      10013   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    8.154E-06
+ ESTIMATE OF DISP.    CORRECTION    7.981E-06
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  AVERAGE MOMENT                     2.959E+07   TIME AVG. MOMENT      2.956E+07
- LARGEST RESIDUAL MOMENT           -0.433       AT NODE      20128   DOF  5
+ LARGEST RESIDUAL MOMENT           -0.954       AT NODE      20129   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.141E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.141E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.606E-05   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -2.595E-05   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.411E-07
+ ESTIMATE OF ROTATION CORRECTION   -3.104E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    2.919E-06
 
@@ -1386,7 +1386,7 @@
 
   INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.919E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1394,33 +1394,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.869E+06   TIME AVG. FORCE       7.590E+06
- LARGEST RESIDUAL FORCE            -3.592E+03   AT NODE      10051   DOF  3
+ AVERAGE FORCE                      4.512E+06   TIME AVG. FORCE       7.707E+06
+ LARGEST RESIDUAL FORCE            -3.661E+03   AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.100       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.100       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        4.009E-02   AT NODE      10024   DOF  3
+ LARGEST CORRECTION TO DISP.        4.007E-02   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
  AVERAGE MOMENT                     2.961E+07   TIME AVG. MOMENT      2.956E+07
- LARGEST RESIDUAL MOMENT            -223.       AT NODE      10128   DOF  5
+ LARGEST RESIDUAL MOMENT            -222.       AT NODE      10108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
  LARGEST INCREMENT OF ROTATION      1.231E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.810E-04   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -4.807E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1428,32 +1428,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      5.200E+06   TIME AVG. FORCE       7.674E+06
- LARGEST RESIDUAL FORCE             -7.50       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      6.061E+06   TIME AVG. FORCE       7.804E+06
+ LARGEST RESIDUAL FORCE             -7.62       AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.102       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.102       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.762E-03   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.761E-03   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -3.682E-06
+ ESTIMATE OF DISP.    CORRECTION   -3.663E-06
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  AVERAGE MOMENT                     2.961E+07   TIME AVG. MOMENT      2.956E+07
- LARGEST RESIDUAL MOMENT            -3.47       AT NODE      10120   DOF  6
+ LARGEST RESIDUAL MOMENT            -3.45       AT NODE      10100   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
  LARGEST INCREMENT OF ROTATION      1.248E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.734E-05   AT NODE      10205   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.737E-05   AT NODE      20165   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.701E-07
+ ESTIMATE OF ROTATION CORRECTION   -2.698E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    4.379E-06
 
@@ -1466,7 +1466,7 @@
 
   INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.379E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1475,32 +1475,32 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.779E+06   TIME AVG. FORCE       7.445E+06
- LARGEST RESIDUAL FORCE            -3.692E+03   AT NODE      10155   DOF  3
+ AVERAGE FORCE                      4.417E+06   TIME AVG. FORCE       7.605E+06
+ LARGEST RESIDUAL FORCE            -3.774E+03   AT NODE      10135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.112       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.112       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        4.115E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        4.114E-02   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.898E+07   TIME AVG. MOMENT      2.953E+07
- LARGEST RESIDUAL MOMENT            -187.       AT NODE      10128   DOF  5
+ AVERAGE MOMENT                     2.930E+07   TIME AVG. MOMENT      2.955E+07
+ LARGEST RESIDUAL MOMENT            -187.       AT NODE      10108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.392E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.392E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.802E-04   AT NODE      10205   DOF  5
+ LARGEST CORRECTION TO ROTATION     4.802E-04   AT NODE      10165   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1508,32 +1508,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      5.201E+06   TIME AVG. FORCE       7.528E+06
- LARGEST RESIDUAL FORCE             -12.1       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      6.062E+06   TIME AVG. FORCE       7.702E+06
+ LARGEST RESIDUAL FORCE             -12.3       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.114       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.114       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.202E-03   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.       -2.200E-03   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -7.222E-06
+ ESTIMATE OF DISP.    CORRECTION   -7.145E-06
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.877E+07   TIME AVG. MOMENT      2.951E+07
- LARGEST RESIDUAL MOMENT             1.32       AT NODE      10080   DOF  5
+ AVERAGE MOMENT                     2.898E+07   TIME AVG. MOMENT      2.953E+07
+ LARGEST RESIDUAL MOMENT             1.32       AT NODE      10060   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.414E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.414E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.167E-05   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION     2.169E-05   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.531E-07
+ ESTIMATE OF ROTATION CORRECTION   -1.538E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    6.568E-06
 
@@ -1546,7 +1546,7 @@
 
   INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.568E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1562,25 +1562,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.451E+06   TIME AVG. FORCE       7.302E+06
- LARGEST RESIDUAL FORCE            -5.741E+03   AT NODE      10155   DOF  3
+ AVERAGE FORCE                      4.051E+06   TIME AVG. FORCE       7.499E+06
+ LARGEST RESIDUAL FORCE            -5.863E+03   AT NODE      10135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.121       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.121       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.024E-02   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.        5.022E-02   AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.545E+07   TIME AVG. MOMENT      2.929E+07
- LARGEST RESIDUAL MOMENT             261.       AT NODE      10072   DOF  5
+ AVERAGE MOMENT                     2.684E+07   TIME AVG. MOMENT      2.938E+07
+ LARGEST RESIDUAL MOMENT             261.       AT NODE      10052   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.525E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.524E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -5.965E-04   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -5.964E-04   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1588,32 +1588,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      4.390E+06   TIME AVG. FORCE       7.354E+06
- LARGEST RESIDUAL FORCE             -17.7       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      4.988E+06   TIME AVG. FORCE       7.551E+06
+ LARGEST RESIDUAL FORCE             -17.8       AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.124       AT NODE      10025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.124       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.606E-03   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.       -2.605E-03   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -8.032E-06
+ ESTIMATE OF DISP.    CORRECTION   -7.932E-06
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.520E+07   TIME AVG. MOMENT      2.927E+07
- LARGEST RESIDUAL MOMENT            -2.20       AT NODE      10128   DOF  5
+ AVERAGE MOMENT                     2.666E+07   TIME AVG. MOMENT      2.937E+07
+ LARGEST RESIDUAL MOMENT            -2.20       AT NODE      10108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.549E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.548E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.451E-05   AT NODE      10005   DOF  5
+ LARGEST CORRECTION TO ROTATION     2.454E-05   AT NODE      10004   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.070E-07
+ ESTIMATE OF ROTATION CORRECTION   -2.073E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    9.853E-06
 
@@ -1626,7 +1626,7 @@
 
   INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.853E-06
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1634,33 +1634,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.50000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.60000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.424E+06   TIME AVG. FORCE       7.147E+06
- LARGEST RESIDUAL FORCE            -6.519E+03   AT NODE      10155   DOF  3
+ AVERAGE FORCE                      4.066E+06   TIME AVG. FORCE       7.368E+06
+ LARGEST RESIDUAL FORCE            -6.677E+03   AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.132       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.132       AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.402E-02   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.        5.398E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.394E+07   TIME AVG. MOMENT      2.899E+07
- LARGEST RESIDUAL MOMENT             259.       AT NODE      20072   DOF  5
+ AVERAGE MOMENT                     2.549E+07   TIME AVG. MOMENT      2.916E+07
+ LARGEST RESIDUAL MOMENT             258.       AT NODE      20052   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
  LARGEST INCREMENT OF ROTATION      1.683E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -6.402E-04   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -6.401E-04   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1676,24 +1676,24 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      4.391E+06   TIME AVG. FORCE       7.198E+06
- LARGEST RESIDUAL FORCE             -25.3       AT NODE      10155   DOF  3
+ AVERAGE FORCE                      4.989E+06   TIME AVG. FORCE       7.416E+06
+ LARGEST RESIDUAL FORCE             -25.5       AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.135       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.135       AT NODE      20015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.062E-03   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.       -3.062E-03   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.190E-05
+ ESTIMATE OF DISP.    CORRECTION   -1.169E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.394E+07   TIME AVG. MOMENT      2.899E+07
- LARGEST RESIDUAL MOMENT            -2.74       AT NODE      10128   DOF  5
+ AVERAGE MOMENT                     2.566E+07   TIME AVG. MOMENT      2.917E+07
+ LARGEST RESIDUAL MOMENT            -2.74       AT NODE      20108   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.712E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.711E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.843E-05   AT NODE      10007   DOF  5
+ LARGEST CORRECTION TO ROTATION     2.846E-05   AT NODE      10004   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -3.007E-07
+ ESTIMATE OF ROTATION CORRECTION   -3.012E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    1.478E-05
 
@@ -1706,7 +1706,7 @@
 
   INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.478E-05
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1714,33 +1714,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.339E+06   TIME AVG. FORCE       7.005E+06
- LARGEST RESIDUAL FORCE            -8.014E+03   AT NODE      20155   DOF  3
+ AVERAGE FORCE                      3.971E+06   TIME AVG. FORCE       7.244E+06
+ LARGEST RESIDUAL FORCE            -8.229E+03   AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.143       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.143       AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.953E-02   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.        5.948E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.315E+07   TIME AVG. MOMENT      2.870E+07
- LARGEST RESIDUAL MOMENT            -290.       AT NODE      10136   DOF  5
+ AVERAGE MOMENT                     2.506E+07   TIME AVG. MOMENT      2.897E+07
+ LARGEST RESIDUAL MOMENT            -289.       AT NODE      20116   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.856E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.855E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -7.119E-04   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -7.118E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1756,24 +1756,24 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      4.327E+06   TIME AVG. FORCE       7.054E+06
- LARGEST RESIDUAL FORCE             -35.2       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      4.906E+06   TIME AVG. FORCE       7.291E+06
+ LARGEST RESIDUAL FORCE             -35.3       AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.146       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.146       AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.565E-03   AT NODE      10026   DOF  3
+ LARGEST CORRECTION TO DISP.       -3.567E-03   AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.565E-05
+ ESTIMATE OF DISP.    CORRECTION   -1.531E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.315E+07   TIME AVG. MOMENT      2.870E+07
- LARGEST RESIDUAL MOMENT             3.41       AT NODE      20072   DOF  5
+ AVERAGE MOMENT                     2.506E+07   TIME AVG. MOMENT      2.897E+07
+ LARGEST RESIDUAL MOMENT             3.42       AT NODE      10052   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.888E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      1.887E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.272E-05   AT NODE      20008   DOF  5
+ LARGEST CORRECTION TO ROTATION     3.276E-05   AT NODE      20005   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -3.850E-07
+ ESTIMATE OF ROTATION CORRECTION   -3.870E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    2.217E-05
 
@@ -1786,7 +1786,7 @@
 
   INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.217E-05
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1794,33 +1794,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.159E+06   TIME AVG. FORCE       6.869E+06
- LARGEST RESIDUAL FORCE            -9.283E+03   AT NODE      20051   DOF  3
+ AVERAGE FORCE                      3.766E+06   TIME AVG. FORCE       7.123E+06
+ LARGEST RESIDUAL FORCE            -9.586E+03   AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.155       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.155       AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        6.461E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        6.453E-02   AT NODE      10015   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.255E+07   TIME AVG. MOMENT      2.841E+07
- LARGEST RESIDUAL MOMENT             382.       AT NODE      10064   DOF  5
+ AVERAGE MOMENT                     2.465E+07   TIME AVG. MOMENT      2.876E+07
+ LARGEST RESIDUAL MOMENT             382.       AT NODE      20044   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.052E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.050E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -7.801E-04   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -7.800E-04   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1836,24 +1836,24 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      3.614E+06   TIME AVG. FORCE       6.891E+06
- LARGEST RESIDUAL FORCE             -45.9       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      4.240E+06   TIME AVG. FORCE       7.145E+06
+ LARGEST RESIDUAL FORCE             -46.1       AT NODE      20135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.159       AT NODE      20025   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.159       AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.136E-03   AT NODE      10026   DOF  3
+ LARGEST CORRECTION TO DISP.       -4.138E-03   AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -2.045E-05
+ ESTIMATE OF DISP.    CORRECTION   -1.992E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.255E+07   TIME AVG. MOMENT      2.841E+07
- LARGEST RESIDUAL MOMENT            -6.60       AT NODE      20060   DOF  6
+ AVERAGE MOMENT                     2.466E+07   TIME AVG. MOMENT      2.876E+07
+ LARGEST RESIDUAL MOMENT             6.88       AT NODE      10128   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.089E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.088E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.778E-05   AT NODE      10008   DOF  5
+ LARGEST CORRECTION TO ROTATION     3.782E-05   AT NODE      10005   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -6.532E-07
+ ESTIMATE OF ROTATION CORRECTION    6.815E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    3.325E-05
 
@@ -1866,7 +1866,7 @@
 
   INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.325E-05
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1874,33 +1874,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.083E+06   TIME AVG. FORCE       6.718E+06
- LARGEST RESIDUAL FORCE            -1.114E+04   AT NODE      20051   DOF  3
+ AVERAGE FORCE                      3.653E+06   TIME AVG. FORCE       6.987E+06
+ LARGEST RESIDUAL FORCE            -1.158E+04   AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.168       AT NODE      20026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.168       AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.067E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        7.054E-02   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.212E+07   TIME AVG. MOMENT      2.812E+07
- LARGEST RESIDUAL MOMENT             646.       AT NODE      10064   DOF  5
+ AVERAGE MOMENT                     2.443E+07   TIME AVG. MOMENT      2.856E+07
+ LARGEST RESIDUAL MOMENT             644.       AT NODE      10044   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.267E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.266E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -8.660E-04   AT NODE      10001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -8.658E-04   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1908,32 +1908,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      3.520E+06   TIME AVG. FORCE       6.737E+06
- LARGEST RESIDUAL FORCE             -59.9       AT NODE      20155   DOF  3
+ AVERAGE FORCE                      4.111E+06   TIME AVG. FORCE       7.007E+06
+ LARGEST RESIDUAL FORCE             -60.4       AT NODE      10135   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.173       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.173       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.802E-03   AT NODE      10180   DOF  3
+ LARGEST CORRECTION TO DISP.       -4.805E-03   AT NODE      10150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -2.583E-05
+ ESTIMATE OF DISP.    CORRECTION   -2.507E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.212E+07   TIME AVG. MOMENT      2.812E+07
- LARGEST RESIDUAL MOMENT             12.3       AT NODE      20064   DOF  5
+ AVERAGE MOMENT                     2.459E+07   TIME AVG. MOMENT      2.857E+07
+ LARGEST RESIDUAL MOMENT             12.3       AT NODE      20044   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.310E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.309E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.371E-05   AT NODE      20008   DOF  5
+ LARGEST CORRECTION TO ROTATION     4.377E-05   AT NODE      20005   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    8.332E-07
+ ESTIMATE OF ROTATION CORRECTION    8.370E-07
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    4.988E-05
 
@@ -1946,7 +1946,7 @@
 
   INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.988E-05
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1962,25 +1962,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.964E+06   TIME AVG. FORCE       6.573E+06
- LARGEST RESIDUAL FORCE            -1.339E+04   AT NODE      10051   DOF  3
+ AVERAGE FORCE                      3.498E+06   TIME AVG. FORCE       6.855E+06
+ LARGEST RESIDUAL FORCE            -1.404E+04   AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.182       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.182       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.734E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        7.726E-02   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.194E+07   TIME AVG. MOMENT      2.785E+07
- LARGEST RESIDUAL MOMENT           -1.026E+03   AT NODE      10144   DOF  5
+ AVERAGE MOMENT                     2.420E+07   TIME AVG. MOMENT      2.838E+07
+ LARGEST RESIDUAL MOMENT           -1.024E+03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.500E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.498E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -9.650E-04   AT NODE      20001   DOF  5
+ LARGEST CORRECTION TO ROTATION    -9.647E-04   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -1988,32 +1988,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      3.464E+06   TIME AVG. FORCE       6.595E+06
- LARGEST RESIDUAL FORCE             -78.6       AT NODE      10051   DOF  3
+ AVERAGE FORCE                      4.034E+06   TIME AVG. FORCE       6.878E+06
+ LARGEST RESIDUAL FORCE             -79.6       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.187       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.187       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        6.183E-03   AT NODE      20103   DOF  3
+ LARGEST CORRECTION TO DISP.        6.177E-03   AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    3.630E-05
+ ESTIMATE OF DISP.    CORRECTION    3.503E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.194E+07   TIME AVG. MOMENT      2.785E+07
- LARGEST RESIDUAL MOMENT            -25.9       AT NODE      10144   DOF  5
+ AVERAGE MOMENT                     2.420E+07   TIME AVG. MOMENT      2.838E+07
+ LARGEST RESIDUAL MOMENT            -25.9       AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.551E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.548E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.114E-05   AT NODE      20162   DOF  5
+ LARGEST CORRECTION TO ROTATION     5.120E-05   AT NODE      20139   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.290E-06
+ ESTIMATE OF ROTATION CORRECTION    1.295E-06
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    7.482E-05
 
@@ -2026,7 +2026,7 @@
 
   INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.482E-05
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -2034,33 +2034,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.912E+06   TIME AVG. FORCE       6.442E+06
- LARGEST RESIDUAL FORCE            -1.644E+04   AT NODE      20051   DOF  3
+ AVERAGE FORCE                      3.428E+06   TIME AVG. FORCE       6.734E+06
+ LARGEST RESIDUAL FORCE            -1.742E+04   AT NODE      20031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.196       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.196       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        8.495E-02   AT NODE      10026   DOF  3
+ LARGEST CORRECTION TO DISP.        8.490E-02   AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.178E+07   TIME AVG. MOMENT      2.760E+07
- LARGEST RESIDUAL MOMENT           -1.193E+03   AT NODE      10144   DOF  5
+ AVERAGE MOMENT                     2.429E+07   TIME AVG. MOMENT      2.821E+07
+ LARGEST RESIDUAL MOMENT           -1.190E+03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.745E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.741E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
  LARGEST CORRECTION TO ROTATION    -1.081E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -2068,32 +2068,32 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      3.427E+06   TIME AVG. FORCE       6.463E+06
- LARGEST RESIDUAL FORCE             -107.       AT NODE      10051   DOF  3
+ AVERAGE FORCE                      3.982E+06   TIME AVG. FORCE       6.758E+06
+ LARGEST RESIDUAL FORCE             -109.       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.203       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.202       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.963E-03   AT NODE      20103   DOF  3
+ LARGEST CORRECTION TO DISP.        7.954E-03   AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    5.176E-05
+ ESTIMATE OF DISP.    CORRECTION    4.973E-05
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     2.178E+07   TIME AVG. MOMENT      2.760E+07
- LARGEST RESIDUAL MOMENT            -45.6       AT NODE      10144   DOF  5
+ AVERAGE MOMENT                     2.429E+07   TIME AVG. MOMENT      2.821E+07
+ LARGEST RESIDUAL MOMENT            -45.6       AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.804E-03   AT NODE      20001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.801E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.117E-05   AT NODE      20162   DOF  5
+ LARGEST CORRECTION TO ROTATION     6.129E-05   AT NODE      20139   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    2.337E-06
+ ESTIMATE OF ROTATION CORRECTION    2.347E-06
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    1.122E-04
 
@@ -2106,7 +2106,7 @@
 
   INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.122E-04
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -2114,1255 +2114,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.830E+06   TIME AVG. FORCE       6.318E+06
- LARGEST RESIDUAL FORCE            -2.029E+04   AT NODE      10051   DOF  3
+ AVERAGE FORCE                      3.313E+06   TIME AVG. FORCE       6.620E+06
+ LARGEST RESIDUAL FORCE            -2.177E+04   AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.210       AT NODE      10026   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.210       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.350E-02   AT NODE      20026   DOF  3
+ LARGEST CORRECTION TO DISP.        9.343E-02   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     2.183E+07   TIME AVG. MOMENT      2.737E+07
- LARGEST RESIDUAL MOMENT            -987.       AT NODE      10144   DOF  5
+ AVERAGE MOMENT                     2.404E+07   TIME AVG. MOMENT      2.804E+07
+ LARGEST RESIDUAL MOMENT            -983.       AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.991E-03   AT NODE      10001   DOF  5
+ LARGEST INCREMENT OF ROTATION      2.987E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
  LARGEST CORRECTION TO ROTATION    -1.214E-03   AT NODE      20001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      3.337E+06   TIME AVG. FORCE       6.338E+06
- LARGEST RESIDUAL FORCE             -150.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.218       AT NODE      10026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.263E-03   AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    6.837E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.183E+07   TIME AVG. MOMENT      2.737E+07
- LARGEST RESIDUAL MOMENT            -56.4       AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.062E-03   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.349E-05   AT NODE      20162   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    4.204E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.683E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.122E-04,  FRACTION OF STEP COMPLETED  3.367E-04
- STEP TIME COMPLETED       3.367E-04,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.683E-04
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.766E+06   TIME AVG. FORCE       6.201E+06
- LARGEST RESIDUAL FORCE            -2.515E+04   AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.224       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.103       AT NODE      10026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     2.196E+07   TIME AVG. MOMENT      2.716E+07
- LARGEST RESIDUAL MOMENT            -520.       AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.229E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.364E-03   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      3.247E+06   TIME AVG. FORCE       6.219E+06
- LARGEST RESIDUAL FORCE             -218.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.233       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.010E-02   AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    8.772E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.185E+07   TIME AVG. MOMENT      2.716E+07
- LARGEST RESIDUAL MOMENT            -45.8       AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.314E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     8.875E-05   AT NODE      20161   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    7.810E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    2.525E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.683E-04,  FRACTION OF STEP COMPLETED  5.050E-04
- STEP TIME COMPLETED       5.050E-04,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.525E-04
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.717E+06   TIME AVG. FORCE       6.089E+06
- LARGEST RESIDUAL FORCE            -3.089E+04   AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.236       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.114       AT NODE      10026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     2.129E+07   TIME AVG. MOMENT      2.694E+07
- LARGEST RESIDUAL MOMENT            -551.       AT NODE      10136   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.443E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.528E-03   AT NODE      10001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      3.164E+06   TIME AVG. FORCE       6.106E+06
- LARGEST RESIDUAL FORCE             -321.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.247       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.074E-02   AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.116E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.130E+07   TIME AVG. MOMENT      2.694E+07
- LARGEST RESIDUAL MOMENT             41.3       AT NODE      20072   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.547E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.076E-04   AT NODE      20161   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -8.057E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    3.788E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.525E-04,  FRACTION OF STEP COMPLETED  7.575E-04
- STEP TIME COMPLETED       7.575E-04,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.788E-04
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.693E+06   TIME AVG. FORCE       5.984E+06
- LARGEST RESIDUAL FORCE            -3.746E+04   AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.245       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.125       AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     2.128E+07   TIME AVG. MOMENT      2.674E+07
- LARGEST RESIDUAL MOMENT            -562.       AT NODE      10136   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.616E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.704E-03   AT NODE      20001   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      3.136E+06   TIME AVG. FORCE       6.000E+06
- LARGEST RESIDUAL FORCE             -459.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.258       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.288E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.580E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.130E+07   TIME AVG. MOMENT      2.674E+07
- LARGEST RESIDUAL MOMENT            -44.5       AT NODE      20136   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.743E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.317E-04   AT NODE      20160   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.043E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    5.682E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.788E-04,  FRACTION OF STEP COMPLETED  1.136E-03
- STEP TIME COMPLETED       1.136E-03,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.682E-04
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.649E+06   TIME AVG. FORCE       5.884E+06
- LARGEST RESIDUAL FORCE            -4.482E+04   AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.249       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.137       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     2.131E+07   TIME AVG. MOMENT      2.655E+07
- LARGEST RESIDUAL MOMENT             614.       AT NODE      10064   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.725E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.889E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      3.071E+06   TIME AVG. FORCE       5.899E+06
- LARGEST RESIDUAL FORCE             -630.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.265       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.556E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -2.186E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.116E+07   TIME AVG. MOMENT      2.655E+07
- LARGEST RESIDUAL MOMENT            -41.1       AT NODE      20136   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.882E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.621E-04   AT NODE      20159   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.086E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    8.522E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.682E-04,  FRACTION OF STEP COMPLETED  1.704E-03
- STEP TIME COMPLETED       1.704E-03,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.522E-04
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.424E+06   TIME AVG. FORCE       5.783E+06
- LARGEST RESIDUAL FORCE            -5.312E+04   AT NODE      20051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.248       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.149       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     2.040E+07   TIME AVG. MOMENT      2.634E+07
- LARGEST RESIDUAL MOMENT             706.       AT NODE      10064   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.749E-03   AT NODE      20205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.074E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.710E+06   TIME AVG. FORCE       5.793E+06
- LARGEST RESIDUAL FORCE             -842.       AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.267       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.882E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -2.983E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     2.049E+07   TIME AVG. MOMENT      2.635E+07
- LARGEST RESIDUAL MOMENT             46.6       AT NODE      10064   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.943E-03   AT NODE      20205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.020E-04   AT NODE      20159   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.332E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.278E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.522E-04,  FRACTION OF STEP COMPLETED  2.557E-03
- STEP TIME COMPLETED       2.557E-03,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.278E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.416E+06   TIME AVG. FORCE       5.684E+06
- LARGEST RESIDUAL FORCE             6.682E+04   AT NODE      10156   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.239       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.161       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.850E+07   TIME AVG. MOMENT      2.609E+07
- LARGEST RESIDUAL MOMENT             770.       AT NODE      10064   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.775E-03   AT NODE      10157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.250E-03   AT NODE      10205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.667E+06   TIME AVG. FORCE       5.692E+06
- LARGEST RESIDUAL FORCE            -1.125E+03   AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.262       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.271E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    3.825E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.825E+07   TIME AVG. MOMENT      2.608E+07
- LARGEST RESIDUAL MOMENT             46.0       AT NODE     210013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.015E-03   AT NODE      10157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.515E-04   AT NODE      20158   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.504E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.918E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.278E-03,  FRACTION OF STEP COMPLETED  3.835E-03
- STEP TIME COMPLETED       3.835E-03,  TOTAL TIME COMPLETED         1.00    
-
-
-  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.918E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.243E+06   TIME AVG. FORCE       5.584E+06
- LARGEST RESIDUAL FORCE             8.863E+04   AT NODE      20156   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.223       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.170       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.652E+07   TIME AVG. MOMENT      2.579E+07
- LARGEST RESIDUAL MOMENT           -1.015E+03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.674E-03   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.402E-03   AT NODE      20205   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.428E+06   TIME AVG. FORCE       5.590E+06
- LARGEST RESIDUAL FORCE            -1.531E+03   AT NODE      10051   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.250       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.712E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    4.685E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.656E+07   TIME AVG. MOMENT      2.579E+07
- LARGEST RESIDUAL MOMENT            -58.2       AT NODE     110013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.944E-03   AT NODE      10157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.144E-04   AT NODE      20158   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.804E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    2.876E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.918E-03,  FRACTION OF STEP COMPLETED  5.753E-03
- STEP TIME COMPLETED       5.753E-03,  TOTAL TIME COMPLETED         1.01    
-
-
-  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.876E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.957E+06   TIME AVG. FORCE       5.480E+06
- LARGEST RESIDUAL FORCE             1.129E+05   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.198       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.176       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.576E+07   TIME AVG. MOMENT      2.548E+07
- LARGEST RESIDUAL MOMENT           -1.800E+03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.633E-03   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.597E-03   AT NODE      10157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.062E+06   TIME AVG. FORCE       5.483E+06
- LARGEST RESIDUAL FORCE             2.342E+03   AT NODE      10155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.230       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.173E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -6.582E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.582E+07   TIME AVG. MOMENT      2.548E+07
- LARGEST RESIDUAL MOMENT            -71.6       AT NODE     200013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.966E-03   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.854E-04   AT NODE      10158   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.533E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    4.314E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.876E-03,  FRACTION OF STEP COMPLETED  8.629E-03
- STEP TIME COMPLETED       8.629E-03,  TOTAL TIME COMPLETED         1.01    
-
-
-  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.314E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.988E+06   TIME AVG. FORCE       5.380E+06
- LARGEST RESIDUAL FORCE             1.397E+05   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.168       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.177       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.581E+07   TIME AVG. MOMENT      2.520E+07
- LARGEST RESIDUAL MOMENT           -3.837E+03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.075E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.728E-03   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.057E+06   TIME AVG. FORCE       5.382E+06
- LARGEST RESIDUAL FORCE             3.824E+03   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.204       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.596E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -9.845E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.582E+07   TIME AVG. MOMENT      2.520E+07
- LARGEST RESIDUAL MOMENT            -84.7       AT NODE     200013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.134E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.690E-04   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.035E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    6.472E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.314E-03,  FRACTION OF STEP COMPLETED  1.294E-02
- STEP TIME COMPLETED       1.294E-02,  TOTAL TIME COMPLETED         1.01    
-
-
-  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.472E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.931E+06   TIME AVG. FORCE       5.284E+06
- LARGEST RESIDUAL FORCE             1.611E+05   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.135       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.171       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.541E+07   TIME AVG. MOMENT      2.492E+07
- LARGEST RESIDUAL MOMENT           -8.479E+03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.062E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.729E-03   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.956E+06   TIME AVG. FORCE       5.284E+06
- LARGEST RESIDUAL FORCE             5.668E+03   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.174       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.892E-02   AT NODE      20026   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.369E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.545E+07   TIME AVG. MOMENT      2.492E+07
- LARGEST RESIDUAL MOMENT             95.0       AT NODE     100013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.198E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.489E-04   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -6.148E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    9.707E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  6.472E-03,  FRACTION OF STEP COMPLETED  1.941E-02
- STEP TIME COMPLETED       1.941E-02,  TOTAL TIME COMPLETED         1.02    
-
-
-  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.707E-03
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.025E+06   TIME AVG. FORCE       5.194E+06
- LARGEST RESIDUAL FORCE             1.715E+05   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.103       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.158       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.494E+07   TIME AVG. MOMENT      2.464E+07
- LARGEST RESIDUAL MOMENT           -1.787E+04   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.007E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.808E-03   AT NODE      20156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.029E+06   TIME AVG. FORCE       5.194E+06
- LARGEST RESIDUAL FORCE             7.561E+03   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.142       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.968E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     1.498E+07   TIME AVG. MOMENT      2.465E+07
- LARGEST RESIDUAL MOMENT            -371.       AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.260E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.008E-04   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.247E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.010E+06   TIME AVG. FORCE       5.193E+06
- LARGEST RESIDUAL FORCE              156.       AT NODE      10156   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.144       AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.011E-03   AT NODE      20171   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -4.151E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.499E+07   TIME AVG. MOMENT      2.465E+07
- LARGEST RESIDUAL MOMENT             6.32       AT NODE     210013   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.260E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.951E-05   AT NODE      20157   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.354E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.456E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.707E-03,  FRACTION OF STEP COMPLETED  2.912E-02
- STEP TIME COMPLETED       2.912E-02,  TOTAL TIME COMPLETED         1.03    
-
-
-  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.456E-02
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.163E+06   TIME AVG. FORCE       5.111E+06
- LARGEST RESIDUAL FORCE             2.024E+05   AT NODE      10155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -7.045E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.146       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.483E+07   TIME AVG. MOMENT      2.438E+07
- LARGEST RESIDUAL MOMENT           -3.470E+04   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.773E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.061E-03   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.175E+06   TIME AVG. FORCE       5.112E+06
- LARGEST RESIDUAL FORCE             1.113E+04   AT NODE      10155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.110       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.969E-02   AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     1.498E+07   TIME AVG. MOMENT      2.438E+07
- LARGEST RESIDUAL MOMENT            -722.       AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.190E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.263E-04   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.510E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.161E+06   TIME AVG. FORCE       5.111E+06
- LARGEST RESIDUAL FORCE             -116.       AT NODE      10157   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.112       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.423E-03   AT NODE      10169   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.484E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.498E+07   TIME AVG. MOMENT      2.438E+07
- LARGEST RESIDUAL MOMENT             61.9       AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.198E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.954E-05   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    2.184E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.456E-02,  FRACTION OF STEP COMPLETED  4.368E-02
- STEP TIME COMPLETED       4.368E-02,  TOTAL TIME COMPLETED         1.04    
-
-
-  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.184E-02
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.340E+06   TIME AVG. FORCE       5.038E+06
- LARGEST RESIDUAL FORCE             1.529E+05   AT NODE      20155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -5.547E-02   AT NODE      10105   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.115       AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.450E+07   TIME AVG. MOMENT      2.412E+07
- LARGEST RESIDUAL MOMENT           -1.340E+05   AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.201E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.596E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.352E+06   TIME AVG. FORCE       5.039E+06
- LARGEST RESIDUAL FORCE             9.915E+03   AT NODE      10155   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.546E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.346E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     1.465E+07   TIME AVG. MOMENT      2.413E+07
- LARGEST RESIDUAL MOMENT            1.275E+04   AT NODE      10144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.838E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.037E-04   AT NODE      10156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -6.695E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.340E+06   TIME AVG. FORCE       5.038E+06
- LARGEST RESIDUAL FORCE            -1.053E+03   AT NODE      20144   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.596E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -5.213E-04   AT NODE      20169   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.472E+07   TIME AVG. MOMENT      2.413E+07
- LARGEST RESIDUAL MOMENT           -1.290E+03   AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.859E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.343E-05   AT NODE      20156   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    3.276E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.184E-02,  FRACTION OF STEP COMPLETED  6.552E-02
- STEP TIME COMPLETED       6.552E-02,  TOTAL TIME COMPLETED         1.07    
-
-
-  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.276E-02
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.650E+06   TIME AVG. FORCE       4.977E+06
- LARGEST RESIDUAL FORCE            -1.775E+05   AT NODE      10144   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -9.772E-02   AT NODE      20102   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.079E-02   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.349E+07   TIME AVG. MOMENT      2.386E+07
- LARGEST RESIDUAL MOMENT            1.213E+06   AT NODE      10144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.198E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.591E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3378,25 +2156,906 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      2.652E+06   TIME AVG. FORCE       4.977E+06
- LARGEST RESIDUAL FORCE             3.284E+04   AT NODE      10144   DOF  1
+ AVERAGE FORCE                      3.850E+06   TIME AVG. FORCE       6.641E+06
+ LARGEST RESIDUAL FORCE             -154.       AT NODE      10031   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.175E-02   AT NODE      20102   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.218       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.743E-02   AT NODE      20180   DOF  3
+ LARGEST CORRECTION TO DISP.        9.251E-03   AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    6.535E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.404E+07   TIME AVG. MOMENT      2.804E+07
+ LARGEST RESIDUAL MOMENT            -56.3       AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.058E-03   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     7.370E-05   AT NODE      20139   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.225E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.683E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.122E-04,  FRACTION OF STEP COMPLETED  3.367E-04
+ STEP TIME COMPLETED       3.367E-04,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.683E-04
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      3.218E+06   TIME AVG. FORCE       6.510E+06
+ LARGEST RESIDUAL FORCE            -2.738E+04   AT NODE      20031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.223       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.103       AT NODE      10016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     2.433E+07   TIME AVG. MOMENT      2.790E+07
+ LARGEST RESIDUAL MOMENT            -517.       AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.224E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.363E-03   AT NODE      10001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.738E+06   TIME AVG. FORCE       6.530E+06
+ LARGEST RESIDUAL FORCE             -226.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.232       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.009E-02   AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    8.327E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.419E+07   TIME AVG. MOMENT      2.790E+07
+ LARGEST RESIDUAL MOMENT            -45.6       AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.309E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     8.893E-05   AT NODE      20139   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    7.831E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    2.525E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.683E-04,  FRACTION OF STEP COMPLETED  5.050E-04
+ STEP TIME COMPLETED       5.050E-04,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.525E-04
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      3.150E+06   TIME AVG. FORCE       6.404E+06
+ LARGEST RESIDUAL FORCE            -3.424E+04   AT NODE      20031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.235       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.113       AT NODE      10016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.339E+07   TIME AVG. MOMENT      2.385E+07
- LARGEST RESIDUAL MOMENT           -2.241E+05   AT NODE      20144   DOF  6
+ AVERAGE MOMENT                     2.369E+07   TIME AVG. MOMENT      2.774E+07
+ LARGEST RESIDUAL MOMENT            -549.       AT NODE      10116   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -8.092E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -3.437E-03   AT NODE      10165   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -8.941E-04   AT NODE      20144   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.527E-03   AT NODE      10001   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.626E+06   TIME AVG. FORCE       6.422E+06
+ LARGEST RESIDUAL FORCE             -335.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.246       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.075E-02   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.051E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.377E+07   TIME AVG. MOMENT      2.774E+07
+ LARGEST RESIDUAL MOMENT             41.1       AT NODE      20052   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.540E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.079E-04   AT NODE      20138   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -8.082E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    3.788E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.525E-04,  FRACTION OF STEP COMPLETED  7.575E-04
+ STEP TIME COMPLETED       7.575E-04,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.788E-04
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      3.122E+06   TIME AVG. FORCE       6.304E+06
+ LARGEST RESIDUAL FORCE            -4.246E+04   AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.244       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.125       AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     2.372E+07   TIME AVG. MOMENT      2.760E+07
+ LARGEST RESIDUAL MOMENT            -558.       AT NODE      20116   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.608E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.703E-03   AT NODE      20001   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.546E+06   TIME AVG. FORCE       6.319E+06
+ LARGEST RESIDUAL FORCE             -485.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.257       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.290E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.472E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.373E+07   TIME AVG. MOMENT      2.760E+07
+ LARGEST RESIDUAL MOMENT            -44.3       AT NODE      10116   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.735E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.323E-04   AT NODE      20138   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    1.050E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    5.682E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.788E-04,  FRACTION OF STEP COMPLETED  1.136E-03
+ STEP TIME COMPLETED       1.136E-03,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.682E-04
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      3.059E+06   TIME AVG. FORCE       6.207E+06
+ LARGEST RESIDUAL FORCE            -5.218E+04   AT NODE      20031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.248       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.137       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     2.378E+07   TIME AVG. MOMENT      2.747E+07
+ LARGEST RESIDUAL MOMENT             731.       AT NODE      10135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.715E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.887E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.418E+06   TIME AVG. FORCE       6.219E+06
+ LARGEST RESIDUAL FORCE             -677.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.264       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.557E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -2.019E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.360E+07   TIME AVG. MOMENT      2.746E+07
+ LARGEST RESIDUAL MOMENT            -40.9       AT NODE      20116   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.872E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.629E-04   AT NODE      20138   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -9.103E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    8.522E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.682E-04,  FRACTION OF STEP COMPLETED  1.704E-03
+ STEP TIME COMPLETED       1.704E-03,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.522E-04
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.758E+06   TIME AVG. FORCE       6.104E+06
+ LARGEST RESIDUAL FORCE            -6.379E+04   AT NODE      20031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.247       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.149       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     2.272E+07   TIME AVG. MOMENT      2.730E+07
+ LARGEST RESIDUAL MOMENT            1.198E+03   AT NODE      20135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.737E-03   AT NODE      20165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.072E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.018E+06   TIME AVG. FORCE       6.113E+06
+ LARGEST RESIDUAL FORCE             -929.       AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.266       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.884E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -2.743E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     2.280E+07   TIME AVG. MOMENT      2.731E+07
+ LARGEST RESIDUAL MOMENT             46.6       AT NODE      10044   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.932E-03   AT NODE      20165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.029E-04   AT NODE      20137   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    7.887E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.278E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.522E-04,  FRACTION OF STEP COMPLETED  2.557E-03
+ STEP TIME COMPLETED       2.557E-03,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.278E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.597E+06   TIME AVG. FORCE       5.999E+06
+ LARGEST RESIDUAL FORCE             8.289E+04   AT NODE      10135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.238       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.161       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     2.024E+07   TIME AVG. MOMENT      2.708E+07
+ LARGEST RESIDUAL MOMENT            1.920E+03   AT NODE      10135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.786E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.248E-03   AT NODE      10165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.823E+06   TIME AVG. FORCE       6.006E+06
+ LARGEST RESIDUAL FORCE            -1.287E+03   AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.261       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -2.273E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    3.529E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.991E+07   TIME AVG. MOMENT      2.707E+07
+ LARGEST RESIDUAL MOMENT            -46.0       AT NODE     200013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.022E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.546E-04   AT NODE      20137   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -6.100E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.918E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.278E-03,  FRACTION OF STEP COMPLETED  3.835E-03
+ STEP TIME COMPLETED       3.835E-03,  TOTAL TIME COMPLETED         1.00    
+
+
+  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.918E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.196E+06   TIME AVG. FORCE       5.887E+06
+ LARGEST RESIDUAL FORCE             1.152E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.221       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.170       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.792E+07   TIME AVG. MOMENT      2.678E+07
+ LARGEST RESIDUAL MOMENT            2.975E+03   AT NODE      10135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.710E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.398E-03   AT NODE      20165   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.337E+06   TIME AVG. FORCE       5.892E+06
+ LARGEST RESIDUAL FORCE            -1.826E+03   AT NODE      10031   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.248       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -2.713E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    4.300E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.799E+07   TIME AVG. MOMENT      2.678E+07
+ LARGEST RESIDUAL MOMENT             58.2       AT NODE     100013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.012E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.162E-04   AT NODE      20137   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    6.185E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    2.876E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.918E-03,  FRACTION OF STEP COMPLETED  5.753E-03
+ STEP TIME COMPLETED       5.753E-03,  TOTAL TIME COMPLETED         1.01    
+
+
+  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.876E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.173E+06   TIME AVG. FORCE       5.779E+06
+ LARGEST RESIDUAL FORCE             1.518E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.197       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.176       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.700E+07   TIME AVG. MOMENT      2.649E+07
+ LARGEST RESIDUAL MOMENT            4.390E+03   AT NODE      20135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.447E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.571E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.280E+06   TIME AVG. FORCE       5.782E+06
+ LARGEST RESIDUAL FORCE             3.126E+03   AT NODE      10135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.229       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.174E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -6.536E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.707E+07   TIME AVG. MOMENT      2.649E+07
+ LARGEST RESIDUAL MOMENT             71.5       AT NODE     100013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.829E-03   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.835E-04   AT NODE      10137   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    6.247E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    4.314E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.876E-03,  FRACTION OF STEP COMPLETED  8.629E-03
+ STEP TIME COMPLETED       8.629E-03,  TOTAL TIME COMPLETED         1.01    
+
+
+  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.314E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.191E+06   TIME AVG. FORCE       5.677E+06
+ LARGEST RESIDUAL FORCE             1.876E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.167       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.176       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.696E+07   TIME AVG. MOMENT      2.621E+07
+ LARGEST RESIDUAL MOMENT            6.073E+03   AT NODE      20135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -4.093E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.759E-03   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.258E+06   TIME AVG. FORCE       5.679E+06
+ LARGEST RESIDUAL FORCE             5.172E+03   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.202       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.594E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -9.909E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.700E+07   TIME AVG. MOMENT      2.621E+07
+ LARGEST RESIDUAL MOMENT             113.       AT NODE      20135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -4.153E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     4.752E-04   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    8.816E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    6.472E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.314E-03,  FRACTION OF STEP COMPLETED  1.294E-02
+ STEP TIME COMPLETED       1.294E-02,  TOTAL TIME COMPLETED         1.01    
+
+
+  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.472E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.245E+06   TIME AVG. FORCE       5.581E+06
+ LARGEST RESIDUAL FORCE             2.143E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.133       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.170       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.662E+07   TIME AVG. MOMENT      2.594E+07
+ LARGEST RESIDUAL MOMENT           -8.633E+03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.077E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.839E-03   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.271E+06   TIME AVG. FORCE       5.581E+06
+ LARGEST RESIDUAL FORCE             7.751E+03   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.172       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.884E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.405E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.670E+07   TIME AVG. MOMENT      2.594E+07
+ LARGEST RESIDUAL MOMENT             192.       AT NODE      20135   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.216E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     5.679E-04   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.266E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    9.707E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  6.472E-03,  FRACTION OF STEP COMPLETED  1.941E-02
+ STEP TIME COMPLETED       1.941E-02,  TOTAL TIME COMPLETED         1.02    
+
+
+  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.707E-03
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.335E+06   TIME AVG. FORCE       5.491E+06
+ LARGEST RESIDUAL FORCE             2.225E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.101       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.157       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.605E+07   TIME AVG. MOMENT      2.566E+07
+ LARGEST RESIDUAL MOMENT           -1.815E+04   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.017E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.761E-03   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.337E+06   TIME AVG. FORCE       5.491E+06
+ LARGEST RESIDUAL FORCE             1.033E+04   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.141       AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.954E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.609E+07   TIME AVG. MOMENT      2.567E+07
+ LARGEST RESIDUAL MOMENT            -413.       AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.273E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     6.384E-04   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    1.454E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3412,26 +3071,367 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      2.655E+06   TIME AVG. FORCE       4.977E+06
- LARGEST RESIDUAL FORCE             7.559E+04   AT NODE      10144   DOF  2
+ AVERAGE FORCE                      2.330E+06   TIME AVG. FORCE       5.491E+06
+ LARGEST RESIDUAL FORCE              137.       AT NODE      10135   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.141E-02   AT NODE      20105   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.143       AT NODE      20150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.925E-03   AT NODE      10136   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.969E-03   AT NODE      20145   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -2.619E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.609E+07   TIME AVG. MOMENT      2.567E+07
+ LARGEST RESIDUAL MOMENT             6.16       AT NODE     100013   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.274E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     7.358E-05   AT NODE      20136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.097E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.456E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  9.707E-03,  FRACTION OF STEP COMPLETED  2.912E-02
+ STEP TIME COMPLETED       2.912E-02,  TOTAL TIME COMPLETED         1.03    
+
+
+  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.456E-02
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.460E+06   TIME AVG. FORCE       5.409E+06
+ LARGEST RESIDUAL FORCE             2.519E+05   AT NODE      10135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -6.952E-02   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.145       AT NODE      10150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.350E+07   TIME AVG. MOMENT      2.386E+07
- LARGEST RESIDUAL MOMENT            2.025E+04   AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.446E+07   TIME AVG. MOMENT      2.536E+07
+ LARGEST RESIDUAL MOMENT           -3.514E+04   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -8.131E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -6.773E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.565E-04   AT NODE      10144   DOF  4
+ LARGEST CORRECTION TO ROTATION    -2.764E-03   AT NODE      10136   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    2.317E-05
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.470E+06   TIME AVG. FORCE       5.409E+06
+ LARGEST RESIDUAL FORCE             1.477E+04   AT NODE      10135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.109       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.946E-02   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.465E+07   TIME AVG. MOMENT      2.537E+07
+ LARGEST RESIDUAL MOMENT            -739.       AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.195E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     7.317E-04   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    1.539E-05
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      2.465E+06   TIME AVG. FORCE       5.409E+06
+ LARGEST RESIDUAL FORCE              131.       AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.110       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.380E-03   AT NODE      10144   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.226E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.463E+07   TIME AVG. MOMENT      2.537E+07
+ LARGEST RESIDUAL MOMENT             75.2       AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.203E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     6.286E-05   AT NODE      10136   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    2.184E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.456E-02,  FRACTION OF STEP COMPLETED  4.368E-02
+ STEP TIME COMPLETED       4.368E-02,  TOTAL TIME COMPLETED         1.04    
+
+
+  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.184E-02
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.517E+06   TIME AVG. FORCE       5.333E+06
+ LARGEST RESIDUAL FORCE             1.724E+05   AT NODE      20135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -5.643E-02   AT NODE      10085   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.114       AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.411E+07   TIME AVG. MOMENT      2.507E+07
+ LARGEST RESIDUAL MOMENT           -1.556E+05   AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.189E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.615E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.528E+06   TIME AVG. FORCE       5.333E+06
+ LARGEST RESIDUAL FORCE             1.245E+04   AT NODE      10135   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.446E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.320E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.425E+07   TIME AVG. MOMENT      2.507E+07
+ LARGEST RESIDUAL MOMENT            1.524E+04   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.831E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -6.421E-04   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    6.289E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      2.522E+06   TIME AVG. FORCE       5.333E+06
+ LARGEST RESIDUAL FORCE            -1.431E+03   AT NODE      20124   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.495E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.133E-04   AT NODE      20143   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.433E+07   TIME AVG. MOMENT      2.508E+07
+ LARGEST RESIDUAL MOMENT           -1.539E+03   AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.853E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.531E-05   AT NODE      20124   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    3.276E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.184E-02,  FRACTION OF STEP COMPLETED  6.552E-02
+ STEP TIME COMPLETED       6.552E-02,  TOTAL TIME COMPLETED         1.07    
+
+
+  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.276E-02
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.799E+06   TIME AVG. FORCE       5.268E+06
+ LARGEST RESIDUAL FORCE            -2.051E+05   AT NODE      10124   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -9.878E-02   AT NODE      20082   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        8.982E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.374E+07   TIME AVG. MOMENT      2.479E+07
+ LARGEST RESIDUAL MOMENT            1.401E+06   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.172E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     4.607E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.806E+06   TIME AVG. FORCE       5.268E+06
+ LARGEST RESIDUAL FORCE             3.771E+04   AT NODE      10124   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.302E-02   AT NODE      20082   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -2.716E-02   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.376E+07   TIME AVG. MOMENT      2.479E+07
+ LARGEST RESIDUAL MOMENT           -2.575E+05   AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -8.073E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.004E-04   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      2.811E+06   TIME AVG. FORCE       5.269E+06
+ LARGEST RESIDUAL FORCE             9.600E+04   AT NODE      10124   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.264E-02   AT NODE      20085   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.154E-03   AT NODE      10116   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.388E+07   TIME AVG. MOMENT      2.479E+07
+ LARGEST RESIDUAL MOMENT            2.285E+04   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -8.112E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.891E-04   AT NODE      20124   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    2.565E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3447,21 +3447,21 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      2.658E+06   TIME AVG. FORCE       4.977E+06
- LARGEST RESIDUAL FORCE              22.1       AT NODE      10144   DOF  2
+ AVERAGE FORCE                      2.814E+06   TIME AVG. FORCE       5.269E+06
+ LARGEST RESIDUAL FORCE              86.8       AT NODE      10124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.140E-02   AT NODE      20105   DOF  3
+ LARGEST INCREMENT OF DISP.        -8.263E-02   AT NODE      20085   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.215E-05   AT NODE      10143   DOF  3
+ LARGEST CORRECTION TO DISP.        6.241E-05   AT NODE      10123   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     1.355E+07   TIME AVG. MOMENT      2.386E+07
- LARGEST RESIDUAL MOMENT            -8.86       AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.393E+07   TIME AVG. MOMENT      2.479E+07
+ LARGEST RESIDUAL MOMENT            -23.9       AT NODE      10124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -8.130E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -8.111E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.415E-06   AT NODE      20144   DOF  4
+ LARGEST CORRECTION TO ROTATION    -8.731E-06   AT NODE      20124   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
           TIME INCREMENT MAY NOW INCREASE TO    4.914E-02
@@ -3475,7 +3475,7 @@
 
   INCREMENT    40 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.914E-02
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3491,25 +3491,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.980E+06   TIME AVG. FORCE       4.927E+06
- LARGEST RESIDUAL FORCE             2.302E+05   AT NODE      10143   DOF  1
+ AVERAGE FORCE                      3.255E+06   TIME AVG. FORCE       5.218E+06
+ LARGEST RESIDUAL FORCE             2.310E+05   AT NODE      20123   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.155       AT NODE      20104   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.156       AT NODE      20082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        6.875E-02   AT NODE      20180   DOF  3
+ LARGEST CORRECTION TO DISP.        6.791E-02   AT NODE      10150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.210E+07   TIME AVG. MOMENT      2.356E+07
- LARGEST RESIDUAL MOMENT           -4.891E+05   AT NODE      10064   DOF  6
+ AVERAGE MOMENT                     1.351E+07   TIME AVG. MOMENT      2.451E+07
+ LARGEST RESIDUAL MOMENT            5.764E+05   AT NODE      10124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.754E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -6.718E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.441E-03   AT NODE      20144   DOF  5
+ LARGEST CORRECTION TO ROTATION     5.448E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3525,25 +3525,26 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      2.977E+06   TIME AVG. FORCE       4.927E+06
- LARGEST RESIDUAL FORCE             1.862E+04   AT NODE      20144   DOF  1
+ AVERAGE FORCE                      3.259E+06   TIME AVG. FORCE       5.218E+06
+ LARGEST RESIDUAL FORCE             1.434E+04   AT NODE      10124   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.142       AT NODE      10102   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.144       AT NODE      20082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.131E-02   AT NODE      10180   DOF  3
+ LARGEST CORRECTION TO DISP.       -2.107E-02   AT NODE      20150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+ ESTIMATE OF DISP.    CORRECTION   -1.307E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     1.211E+07   TIME AVG. MOMENT      2.357E+07
- LARGEST RESIDUAL MOMENT            1.269E+05   AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.350E+07   TIME AVG. MOMENT      2.451E+07
+ LARGEST RESIDUAL MOMENT           -9.762E+04   AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.906E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -7.874E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.152E-03   AT NODE      10144   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.156E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3552,30 +3553,30 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      2.983E+06   TIME AVG. FORCE       4.928E+06
- LARGEST RESIDUAL FORCE            -1.082E+04   AT NODE      20144   DOF  2
+ AVERAGE FORCE                      3.266E+06   TIME AVG. FORCE       5.219E+06
+ LARGEST RESIDUAL FORCE             1.188E+04   AT NODE      10124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.142       AT NODE      10104   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.143       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.737E-04   AT NODE      20135   DOF  3
+ LARGEST CORRECTION TO DISP.        7.281E-04   AT NODE      10123   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     1.222E+07   TIME AVG. MOMENT      2.357E+07
- LARGEST RESIDUAL MOMENT           -1.189E+04   AT NODE      20144   DOF  6
+ AVERAGE MOMENT                     1.363E+07   TIME AVG. MOMENT      2.451E+07
+ LARGEST RESIDUAL MOMENT            1.256E+04   AT NODE      10124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.967E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -7.936E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     9.746E-05   AT NODE      20143   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.017E-04   AT NODE      10124   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -9.137E-06
+ ESTIMATE OF ROTATION CORRECTION    1.308E-05
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
           TIME INCREMENT MAY NOW INCREASE TO    7.372E-02
 
@@ -3588,7 +3589,7 @@
 
   INCREMENT    41 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.372E-02
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3596,33 +3597,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      3.670E+06   TIME AVG. FORCE       4.897E+06
- LARGEST RESIDUAL FORCE             2.823E+05   AT NODE      20143   DOF  1
+ AVERAGE FORCE                      3.938E+06   TIME AVG. FORCE       5.187E+06
+ LARGEST RESIDUAL FORCE            -5.253E+05   AT NODE      20124   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.236       AT NODE      20102   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.237       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.047E-02   AT NODE      10180   DOF  3
+ LARGEST CORRECTION TO DISP.        4.977E-02   AT NODE      20150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.176E+07   TIME AVG. MOMENT      2.328E+07
- LARGEST RESIDUAL MOMENT            1.860E+06   AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.312E+07   TIME AVG. MOMENT      2.423E+07
+ LARGEST RESIDUAL MOMENT           -3.586E+06   AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.990E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -5.948E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.961E-03   AT NODE      10144   DOF  5
+ LARGEST CORRECTION TO ROTATION     5.956E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3638,25 +3639,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      3.669E+06   TIME AVG. FORCE       4.897E+06
- LARGEST RESIDUAL FORCE             6.074E+04   AT NODE      10144   DOF  1
+ AVERAGE FORCE                      3.936E+06   TIME AVG. FORCE       5.187E+06
+ LARGEST RESIDUAL FORCE             9.584E+04   AT NODE      20124   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.226       AT NODE      20102   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.228       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.588E-02   AT NODE      20180   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.568E-02   AT NODE      10150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.178E+07   TIME AVG. MOMENT      2.328E+07
- LARGEST RESIDUAL MOMENT           -4.156E+05   AT NODE      20144   DOF  6
+ AVERAGE MOMENT                     1.313E+07   TIME AVG. MOMENT      2.423E+07
+ LARGEST RESIDUAL MOMENT            6.560E+05   AT NODE      10124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.367E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -7.334E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.378E-03   AT NODE      20144   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.387E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3664,34 +3665,34 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      3.677E+06   TIME AVG. FORCE       4.897E+06
- LARGEST RESIDUAL FORCE             1.103E+05   AT NODE      10144   DOF  2
+ AVERAGE FORCE                      3.948E+06   TIME AVG. FORCE       5.188E+06
+ LARGEST RESIDUAL FORCE            -2.999E+05   AT NODE      20124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.226       AT NODE      20104   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.228       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.281E-03   AT NODE      10136   DOF  3
+ LARGEST CORRECTION TO DISP.        3.635E-03   AT NODE      20116   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.186E+07   TIME AVG. MOMENT      2.328E+07
- LARGEST RESIDUAL MOMENT            4.240E+04   AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.323E+07   TIME AVG. MOMENT      2.424E+07
+ LARGEST RESIDUAL MOMENT           -6.601E+04   AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.436E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -7.399E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.097E-04   AT NODE      10144   DOF  4
+ LARGEST CORRECTION TO ROTATION     5.107E-04   AT NODE      10124   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    3.160E-05
+ ESTIMATE OF ROTATION CORRECTION   -5.138E-05
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3699,29 +3700,29 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      3.683E+06   TIME AVG. FORCE       4.897E+06
- LARGEST RESIDUAL FORCE              16.9       AT NODE      10144   DOF  2
+ AVERAGE FORCE                      3.956E+06   TIME AVG. FORCE       5.188E+06
+ LARGEST RESIDUAL FORCE             -860.       AT NODE      20124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.226       AT NODE      20104   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.228       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.830E-05   AT NODE      10143   DOF  3
+ LARGEST CORRECTION TO DISP.        1.945E-04   AT NODE      20116   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     1.191E+07   TIME AVG. MOMENT      2.328E+07
- LARGEST RESIDUAL MOMENT            -8.87       AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.331E+07   TIME AVG. MOMENT      2.424E+07
+ LARGEST RESIDUAL MOMENT             200.       AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.435E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -7.395E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.858E-06   AT NODE      20144   DOF  4
+ LARGEST CORRECTION TO ROTATION     2.741E-05   AT NODE      10124   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
           TIME INCREMENT MAY NOW INCREASE TO    0.111    
@@ -3735,7 +3736,41 @@
 
   INCREMENT    42 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.111    
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      4.984E+06   TIME AVG. FORCE       5.183E+06
+ LARGEST RESIDUAL FORCE            -5.410E+05   AT NODE      20124   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.356       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.566E-02   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.283E+07   TIME AVG. MOMENT      2.397E+07
+ LARGEST RESIDUAL MOMENT           -3.691E+06   AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.092E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     6.001E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3746,64 +3781,30 @@
        ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      4.731E+06   TIME AVG. FORCE       4.893E+06
- LARGEST RESIDUAL FORCE             2.932E+05   AT NODE      10143   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.354       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.620E-02   AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.151E+07   TIME AVG. MOMENT      2.300E+07
- LARGEST RESIDUAL MOMENT           -1.318E+06   AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.133E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.019E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      4.732E+06   TIME AVG. FORCE       4.893E+06
- LARGEST RESIDUAL FORCE             2.476E+04   AT NODE      20144   DOF  1
+ AVERAGE FORCE                      4.976E+06   TIME AVG. FORCE       5.183E+06
+ LARGEST RESIDUAL FORCE             4.543E+04   AT NODE      20124   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.346       AT NODE      10103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.349       AT NODE      10082   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.148E-02   AT NODE      10180   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.131E-02   AT NODE      10150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.152E+07   TIME AVG. MOMENT      2.300E+07
- LARGEST RESIDUAL MOMENT            1.695E+05   AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.284E+07   TIME AVG. MOMENT      2.397E+07
+ LARGEST RESIDUAL MOMENT            3.114E+05   AT NODE      10124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.639E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -6.601E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.506E-03   AT NODE      10144   DOF  5
+ LARGEST CORRECTION TO ROTATION    -1.509E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3811,34 +3812,181 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      4.745E+06   TIME AVG. FORCE       4.894E+06
- LARGEST RESIDUAL FORCE            -3.387E+04   AT NODE      20144   DOF  2
+ AVERAGE FORCE                      4.997E+06   TIME AVG. FORCE       5.183E+06
+ LARGEST RESIDUAL FORCE            -2.221E+05   AT NODE      20124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.346       AT NODE      10103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.349       AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.271E-03   AT NODE      20136   DOF  3
+ LARGEST CORRECTION TO DISP.        3.118E-03   AT NODE      20116   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.161E+07   TIME AVG. MOMENT      2.301E+07
- LARGEST RESIDUAL MOMENT           -2.064E+04   AT NODE      20144   DOF  6
+ AVERAGE MOMENT                     1.293E+07   TIME AVG. MOMENT      2.397E+07
+ LARGEST RESIDUAL MOMENT           -5.115E+04   AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.700E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -6.659E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.715E-04   AT NODE      20144   DOF  4
+ LARGEST CORRECTION TO ROTATION     4.394E-04   AT NODE      20124   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.089E-05
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      5.007E+06   TIME AVG. FORCE       5.183E+06
+ LARGEST RESIDUAL FORCE             0.856       AT NODE      10044   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.349       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.445E-05   AT NODE      10114   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.299E+07   TIME AVG. MOMENT      2.397E+07
+ LARGEST RESIDUAL MOMENT           -0.823       AT NODE      20044   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.658E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.102E-06   AT NODE      10046   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    0.166    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.111    ,  FRACTION OF STEP COMPLETED  0.332    
+ STEP TIME COMPLETED       0.332    ,  TOTAL TIME COMPLETED         1.33    
+
+
+  INCREMENT    43 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.166    
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.548E+06   TIME AVG. FORCE       5.215E+06
+ LARGEST RESIDUAL FORCE            -3.968E+05   AT NODE      10124   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.529       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.523E-02   AT NODE      10150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.231E+07   TIME AVG. MOMENT      2.370E+07
+ LARGEST RESIDUAL MOMENT            2.705E+06   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -4.407E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     5.580E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      6.560E+06   TIME AVG. FORCE       5.215E+06
+ LARGEST RESIDUAL FORCE            -1.883E+04   AT NODE      10125   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.524       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -7.978E-03   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -3.785E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.234E+07   TIME AVG. MOMENT      2.370E+07
+ LARGEST RESIDUAL MOMENT            1.002E+05   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.909E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.501E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      6.570E+06   TIME AVG. FORCE       5.216E+06
+ LARGEST RESIDUAL FORCE             6.087E+04   AT NODE      10124   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.524       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.653E-03   AT NODE      10116   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     1.242E+07   TIME AVG. MOMENT      2.370E+07
+ LARGEST RESIDUAL MOMENT            1.808E+04   AT NODE      10124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.948E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.300E-04   AT NODE      10124   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -4.151E-05
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -3854,107 +4002,27 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      4.750E+06   TIME AVG. FORCE       4.894E+06
- LARGEST RESIDUAL FORCE              5.99       AT NODE      10144   DOF  2
+ AVERAGE FORCE                      6.578E+06   TIME AVG. FORCE       5.216E+06
+ LARGEST RESIDUAL FORCE              3.03       AT NODE      10124   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.346       AT NODE      10103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.524       AT NODE      10083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.815E-05   AT NODE      10135   DOF  3
+ LARGEST CORRECTION TO DISP.        1.388E-05   AT NODE      10052   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     1.165E+07   TIME AVG. MOMENT      2.301E+07
- LARGEST RESIDUAL MOMENT            0.830       AT NODE      10064   DOF  6
+ AVERAGE MOMENT                     1.247E+07   TIME AVG. MOMENT      2.370E+07
+ LARGEST RESIDUAL MOMENT            -1.44       AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.700E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -5.948E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.320E-06   AT NODE      20143   DOF  4
+ LARGEST CORRECTION TO ROTATION     1.727E-06   AT NODE      10122   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    0.166    
+          TIME INCREMENT MAY NOW INCREASE TO    0.249    
 
  ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  0.111    ,  FRACTION OF STEP COMPLETED  0.332    
- STEP TIME COMPLETED       0.332    ,  TOTAL TIME COMPLETED         1.33    
-
-
-  INCREMENT    43 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.166    
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.322E+06   TIME AVG. FORCE       4.927E+06
- LARGEST RESIDUAL FORCE             2.573E+05   AT NODE      10143   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.526       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.563E-02   AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.110E+07   TIME AVG. MOMENT      2.273E+07
- LARGEST RESIDUAL MOMENT           -2.005E+05   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.439E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.610E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      6.337E+06   TIME AVG. FORCE       4.927E+06
- LARGEST RESIDUAL FORCE            -1.893E+04   AT NODE      20145   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.521       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -8.104E-03   AT NODE      10180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    5.964E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     1.119E+07   TIME AVG. MOMENT      2.273E+07
- LARGEST RESIDUAL MOMENT           -6.498E+03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.946E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.506E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -4.881E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    0.249    
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
  TIME INCREMENT COMPLETED  0.166    ,  FRACTION OF STEP COMPLETED  0.498    
  STEP TIME COMPLETED       0.498    ,  TOTAL TIME COMPLETED         1.50    
@@ -3962,41 +4030,7 @@
 
   INCREMENT    44 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.249    
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.652E+06   TIME AVG. FORCE       5.012E+06
- LARGEST RESIDUAL FORCE             1.807E+05   AT NODE      10143   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.777       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.817E-02   AT NODE      20180   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     1.052E+07   TIME AVG. MOMENT      2.245E+07
- LARGEST RESIDUAL MOMENT           -7.497E+05   AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.205E-03   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.713E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4009,28 +4043,73 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      8.662E+06   TIME AVG. FORCE       5.012E+06
- LARGEST RESIDUAL FORCE             2.515E+04   AT NODE      10144   DOF  1
+ AVERAGE FORCE                      8.900E+06   TIME AVG. FORCE       5.300E+06
+ LARGEST RESIDUAL FORCE             1.892E+05   AT NODE      10123   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.773       AT NODE      10103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.781       AT NODE      10083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -5.621E-03   AT NODE      20180   DOF  3
+ LARGEST CORRECTION TO DISP.        1.791E-02   AT NODE      20150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.053E+07   TIME AVG. MOMENT      2.245E+07
- LARGEST RESIDUAL MOMENT           -1.717E+05   AT NODE      20144   DOF  6
+ AVERAGE MOMENT                     1.175E+07   TIME AVG. MOMENT      2.343E+07
+ LARGEST RESIDUAL MOMENT           -2.244E+05   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.533E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -4.098E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.328E-03   AT NODE      20144   DOF  5
+ LARGEST CORRECTION TO ROTATION     4.824E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           MOMENT    EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      8.912E+06   TIME AVG. FORCE       5.300E+06
+ LARGEST RESIDUAL FORCE            -1.579E+04   AT NODE      20125   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.777       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.536E-03   AT NODE      20150   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.180E+07   TIME AVG. MOMENT      2.343E+07
+ LARGEST RESIDUAL MOMENT           -4.249E+03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.464E-03   AT NODE      10124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.366E-03   AT NODE      20124   DOF  5
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.587E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    0.373    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.249    ,  FRACTION OF STEP COMPLETED  0.746    
+ STEP TIME COMPLETED       0.746    ,  TOTAL TIME COMPLETED         1.75    
+
+
+  INCREMENT    45 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.254    
+
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4043,72 +4122,28 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      8.691E+06   TIME AVG. FORCE       5.013E+06
- LARGEST RESIDUAL FORCE            -1.786E+03   AT NODE      20144   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.773       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.051E-04   AT NODE      20136   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.062E+07   TIME AVG. MOMENT      2.246E+07
- LARGEST RESIDUAL MOMENT           -1.431E+03   AT NODE      20144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.551E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.937E-05   AT NODE      20144   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    0.373    
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  0.249    ,  FRACTION OF STEP COMPLETED  0.746    
- STEP TIME COMPLETED       0.746    ,  TOTAL TIME COMPLETED         1.75    
-
-
-  INCREMENT    45 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.254    
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.106E+07   TIME AVG. FORCE       5.147E+06
- LARGEST RESIDUAL FORCE             3.892E+04   AT NODE      20143   DOF  1
+ AVERAGE FORCE                      1.127E+07   TIME AVG. FORCE       5.433E+06
+ LARGEST RESIDUAL FORCE             3.451E+04   AT NODE      20123   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.776       AT NODE      20103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.779       AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.258E-02   AT NODE      20105   DOF  3
+ LARGEST CORRECTION TO DISP.        1.299E-02   AT NODE      20085   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- AVERAGE MOMENT                     1.003E+07   TIME AVG. MOMENT      2.218E+07
- LARGEST RESIDUAL MOMENT           -9.547E+04   AT NODE      20144   DOF  5
+ AVERAGE MOMENT                     1.121E+07   TIME AVG. MOMENT      2.316E+07
+ LARGEST RESIDUAL MOMENT           -9.001E+04   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.419E-03   AT NODE      20144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -3.454E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.240E-03   AT NODE      10144   DOF  5
+ LARGEST CORRECTION TO ROTATION     2.116E-03   AT NODE      10124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
+  NUMBER OF EQUATIONS =      3776     NUMBER OF FLOATING PT. OPERATIONS =  9.34E+05
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4116,74 +4151,41 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.106E+07   TIME AVG. FORCE       5.147E+06
- LARGEST RESIDUAL FORCE             2.294E+03   AT NODE      20144   DOF  1
+ AVERAGE FORCE                      1.127E+07   TIME AVG. FORCE       5.433E+06
+ LARGEST RESIDUAL FORCE            -1.863E+03   AT NODE      20125   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.775       AT NODE      20103   DOF  3
+ LARGEST INCREMENT OF DISP.        -0.778       AT NODE      20083   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.619E-03   AT NODE      10179   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.005E+07   TIME AVG. MOMENT      2.218E+07
- LARGEST RESIDUAL MOMENT            1.548E+04   AT NODE      10144   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.912E-03   AT NODE      20144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.930E-04   AT NODE      10144   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      4416     NUMBER OF FLOATING PT. OPERATIONS =  1.12E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.107E+07   TIME AVG. FORCE       5.147E+06
- LARGEST RESIDUAL FORCE             -1.63       AT NODE      20143   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.775       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.476E-06   AT NODE      10127   DOF  3
+ LARGEST CORRECTION TO DISP.       -1.591E-03   AT NODE      20150   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     1.007E+07   TIME AVG. MOMENT      2.218E+07
- LARGEST RESIDUAL MOMENT            0.972       AT NODE      10144   DOF  6
+ AVERAGE MOMENT                     1.121E+07   TIME AVG. MOMENT      2.316E+07
+ LARGEST RESIDUAL MOMENT            -551.       AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.913E-03   AT NODE      10144   DOF  5
+ LARGEST INCREMENT OF ROTATION     -3.918E-03   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.147E-06   AT NODE      10144   DOF  5
+ LARGEST CORRECTION TO ROTATION    -4.636E-04   AT NODE      20124   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+ ESTIMATE OF ROTATION CORRECTION   -2.836E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
  TIME INCREMENT COMPLETED  0.254    ,  FRACTION OF STEP COMPLETED   1.00    
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         2.00    
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 18-Feb-2022   Time 13:26:16
+   Abaqus 3DEXPERIENCE R2017x                                  Date 28-Feb-2022   Time 13:21:31
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -4276,7 +4278,7 @@
 
      LINEAR EXTRAPOLATION WILL BE USED
 
-     CHARACTERISTIC ELEMENT LENGTH      14.8    
+     CHARACTERISTIC ELEMENT LENGTH      15.4    
 
      DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
 
@@ -4296,12 +4298,12 @@
  
      INITIAL ELEMENT LOAD BALANCE
         COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
-                              1            256
-                              2            301
-                              3            512
-                              4            512
+                              1            477
+                              2            512
+                              3            256
+                              4            256
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4309,33 +4311,34 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE             0.227       AT NODE      11156   DOF  3
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE             -1.57       AT NODE      10123   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.466E-04   AT NODE     400002   DOF  1
+ LARGEST INCREMENT OF DISP.        -8.579E-05   AT NODE      11001   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.466E-04   AT NODE     400002   DOF  1
+ LARGEST CORRECTION TO DISP.       -8.579E-05   AT NODE      11001   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+ ESTIMATE OF DISP.    CORRECTION   -7.244E-08
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT            0.810       AT NODE      20072   DOF  6
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT            -352.       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.976E-06   AT NODE      20088   DOF  4
+ LARGEST INCREMENT OF ROTATION      8.240E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.976E-06   AT NODE      20088   DOF  4
+ LARGEST CORRECTION TO ROTATION     8.240E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4343,33 +4346,282 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE            -7.930E-02   AT NODE     101104   DOF  1
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE             0.289       AT NODE      10096   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.554E-04   AT NODE     400002   DOF  1
+ LARGEST INCREMENT OF DISP.        -8.199E-05   AT NODE      11001   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.125E-05   AT NODE     400002   DOF  1
+ LARGEST CORRECTION TO DISP.        1.557E-05   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT             1.30       AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT             72.6       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.694E-06   AT NODE      10105   DOF  4
+ LARGEST INCREMENT OF ROTATION      6.626E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.369E-06   AT NODE      20112   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.614E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE            -0.146       AT NODE      10096   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.193E-05   AT NODE      11001   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.293E-06   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT            -34.8       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.407E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     7.807E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE             0.126       AT NODE      10082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.195E-05   AT NODE      11001   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.849E-06   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT             14.2       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.078E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.294E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE            -0.126       AT NODE      10082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.194E-05   AT NODE      11001   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.513E-06   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT            -6.78       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.239E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.617E-05   AT NODE      20107   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
+
+
+ AVERAGE FORCE                      1.131E+07   TIME AVG. FORCE       1.131E+07
+ LARGEST RESIDUAL FORCE            -7.407E-02   AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -8.194E-05   AT NODE      11001   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        8.329E-07   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.127E+07   TIME AVG. MOMENT      1.127E+07
+ LARGEST RESIDUAL MOMENT             3.40       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.156E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -8.415E-06   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.217E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ ITERATION SUMMARY FOR THE INCREMENT:   6 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  6 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-06,  FRACTION OF STEP COMPLETED  1.000E-06
+ STEP TIME COMPLETED       1.000E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE              1.52       AT NODE      10123   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.466E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.334E-05   AT NODE     401002   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.906E-08
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             348.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -9.797E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -8.136E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -0.291       AT NODE      10096   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.480E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.493E-05   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            -69.5       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      5.561E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.536E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             0.146       AT NODE      10096   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.483E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.872E-06   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             33.2       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.837E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -7.398E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4382,62 +4634,28 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE             0.111       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.529E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.453E-06   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT           -0.619       AT NODE      20136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.741E-07   AT NODE      20072   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.621E-06   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE            -7.930E-02   AT NODE     101104   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -0.120       AT NODE      10082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.529E-04   AT NODE     400002   DOF  1
+ LARGEST INCREMENT OF DISP.        -7.481E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.722E-08   AT NODE      20102   DOF  2
+ LARGEST CORRECTION TO DISP.       -2.608E-06   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT            0.365       AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            -13.3       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.090E-06   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.226E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -9.590E-07   AT NODE      20112   DOF  4
+ LARGEST CORRECTION TO ROTATION     3.062E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4445,33 +4663,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE            -7.967E-02   AT NODE     101102   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             0.130       AT NODE      10082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.529E-04   AT NODE     400002   DOF  1
+ LARGEST INCREMENT OF DISP.        -7.482E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -5.632E-08   AT NODE      20102   DOF  2
+ LARGEST CORRECTION TO DISP.        1.372E-06   AT NODE      20090   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT           -0.204       AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             6.26       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.960E-07   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION     -2.641E-06   AT NODE      20101   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.371E-07   AT NODE      20112   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.487E-05   AT NODE      20107   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -4487,945 +4705,31 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
 
 
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE             0.111       AT NODE     101104   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -0.130       AT NODE      10082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.529E-04   AT NODE     400002   DOF  1
+ LARGEST INCREMENT OF DISP.        -7.481E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.168E-08   AT NODE      20102   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT            0.116       AT NODE      20136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      8.763E-07   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.046E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     7
-
-
- AVERAGE FORCE                      1.111E+07   TIME AVG. FORCE       1.111E+07
- LARGEST RESIDUAL FORCE            -7.930E-02   AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -3.529E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.794E-08   AT NODE      20102   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.013E+07   TIME AVG. MOMENT      1.013E+07
- LARGEST RESIDUAL MOMENT           -7.296E-02   AT NODE      12309   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      7.179E-07   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.722E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- ITERATION SUMMARY FOR THE INCREMENT:   7 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  7 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.000E-06,  FRACTION OF STEP COMPLETED  1.000E-06
- STEP TIME COMPLETED       1.000E-06,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.112E+07
- LARGEST RESIDUAL FORCE            -9.218E-02   AT NODE     201104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.048E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.482E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.011E+07
- LARGEST RESIDUAL MOMENT           -0.244       AT NODE      20072   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -9.260E-07   AT NODE      20106   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -5.924E-07   AT NODE      20080   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.112E+07
- LARGEST RESIDUAL FORCE             8.178E-02   AT NODE     101103   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.304E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.568E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.011E+07
- LARGEST RESIDUAL MOMENT           -0.132       AT NODE      20136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      6.870E-07   AT NODE      10105   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.243E-07   AT NODE      20120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.112E+07
- LARGEST RESIDUAL FORCE             9.827E-02   AT NODE     201104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.305E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -6.260E-08   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.011E+07
- LARGEST RESIDUAL MOMENT           -9.457E-02   AT NODE     210042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.915E-07   AT NODE      20105   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.831E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.000E-06,  FRACTION OF STEP COMPLETED  2.000E-06
- STEP TIME COMPLETED       2.000E-06,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -8.924E-02   AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.506E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.988E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT           -0.117       AT NODE      20136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.881E-07   AT NODE      10105   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.056E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -5.515E-02   AT NODE     100042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.624E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.181E-05   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT           -6.799E-02   AT NODE      11311   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      6.747E-07   AT NODE      10105   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.726E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    1.500E-06
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.000E-06,  FRACTION OF STEP COMPLETED  3.000E-06
- STEP TIME COMPLETED       3.000E-06,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.500E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             9.371E-02   AT NODE     100042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.538E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        8.982E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT           -0.126       AT NODE     100042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      9.373E-07   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     8.844E-08   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.106       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.701E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.631E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT            0.104       AT NODE     400002   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      9.795E-07   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.978E-08   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -6.835E-02   AT NODE     201104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.701E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.027E-08   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT           -8.805E-02   AT NODE     400002   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      9.557E-07   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.810E-08   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    2.250E-06
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.500E-06,  FRACTION OF STEP COMPLETED  4.500E-06
- STEP TIME COMPLETED       4.500E-06,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.250E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -0.125       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.398E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.154E-04   AT NODE     400002   DOF  1
+ LARGEST CORRECTION TO DISP.       -7.540E-07   AT NODE      20090   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT            0.125       AT NODE     100042   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            -3.11       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.570E-06   AT NODE      20104   DOF  4
+ LARGEST INCREMENT OF ROTATION      5.411E-06   AT NODE      10100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.856E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -7.601E-02   AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.645E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.468E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     1.009E+07   TIME AVG. MOMENT      1.010E+07
- LARGEST RESIDUAL MOMENT            9.772E-02   AT NODE      11311   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.480E-06   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.054E-07   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    3.375E-06
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.250E-06,  FRACTION OF STEP COMPLETED  6.750E-06
- STEP TIME COMPLETED       6.750E-06,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.375E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.100       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.157E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.311E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     9.853E+06   TIME AVG. MOMENT      1.006E+07
- LARGEST RESIDUAL MOMENT           -0.136       AT NODE     100042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.323E-06   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.255E-07   AT NODE      20096   DOF  4
+ LARGEST CORRECTION TO ROTATION     7.654E-06   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+ 
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+ ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
 
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
-     CHECK POINT   START OF SOLVER    
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  2.500E-07
 
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             5.224E-02   AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.475E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.184E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     9.853E+06   TIME AVG. MOMENT      1.006E+07
- LARGEST RESIDUAL MOMENT            6.517E-02   AT NODE      12291   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.252E-06   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.163E-08   AT NODE      20112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    5.062E-06
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.375E-06,  FRACTION OF STEP COMPLETED  1.012E-05
- STEP TIME COMPLETED       1.012E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.062E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -0.115       AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.606E-04   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.328E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     9.653E+06   TIME AVG. MOMENT      1.000E+07
- LARGEST RESIDUAL MOMENT           -0.127       AT NODE     200042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.391E-06   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.398E-08   AT NODE      20094   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.104       AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.606E-04   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.546E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     9.653E+06   TIME AVG. MOMENT      1.000E+07
- LARGEST RESIDUAL MOMENT            0.106       AT NODE     100042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.382E-06   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     9.017E-09   AT NODE      20094   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    7.594E-06
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.062E-06,  FRACTION OF STEP COMPLETED  1.519E-05
- STEP TIME COMPLETED       1.519E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.594E-06
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             7.414E-02   AT NODE     201004   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.409E-04   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.215E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     9.513E+06   TIME AVG. MOMENT      9.940E+06
- LARGEST RESIDUAL MOMENT            8.117E-02   AT NODE     210042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.034E-06   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.633E-08   AT NODE      20113   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    1.139E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.594E-06,  FRACTION OF STEP COMPLETED  2.278E-05
- STEP TIME COMPLETED       2.278E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.139E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.50000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.50000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -0.101       AT NODE     200042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         3.613E-04   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.205E-05   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     9.095E+06   TIME AVG. MOMENT      9.846E+06
- LARGEST RESIDUAL MOMENT            0.148       AT NODE     200042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.562E-06   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.274E-08   AT NODE      20128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    1.709E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.139E-05,  FRACTION OF STEP COMPLETED  3.417E-05
- STEP TIME COMPLETED       3.417E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.709E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.127       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -5.417E-04   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.798E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
-
- AVERAGE MOMENT                     8.717E+06   TIME AVG. MOMENT      9.733E+06
- LARGEST RESIDUAL MOMENT           -0.113       AT NODE     200042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.133E-05   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.888E-08   AT NODE      20128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.50000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -0.111       AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         5.417E-04   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -5.583E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     8.717E+06   TIME AVG. MOMENT      9.733E+06
- LARGEST RESIDUAL MOMENT            9.274E-02   AT NODE     110042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.132E-05   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.067E-08   AT NODE      20120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    2.563E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.709E-05,  FRACTION OF STEP COMPLETED  5.126E-05
- STEP TIME COMPLETED       5.126E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.563E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.107       AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.121E-04   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        4.543E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.589E+06   TIME AVG. MOMENT      9.629E+06
- LARGEST RESIDUAL MOMENT            9.706E-02   AT NODE     200042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.705E-05   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.849E-08   AT NODE      10097   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    3.844E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.563E-05,  FRACTION OF STEP COMPLETED  7.689E-05
- STEP TIME COMPLETED       7.689E-05,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.844E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             9.016E-02   AT NODE       1001   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.217E-03   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -9.900E-06   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.098E+06   TIME AVG. MOMENT      9.502E+06
- LARGEST RESIDUAL MOMENT           -0.108       AT NODE     400002   DOF  5
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.550E-05   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -9.792E-08   AT NODE      10112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    5.767E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.844E-05,  FRACTION OF STEP COMPLETED  1.153E-04
- STEP TIME COMPLETED       1.153E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.767E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE            -5.826E-02   AT NODE     201102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.823E-03   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.451E-05   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.061E+06   TIME AVG. MOMENT      9.391E+06
- LARGEST RESIDUAL MOMENT           -8.318E-02   AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.843E-05   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.178E-07   AT NODE      10112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-          TIME INCREMENT MAY NOW INCREASE TO    8.650E-05
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.767E-05,  FRACTION OF STEP COMPLETED  1.730E-04
- STEP TIME COMPLETED       1.730E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.650E-05
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             5.380E-02   AT NODE     101004   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         2.730E-03   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -7.656E-05   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.044E+06   TIME AVG. MOMENT      9.295E+06
- LARGEST RESIDUAL MOMENT            0.121       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.743E-05   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.210E-07   AT NODE      10113   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    1.297E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.650E-05,  FRACTION OF STEP COMPLETED  2.595E-04
- STEP TIME COMPLETED       2.595E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.297E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -5441,401 +4745,26 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.114E+07   TIME AVG. FORCE       1.114E+07
- LARGEST RESIDUAL FORCE            -8.464E-02   AT NODE     101102   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             0.382       AT NODE      10123   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.083E-03   AT NODE      20104   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.933E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.628E-04   AT NODE     400002   DOF  1
+ LARGEST CORRECTION TO DISP.        5.583E-06   AT NODE     401002   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.028E+06   TIME AVG. MOMENT      9.210E+06
- LARGEST RESIDUAL MOMENT           -0.307       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      8.680E-05   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     8.038E-07   AT NODE      10112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    1.946E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.297E-04,  FRACTION OF STEP COMPLETED  3.892E-04
- STEP TIME COMPLETED       3.892E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.946E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.115E+07   TIME AVG. FORCE       1.114E+07
- LARGEST RESIDUAL FORCE             9.621E-02   AT NODE     101103   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         6.098E-03   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.476E-04   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     8.027E+06   TIME AVG. MOMENT      9.136E+06
- LARGEST RESIDUAL MOMENT            0.395       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.295E-04   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.047E-06   AT NODE      10118   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    2.919E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.946E-04,  FRACTION OF STEP COMPLETED  5.839E-04
- STEP TIME COMPLETED       5.839E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.919E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.109E+07   TIME AVG. FORCE       1.113E+07
- LARGEST RESIDUAL FORCE             0.217       AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -9.089E-03   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        4.342E-04   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    4.262E-07
+ ESTIMATE OF DISP.    CORRECTION    4.581E-09
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
- AVERAGE MOMENT                     8.007E+06   TIME AVG. MOMENT      9.070E+06
- LARGEST RESIDUAL MOMENT           -0.876       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             85.7       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.955E-04   AT NODE      10104   DOF  4
+ LARGEST INCREMENT OF ROTATION     -2.119E-05   AT NODE      20109   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.025E-06   AT NODE      10127   DOF  4
+ LARGEST CORRECTION TO ROTATION    -2.001E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.535E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    4.379E-04
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.919E-04,  FRACTION OF STEP COMPLETED  8.758E-04
- STEP TIME COMPLETED       8.758E-04,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.379E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.096E+07   TIME AVG. FORCE       1.112E+07
- LARGEST RESIDUAL FORCE            -0.603       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.350E-02   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -7.197E-04   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    8.757E-07
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.998E+06   TIME AVG. MOMENT      9.010E+06
- LARGEST RESIDUAL MOMENT             1.53       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.898E-04   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.790E-06   AT NODE      10117   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    2.828E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    6.568E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.379E-04,  FRACTION OF STEP COMPLETED  1.314E-03
- STEP TIME COMPLETED       1.314E-03,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.568E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      9.652E+06   TIME AVG. FORCE       1.105E+07
- LARGEST RESIDUAL FORCE              1.78       AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.996E-02   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.223E-03   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.962E-06
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.993E+06   TIME AVG. MOMENT      8.957E+06
- LARGEST RESIDUAL MOMENT            -4.07       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.427E-04   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.028E-05   AT NODE      10119   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -7.216E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    9.853E-04
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  6.568E-04,  FRACTION OF STEP COMPLETED  1.971E-03
- STEP TIME COMPLETED       1.971E-03,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.853E-04
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      9.440E+06   TIME AVG. FORCE       1.097E+07
- LARGEST RESIDUAL FORCE              5.24       AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         2.931E-02   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.062E-03   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -4.358E-06
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.987E+06   TIME AVG. MOMENT      8.908E+06
- LARGEST RESIDUAL MOMENT             2.85       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -6.625E-04   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -7.043E-06   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.550E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.478E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.853E-04,  FRACTION OF STEP COMPLETED  2.956E-03
- STEP TIME COMPLETED       2.956E-03,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.478E-03
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.970E+06   TIME AVG. FORCE       1.087E+07
- LARGEST RESIDUAL FORCE              15.8       AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.259E-02   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.488E-03   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    9.986E-06
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.985E+06   TIME AVG. MOMENT      8.864E+06
- LARGEST RESIDUAL MOMENT            -14.4       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.024E-03   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.662E-05   AT NODE      10112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.823E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    2.217E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.478E-03,  FRACTION OF STEP COMPLETED  4.434E-03
- STEP TIME COMPLETED       4.434E-03,  TOTAL TIME COMPLETED         2.00    
-
-
-  INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.217E-03
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.310E+06   TIME AVG. FORCE       1.075E+07
- LARGEST RESIDUAL FORCE              48.6       AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         6.095E-02   AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -5.888E-03   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -2.342E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.982E+06   TIME AVG. MOMENT      8.824E+06
- LARGEST RESIDUAL MOMENT             9.69       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.525E-03   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.638E-05   AT NODE      10120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -4.007E-08
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    3.325E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.217E-03,  FRACTION OF STEP COMPLETED  6.651E-03
- STEP TIME COMPLETED       6.651E-03,  TOTAL TIME COMPLETED         2.01    
-
-
-  INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.325E-03
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.957E+06   TIME AVG. FORCE       1.063E+07
- LARGEST RESIDUAL FORCE              152.       AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -8.530E-02   AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        9.920E-03   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    5.603E-05
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.969E+06   TIME AVG. MOMENT      8.787E+06
- LARGEST RESIDUAL MOMENT            -49.9       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.391E-03   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.255E-04   AT NODE      10112   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -4.456E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    4.988E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.325E-03,  FRACTION OF STEP COMPLETED  9.976E-03
- STEP TIME COMPLETED       9.976E-03,  TOTAL TIME COMPLETED         2.01    
-
-
-  INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.988E-03
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -5846,422 +4775,30 @@
        ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.169E+06   TIME AVG. FORCE       1.049E+07
- LARGEST RESIDUAL FORCE              475.       AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         0.116       AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.661E-02   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.348E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.961E+06   TIME AVG. MOMENT      8.752E+06
- LARGEST RESIDUAL MOMENT             40.9       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.531E-03   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.105E-04   AT NODE      10120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.478E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    7.482E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.988E-03,  FRACTION OF STEP COMPLETED  1.496E-02
- STEP TIME COMPLETED       1.496E-02,  TOTAL TIME COMPLETED         2.01    
-
-
-  INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.482E-03
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.937E+06   TIME AVG. FORCE       1.035E+07
- LARGEST RESIDUAL FORCE             1.441E+03   AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.150       AT NODE      20104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.742E-02   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    3.126E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.792E+06   TIME AVG. MOMENT      8.714E+06
- LARGEST RESIDUAL MOMENT            -149.       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.573E-03   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     3.556E-04   AT NODE      10111   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -8.003E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.122E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.482E-03,  FRACTION OF STEP COMPLETED  2.245E-02
- STEP TIME COMPLETED       2.245E-02,  TOTAL TIME COMPLETED         2.02    
-
-
-  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.122E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.774E+06   TIME AVG. FORCE       1.021E+07
- LARGEST RESIDUAL FORCE             4.014E+03   AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         0.185       AT NODE      10104   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.403E-02   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -6.618E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.696E+06   TIME AVG. MOMENT      8.675E+06
- LARGEST RESIDUAL MOMENT             229.       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.952E-03   AT NODE      20104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -5.921E-04   AT NODE      10114   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -9.733E-07
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    1.683E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.122E-02,  FRACTION OF STEP COMPLETED  3.367E-02
- STEP TIME COMPLETED       3.367E-02,  TOTAL TIME COMPLETED         2.03    
-
-
-  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.683E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.941E+06   TIME AVG. FORCE       1.009E+07
- LARGEST RESIDUAL FORCE             9.760E+03   AT NODE      11156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.221       AT NODE      20102   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        6.718E-02   AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.175E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.634E+06   TIME AVG. MOMENT      8.636E+06
- LARGEST RESIDUAL MOMENT            -440.       AT NODE     400001   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.238E-02   AT NODE      10104   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.207E-04   AT NODE      10111   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.087E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    2.525E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.683E-02,  FRACTION OF STEP COMPLETED  5.050E-02
- STEP TIME COMPLETED       5.050E-02,  TOTAL TIME COMPLETED         2.05    
-
-
-  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.525E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.225E+06   TIME AVG. FORCE       9.986E+06
- LARGEST RESIDUAL FORCE             1.953E+04   AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.308       AT NODE      10102   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -9.480E-02   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.634E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.587E+06   TIME AVG. MOMENT      8.599E+06
- LARGEST RESIDUAL MOMENT            1.312E+03   AT NODE     401003   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.662E-02   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.539E-03   AT NODE      10113   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -5.626E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    3.788E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.525E-02,  FRACTION OF STEP COMPLETED  7.575E-02
- STEP TIME COMPLETED       7.575E-02,  TOTAL TIME COMPLETED         2.08    
-
-
-  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.788E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.607E+06   TIME AVG. FORCE       9.904E+06
- LARGEST RESIDUAL FORCE            -3.191E+04   AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.422       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.122       AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.717E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.539E+06   TIME AVG. MOMENT      8.562E+06
- LARGEST RESIDUAL MOMENT           -3.623E+03   AT NODE     400001   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.600E-02   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.946E-03   AT NODE      10119   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    5.952E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    5.682E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.788E-02,  FRACTION OF STEP COMPLETED  0.114    
- STEP TIME COMPLETED       0.114    ,  TOTAL TIME COMPLETED         2.11    
-
-
-  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.682E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.118E+06   TIME AVG. FORCE       9.844E+06
- LARGEST RESIDUAL FORCE            -4.289E+04   AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.572       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -0.146       AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    1.422E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.257E+06   TIME AVG. MOMENT      8.519E+06
- LARGEST RESIDUAL MOMENT            8.981E+03   AT NODE     401003   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.379E-02   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -6.886E-03   AT NODE      10113   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.687E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    8.522E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.682E-02,  FRACTION OF STEP COMPLETED  0.170    
- STEP TIME COMPLETED       0.170    ,  TOTAL TIME COMPLETED         2.17    
-
-
-  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.522E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.587E+06   TIME AVG. FORCE       9.804E+06
- LARGEST RESIDUAL FORCE            -5.943E+04   AT NODE      20155   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.769       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.172       AT NODE     400002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     6.993E+06   TIME AVG. MOMENT      8.470E+06
- LARGEST RESIDUAL MOMENT           -1.949E+04   AT NODE     400001   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      5.513E-02   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.037E-03   AT NODE      10119   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    3.123E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      8.587E+06   TIME AVG. FORCE       9.804E+06
- LARGEST RESIDUAL FORCE            -2.075E+03   AT NODE      10103   DOF  3
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -0.127       AT NODE      10082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.777       AT NODE      20103   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.689E-02   AT NODE     400002   DOF  1
+ LARGEST CORRECTION TO DISP.       -3.555E-06   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -1.288E-03
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     7.245E+06   TIME AVG. MOMENT      8.478E+06
- LARGEST RESIDUAL MOMENT            5.516E+03   AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            -16.6       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.209E-02   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.540E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.326E-02   AT NODE      10120   DOF  4
+ LARGEST CORRECTION TO ROTATION     3.654E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      8.579E+06   TIME AVG. FORCE       9.803E+06
- LARGEST RESIDUAL FORCE              24.2       AT NODE      12156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.777       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.089E-03   AT NODE     401002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.245E+06   TIME AVG. MOMENT      8.478E+06
- LARGEST RESIDUAL MOMENT           -2.099E+03   AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.695E-02   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.002E-03   AT NODE      10120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6272,30 +4809,64 @@
        ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -5.481E-02   AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.118E-06   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             7.90       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.155E-06   AT NODE      10115   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.748E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      8.579E+06   TIME AVG. FORCE       9.803E+06
- LARGEST RESIDUAL FORCE              1.70       AT NODE      10135   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -6.487E-02   AT NODE     201002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.777       AT NODE      20103   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.934E-05   AT NODE      10110   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.966E-07   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.245E+06   TIME AVG. MOMENT      8.478E+06
- LARGEST RESIDUAL MOMENT             680.       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            -3.10       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.535E-02   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION      5.016E-06   AT NODE      20107   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.650E-03   AT NODE      10120   DOF  4
+ LARGEST CORRECTION TO ROTATION     7.093E-06   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6304,42 +4875,66 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      8.579E+06   TIME AVG. FORCE       9.803E+06
- LARGEST RESIDUAL FORCE            -0.220       AT NODE      10137   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             7.335E-02   AT NODE     201002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.777       AT NODE      20103   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.415E-05   AT NODE      10110   DOF  2
+ LARGEST CORRECTION TO DISP.        3.088E-07   AT NODE      20090   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.245E+06   TIME AVG. MOMENT      8.478E+06
- LARGEST RESIDUAL MOMENT            -253.       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             1.44       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.595E-02   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.666E-06   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.216E-04   AT NODE      10120   DOF  4
+ LARGEST CORRECTION TO ROTATION    -3.403E-06   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.315E-04
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
- ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
- TIME INCREMENT COMPLETED  8.522E-02,  FRACTION OF STEP COMPLETED  0.256    
- STEP TIME COMPLETED       0.256    ,  TOTAL TIME COMPLETED         2.26    
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
 
 
-  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.522E-02
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             8.800E-02   AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.694E-07   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT           -0.707       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.395E-06   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.730E-06   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6348,33 +4943,32 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     7
 
 
- AVERAGE FORCE                      9.371E+06   TIME AVG. FORCE       9.790E+06
- LARGEST RESIDUAL FORCE            -5.914E+04   AT NODE      20155   DOF  3
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -0.102       AT NODE     101104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.699       AT NODE      10104   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        0.117       AT NODE      20104   DOF  2
+ LARGEST CORRECTION TO DISP.        9.342E-08   AT NODE      20090   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     6.988E+06   TIME AVG. MOMENT      8.431E+06
- LARGEST RESIDUAL MOMENT            1.317E+04   AT NODE     401003   DOF  4
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            0.368       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.730E-02   AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION      2.466E-06   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.272E-02   AT NODE      20120   DOF  4
+ LARGEST CORRECTION TO ROTATION    -9.294E-07   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -3.801E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6382,34 +4976,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     8
 
 
- AVERAGE FORCE                      9.381E+06   TIME AVG. FORCE       9.790E+06
- LARGEST RESIDUAL FORCE             -812.       AT NODE      20104   DOF  3
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE            -6.483E-02   AT NODE     101102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.705       AT NODE      20104   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.430E-02   AT NODE      20104   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.189E-08   AT NODE      20090   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION   -3.337E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.215E+06   TIME AVG. MOMENT      8.438E+06
- LARGEST RESIDUAL MOMENT           -4.737E+03   AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT           -0.197       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.664E-02   AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION      2.974E-06   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.107E-02   AT NODE      20120   DOF  4
+ LARGEST CORRECTION TO ROTATION     5.082E-07   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6422,28 +5015,37 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     9
 
 
- AVERAGE FORCE                      9.381E+06   TIME AVG. FORCE       9.790E+06
- LARGEST RESIDUAL FORCE              6.66       AT NODE      20135   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.133E+07
+ LARGEST RESIDUAL FORCE             0.100       AT NODE     201104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.705       AT NODE      10104   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.932E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        5.866E-04   AT NODE      10103   DOF  2
+ LARGEST CORRECTION TO DISP.        2.898E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.222E+06   TIME AVG. MOMENT      8.438E+06
- LARGEST RESIDUAL MOMENT            1.827E+03   AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            0.108       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.070E-02   AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION      2.693E-06   AT NODE      20100   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.327E-03   AT NODE      20120   DOF  4
+ LARGEST CORRECTION TO ROTATION    -2.809E-07   AT NODE      20099   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+ ITERATION SUMMARY FOR THE INCREMENT:   9 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  9 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.500E-07,  FRACTION OF STEP COMPLETED  1.250E-06
+ STEP TIME COMPLETED       1.250E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.500E-07
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6451,170 +5053,135 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.965E-02   AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.283E-07   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT             1.67       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.549E-06   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -4.242E-06   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.030E-02   AT NODE       1001   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -2.381E-07   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT           -0.899       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      9.086E-07   AT NODE      10092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.326E-06   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.964E-02   AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.331E-07   AT NODE      20082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            0.493       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.219E-07   AT NODE      20088   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.288E-06   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      9.381E+06   TIME AVG. FORCE       9.790E+06
- LARGEST RESIDUAL FORCE             0.987       AT NODE      20135   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -8.586E-02   AT NODE     101104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.705       AT NODE      10104   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.536E-05   AT NODE      20110   DOF  2
+ LARGEST CORRECTION TO DISP.       -7.450E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.222E+06   TIME AVG. MOMENT      8.438E+06
- LARGEST RESIDUAL MOMENT            -527.       AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT           -0.273       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.949E-02   AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION      4.562E-07   AT NODE      10087   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.258E-03   AT NODE      20120   DOF  4
+ LARGEST CORRECTION TO ROTATION     7.166E-07   AT NODE      20098   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -3.628E-04
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
- ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.522E-02,  FRACTION OF STEP COMPLETED  0.341    
- STEP TIME COMPLETED       0.341    ,  TOTAL TIME COMPLETED         2.34    
-
-
-  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.522E-02
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.018E+07   TIME AVG. FORCE       9.802E+06
- LARGEST RESIDUAL FORCE            -2.776E+04   AT NODE      10155   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.658       AT NODE      10103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -7.365E-02   AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    2.825E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.242E+06   TIME AVG. MOMENT      8.402E+06
- LARGEST RESIDUAL MOMENT            5.443E+03   AT NODE     400003   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -5.190E-02   AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.898E-03   AT NODE      20128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -4.170E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    0.128    
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.522E-02,  FRACTION OF STEP COMPLETED  0.426    
- STEP TIME COMPLETED       0.426    ,  TOTAL TIME COMPLETED         2.43    
-
-
-  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.128    
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.140E+07   TIME AVG. FORCE       9.849E+06
- LARGEST RESIDUAL FORCE            -3.616E+04   AT NODE      10155   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -0.936       AT NODE      20103   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -7.994E-02   AT NODE      10025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    2.373E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- AVERAGE MOMENT                     7.161E+06   TIME AVG. MOMENT      8.366E+06
- LARGEST RESIDUAL MOMENT           -7.911E+03   AT NODE     400001   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      6.816E-02   AT NODE      10103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     9.731E-03   AT NODE      20108   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -1.210E-05
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    0.192    
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  0.128    ,  FRACTION OF STEP COMPLETED  0.554    
- STEP TIME COMPLETED       0.554    ,  TOTAL TIME COMPLETED         2.55    
-
-
-  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.192    
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.328E+07   TIME AVG. FORCE       9.947E+06
- LARGEST RESIDUAL FORCE            -1.011E+05   AT NODE      20155   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.32       AT NODE       1156   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -0.137       AT NODE      20025   DOF  3
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
- AVERAGE MOMENT                     7.187E+06   TIME AVG. MOMENT      8.332E+06
- LARGEST RESIDUAL MOMENT            2.023E+04   AT NODE     400003   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -0.105       AT NODE      20103   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -5.545E-03   AT NODE      20072   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -8.611E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6627,29 +5194,28 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      1.331E+07   TIME AVG. FORCE       9.948E+06
- LARGEST RESIDUAL FORCE            -2.452E+03   AT NODE      20051   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             5.698E-02   AT NODE     101104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.32       AT NODE       1156   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.114E-02   AT NODE      20025   DOF  3
+ LARGEST CORRECTION TO DISP.        4.167E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    5.128E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.615E+06   TIME AVG. MOMENT      8.344E+06
- LARGEST RESIDUAL MOMENT           -3.839E+03   AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT            0.152       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -9.659E-02   AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION     -2.089E-07   AT NODE      20083   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     8.694E-03   AT NODE      20127   DOF  4
+ LARGEST CORRECTION TO ROTATION    -4.000E-07   AT NODE      20093   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.08E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6658,43 +5224,41 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
 
 
- AVERAGE FORCE                      1.331E+07   TIME AVG. FORCE       9.948E+06
- LARGEST RESIDUAL FORCE              1.44       AT NODE      20135   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.507E-02   AT NODE     201102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.32       AT NODE       1156   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.890E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -3.734E-05   AT NODE      20062   DOF  2
+ LARGEST CORRECTION TO DISP.       -2.331E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.622E+06   TIME AVG. MOMENT      8.344E+06
- LARGEST RESIDUAL MOMENT             908.       AT NODE      20136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.125E+07
+ LARGEST RESIDUAL MOMENT           -8.453E-02   AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -9.830E-02   AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION      3.169E-07   AT NODE      10085   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.979E-03   AT NODE      20128   DOF  4
+ LARGEST CORRECTION TO ROTATION     2.235E-07   AT NODE      20092   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    4.684E-04
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-          TIME INCREMENT MAY NOW INCREASE TO    0.288    
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   6 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  6 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  0.192    ,  FRACTION OF STEP COMPLETED  0.746    
- STEP TIME COMPLETED       0.746    ,  TOTAL TIME COMPLETED         2.75    
+ TIME INCREMENT COMPLETED  2.500E-07,  FRACTION OF STEP COMPLETED  1.500E-06
+ STEP TIME COMPLETED       1.500E-06,  TOTAL TIME COMPLETED         2.00    
 
 
-  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.254    
+  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.500E-07
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.07E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6703,33 +5267,32 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.002E+07   TIME AVG. FORCE       1.023E+07
- LARGEST RESIDUAL FORCE            -1.910E+05   AT NODE      10155   DOF  3
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -7.166E-02   AT NODE     201102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.65       AT NODE       1156   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.849E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -0.189       AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.        4.153E-07   AT NODE      12099   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
- AVERAGE MOMENT                     7.306E+06   TIME AVG. MOMENT      8.316E+06
- LARGEST RESIDUAL MOMENT            3.533E+04   AT NODE     400003   DOF  4
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.154       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      0.126       AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION     -3.895E-07   AT NODE      20086   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.458E-03   AT NODE      20104   DOF  4
+ LARGEST CORRECTION TO ROTATION    -4.059E-07   AT NODE      20093   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    7.243E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.07E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6745,26 +5308,414 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      2.011E+07   TIME AVG. FORCE       1.023E+07
- LARGEST RESIDUAL FORCE            -5.643E+03   AT NODE      10051   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -6.565E-02   AT NODE     101004   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.65       AT NODE       1156   DOF  3
+ LARGEST INCREMENT OF DISP.        -1.849E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.168E-02   AT NODE      10025   DOF  3
+ LARGEST CORRECTION TO DISP.       -2.365E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF DISP.    CORRECTION    9.360E-04
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.933E+06   TIME AVG. MOMENT      8.333E+06
- LARGEST RESIDUAL MOMENT            4.554E+03   AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -8.579E-02   AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -0.116       AT NODE      20103   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.695E-07   AT NODE      10083   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.043E-02   AT NODE      10127   DOF  4
+ LARGEST CORRECTION TO ROTATION     2.268E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.500E-07,  FRACTION OF STEP COMPLETED  1.750E-06
+ STEP TIME COMPLETED       1.750E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.500E-07
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.110       AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.809E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.020E-07   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -0.106       AT NODE     100042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.921E-07   AT NODE      20085   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.286E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    3.750E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.500E-07,  FRACTION OF STEP COMPLETED  2.000E-06
+ STEP TIME COMPLETED       2.000E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.750E-07
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             7.556E-02   AT NODE     201103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.642E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        7.188E-07   AT NODE      11210   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -0.140       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.990E-07   AT NODE      10084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.700E-07   AT NODE      20092   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8402     NUMBER OF FLOATING PT. OPERATIONS =  4.07E+06
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             0.115       AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.643E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.160E-08   AT NODE      20082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -0.113       AT NODE     110042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.763E-07   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.069E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.113       AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.643E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.208E-08   AT NODE      20082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -8.767E-02   AT NODE     200042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.226E-07   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.157E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    5.625E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.750E-07,  FRACTION OF STEP COMPLETED  2.375E-06
+ STEP TIME COMPLETED       2.375E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.625E-07
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             8.756E-02   AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -3.807E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.579E-06   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.102       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.097E-07   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.697E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    8.437E-07
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.625E-07,  FRACTION OF STEP COMPLETED  2.938E-06
+ STEP TIME COMPLETED       2.938E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.437E-07
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             7.916E-02   AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -5.388E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.225E-06   AT NODE      11099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -0.179       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.832E-07   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     4.739E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.163       AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -5.399E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.095E-07   AT NODE      11213   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.126       AT NODE     210042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      5.608E-07   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -2.650E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             7.916E-02   AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -5.399E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.548E-08   AT NODE      20082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -7.744E-02   AT NODE     401001   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.850E-07   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.482E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    1.266E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.437E-07,  FRACTION OF STEP COMPLETED  3.781E-06
+ STEP TIME COMPLETED       3.781E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.266E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             9.196E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.412E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        6.867E-06   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.164       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.045E-06   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -4.336E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.705E-02   AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.445E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.325E-07   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT           -0.133       AT NODE      11311   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      8.670E-07   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.425E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6780,33 +5731,1907 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      2.011E+07   TIME AVG. FORCE       1.023E+07
- LARGEST RESIDUAL FORCE              1.22       AT NODE      10135   DOF  1
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             9.196E-02   AT NODE     101102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         -1.65       AT NODE       1156   DOF  3
+ LARGEST INCREMENT OF DISP.        -7.445E-05   AT NODE     400002   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.622E-05   AT NODE      10071   DOF  3
+ LARGEST CORRECTION TO DISP.        1.416E-08   AT NODE      20082   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.926E+06   TIME AVG. MOMENT      8.333E+06
- LARGEST RESIDUAL MOMENT            -780.       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.115       AT NODE     100042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      0.117       AT NODE      10103   DOF  4
+ LARGEST INCREMENT OF ROTATION     -9.394E-07   AT NODE      20083   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     1.628E-03   AT NODE      10135   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.356E-07   AT NODE      20092   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION   -2.788E-04
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -9.849E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.445E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -7.918E-09   AT NODE      20082   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            0.107       AT NODE      11311   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -8.642E-07   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     7.583E-08   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    1.898E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.266E-06,  FRACTION OF STEP COMPLETED  5.047E-06
+ STEP TIME COMPLETED       5.047E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.898E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -8.328E-02   AT NODE     201102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -9.828E-05   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.340E-05   AT NODE      11099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.123E+07   TIME AVG. MOMENT      1.124E+07
+ LARGEST RESIDUAL MOMENT            9.282E-02   AT NODE      12311   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.278E-06   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.809E-08   AT NODE      20076   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    2.848E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.898E-06,  FRACTION OF STEP COMPLETED  6.945E-06
+ STEP TIME COMPLETED       6.945E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.848E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             0.107       AT NODE     201103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.250E-04   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.244E-05   AT NODE      11099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.094E+07   TIME AVG. MOMENT      1.121E+07
+ LARGEST RESIDUAL MOMENT           -0.104       AT NODE     100042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.893E-06   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.800E-08   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    4.271E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.848E-06,  FRACTION OF STEP COMPLETED  9.793E-06
+ STEP TIME COMPLETED       9.793E-06,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.271E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             5.871E-02   AT NODE     101002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.487E-04   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.877E-05   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.075E+07   TIME AVG. MOMENT      1.117E+07
+ LARGEST RESIDUAL MOMENT            7.299E-02   AT NODE     401003   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.858E-06   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.888E-08   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    6.407E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.271E-06,  FRACTION OF STEP COMPLETED  1.406E-05
+ STEP TIME COMPLETED       1.406E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.407E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             6.451E-02   AT NODE     201103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.037E-04   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        5.770E-05   AT NODE      11099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.057E+07   TIME AVG. MOMENT      1.113E+07
+ LARGEST RESIDUAL MOMENT            7.655E-02   AT NODE     401001   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.282E-06   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     8.482E-08   AT NODE      20076   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    9.611E-06
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  6.407E-06,  FRACTION OF STEP COMPLETED  2.047E-05
+ STEP TIME COMPLETED       2.047E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.611E-06
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.199       AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         3.055E-04   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        7.741E-05   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE MOMENT                     1.026E+07   TIME AVG. MOMENT      1.106E+07
+ LARGEST RESIDUAL MOMENT           -0.166       AT NODE     100042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.454E-06   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.533E-07   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             8.712E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         3.055E-04   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.454E-05   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     1.026E+07   TIME AVG. MOMENT      1.106E+07
+ LARGEST RESIDUAL MOMENT            9.469E-02   AT NODE      12311   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.366E-06   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     9.064E-08   AT NODE      20093   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    1.442E-05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  9.611E-06,  FRACTION OF STEP COMPLETED  3.008E-05
+ STEP TIME COMPLETED       3.008E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.442E-05
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -5.474E-02   AT NODE     200042   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         4.581E-04   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.377E-04   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     9.713E+06   TIME AVG. MOMENT      1.097E+07
+ LARGEST RESIDUAL MOMENT            0.108       AT NODE     400003   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -9.614E-06   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -6.990E-08   AT NODE      20094   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    2.162E-05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.442E-05,  FRACTION OF STEP COMPLETED  4.450E-05
+ STEP TIME COMPLETED       4.450E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.162E-05
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.112       AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -6.869E-04   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.353E-05   AT NODE      11096   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     9.485E+06   TIME AVG. MOMENT      1.088E+07
+ LARGEST RESIDUAL MOMENT            0.108       AT NODE     210042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.438E-05   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.690E-07   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    3.244E-05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.162E-05,  FRACTION OF STEP COMPLETED  6.612E-05
+ STEP TIME COMPLETED       6.612E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.244E-05
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE             0.116       AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         1.030E-03   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        1.670E-04   AT NODE      12099   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    7.024E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.872E+06   TIME AVG. MOMENT      1.076E+07
+ LARGEST RESIDUAL MOMENT            0.113       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.168E-05   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.010E-07   AT NODE      20093   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.369E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    4.865E-05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.244E-05,  FRACTION OF STEP COMPLETED  9.856E-05
+ STEP TIME COMPLETED       9.856E-05,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.865E-05
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE            -0.110       AT NODE     201103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.543E-03   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -2.195E-05   AT NODE      12246   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.799E+06   TIME AVG. MOMENT      1.065E+07
+ LARGEST RESIDUAL MOMENT           -0.212       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.229E-05   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     5.850E-07   AT NODE      20081   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    3.845E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    7.298E-05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.865E-05,  FRACTION OF STEP COMPLETED  1.472E-04
+ STEP TIME COMPLETED       1.472E-04,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.298E-05
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.135E+07
+ LARGEST RESIDUAL FORCE             8.174E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         2.310E-03   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.194E-04   AT NODE      12096   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.765E+06   TIME AVG. MOMENT      1.055E+07
+ LARGEST RESIDUAL MOMENT            0.362       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -4.876E-05   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.078E-07   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -4.548E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.095E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.298E-05,  FRACTION OF STEP COMPLETED  2.202E-04
+ STEP TIME COMPLETED       2.202E-04,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.095E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.135E+07
+ LARGEST RESIDUAL FORCE            -7.819E-02   AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -3.457E-03   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.778E-04   AT NODE      11228   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.750E+06   TIME AVG. MOMENT      1.046E+07
+ LARGEST RESIDUAL MOMENT           -0.624       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      7.274E-05   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.725E-06   AT NODE      20096   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    6.153E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.642E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.095E-04,  FRACTION OF STEP COMPLETED  3.297E-04
+ STEP TIME COMPLETED       3.297E-04,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.642E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.136E+07   TIME AVG. FORCE       1.135E+07
+ LARGEST RESIDUAL FORCE             0.187       AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         5.167E-03   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.071E-04   AT NODE      12084   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.088E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.730E+06   TIME AVG. MOMENT      1.038E+07
+ LARGEST RESIDUAL MOMENT             1.34       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.109E-04   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.753E-06   AT NODE      20096   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.377E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    2.463E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.642E-04,  FRACTION OF STEP COMPLETED  4.939E-04
+ STEP TIME COMPLETED       4.939E-04,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.463E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.135E+07   TIME AVG. FORCE       1.135E+07
+ LARGEST RESIDUAL FORCE             0.356       AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.709E-03   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.616E-04   AT NODE      12243   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.273E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.716E+06   TIME AVG. MOMENT      1.031E+07
+ LARGEST RESIDUAL MOMENT            -3.10       AT NODE      20072   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.645E-04   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     5.953E-06   AT NODE      20071   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.253E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    3.695E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.463E-04,  FRACTION OF STEP COMPLETED  7.402E-04
+ STEP TIME COMPLETED       7.402E-04,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.695E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.121E+07   TIME AVG. FORCE       1.134E+07
+ LARGEST RESIDUAL FORCE              1.11       AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         1.147E-02   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        9.927E-04   AT NODE      12051   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    3.148E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.705E+06   TIME AVG. MOMENT      1.024E+07
+ LARGEST RESIDUAL MOMENT             4.51       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.524E-04   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.174E-05   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.886E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    5.542E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.695E-04,  FRACTION OF STEP COMPLETED  1.110E-03
+ STEP TIME COMPLETED       1.110E-03,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.542E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.777E+06   TIME AVG. FORCE       1.128E+07
+ LARGEST RESIDUAL FORCE              2.90       AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -1.700E-02   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.594E-03   AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -5.844E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.695E+06   TIME AVG. MOMENT      1.017E+07
+ LARGEST RESIDUAL MOMENT            -7.82       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.723E-04   AT NODE      10084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.177E-05   AT NODE      20089   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.124E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    8.313E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.542E-04,  FRACTION OF STEP COMPLETED  1.664E-03
+ STEP TIME COMPLETED       1.664E-03,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.313E-04
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.435E+06   TIME AVG. FORCE       1.120E+07
+ LARGEST RESIDUAL FORCE              8.37       AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         2.504E-02   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.695E-03   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.280E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.694E+06   TIME AVG. MOMENT      1.011E+07
+ LARGEST RESIDUAL MOMENT             17.2       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.816E-04   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -4.619E-05   AT NODE      20079   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -8.617E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.247E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.313E-04,  FRACTION OF STEP COMPLETED  2.495E-03
+ STEP TIME COMPLETED       2.495E-03,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.247E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.833E+06   TIME AVG. FORCE       1.111E+07
+ LARGEST RESIDUAL FORCE              23.6       AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -3.656E-02   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -4.484E-03   AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -2.688E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.692E+06   TIME AVG. MOMENT      1.006E+07
+ LARGEST RESIDUAL MOMENT            -25.4       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      8.580E-04   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     6.735E-05   AT NODE      20094   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    8.308E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.870E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.247E-03,  FRACTION OF STEP COMPLETED  3.742E-03
+ STEP TIME COMPLETED       3.742E-03,  TOTAL TIME COMPLETED         2.00    
+
+
+  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.870E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.966E+06   TIME AVG. FORCE       1.099E+07
+ LARGEST RESIDUAL FORCE              68.5       AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         5.269E-02   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        7.527E-03   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    5.912E-05
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.684E+06   TIME AVG. MOMENT      1.001E+07
+ LARGEST RESIDUAL MOMENT             60.4       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.366E-03   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.580E-04   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.094E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    2.806E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.870E-03,  FRACTION OF STEP COMPLETED  5.613E-03
+ STEP TIME COMPLETED       5.613E-03,  TOTAL TIME COMPLETED         2.01    
+
+
+  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.806E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.393E+06   TIME AVG. FORCE       1.087E+07
+ LARGEST RESIDUAL FORCE              199.       AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -7.453E-02   AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.256E-02   AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.292E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.646E+06   TIME AVG. MOMENT      9.959E+06
+ LARGEST RESIDUAL MOMENT            -88.3       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.998E-03   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.323E-04   AT NODE      20093   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    2.031E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    4.209E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.806E-03,  FRACTION OF STEP COMPLETED  8.418E-03
+ STEP TIME COMPLETED       8.418E-03,  TOTAL TIME COMPLETED         2.01    
+
+
+  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.209E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.169E+06   TIME AVG. FORCE       1.074E+07
+ LARGEST RESIDUAL FORCE              577.       AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         0.103       AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.079E-02   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.844E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.522E+06   TIME AVG. MOMENT      9.909E+06
+ LARGEST RESIDUAL MOMENT             208.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.256E-03   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -5.313E-04   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -5.011E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    6.313E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.209E-03,  FRACTION OF STEP COMPLETED  1.263E-02
+ STEP TIME COMPLETED       1.263E-02,  TOTAL TIME COMPLETED         2.01    
+
+
+  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.313E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.627E+06   TIME AVG. FORCE       1.060E+07
+ LARGEST RESIDUAL FORCE             1.624E+03   AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.136       AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.378E-02   AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -5.989E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.416E+06   TIME AVG. MOMENT      9.859E+06
+ LARGEST RESIDUAL MOMENT            -324.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.670E-03   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     8.298E-04   AT NODE      20093   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    5.613E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    9.469E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  6.313E-03,  FRACTION OF STEP COMPLETED  1.894E-02
+ STEP TIME COMPLETED       1.894E-02,  TOTAL TIME COMPLETED         2.02    
+
+
+  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.469E-03
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.545E+06   TIME AVG. FORCE       1.047E+07
+ LARGEST RESIDUAL FORCE             4.290E+03   AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         0.171       AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        5.293E-02   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.165E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.318E+06   TIME AVG. MOMENT      9.810E+06
+ LARGEST RESIDUAL MOMENT             673.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -7.718E-03   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.634E-03   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.080E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    1.420E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  9.469E-03,  FRACTION OF STEP COMPLETED  2.841E-02
+ STEP TIME COMPLETED       2.841E-02,  TOTAL TIME COMPLETED         2.03    
+
+
+  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.420E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.648E+06   TIME AVG. FORCE       1.035E+07
+ LARGEST RESIDUAL FORCE             9.966E+03   AT NODE      11156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.203       AT NODE      20084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -7.789E-02   AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.892E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.246E+06   TIME AVG. MOMENT      9.761E+06
+ LARGEST RESIDUAL MOMENT           -1.266E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.051E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.073E-03   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    1.815E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    2.131E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.420E-02,  FRACTION OF STEP COMPLETED  4.261E-02
+ STEP TIME COMPLETED       4.261E-02,  TOTAL TIME COMPLETED         2.04    
+
+
+  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.131E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.841E+06   TIME AVG. FORCE       1.024E+07
+ LARGEST RESIDUAL FORCE             1.942E+04   AT NODE      12156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.270       AT NODE      10082   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.105       AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.416E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.196E+06   TIME AVG. MOMENT      9.713E+06
+ LARGEST RESIDUAL MOMENT            2.154E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.743E-02   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -4.670E-03   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.290E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    3.196E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.131E-02,  FRACTION OF STEP COMPLETED  6.392E-02
+ STEP TIME COMPLETED       6.392E-02,  TOTAL TIME COMPLETED         2.06    
+
+
+  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.196E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      6.993E+06   TIME AVG. FORCE       1.015E+07
+ LARGEST RESIDUAL FORCE            -3.062E+04   AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.372       AT NODE      20082   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -0.126       AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.280E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.133E+06   TIME AVG. MOMENT      9.667E+06
+ LARGEST RESIDUAL MOMENT           -4.633E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      2.224E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.002E-02   AT NODE      20092   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    5.230E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    4.794E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.196E-02,  FRACTION OF STEP COMPLETED  9.588E-02
+ STEP TIME COMPLETED       9.588E-02,  TOTAL TIME COMPLETED         2.10    
+
+
+  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.794E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.416E+06   TIME AVG. FORCE       1.007E+07
+ LARGEST RESIDUAL FORCE            -4.072E+04   AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.507       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.142       AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.733E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.813E+06   TIME AVG. MOMENT      9.614E+06
+ LARGEST RESIDUAL MOMENT            7.900E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -3.811E-02   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.392E-02   AT NODE      20099   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -6.329E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    7.191E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.794E-02,  FRACTION OF STEP COMPLETED  0.144    
+ STEP TIME COMPLETED       0.144    ,  TOTAL TIME COMPLETED         2.14    
+
+
+  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.191E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.993E+06   TIME AVG. FORCE       1.001E+07
+ LARGEST RESIDUAL FORCE            -4.685E+04   AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.683       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -0.157       AT NODE     401002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    1.147E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.005E+06   TIME AVG. MOMENT      9.541E+06
+ LARGEST RESIDUAL MOMENT           -1.563E+04   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      4.670E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.699E-02   AT NODE      20093   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    1.257E-04
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    0.108    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.191E-02,  FRACTION OF STEP COMPLETED  0.216    
+ STEP TIME COMPLETED       0.216    ,  TOTAL TIME COMPLETED         2.22    
+
+
+  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.108    
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.937E+06   TIME AVG. FORCE       9.984E+06
+ LARGEST RESIDUAL FORCE            -9.954E+04   AT NODE      10135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.920       AT NODE      10084   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        0.186       AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     6.686E+06   TIME AVG. MOMENT      9.464E+06
+ LARGEST RESIDUAL MOMENT            3.119E+04   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -8.331E-02   AT NODE      20084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.839E-02   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.895E-04
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      8.970E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE            -2.633E+03   AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.928       AT NODE      10084   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -4.248E-02   AT NODE     400002   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION   -1.124E-03
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.239E+06   TIME AVG. MOMENT      9.479E+06
+ LARGEST RESIDUAL MOMENT           -1.073E+04   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.778E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.608E-02   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      8.971E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE              34.4       AT NODE      20115   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.929       AT NODE      10084   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -3.933E-03   AT NODE      11311   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     7.443E+06   TIME AVG. MOMENT      9.485E+06
+ LARGEST RESIDUAL MOMENT            3.870E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.670E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.236E-03   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      8.971E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE              4.28       AT NODE      20115   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.929       AT NODE      10084   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.641E-04   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.005E+06   TIME AVG. MOMENT      9.500E+06
+ LARGEST RESIDUAL MOMENT           -1.152E+03   AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.400E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.784E-03   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      8.971E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE            -0.402       AT NODE      20117   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.929       AT NODE      10084   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.835E-05   AT NODE      20090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.005E+06   TIME AVG. MOMENT      9.500E+06
+ LARGEST RESIDUAL MOMENT             384.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -6.491E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.339E-04   AT NODE      20100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    3.114E-04
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.108    ,  FRACTION OF STEP COMPLETED  0.324    
+ STEP TIME COMPLETED       0.324    ,  TOTAL TIME COMPLETED         2.32    
+
+
+  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.108    
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.948E+06   TIME AVG. FORCE       9.984E+06
+ LARGEST RESIDUAL FORCE            -9.589E+04   AT NODE      20135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.838       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -0.141       AT NODE      10015   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     7.206E+06   TIME AVG. MOMENT      9.440E+06
+ LARGEST RESIDUAL MOMENT           -1.762E+04   AT NODE     400001   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.997E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.579E-02   AT NODE      10100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.366E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      9.980E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE            -1.378E+03   AT NODE      10031   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.845       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.439E-02   AT NODE      10084   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    3.506E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.559E+06   TIME AVG. MOMENT      9.449E+06
+ LARGEST RESIDUAL MOMENT            5.086E+03   AT NODE      10116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.968E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.174E-02   AT NODE      10100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      9.980E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE              5.79       AT NODE      10115   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.845       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.102E-04   AT NODE      20083   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.039E+06   TIME AVG. MOMENT      9.462E+06
+ LARGEST RESIDUAL MOMENT           -1.766E+03   AT NODE      10116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.252E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     4.095E-03   AT NODE      10100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      9.980E+06   TIME AVG. FORCE       9.985E+06
+ LARGEST RESIDUAL FORCE             0.695       AT NODE      10115   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.845       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        4.484E-05   AT NODE      10090   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.040E+06   TIME AVG. MOMENT      9.462E+06
+ LARGEST RESIDUAL MOMENT             443.       AT NODE      10116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.153E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.039E-03   AT NODE      10100   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    2.609E-04
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.108    ,  FRACTION OF STEP COMPLETED  0.431    
+ STEP TIME COMPLETED       0.431    ,  TOTAL TIME COMPLETED         2.43    
+
+
+  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.108    
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.102E+07   TIME AVG. FORCE       1.001E+07
+ LARGEST RESIDUAL FORCE            -3.959E+04   AT NODE      10135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.792       AT NODE      20083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -8.593E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    3.230E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.858E+06   TIME AVG. MOMENT      9.420E+06
+ LARGEST RESIDUAL MOMENT           -6.666E+03   AT NODE     400001   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.264E-02   AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.210E-03   AT NODE      10052   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.677E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    0.162    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.108    ,  FRACTION OF STEP COMPLETED  0.539    
+ STEP TIME COMPLETED       0.539    ,  TOTAL TIME COMPLETED         2.54    
+
+
+  INCREMENT    40 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.162    
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.268E+07   TIME AVG. FORCE       1.008E+07
+ LARGEST RESIDUAL FORCE            -4.429E+04   AT NODE      10135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         -1.13       AT NODE      10083   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -8.521E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    2.111E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     7.967E+06   TIME AVG. MOMENT      9.384E+06
+ LARGEST RESIDUAL MOMENT            9.950E+03   AT NODE     400003   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -8.337E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.067E-02   AT NODE      10086   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -1.137E-05
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          TIME INCREMENT MAY NOW INCREASE TO    0.243    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.162    ,  FRACTION OF STEP COMPLETED  0.701    
+ STEP TIME COMPLETED       0.701    ,  TOTAL TIME COMPLETED         2.70    
+
+
+  INCREMENT    41 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.243    
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.598E+07   TIME AVG. FORCE       1.022E+07
+ LARGEST RESIDUAL FORCE            -1.227E+05   AT NODE      10135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         -1.60       AT NODE       1156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -0.146       AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE MOMENT                     7.812E+06   TIME AVG. MOMENT      9.346E+06
+ LARGEST RESIDUAL MOMENT           -2.710E+04   AT NODE     400001   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      0.121       AT NODE      10083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     3.625E-03   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -5.099E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.601E+07   TIME AVG. FORCE       1.022E+07
+ LARGEST RESIDUAL FORCE            -3.310E+03   AT NODE      10031   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         -1.61       AT NODE       1156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.426E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    6.546E-04
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.490E+06   TIME AVG. MOMENT      9.362E+06
+ LARGEST RESIDUAL MOMENT            4.252E+03   AT NODE      10116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -0.112       AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -9.802E-03   AT NODE      10107   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.601E+07   TIME AVG. FORCE       1.022E+07
+ LARGEST RESIDUAL FORCE              1.18       AT NODE      10115   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         -1.61       AT NODE       1156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.333E-05   AT NODE      10042   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.494E+06   TIME AVG. MOMENT      9.362E+06
+ LARGEST RESIDUAL MOMENT            -791.       AT NODE      10116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -0.114       AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.688E-03   AT NODE      10108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -3.139E-04
  MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
  ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  0.254    ,  FRACTION OF STEP COMPLETED   1.00    
+ TIME INCREMENT COMPLETED  0.243    ,  FRACTION OF STEP COMPLETED  0.944    
+ STEP TIME COMPLETED       0.944    ,  TOTAL TIME COMPLETED         2.94    
+
+
+  INCREMENT    42 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.622E-02
+
+  NUMBER OF EQUATIONS =      7762     NUMBER OF FLOATING PT. OPERATIONS =  4.01E+06
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.014E+07   TIME AVG. FORCE       1.046E+07
+ LARGEST RESIDUAL FORCE            -2.639E+03   AT NODE      10135   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -0.359       AT NODE       1156   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -1.928E-02   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    8.902E-06
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.572E+06   TIME AVG. MOMENT      9.344E+06
+ LARGEST RESIDUAL MOMENT             568.       AT NODE      10050   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -2.502E-02   AT NODE      20083   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.286E-03   AT NODE      10084   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION   -2.447E-07
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.622E-02,  FRACTION OF STEP COMPLETED   1.00    
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         3.00    
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 18-Feb-2022   Time 13:26:34
+   Abaqus 3DEXPERIENCE R2017x                                  Date 28-Feb-2022   Time 13:21:50
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -6899,7 +7724,7 @@
 
      LINEAR EXTRAPOLATION WILL BE USED
 
-     CHARACTERISTIC ELEMENT LENGTH      14.8    
+     CHARACTERISTIC ELEMENT LENGTH      15.4    
 
      DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
 
@@ -6919,12 +7744,91 @@
  
      INITIAL ELEMENT LOAD BALANCE
         COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
-                              1            256
+                              1            477
                               2            512
-                              3            301
-                              4            512
+                              3            256
+                              4            256
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.014E+07   TIME AVG. FORCE       2.014E+07
+ LARGEST RESIDUAL FORCE             -2.88       AT NODE      20031   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         7.085E-04   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        7.085E-04   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF DISP.    CORRECTION    7.720E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE MOMENT                     8.568E+06   TIME AVG. MOMENT      8.568E+06
+ LARGEST RESIDUAL MOMENT            -285.       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      6.318E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     6.318E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.014E+07   TIME AVG. FORCE       2.014E+07
+ LARGEST RESIDUAL FORCE             7.418E-02   AT NODE     101103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         7.085E-04   AT NODE      20016   DOF  3
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.262E-06   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.568E+06   TIME AVG. MOMENT      8.568E+06
+ LARGEST RESIDUAL MOMENT             23.8       AT NODE      20124   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      5.859E-04   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -4.951E-05   AT NODE      20116   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ ESTIMATE OF ROTATION CORRECTION    4.138E-06
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.100    ,  FRACTION OF STEP COMPLETED  0.100    
+ STEP TIME COMPLETED       0.100    ,  TOTAL TIME COMPLETED         3.10    
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.100    
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6940,25 +7844,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.012E+07   TIME AVG. FORCE       2.012E+07
- LARGEST RESIDUAL FORCE            -0.101       AT NODE     101103   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.024E+07
+ LARGEST RESIDUAL FORCE             -2.89       AT NODE      20031   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         6.445E-06   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.         1.845E-06   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        6.445E-06   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.       -7.085E-04   AT NODE      20016   DOF  3
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
 
- AVERAGE MOMENT                     7.926E+06   TIME AVG. MOMENT      7.926E+06
- LARGEST RESIDUAL MOMENT             131.       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.444E+06
+ LARGEST RESIDUAL MOMENT             272.       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.912E-04   AT NODE      10128   DOF  4
+ LARGEST INCREMENT OF ROTATION     -2.243E-05   AT NODE      20116   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.912E-04   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION    -6.026E-04   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -6969,30 +7873,30 @@
        ELAPSED USER TIME (SEC)      =  0.30000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      2.012E+07   TIME AVG. FORCE       2.012E+07
- LARGEST RESIDUAL FORCE             9.902E-02   AT NODE     201102   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.024E+07
+ LARGEST RESIDUAL FORCE            -6.927E-02   AT NODE     101102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         5.356E-06   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -3.288E-07   AT NODE      20106   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.090E-06   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.       -2.161E-06   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.926E+06   TIME AVG. MOMENT      7.926E+06
- LARGEST RESIDUAL MOMENT            -20.9       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.444E+06
+ LARGEST RESIDUAL MOMENT            -22.5       AT NODE      20124   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.458E-04   AT NODE      10128   DOF  4
+ LARGEST INCREMENT OF ROTATION      2.628E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     4.539E-05   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION     4.660E-05   AT NODE      20116   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7000,111 +7904,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      2.012E+07   TIME AVG. FORCE       2.012E+07
- LARGEST RESIDUAL FORCE            -5.317E-02   AT NODE     101102   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.024E+07
+ LARGEST RESIDUAL FORCE             6.508E-02   AT NODE       1311   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         5.529E-06   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.281E-07   AT NODE      20106   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.732E-07   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.926E+06   TIME AVG. MOMENT      7.926E+06
- LARGEST RESIDUAL MOMENT             3.50       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -2.535E-04   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -7.699E-06   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- ESTIMATE OF ROTATION CORRECTION    1.289E-06
- MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  0.100    ,  FRACTION OF STEP COMPLETED  0.100    
- STEP TIME COMPLETED       0.100    ,  TOTAL TIME COMPLETED         3.10    
-
-
-  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.100    
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE             0.138       AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -9.749E-07   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -6.504E-06   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT            -132.       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      4.091E-05   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.944E-04   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE             5.150E-02   AT NODE     201104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.273E-07   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        1.102E-06   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.        2.006E-07   AT NODE      20106   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT             21.1       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.444E+06
+ LARGEST RESIDUAL MOMENT             6.22       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -4.940E-06   AT NODE      10128   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.217E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.585E-05   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.411E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7113,66 +7939,32 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE             8.325E-02   AT NODE     100042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.765E-08   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.749E-07   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT            -3.54       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.855E-06   AT NODE      10120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     7.780E-06   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE             8.983E-02   AT NODE     101103   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.024E+07
+ LARGEST RESIDUAL FORCE             0.112       AT NODE     201103   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -1.844E-08   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.742E-07   AT NODE      20106   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.920E-08   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.025E-08   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT            0.567       AT NODE      10136   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.444E+06
+ LARGEST RESIDUAL MOMENT           -0.703       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.710E-06   AT NODE      10116   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.366E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -1.239E-06   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION     1.488E-06   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7188,94 +7980,27 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE            -0.101       AT NODE     101103   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.024E+07
+ LARGEST RESIDUAL FORCE             7.409E-02   AT NODE     101103   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.313E-08   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.684E-07   AT NODE      20106   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -4.686E-09   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT            0.142       AT NODE      11001   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.896E-06   AT NODE      10119   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.058E-07   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE            -0.101       AT NODE     101102   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.236E-08   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        7.739E-10   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.        6.010E-09   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT           -0.117       AT NODE     210042   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.444E+06
+ LARGEST RESIDUAL MOMENT            0.149       AT NODE      20116   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.866E-06   AT NODE      10118   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.332E-05   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -3.313E-08   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION    -3.359E-07   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+ ESTIMATE OF ROTATION CORRECTION    7.128E-08
+ MOMENT    EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.20000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     7
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.024E+07
- LARGEST RESIDUAL FORCE             6.500E-02   AT NODE     210042   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.248E-08   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.252E-10   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.882E+06
- LARGEST RESIDUAL MOMENT            8.208E-02   AT NODE     210042   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      1.871E-06   AT NODE      10118   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.452E-09   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- ITERATION SUMMARY FOR THE INCREMENT:   7 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  7 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
 
  TIME INCREMENT COMPLETED  0.100    ,  FRACTION OF STEP COMPLETED  0.200    
  STEP TIME COMPLETED       0.200    ,  TOTAL TIME COMPLETED         3.20    
@@ -7283,109 +8008,7 @@
 
   INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.100    
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.028E+07
- LARGEST RESIDUAL FORCE            -4.786E-02   AT NODE     400004   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         6.071E-09   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.855E-08   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.867E+06
- LARGEST RESIDUAL MOMENT            0.815       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.830E-07   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -2.031E-06   AT NODE      10120   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.40000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.028E+07
- LARGEST RESIDUAL FORCE            -6.561E-02   AT NODE     201002   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         7.130E-10   AT NODE      20118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -6.783E-09   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.867E+06
- LARGEST RESIDUAL MOMENT           -0.104       AT NODE      10136   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.909E-08   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.221E-07   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
-
-  USING THE DIRECT SOLVER WITH   4 PROCESSORS
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.30000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.028E+07
- LARGEST RESIDUAL FORCE            -5.308E-02   AT NODE     101104   DOF  1
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         1.626E-10   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        8.753E-10   AT NODE      10118   DOF  2
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.867E+06
- LARGEST RESIDUAL MOMENT            0.106       AT NODE      11001   DOF  6
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -7.759E-09   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION    -4.685E-08   AT NODE      10128   DOF  4
-   INSTANCE: SUSPENSIONBRIDGE                                                                
-          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7394,28 +8017,130 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.027E+07
+ LARGEST RESIDUAL FORCE            -7.826E-02   AT NODE     201104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         4.565E-08   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        2.101E-07   AT NODE      20106   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.402E+06
+ LARGEST RESIDUAL MOMENT             6.42       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -1.212E-06   AT NODE      20115   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.452E-05   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.027E+07
+ LARGEST RESIDUAL FORCE             7.408E-02   AT NODE     101103   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -6.212E-09   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.186E-08   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.402E+06
+ LARGEST RESIDUAL MOMENT           -0.733       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      3.478E-07   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     1.552E-06   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.30000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.027E+07
+ LARGEST RESIDUAL FORCE             7.366E-02   AT NODE     101102   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         4.439E-11   AT NODE      20099   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        6.256E-09   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.402E+06
+ LARGEST RESIDUAL MOMENT            0.154       AT NODE      20116   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.967E-09   AT NODE      20079   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -3.469E-07   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.028E+07
- LARGEST RESIDUAL FORCE             6.684E-02   AT NODE     210042   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.027E+07
+ LARGEST RESIDUAL FORCE             7.366E-02   AT NODE     101102   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         8.946E-12   AT NODE      20119   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.216E-09   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.705E-10   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.260E-09   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.867E+06
- LARGEST RESIDUAL MOMENT            8.251E-02   AT NODE     210042   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.402E+06
+ LARGEST RESIDUAL MOMENT            7.417E-02   AT NODE      11311   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.942E-09   AT NODE      10108   DOF  4
+ LARGEST INCREMENT OF ROTATION      4.585E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     6.339E-09   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION     4.487E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
@@ -7428,7 +8153,7 @@
 
   INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.100    
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7436,31 +8161,31 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.030E+07
- LARGEST RESIDUAL FORCE            -5.315E-02   AT NODE     101102   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.029E+07
+ LARGEST RESIDUAL FORCE             0.112       AT NODE     201103   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -2.082E-11   AT NODE      20126   DOF  2
+ LARGEST INCREMENT OF DISP.         3.491E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -2.921E-11   AT NODE      20119   DOF  2
+ LARGEST CORRECTION TO DISP.        1.565E-09   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.860E+06
- LARGEST RESIDUAL MOMENT            0.100       AT NODE     101003   DOF  5
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.382E+06
+ LARGEST RESIDUAL MOMENT            7.680E-02   AT NODE     201004   DOF  5
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -1.181E-09   AT NODE      10128   DOF  4
+ LARGEST INCREMENT OF ROTATION     -1.680E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     9.277E-10   AT NODE      10100   DOF  4
+ LARGEST CORRECTION TO ROTATION    -6.265E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
           TIME INCREMENT MAY NOW INCREASE TO    0.150    
 
  ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
@@ -7472,7 +8197,7 @@
 
   INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.150    
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7480,43 +8205,33 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED USER TIME (SEC)      =  0.30000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.031E+07
- LARGEST RESIDUAL FORCE            -9.135E-02   AT NODE     201102   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.030E+07
+ LARGEST RESIDUAL FORCE            -0.164       AT NODE     101104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -7.442E-12   AT NODE      10126   DOF  2
+ LARGEST INCREMENT OF DISP.        -3.306E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        3.864E-11   AT NODE      20126   DOF  2
+ LARGEST CORRECTION TO DISP.       -8.543E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.855E+06
- LARGEST RESIDUAL MOMENT           -0.102       AT NODE     200042   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.369E+06
+ LARGEST RESIDUAL MOMENT            0.135       AT NODE     110042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION     -3.863E-10   AT NODE      20128   DOF  4
+ LARGEST INCREMENT OF ROTATION      1.446E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     2.158E-09   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION     3.966E-08   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
-          TIME INCREMENT MAY NOW INCREASE TO    0.225    
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
 
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  0.150    ,  FRACTION OF STEP COMPLETED  0.550    
- STEP TIME COMPLETED       0.550    ,  TOTAL TIME COMPLETED         3.55    
-
-
-  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.225    
-
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7529,37 +8244,38 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.032E+07
- LARGEST RESIDUAL FORCE             6.258E-02   AT NODE     201002   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.030E+07
+ LARGEST RESIDUAL FORCE            -0.116       AT NODE     101103   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.         9.992E-12   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.830E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.        2.045E-11   AT NODE      10126   DOF  2
+ LARGEST CORRECTION TO DISP.        1.476E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.852E+06
- LARGEST RESIDUAL MOMENT           -0.119       AT NODE      11001   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.369E+06
+ LARGEST RESIDUAL MOMENT           -8.735E-02   AT NODE     100042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      3.484E-10   AT NODE      20128   DOF  4
+ LARGEST INCREMENT OF ROTATION      8.483E-09   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     9.279E-10   AT NODE      20128   DOF  4
+ LARGEST CORRECTION TO ROTATION    -5.974E-09   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    0.225    
 
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  0.225    ,  FRACTION OF STEP COMPLETED  0.775    
- STEP TIME COMPLETED       0.775    ,  TOTAL TIME COMPLETED         3.78    
+ TIME INCREMENT COMPLETED  0.150    ,  FRACTION OF STEP COMPLETED  0.550    
+ STEP TIME COMPLETED       0.550    ,  TOTAL TIME COMPLETED         3.55    
 
 
-  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.225    
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.225    
 
-  NUMBER OF EQUATIONS =      8418     NUMBER OF FLOATING PT. OPERATIONS =  1.31E+07
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
 
   USING THE DIRECT SOLVER WITH   4 PROCESSORS
 
@@ -7567,29 +8283,106 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.30000    
+       ELAPSED USER TIME (SEC)      =  0.20000    
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.40000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      2.036E+07   TIME AVG. FORCE       2.033E+07
- LARGEST RESIDUAL FORCE             8.983E-02   AT NODE     101103   DOF  1
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.030E+07
+ LARGEST RESIDUAL FORCE            -0.116       AT NODE     101104   DOF  1
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF DISP.        -4.886E-12   AT NODE      10118   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.489E-11   AT NODE      10098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO DISP.       -1.488E-11   AT NODE      10118   DOF  2
+ LARGEST CORRECTION TO DISP.        2.984E-10   AT NODE      20098   DOF  2
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
- AVERAGE MOMENT                     7.838E+06   TIME AVG. MOMENT      7.850E+06
- LARGEST RESIDUAL MOMENT           -0.108       AT NODE      11001   DOF  6
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.361E+06
+ LARGEST RESIDUAL MOMENT            0.137       AT NODE     110042   DOF  6
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST INCREMENT OF ROTATION      2.115E-10   AT NODE      10128   DOF  4
+ LARGEST INCREMENT OF ROTATION     -9.122E-10   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
- LARGEST CORRECTION TO ROTATION     5.599E-10   AT NODE      10128   DOF  4
+ LARGEST CORRECTION TO ROTATION    -1.364E-08   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          ROTATION CORRECTION TOO LARGE COMPARED TO ROTATION INCREMENT
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.20000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.30000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.030E+07
+ LARGEST RESIDUAL FORCE             7.430E-02   AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.        -2.692E-11   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.       -5.093E-11   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.361E+06
+ LARGEST RESIDUAL MOMENT            0.107       AT NODE      11001   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION      1.179E-09   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION     2.091E-09   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.225    ,  FRACTION OF STEP COMPLETED  0.775    
+ STEP TIME COMPLETED       0.775    ,  TOTAL TIME COMPLETED         3.77    
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.225    
+
+  NUMBER OF EQUATIONS =      7778     NUMBER OF FLOATING PT. OPERATIONS =  1.38E+07
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.034E+07   TIME AVG. FORCE       2.031E+07
+ LARGEST RESIDUAL FORCE             0.122       AT NODE     101104   DOF  1
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF DISP.         1.280E-11   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO DISP.        3.973E-11   AT NODE      20098   DOF  2
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.320E+06   TIME AVG. MOMENT      8.355E+06
+ LARGEST RESIDUAL MOMENT           -0.133       AT NODE     110042   DOF  6
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST INCREMENT OF ROTATION     -5.313E-10   AT NODE      20108   DOF  4
+   INSTANCE: SUSPENSIONBRIDGE                                                                
+ LARGEST CORRECTION TO ROTATION    -1.710E-09   AT NODE      20108   DOF  4
    INSTANCE: SUSPENSIONBRIDGE                                                                
           THE MOMENT    EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
@@ -7600,7 +8393,7 @@
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         4.00    
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 18-Feb-2022   Time 13:26:39
+   Abaqus 3DEXPERIENCE R2017x                                  Date 28-Feb-2022   Time 13:21:55
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -7636,7 +8429,7 @@
 
      EXTRAPOLATION WILL NOT BE USED
 
-     CHARACTERISTIC ELEMENT LENGTH      14.8    
+     CHARACTERISTIC ELEMENT LENGTH      15.4    
 
      DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
 
@@ -7656,15 +8449,15 @@
  COMPUTER PRECISION USED BY ABAQUS      2.22045e-016
  CONVERGENCE CRITERION FOR LANCZOS RUN  1.81899e-012
   
- NUMBER OF EQUATIONS                                                        8418
- NUMBER OF UNRESTRAINED DEGREES OF FREEDOM                                  8354
- HEURISTIC SCALE FOR THE FIRST NONZERO EIGENVALUES (PROBLEM SCALE)  3.56206e-004
+ NUMBER OF EQUATIONS                                                        7778
+ NUMBER OF UNRESTRAINED DEGREES OF FREEDOM                                  7714
+ HEURISTIC SCALE FOR THE FIRST NONZERO EIGENVALUES (PROBLEM SCALE)  3.51914e-004
  INITIAL SHIFT VALUE                                                0.00000e+000
   
  NUMBER OF CPUS USED BY DIRECT SOLVER     4
   
  NUMBER OF NEGATIVE EIGENVALUES     0
- NUMBER OF POSITIVE EIGENVALUES  8418
+ NUMBER OF POSITIVE EIGENVALUES  7778
  NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS     0
  NUMBER OF LAGRANGE MULTIPLIERS     0
   
@@ -7675,19 +8468,20 @@
  RIGHT BOUNDARY OF THE COMPUTATIONAL INTERVAL  3.95574e+037
  LEFT BOUNDARY OF THE COMPUTATIONAL INTERVAL  -3.95574e+037
   
- LANCZOS RUN TERMINATED. NUMBER OF STEPS:   18
+ LANCZOS RUN TERMINATED. NUMBER OF STEPS:   19
  TERMINATION BASED ON THE COST-PER-EIGENVALUE CRITERION
   
- NUMBER OF ACCEPTED EIGENVALUES   40
+ NUMBER OF ACCEPTED EIGENVALUES   43
   
  ACCEPTED EIGENVALUES
-  1.39696e-001 4.77103e-001 8.67819e-001 9.45518e-001 1.44203e+000 1.65642e+000
-  1.76661e+000 1.98829e+000 2.08875e+000 2.12443e+000 2.46141e+000 3.53555e+000
-  3.83405e+000 4.02009e+000 4.78779e+000 5.02506e+000 5.21026e+000 5.38047e+000
-  5.50614e+000 5.73734e+000 5.73898e+000 5.79304e+000 5.99949e+000 6.06040e+000
-  6.11051e+000 6.11926e+000 6.12079e+000 6.21899e+000 6.29957e+000 7.06213e+000
-  7.97818e+000 8.49733e+000 9.31635e+000 9.64820e+000 9.81578e+000 1.26349e+001
-  1.30191e+001 1.34377e+001 1.44018e+001 1.62816e+001
+  1.39910e-001 4.76525e-001 8.68247e-001 9.45636e-001 1.44198e+000 1.65183e+000
+  1.76621e+000 1.99088e+000 2.09046e+000 2.13006e+000 2.45727e+000 3.53979e+000
+  3.83908e+000 4.02671e+000 4.78673e+000 5.03522e+000 5.22020e+000 5.37795e+000
+  5.49552e+000 5.75365e+000 5.75538e+000 5.80917e+000 6.01600e+000 6.07408e+000
+  6.11330e+000 6.13450e+000 6.13622e+000 6.23092e+000 6.30403e+000 7.08422e+000
+  7.98693e+000 8.50359e+000 9.33740e+000 9.65836e+000 9.83282e+000 1.26440e+001
+  1.30499e+001 1.34546e+001 1.44156e+001 1.62870e+001 1.72760e+001 1.74042e+001
+  1.77971e+001
   
  FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
   
@@ -7707,17 +8501,17 @@
   
  NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL  100
   
- NUMBER OF MODES FORMING SENTINEL TO THE RIGHT   40
- SHIFT RIGHT        6.04819e+001
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT   42
+ SHIFT RIGHT        6.51565e+001
   
  NUMBER OF MODES FORMING SENTINEL TO THE LEFT     0
  SHIFT LEFT         0.00000e+000
   
  SHIFTING TO THE RIGHT DIRECTION
- NEW SHIFT          6.04819e+001
+ NEW SHIFT          6.51565e+001
   
  NUMBER OF NEGATIVE EIGENVALUES    87
- NUMBER OF POSITIVE EIGENVALUES  8331
+ NUMBER OF POSITIVE EIGENVALUES  7691
  NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS    87
  NUMBER OF LAGRANGE MULTIPLIERS     0
   
@@ -7725,9 +8519,9 @@
   
  TYPE OF RUN: EXPAND THE TRUST INTERVAL TO THE RIGHT
  EIGENVALUES NEEDED TO THE RIGHT    13
- EIGENVALUES NEEDED TO THE LEFT     47
+ EIGENVALUES NEEDED TO THE LEFT     44
  RIGHT BOUNDARY OF THE INTERVAL  3.95574e+037
- LEFT BOUNDARY OF THE INTERVAL   1.62816e+001
+ LEFT BOUNDARY OF THE INTERVAL   1.74042e+001
   
  TRUST INTERVALS AFTER FACTORIZATION AND COMPRESSION
   
@@ -7735,38 +8529,39 @@
  | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
  |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
  -------------------------------------------------------------------------------------
- |  +  |      0 |        0        0 |     0    40 |     0    40 |      0   100       |
- |-3.95574e+037 0.00000e+000 |-3.95574e+037 1.62816e+001 |-3.95574e+037 3.95574e+037 |
+ |  +  |      0 |        0        0 |     0    42 |     0    43 |      0   100       |
+ |-3.95574e+037 0.00000e+000 |-3.95574e+037 1.74042e+001 |-3.95574e+037 3.95574e+037 |
  -------------------------------------------------------------------------------------
- |  -  |      0 |       87       87 |     0     0 |     0     0 |     47    13       |
- | 6.04819e+001 6.04819e+001 | 6.04819e+001 6.04819e+001 | 1.62816e+001 3.95574e+037 |
+ |  -  |      0 |       87       87 |     0     0 |     0     0 |     44    13       |
+ | 6.51565e+001 6.51565e+001 | 6.51565e+001 6.51565e+001 | 1.74042e+001 3.95574e+037 |
  -------------------------------------------------------------------------------------
   
  LANCZOS RUN TERMINATED. NUMBER OF STEPS:   23
  ALL THE EIGENVALUES REQUESTED ON THIS LANCZOS RUN ARE FOUND
   
- NUMBER OF ACCEPTED EIGENVALUES  112
+ NUMBER OF ACCEPTED EIGENVALUES  116
   
  ACCEPTED EIGENVALUES
-  1.39696e-001 4.77103e-001 8.67819e-001 9.45518e-001 1.44203e+000 1.65642e+000
-  1.76661e+000 1.98829e+000 2.08875e+000 2.12443e+000 2.46141e+000 3.53555e+000
-  3.83405e+000 4.02009e+000 4.78779e+000 5.02506e+000 5.21026e+000 5.38047e+000
-  5.50614e+000 5.73734e+000 5.73898e+000 5.79304e+000 5.99949e+000 6.06040e+000
-  6.11051e+000 6.11926e+000 6.12079e+000 6.21899e+000 6.29957e+000 7.06213e+000
-  7.97818e+000 8.49733e+000 9.31635e+000 9.64820e+000 9.81578e+000 1.26349e+001
-  1.30191e+001 1.34377e+001 1.44018e+001 1.62816e+001 1.72781e+001 1.73631e+001
-  1.74318e+001 1.77988e+001 2.09128e+001 2.21238e+001 2.25026e+001 2.25126e+001
-  2.27216e+001 2.29119e+001 2.29552e+001 2.29557e+001 2.29659e+001 2.30031e+001
-  2.30035e+001 2.75448e+001 2.78908e+001 2.82757e+001 2.88369e+001 2.94109e+001
-  3.40278e+001 3.43469e+001 3.43469e+001 3.47170e+001 3.98523e+001 4.04521e+001
-  4.18374e+001 4.24742e+001 4.27397e+001 4.31451e+001 4.68394e+001 4.88839e+001
-  4.94858e+001 4.96328e+001 5.03178e+001 5.16526e+001 5.16530e+001 5.17841e+001
-  5.17878e+001 5.18095e+001 5.18111e+001 5.42349e+001 5.43947e+001 5.45250e+001
-  5.81121e+001 5.90047e+001 6.02041e+001 6.59840e+001 6.60019e+001 6.72645e+001
-  6.98504e+001 7.09506e+001 7.66092e+001 7.71038e+001 8.13226e+001 8.70241e+001
-  8.75622e+001 8.78274e+001 8.80250e+001 8.80298e+001 8.81974e+001 9.03405e+001
-  9.07373e+001 9.18297e+001 9.18339e+001 9.18430e+001 9.20208e+001 9.20309e+001
-  9.20817e+001 9.41804e+001 9.71754e+001 9.87944e+001
+  1.39910e-001 4.76525e-001 8.68247e-001 9.45636e-001 1.44198e+000 1.65183e+000
+  1.76621e+000 1.99088e+000 2.09046e+000 2.13006e+000 2.45727e+000 3.53979e+000
+  3.83908e+000 4.02671e+000 4.78673e+000 5.03522e+000 5.22020e+000 5.37795e+000
+  5.49552e+000 5.75365e+000 5.75538e+000 5.80917e+000 6.01600e+000 6.07408e+000
+  6.11330e+000 6.13450e+000 6.13622e+000 6.23092e+000 6.30403e+000 7.08422e+000
+  7.98693e+000 8.50359e+000 9.33740e+000 9.65836e+000 9.83282e+000 1.26440e+001
+  1.30499e+001 1.34546e+001 1.44156e+001 1.62870e+001 1.72760e+001 1.74042e+001
+  1.74745e+001 1.77971e+001 2.09301e+001 2.21771e+001 2.25625e+001 2.25685e+001
+  2.27826e+001 2.29838e+001 2.30208e+001 2.30212e+001 2.30385e+001 2.30766e+001
+  2.30769e+001 2.75402e+001 2.79547e+001 2.83469e+001 2.88328e+001 2.94342e+001
+  3.41086e+001 3.43427e+001 3.43427e+001 3.48051e+001 3.99135e+001 4.04801e+001
+  4.19441e+001 4.25037e+001 4.27822e+001 4.31907e+001 4.69072e+001 4.89090e+001
+  4.94762e+001 4.97603e+001 5.04381e+001 5.18000e+001 5.18004e+001 5.19476e+001
+  5.19508e+001 5.19733e+001 5.19750e+001 5.42693e+001 5.45058e+001 5.46094e+001
+  5.82619e+001 5.91296e+001 6.02758e+001 6.59699e+001 6.61101e+001 6.74385e+001
+  6.99050e+001 7.09939e+001 7.67935e+001 7.73035e+001 8.13361e+001 8.72115e+001
+  8.77735e+001 8.78374e+001 8.81060e+001 8.81136e+001 8.83704e+001 9.05637e+001
+  9.07864e+001 9.20960e+001 9.20995e+001 9.21211e+001 9.23081e+001 9.23247e+001
+  9.23720e+001 9.41727e+001 9.74087e+001 9.90515e+001 1.04813e+002 1.06485e+002
+  1.07870e+002 1.09576e+002
   
  FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
   
@@ -7779,24 +8574,24 @@
  |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
  -------------------------------------------------------------------------------------
  |  +  |     87 |        0       87 |     0     0 |     0     0 |      0    13       |
- |-3.95574e+037 6.04819e+001 |-3.95574e+037 6.04819e+001 |-3.95574e+037 3.95574e+037 |
+ |-3.95574e+037 6.51565e+001 |-3.95574e+037 6.51565e+001 |-3.95574e+037 3.95574e+037 |
  -------------------------------------------------------------------------------------
   
  DATA FOR CHOOSING SHIFT
   
  NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL   13
   
- NUMBER OF MODES FORMING SENTINEL TO THE RIGHT   25
- SHIFT RIGHT        8.81136e+001
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT   29
+ SHIFT RIGHT        8.82420e+001
   
- NUMBER OF MODES FORMING SENTINEL TO THE LEFT    47
- SHIFT LEFT        -2.54937e+001
+ NUMBER OF MODES FORMING SENTINEL TO THE LEFT    44
+ SHIFT LEFT        -2.97306e+001
   
  SHIFTING TO THE RIGHT DIRECTION
- NEW SHIFT          8.81136e+001
+ NEW SHIFT          8.82420e+001
   
  NUMBER OF NEGATIVE EIGENVALUES   100
- NUMBER OF POSITIVE EIGENVALUES  8318
+ NUMBER OF POSITIVE EIGENVALUES  7678
  NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS   100
  NUMBER OF LAGRANGE MULTIPLIERS     0
   
@@ -7809,42 +8604,42 @@
  |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
  -------------------------------------------------------------------------------------
  |  +  |    100 |        0      100 |     0     0 |     0     0 |      0     0       |
- |-3.95574e+037 8.81136e+001 |-3.95574e+037 8.81136e+001 |-3.95574e+037 8.81136e+001 |
+ |-3.95574e+037 8.82420e+001 |-3.95574e+037 8.82420e+001 |-3.95574e+037 8.82420e+001 |
  -------------------------------------------------------------------------------------
   
  FIRST EIGENVALUE REQUESTED BY THE USER     1
   
  EIGENVALUES REQUESTED BY THE USER
-  1.39696e-001 4.77103e-001 8.67819e-001 9.45518e-001 1.44203e+000 1.65642e+000
-  1.76661e+000 1.98829e+000 2.08875e+000 2.12443e+000 2.46141e+000 3.53555e+000
-  3.83405e+000 4.02009e+000 4.78779e+000 5.02506e+000 5.21026e+000 5.38047e+000
-  5.50614e+000 5.73734e+000 5.73898e+000 5.79304e+000 5.99949e+000 6.06040e+000
-  6.11051e+000 6.11926e+000 6.12079e+000 6.21899e+000 6.29957e+000 7.06213e+000
-  7.97818e+000 8.49733e+000 9.31635e+000 9.64820e+000 9.81578e+000 1.26349e+001
-  1.30191e+001 1.34377e+001 1.44018e+001 1.62816e+001 1.72781e+001 1.73631e+001
-  1.74318e+001 1.77988e+001 2.09128e+001 2.21238e+001 2.25026e+001 2.25126e+001
-  2.27216e+001 2.29119e+001 2.29552e+001 2.29557e+001 2.29659e+001 2.30031e+001
-  2.30035e+001 2.75448e+001 2.78908e+001 2.82757e+001 2.88369e+001 2.94109e+001
-  3.40278e+001 3.43469e+001 3.43469e+001 3.47170e+001 3.98523e+001 4.04521e+001
-  4.18374e+001 4.24742e+001 4.27397e+001 4.31451e+001 4.68394e+001 4.88839e+001
-  4.94858e+001 4.96328e+001 5.03178e+001 5.16526e+001 5.16530e+001 5.17841e+001
-  5.17878e+001 5.18095e+001 5.18111e+001 5.42349e+001 5.43947e+001 5.45250e+001
-  5.81121e+001 5.90047e+001 6.02041e+001 6.59840e+001 6.60019e+001 6.72645e+001
-  6.98504e+001 7.09506e+001 7.66092e+001 7.71038e+001 8.13226e+001 8.70241e+001
-  8.75622e+001 8.78274e+001 8.80250e+001 8.80298e+001
+  1.39910e-001 4.76525e-001 8.68247e-001 9.45636e-001 1.44198e+000 1.65183e+000
+  1.76621e+000 1.99088e+000 2.09046e+000 2.13006e+000 2.45727e+000 3.53979e+000
+  3.83908e+000 4.02671e+000 4.78673e+000 5.03522e+000 5.22020e+000 5.37795e+000
+  5.49552e+000 5.75365e+000 5.75538e+000 5.80917e+000 6.01600e+000 6.07408e+000
+  6.11330e+000 6.13450e+000 6.13622e+000 6.23092e+000 6.30403e+000 7.08422e+000
+  7.98693e+000 8.50359e+000 9.33740e+000 9.65836e+000 9.83282e+000 1.26440e+001
+  1.30499e+001 1.34546e+001 1.44156e+001 1.62870e+001 1.72760e+001 1.74042e+001
+  1.74745e+001 1.77971e+001 2.09301e+001 2.21771e+001 2.25625e+001 2.25685e+001
+  2.27826e+001 2.29838e+001 2.30208e+001 2.30212e+001 2.30385e+001 2.30766e+001
+  2.30769e+001 2.75402e+001 2.79547e+001 2.83469e+001 2.88328e+001 2.94342e+001
+  3.41086e+001 3.43427e+001 3.43427e+001 3.48051e+001 3.99135e+001 4.04801e+001
+  4.19441e+001 4.25037e+001 4.27822e+001 4.31907e+001 4.69072e+001 4.89090e+001
+  4.94762e+001 4.97603e+001 5.04381e+001 5.18000e+001 5.18004e+001 5.19476e+001
+  5.19508e+001 5.19733e+001 5.19750e+001 5.42693e+001 5.45058e+001 5.46094e+001
+  5.82619e+001 5.91296e+001 6.02758e+001 6.59699e+001 6.61101e+001 6.74385e+001
+  6.99050e+001 7.09939e+001 7.67935e+001 7.73035e+001 8.13361e+001 8.72115e+001
+  8.77735e+001 8.78374e+001 8.81060e+001 8.81136e+001
   
  EIGENVALUE EXTRACTION USING THE LANCZOS EIGENSOLVER IS COMPLETE
  NUMBER OF LANCZOS RUNS       :   2
- NUMBER OF LANCZOS STEPS      :  41
+ NUMBER OF LANCZOS STEPS      :  42
  NUMBER OF FACTORIZATIONS     :   3
- NUMBER OF BACK SUBSTITUTIONS :  42
+ NUMBER OF BACK SUBSTITUTIONS :  43
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   9.3000    
-       ELAPSED SYSTEM TIME (SEC)    =   1.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   10.300    
-       ELAPSED WALLCLOCK TIME (SEC) =          5
+       ELAPSED USER TIME (SEC)      =   4.8000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.50000    
+       ELAPSED TOTAL CPU TIME (SEC) =   5.3000    
+       ELAPSED WALLCLOCK TIME (SEC) =          3
 
 
           THE ANALYSIS HAS BEEN COMPLETED
@@ -7852,11 +8647,11 @@
 
 
      ANALYSIS SUMMARY:
-     TOTAL OF         95  INCREMENTS
-                       0  CUTBACKS IN AUTOMATIC INCREMENTATION
-                     179  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
-                     224  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
-                     182  INVOLVE MATRIX DECOMPOSITION, INCLUDING
+     TOTAL OF        101  INCREMENTS
+                       1  CUTBACKS IN AUTOMATIC INCREMENTATION
+                     200  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
+                     246  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
+                     203  INVOLVE MATRIX DECOMPOSITION, INCLUDING
                        0  DECOMPOSITION(S) OF THE MASS MATRIX
                        1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
                        0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
@@ -7870,7 +8665,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   87.900    
-       SYSTEM TIME (SEC)    =   15.900    
-       TOTAL CPU TIME (SEC) =   103.80    
-       WALLCLOCK TIME (SEC) =         55
+       USER TIME (SEC)      =   85.600    
+       SYSTEM TIME (SEC)    =   17.900    
+       TOTAL CPU TIME (SEC) =   103.50    
+       WALLCLOCK TIME (SEC) =         56

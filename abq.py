@@ -9,7 +9,7 @@
 
 import numpy as np
 import os
-import numtools
+from . import numtools
 import time
 
 #%%
@@ -87,51 +87,6 @@ def CheckDuplicateNumbers(InputFileName):
             
             
 #%%
-            
-# =============================================================================
-# def CheckDuplicateNumbersOld(InputFileName):
-# 
-#     fid=open(InputFileName, 'r')
-#     InputFileLines=fid.read().splitlines()
-#     fid.close()
-# 
-#     type_list=['*NODE,' , '*ELEMENT,']
-# 
-#     IndexStar=numtools.listindexsub(InputFileLines,'*')
-# 
-#     for index in np.arange(2):
-#         
-#         IndexMatch=numtools.listindexsub(InputFileLines,type_list[index])
-#         
-#         NumbersAll=[None]*len(IndexMatch)
-#     
-#         for k in np.arange(len(IndexMatch)):
-#         
-#             IndexStarNext=next(x for x in IndexStar if x > IndexMatch[k])
-#         
-#             NumericRange=np.arange(IndexMatch[k]+1,IndexStarNext)
-#           
-#             NumericBlock=np.loadtxt(InputFileName,delimiter=',',dtype='int',skiprows=NumericRange[0],max_rows=len(NumericRange))
-#           
-#             NumericBlock2=np.atleast_2d(NumericBlock)
-#           
-#             NumbersAll[k]=NumericBlock2[:,0]
-#             #[float(s) for s in example_string.split(',')]
-#     
-#         # Find duplicates
-#         NumbersAll2=np.concatenate(NumbersAll,axis=0)
-#         (u,c)= np.unique(NumbersAll2, return_counts=True)
-#         NumbersDup=u[c>1]
-# 
-#         if len(NumbersDup)>0:
-#             
-#             print('***** Duplicate ' + type_list[index] + ' numbers:')
-#             print(NumbersDup)
-#             raise Exception('***** Duplicates not allowed, see above printed numbers')
-#             
-# =============================================================================
-
-#%%
 
 def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_error=True,OldJobName=''):
 
@@ -194,7 +149,7 @@ def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_
     LogicCompleted='COMPLETED' in sys_out
     if LogicCompleted:
         print('***** ABAQUS job completed in ' + numtools.num2strf(t1,1) + ' s')
-
+        
     LogicErrorAnalysis='Abaqus/Analysis exited with error' in sys_out
 
     if LogicErrorAnalysis:
@@ -204,3 +159,4 @@ def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_
         if halt_error:
             raise Exception('***** Stopped due to ABAQUS errors, see message above')
             
+    return LogicCompleted

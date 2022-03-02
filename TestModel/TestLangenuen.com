@@ -46,7 +46,7 @@ options = {
     'moldflowFiles':[],
     'moldflowMaterial':OFF,
     'mp_file_system':(DETECT, DETECT),
-    'mp_head_node':('dhcp-10-24-14-146.wlan.ntnu.no', 'dhcp-10-24-14-146', '10.24.14.146', 'ntnu08422.win.ntnu.no', 'ntnu08422', '129.241.193.42'),
+    'mp_head_node':('dhcp-10-24-15-52.wlan.ntnu.no', 'dhcp-10-24-15-52', '10.24.15.52', 'ntnu08422.win.ntnu.no', 'ntnu08422', '129.241.193.42'),
     'mp_host_list':(('ntnu08422', 4),),
     'mp_mode':MPI,
     'mp_mode_requested':MPI,

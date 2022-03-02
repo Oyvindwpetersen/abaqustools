@@ -9,8 +9,8 @@ Created on
 
 import numpy as np
 from numpy import matlib
-import numtools
-import gen
+from .. import numtools
+from .. import gen
 from .MeshStruct import *
 
 

@@ -1,0 +1,293 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2017 replay file
+# Internal Version: 2016_09_27-23.54.59 126836
+# Run by oyvinpet on Mon Feb 28 12:07:38 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=222.093017578125, 
+    height=89.1006927490234)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='TestLangenuen.odb')
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestLangenuen.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       144
+#: Number of Node Sets:          47
+#: Number of Steps:              5
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+import sys
+sys.path.insert(15, r'c:/Users/oyvinpet/abaqus_plugins/ModalViewPlugin')
+import ModalView
+import ModalView
+ModalView.ModalViewFunc(DoRenderBeamProfiles='No', deflection=50, 
+    X_in_or_out='In')
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP4', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    deformationScaling=AUTO)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: 
+#: Node: SUSPENSIONBRIDGE.10082
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -1.19748e+001, -1.59946e+001,  9.83359e+001,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -1.20020e+001, -1.39999e+001,  8.83566e+001,      -      
+#: Deformed coordinates (scaled):    -1.20020e+001, -1.39999e+001,  8.83566e+001,      -      
+#: Displacement (unscaled):          -2.72707e-002,  1.99464e+000, -9.97931e+000,  1.01767e+001
+#: 
+#: Node: SUSPENSIONBRIDGE.10083
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.00000e-005, -1.60000e+001,  9.82955e+001,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -1.88110e-003, -1.40056e+001,  8.83123e+001,      -      
+#: Deformed coordinates (scaled):    -1.88110e-003, -1.40056e+001,  8.83123e+001,      -      
+#: Displacement (unscaled):          -1.90110e-003,  1.99437e+000, -9.98314e+000,  1.01804e+001
+#: 
+#: Node: SUSPENSIONBRIDGE.1156
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  0.00000e+000,  0.00000e+000,  8.44154e+001,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -1.93457e-003, -7.00608e-009,  7.64576e+001,      -      
+#: Deformed coordinates (scaled):    -1.93457e-003, -7.00608e-009,  7.64576e+001,      -      
+#: Displacement (unscaled):          -1.93457e-003, -7.00608e-009, -7.95777e+000,  7.95777e+000
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2370.93, 
+    farPlane=4453.67, width=3616.69, height=1941.28, viewOffsetX=1122.38, 
+    viewOffsetY=479.389)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP1', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP2', frame=1)
+#: 
+#: Node: SUSPENSIONBRIDGE.10083
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  2.00000e-005, -1.60000e+001,  9.82955e+001,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -1.73165e-003, -1.59667e+001,  9.64181e+001,      -      
+#: Deformed coordinates (scaled):    -1.73165e-003, -1.59667e+001,  9.64181e+001,      -      
+#: Displacement (unscaled):          -1.75165e-003,  3.32984e-002, -1.87743e+000,  1.87772e+000
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2730.15, 
+    farPlane=4094.44, width=33.6231, height=18.0474, viewOffsetX=-417.027, 
+    viewOffsetY=-0.387522)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP4', frame=1)
+#: 
+#: Node: SUSPENSIONBRIDGE.20031
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -6.18381e+002,  1.50000e+000,  2.06100e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -6.17471e+002,  1.50010e+000,  2.06034e+002,      -      
+#: Deformed coordinates (scaled):    -6.17471e+002,  1.50010e+000,  2.06034e+002,      -      
+#: Displacement (unscaled):           9.09764e-001,  1.01677e-004, -6.56424e-002,  9.12129e-001
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2596.19, 
+    farPlane=4228.41, width=1279.1, height=739.19, viewOffsetX=-25.5198, 
+    viewOffsetY=59.6111)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2744.69, 
+    farPlane=4037.32, width=1352.26, height=781.472, cameraPosition=(-1510.49, 
+    141.094, 3136.07), cameraUpVector=(0.192048, 0.930295, -0.312521), 
+    cameraTarget=(168.793, 25.9835, -171.993), viewOffsetX=-26.9795, 
+    viewOffsetY=63.0208)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3075.68, 
+    farPlane=3652.76, width=1515.33, height=875.713, cameraPosition=(246.901, 
+    -2687.78, 2111.54), cameraUpVector=(-0.0634153, 0.827515, 0.557851), 
+    cameraTarget=(10.663, 289.429, -92.3021), viewOffsetX=-30.2331, 
+    viewOffsetY=70.6207)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP4', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP1', frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3228.07, 
+    farPlane=3500.33, width=11.9843, height=6.92572, viewOffsetX=-625.104, 
+    viewOffsetY=91.3023)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U1'), )
+#: 
+#: Mass properties for Whole model:
+#:   Area of shell faces (one side only):  3.96114e+004
+#:   Area centroid of shell faces:  6.97996e-015, -3.75977e-016,  8.01079e+001
+#:   Volume:  1.25516e+004
+#:   Volume centroid:  0.00000e+000,  4.63903e-017,  8.47320e+001
+#:   Mass:  3.03910e+007
+#:   Center of mass:  0.00000e+000,  5.64089e-017,  8.48813e+001
+#:   Moment of inertia about the origin (Ixx, Iyy, Izz, Ixy, Iyz, Izx):  3.28787e+011,  1.19118e+013,  1.15938e+013, -7.89200e-026, -9.31323e-008,  0.00000e+000
+#:   Moment of inertia about the center of mass:  1.09824e+011,  1.16928e+013,  1.15938e+013, -7.89200e-026,  5.23818e-008,  0.00000e+000
+#: 
+#:   The selected elements contain sections unsupported for Mass/Volume/Area computations.
+#:   These elements have been ignored.
+#: 
+#: Element: SUSPENSIONBRIDGE.100042
+#:   Type: B31
+#:   Material: CONCRETE
+#:   Section: TOWER_SOUTH_CS_042.Section-ASSEMBLYSUSPENSIONBRIDGE_SUSPENSIONBRIDGE_TOWER_SOUTH_CS_042, Box Beam Section, a = 5, b = 4, t1 = 0.6, t2 = 0.6, t3 = 0.6, t4 = 0.6
+#:   Connect: 100042, 100043
+#:   Results: Integration Point values not available
+#: 
+#: Node: SUSPENSIONBRIDGE.100042
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -6.17500e+002, -1.58981e+000,  2.05000e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -6.18682e+002, -1.58981e+000,  2.04984e+002,      -      
+#: Deformed coordinates (scaled):    -6.18682e+002, -1.58981e+000,  2.04984e+002,      -      
+#: Displacement (unscaled):          -1.18179e+000,  1.51933e-006, -1.62911e-002,  1.18190e+000
+#: 
+#: Node: SUSPENSIONBRIDGE.100043
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -6.17500e+002, -1.50000e+000,  2.06000e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -6.18692e+002, -1.50002e+000,  2.05984e+002,      -      
+#: Deformed coordinates (scaled):    -6.18692e+002, -1.50002e+000,  2.05984e+002,      -      
+#: Displacement (unscaled):          -1.19210e+000, -1.76149e-005, -1.63428e-002,  1.19221e+000
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3227.63, 
+    farPlane=3500.77, width=17.726, height=8.30385, viewOffsetX=-625.369, 
+    viewOffsetY=92.1861)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP1', frame=0)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP2', frame=1)
+#: 
+#: Node: SUSPENSIONBRIDGE.10031
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -6.18381e+002, -1.50000e+000,  2.06100e+002,      -      
+#: No deformed coordinates for current plot.
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP4', frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3227.83, 
+    farPlane=3500.58, width=14.0261, height=6.57059, viewOffsetX=-626.363, 
+    viewOffsetY=91.0053)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP1', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP2', frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step='STEP4', frame=1)
+#: 
+#: Node: SUSPENSIONBRIDGE.100043
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                 -6.17500e+002, -1.50000e+000,  2.06000e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):  -6.17782e+002, -1.50010e+000,  2.05918e+002,      -      
+#: Deformed coordinates (scaled):    -6.17782e+002, -1.50010e+000,  2.05918e+002,      -      
+#: Displacement (unscaled):          -2.82338e-001, -1.03269e-004, -8.18329e-002,  2.93959e-001
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3227.41, 
+    farPlane=3500.99, width=19.7367, height=9.24574, viewOffsetX=582.335, 
+    viewOffsetY=41.5229)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3227.28, 
+    farPlane=3501.12, width=19.7358, height=9.24535, cameraPosition=(244.403, 
+    -2672.28, 2132.74), cameraUpVector=(-0.0221488, 0.83019, 0.557041), 
+    cameraTarget=(8.16488, 304.925, -71.1011), viewOffsetX=582.311, 
+    viewOffsetY=41.5212)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3227.27, 
+    farPlane=3501.12, width=19.7358, height=9.24533, cameraPosition=(243.293, 
+    -2631.81, 2187.53), cameraUpVector=(0.0842755, 0.83209, 0.5482), 
+    cameraTarget=(7.05481, 345.391, -16.3159), viewOffsetX=582.309, 
+    viewOffsetY=41.5211)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=581.292, 
+    viewOffsetY=37.0635)
+#: 
+#: Node: SUSPENSIONBRIDGE.10135
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  6.18381e+002, -1.50000e+000,  2.06100e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):   6.17471e+002, -1.50010e+000,  2.06034e+002,      -      
+#: Deformed coordinates (scaled):     6.17471e+002, -1.50010e+000,  2.06034e+002,      -      
+#: Displacement (unscaled):          -9.09764e-001, -1.01677e-004, -6.56423e-002,  9.12129e-001
+#: 
+#: Node: SUSPENSIONBRIDGE.200043
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  6.17500e+002, -1.50000e+000,  2.06000e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):   6.17782e+002, -1.50010e+000,  2.05918e+002,      -      
+#: Deformed coordinates (scaled):     6.17782e+002, -1.50010e+000,  2.05918e+002,      -      
+#: Displacement (unscaled):           2.82338e-001, -1.03270e-004, -8.18328e-002,  2.93959e-001
+#: 
+#: Node: SUSPENSIONBRIDGE.10135
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  6.18381e+002, -1.50000e+000,  2.06100e+002,      -      
+#: Scale:                             1.00000e+000,  1.00000e+000,  1.00000e+000,      -      
+#: Deformed coordinates (unscaled):   6.17471e+002, -1.50010e+000,  2.06034e+002,      -      
+#: Deformed coordinates (scaled):     6.17471e+002, -1.50010e+000,  2.06034e+002,      -      
+#: Displacement (unscaled):          -9.09764e-001, -1.01677e-004, -6.56423e-002,  9.12129e-001
+#: Warning: The output database 'C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestLangenuen.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2983.87, 
+    farPlane=3744.53, width=2032.42, height=952.099, viewOffsetX=240.06, 
+    viewOffsetY=-114.388)
+cliCommand("""import os""")
+o1 = session.openOdb(
+    name='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestLangenuen.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestLangenuen.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       144
+#: Number of Node Sets:          47
+#: Number of Steps:              5
+cliCommand("""a=os.getcwd()""")
+cliCommand("""a""")
+#: 'C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools\\TestModel'
+cliCommand("""os.chdir('C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools')""")
+#* WindowsError: (123, 'The filename, directory name, or volume label syntax is 
+#* incorrect', 'C:\\Cloud\\OD_OWP\\Work\\Python\\Github\x07baqustools')
+cliCommand("""os.chdir('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\Github\\\\abaqustools')""")
+cliCommand("""os.chdir('C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools')""")
+#* WindowsError: (123, 'The filename, directory name, or volume label syntax is 
+#* incorrect', 'C:\\Cloud\\OD_OWP\\Work\\Python\\Github\x07baqustools')
+cliCommand("""a=os.getcwd()""")
+cliCommand("""a""")
+#: 'C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools'
+cliCommand("""os.chdir('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\Github\\\\abaqustools\\\\odbexport')""")
+cliCommand("""odbexport.py""")
+#* NameError: name 'odbexport' is not defined
+cliCommand("""python odbexport.py""")
+#*     python odbexport.py
+#*                    ^
+#* SyntaxError: invalid syntax
+cliCommand("""python odbexport""")
+#*     python odbexport
+#*                    ^
+#* SyntaxError: invalid syntax
+cliCommand("""import odbexport""")
+cliCommand("""odbexport""")
+#: <module 'odbexport' from '.\odbexport.py'>
+session.odbs['C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel/TestLangenuen.odb'].close(
+    )
+cliCommand("""odbexport.OpenODB(
+)""")
+#* TypeError: OpenODB() takes exactly 3 arguments (0 given)
+cliCommand("""myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#* TypeError: OpenODB() takes exactly 3 arguments (2 given)
+cliCommand("""import odbexport""")
+cliCommand(""">>> myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#*     >>> 
+#* myOdb=odbexport.OpenODB('C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools\\TestModel',
+#* 'TestLangenuen')
+#*      ^
+#* SyntaxError: invalid syntax
+cliCommand("""myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#* TypeError: OpenODB() takes exactly 3 arguments (2 given)
+cliCommand(""">>> myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#*     >>> 
+#* myOdb=odbexport.OpenODB('C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools\\TestModel',
+#* 'TestLangenuen')
+#*      ^
+#* SyntaxError: invalid syntax
+cliCommand("""myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#* TypeError: OpenODB() takes exactly 3 arguments (2 given)
+cliCommand("""import odbexport""")
+cliCommand(""">>> myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#*     >>> 
+#* myOdb=odbexport.OpenODB('C:\\Cloud\\OD_OWP\\Work\\Python\\Github\\abaqustools\\TestModel',
+#* 'TestLangenuen')
+#*      ^
+#* SyntaxError: invalid syntax
+cliCommand("""myOdb=odbexport.OpenODB('C:\\\\Cloud\\\\OD_OWP\\\\Work\\\\Python\\\\Github\\\\abaqustools\\\\TestModel','TestLangenuen')""")
+#* TypeError: OpenODB() takes exactly 3 arguments (2 given)

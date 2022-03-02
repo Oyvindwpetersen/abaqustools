@@ -30,7 +30,7 @@ Created on
    # 'BeamAddedInertia'
          #  ]
 
-import numtools
+from . import numtools
 import numpy as np
 
 #%%

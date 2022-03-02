@@ -7,8 +7,8 @@ Created on Sat Jan 22 09:31:11 2022
 #%%
 
 import numpy as np
-import numtools
-import gen
+from .. import numtools
+from .. import gen
 import datetime
 
 #%%
@@ -21,7 +21,7 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
     comment.append('Model input generated ' + c[:-7])
 
     gen.Comment(fid,comment)
-    gen.Comment(fid,'Part of abaqtus tools package')
+    gen.Comment(fid,'Part of abaqustools package')
     gen.Comment(fid,'2022 Oyvind Wiig Petersen, NTNU')
 
     gen.Line(fid,'**')

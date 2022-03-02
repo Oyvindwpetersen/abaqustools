@@ -13,8 +13,8 @@ Created on
 
 from ypstruct import *
 import numpy as np
-import numtools
-import gen
+from .. import numtools
+from .. import gen
 
 #%% 
 

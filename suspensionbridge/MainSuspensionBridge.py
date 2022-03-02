@@ -5,16 +5,15 @@ Created on
 
 @author: OWP
 """
-#%%
-
 
 #%%
 
 import numpy as np
-import gen
-import abq
-import numtools
 import time
+
+from .. import numtools
+from .. import gen
+from .. import abq
 
 from .MeshStruct import *
 from .ProcessUserParameters import *
@@ -26,15 +25,15 @@ from .BridgeDeckGeometry import *
 from .HangerGeometry import *
 from .BearingGeometry import *
 from .ElementNormal import *
+from .EstimateCableDeflection import *
 
 #%%
 
 def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflection=False,UpdateGeometry=False):
-    
 
 #%%  User parameters
 
-    UserParameterFile=UserParameterFolder + '//' + UserParameterFileName
+    UserParameterFile=UserParameterFolder + '\\' + UserParameterFileName
 
     (abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower)=ProcessUserParameters(UserParameterFile)
 
@@ -47,19 +46,15 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     meta.crossbeamlow=struct()
     meta.tower=struct()
     
-    
-    
 #%%  Estimate pullback force
 
     if np.isnan(tower.F_pullback_south) and np.isnan(tower.F_pullback_north):
         
-        dummy=2
+        dummy=np.nan
         #numtools.starprint(['Estimating force for retraction of towers'],1)
         
         #raise Exception('***** OPTION NOT IMPLEMENTED YET')
-        
         #(tower.F_pullback_south,tower.F_pullback_north,tower.K_south,tower.K_north,tower.K_est)=EstimatePullbackForce(tower,geo,abaqus)
-        
 
 #%%  Estimate cable deflection
 
@@ -67,9 +62,9 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
         
         numtools.starprint(['Estimating cable deflection'],1)
         
-        raise Exception('***** OPTION NOT IMPLEMENTED YET')
+        # raise Exception('***** OPTION NOT IMPLEMENTED YET')
         
-        #(cable,geo,tower)=EstimateCableDeflectionMain(cable,bridgedeck,hanger,tower,bearing,sadle,geo)
+        (cable,geo)=EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo)
         
 
 #%%  Open file
@@ -242,7 +237,6 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     if bridgedeck.shell==True:
         gen.ModelChange(fid,'ADD',['Bridgedeck_shell'],abaqus.PartName)
     
-    
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF' , 'S'],'','FREQUENCY=100')
     
@@ -270,10 +264,12 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     # Check input file for duplicate node or element numbers
     abq.CheckDuplicateNumbers(InputFileName)
     
+    LogicCompleted=False
     # Run
     if abaqus.RunJob==True:
-        abq.RunJob(abaqus.cmd,abaqus.FolderNameModel,abaqus.InputName,abaqus.JobName,abaqus.cpus,True,True)
+        LogicCompleted=abq.RunJob(abaqus.cmd,abaqus.FolderNameModel,abaqus.InputName,abaqus.JobName,abaqus.cpus,True,True)
 
+    return LogicCompleted
 
 #%%  Contination, update geometry
 

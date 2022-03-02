@@ -8,7 +8,7 @@ Created on
 #%%
 
 import numpy as np
-import numtools
+from .. import numtools
 
 #%%
 

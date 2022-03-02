@@ -10,7 +10,6 @@ Created on
 
 import numpy as np
 import time
-import numba as nb
 
 #%%
 
@@ -307,7 +306,7 @@ def writematrix(fid,matrix,digits=3,delimeter=', ',list_format='e'):
     # matrix: vector or matrix with numbers 
     # digits: digits
     # delimeter: delimeter
-    # list_format: e,f, or int (or [int,e,e] )
+    # list_format: e,f, or int (for all numbers same format) or [int,e,e] for different
     
     matrix=np.atleast_2d(matrix)
     (n_row,n_col)=np.shape(matrix)
@@ -343,6 +342,7 @@ def writematrix(fid,matrix,digits=3,delimeter=', ',list_format='e'):
 def rangebin(n,d):
     
     # Divide range into bins of given size
+    # n=12,d=5 gives bin1=[1,2,3,4,5] bin2=[6,7,8,9,10] bin3=[11,12]
 
     # Inputs:
     # n: number

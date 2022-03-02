@@ -11,8 +11,8 @@ Created on
 import os
 import numpy as np
 import warnings
-import numtools
-
+from .. import numtools
+import time
 from ypstruct import *
 
 #%% Check user parameter file
@@ -31,7 +31,12 @@ def ProcessUserParameters(UserParameterFile):
     #(abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time)=(['Dummy'])*11
     
     # Run file
-    execfile(UserParameterFile)
+    exec(open(UserParameterFile).read(), globals())
+    # execfile(UserParameterFile)
+    
+    time.sleep(0.1)
+    
+    print(abaqus.cpus)
 
         
 #%%  Check that inputs are provided (not exhaustive)
@@ -120,6 +125,7 @@ def ProcessUserParameters(UserParameterFile):
     'x_tower_north'
     
     ]
+    
     CheckField(geo,'geo',fieldnames)
     
     fieldnames=['normaldir' , 'ElementNumberBase']

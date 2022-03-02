@@ -1,11 +1,7 @@
 
 import numpy as np
 from ypstruct import *
-import numpy as np
-import numtools
-import gen
-import warnings
-import os
+
 
 ##########################
 ##########################
@@ -65,7 +61,7 @@ cable.cs.sigma_target=np.nan
 cable.normaldir=np.array([0,1,0])
 cable.eltype='B33'
 cable.meshsize_approx=np.nan
-cable.N_element=np.array(50)
+cable.N_element=np.array(30)
 cable.tempsupport=True
 cable.N_tempsupport=np.array(11)
 cable.polycoeff_hanger_adjust=np.nan
