@@ -41,7 +41,14 @@ ExportToTXT=False
 
 def OpenODB(FolderODB,JobName):
 
-    # OPEN ODB
+    # Inputs:
+    # FolderODB: string with folder name
+    # JobName: string with job name
+    
+    # Outputs:
+    # myOdb: ODB object
+
+    # Open ODB
     if JobName[-4:]=='.odb':
         JobName=JobName
     else:
@@ -52,14 +59,23 @@ def OpenODB(FolderODB,JobName):
 
 def CloseODB(myOdb):
 
+    # Inputs:
+    # myOdb: ODB object
+
     myOdb.close()
 
 #%%
 
 def Export_HistoryOutput(myOdb,StepNumber,hist_str,AssemblyName=''):
+
+    # Inputs:
+    # myOdb: ODB object
+    # StepNumber: step number for export, usually -1
+    # hist_str: string with desired quantity, e.g. EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
     
-    #EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
-    
+    # Outputs:
+    # OutputVector: vector with numbers
+
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
     
@@ -82,7 +98,16 @@ def Export_HistoryOutput(myOdb,StepNumber,hist_str,AssemblyName=''):
 #%%
 
 def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
+
+    # Inputs:
+    # myOdb: ODB object
+    # StepNumber: step number for export, usually -1
+    # FrameNumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
     
+    # Outputs:
+    # DisplacementMatrix: matrix with each frame as column ( e.g. N_DOF*N_MODES)
+    # LabelVector: list with DOF labels of all NDOF
+
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
     SelectedStep=myOdb.steps[NameOfStep]
@@ -131,6 +156,15 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
 
 def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
 
+    # Inputs:
+    # myOdb: ODB object
+    # StepNumber: step number for export, usually -1
+    # FrameNumber: frame number for export, usually 0
+    
+    # Outputs:
+    # NodeCoordMatrix: matrix with [x,y,z] as rows, size N_NODE*3
+    # NodeCoordLabelVector: vector with node numbers
+
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
     SelectedStep=myOdb.steps[NameOfStep]
@@ -153,7 +187,16 @@ def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
 #%%
 
 def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
+
+    # Inputs:
+    # myOdb: ODB object
+    # StepNumber: step number for export, usually -1
+    # FrameNumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
     
+    # Outputs:
+    # SectionForceMatrix: matrix with each frame as column ( e.g. N_SF*N_MODES)
+    # ElementLabelVector: list with SF labels
+
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
     SelectedStep=myOdb.steps[NameOfStep]
@@ -213,6 +256,14 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
 
 def Export_ElConnectivity(myOdb):
 
+    # Inputs:
+    # myOdb: ODB object
+    
+    # Outputs:
+    # ElementConnectivity_B31: matrix with rows [Elno,Nodeno1,Nodeno2]
+    # ElementConnectivity_B33: matrix with rows [Elno,Nodeno1,Nodeno2]
+    # ElementConnectivity_B32: matrix with rows [Elno,Nodeno1,Nodeno2,Nodeno3]
+
     t_start=timer()
 
     InstanceKeys=myOdb.rootAssembly.instances.keys()
@@ -239,7 +290,14 @@ def Export_ElConnectivity(myOdb):
 
 #%%
 
-def Export_ElSets(myOdb,StepNumber,FrameNumber):
+def Export_ElSets(myOdb):
+    
+    # Inputs:
+    # myOdb: ODB object
+    
+    # Outputs:
+    # ElementSetNumbers: vector with set number (separated by 0 between each set)
+    # ElementSetNames: list with names
 
     InstanceKeys=myOdb.rootAssembly.instances.keys()
     ElementSetNumbers=[]
@@ -265,154 +323,29 @@ def Export_ElSets(myOdb,StepNumber,FrameNumber):
     
 #%%
 
-
 def SaveToTXT(FolderSave,NameSave,A_matrix,atype='string',Prefix=''):
     
     # Inputs:
-    # FolderSave: string 
-    # NameSave: string 
-    # OutputPrefix: string 
-    # atype: string 
-    # A_matrix: numpy array
-        
+    # FolderSave: string with folder name for export
+    # NameSave: string with name for export
+    # A_matrix: the quantity to export
+    # atype: 'string' or 'number' specifies text or numeric data
+    # Prefix: prefix in front of NameSave
+    
     if atype=='number' or atype==1:
         np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=',') 
     elif atype=='string' or atype==2:
         np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=' ', fmt='%s')
     
+#%%
 
 def SaveToNPY(FolderSave,NameSave,A_matrix,Prefix=''):
     
     # Inputs:
-    # FolderSave: string 
-    # NameSave: string 
-    # OutputPrefix: string 
-    # A_matrix: numpy array
+    # FolderSave: string with folder name for export
+    # NameSave: string with name for export
+    # A_matrix: the quantity to export
+    # Prefix: prefix in front of NameSave
     
     np.save((FolderSave+'\\'+OutputPrefix+NameSave), A_matrix)
     
-##############################################################################################
-##############################################################################################
-# OLD
-# OLD
-# OLD
-##############################################################################################
-##############################################################################################
-
-###################################
-#EXPORT
-###################################
-
-
-
-# OutputPrefix=''
-# t_start=timer()
-
-# # ADD PREFIX
-# if OutputPrefix=='none':
-#     OutputPrefix=''
-
-# if FrequencyExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'freq',OutputPrefix,'number',FrequencyVector)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'freq',OutputPrefix,FrequencyVector)
-
-
-# if DampingExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'damp',OutputPrefix,'number',DampingVector)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'damp',OutputPrefix,DampingVector)
-
-# if EigrealExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'eigreal',OutputPrefix,'number',EigrealVector)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'eigreal',OutputPrefix,EigrealVector)
-
-# if EigimagExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'eigimag',OutputPrefix,'number',EigimagVector)
-#     else:    
-#         np.save((FolderExport+'\\'+OutputPrefix+'eigimag'), EigimagVector)
-#         FunctionSaveToNPY(FolderExport,'eigimag',OutputPrefix,EigimagVector)
-
-# if GenmassExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'genmass',OutputPrefix,'number',GenmassVector)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'genmass',OutputPrefix,GenmassVector)
-
-# if PhiExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'phi',OutputPrefix,'number',ModeshapeMatrix)
-#     else:    
-#         FunctionSaveToNPY(FolderExport,'phi',OutputPrefix,ModeshapeMatrix)
-    
-#     FunctionSaveToTXT(FolderExport,'phi_label',OutputPrefix,'string',PhiLabelVector)
-
-
-# if PhiConjExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'phi_conj',OutputPrefix,'number',ModeshapeConjMatrix)
-#     else:    
-#         FunctionSaveToNPY(FolderExport,'phi_conj',OutputPrefix,ModeshapeConjMatrix)
-
-
-# if PhiSFExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'phi_sf',OutputPrefix,'number',ModeSectionForceMatrix)
-#     else:    
-#         FunctionSaveToNPY(FolderExport,'phi_sf',OutputPrefix,ModeSectionForceMatrix)
-    
-#     FunctionSaveToTXT(FolderExport,'phi_sf_label',OutputPrefix,'string',ElementLabelVector)
-    
-
-# if NodeCoordExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'nodecoord',OutputPrefix,'number',NodeCoordMatrix)
-#         FunctionSaveToTXT(FolderExport,'nodecoord_label',OutputPrefix,'number',NodeCoordLabelVector)
-#     else:    
-#         FunctionSaveToNPY(FolderExport,'nodecoord',OutputPrefix,NodeCoordMatrix)
-#         FunctionSaveToNPY(FolderExport,'nodecoord_label',OutputPrefix,NodeCoordLabelVector)
-
-# if SFExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'SF',OutputPrefix,'number',SF_Matrix)
-#         FunctionSaveToTXT(FolderExport,'SM',OutputPrefix,'number',SM_Matrix)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'SF',OutputPrefix,SF_Matrix)
-#         FunctionSaveToNPY(FolderExport,'SM',OutputPrefix,SM_Matrix)
-    
-#     FunctionSaveToTXT(FolderExport,'SF_label',OutputPrefix,'string',ElementLabelVector_SF)
-#     FunctionSaveToTXT(FolderExport,'SM_label',OutputPrefix,'string',ElementLabelVector_SM)
-
-# if ElementConnectivityExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'ElementConnectivity2Node',OutputPrefix,'number',ElementConnectivity2NodeMatrix)
-#         FunctionSaveToTXT(FolderExport,'ElementConnectivity3Node',OutputPrefix,'number',ElementConnectivity3NodeMatrix)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'ElementConnectivity2Node',OutputPrefix,ElementConnectivity2NodeMatrix)
-#         FunctionSaveToNPY(FolderExport,'ElementConnectivity3Node',OutputPrefix,ElementConnectivity3NodeMatrix)
-        
-# if ElementSetExport:
-#     if ExportToTXT==True:
-#         FunctionSaveToTXT(FolderExport,'ElementSetNumbers',OutputPrefix,'number',ElementSetNumbers)
-#     else:
-#         FunctionSaveToNPY(FolderExport,'ElementSetNumbers',OutputPrefix,ElementSetNumbers)
-        
-#     FunctionSaveToTXT(FolderExport,'ElementSetNames',OutputPrefix,'string',ElementSetNames)
-    
-
-# t_end=timer()
-# print('Time #EXPORT ' + str(t_end-t_start))
-
-
-###################################
-#CLOSE
-###################################
-
-#sys.exit(0)
-
-###################################
