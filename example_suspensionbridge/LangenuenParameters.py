@@ -2,14 +2,13 @@
 import numpy as np
 from ypstruct import *
 
-
 ##########################
 ##########################
 ##########################
 
 abaqus=struct()
 
-abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel'
+abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen'
 abaqus.InputName='TestLangenuen'
 abaqus.JobName='TestLangenuen'
 abaqus.PartName='SuspensionBridge'
@@ -19,6 +18,7 @@ abaqus.cmd='abaqus'
 abaqus.cpus=np.array(4)
 abaqus.restart=False
 abaqus.halt_error=True
+abaqus.FolderODBExport='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
 
 ##########################
 ##########################
@@ -154,8 +154,8 @@ tower.cs.v=np.array(0.2)
 tower.normaldir=np.array([0,1,0])
 tower.eltype='B31'
 
-tower.F_pullback_south=np.array(-6e5) #np.nan
-tower.F_pullback_north=np.array(6e5) #np.nan
+tower.F_pullback_south=np.nan # np.array(-6e5) #np.nan
+tower.F_pullback_north=np.nan # np.array(6e5) #
 
 tower.z_crossbeam_south=np.array([60.0,205.0])
 tower.z_crossbeam_north=np.array([60.0,205.0])
@@ -205,8 +205,8 @@ geo.gap=np.nan
 geo.dx_hanger=np.array(12.0)
 geo.dx_endpiece_max=np.array(12.0)
 
-geo.dx_pullback_south=np.array(-0.8) #*np.nan
-geo.dx_pullback_north=np.array(0.8) #*np.nan
+geo.dx_pullback_south=np.array(-0.8)
+geo.dx_pullback_north=np.array(0.8)
 
 geo.z_cog_south=np.array(69.0)
 geo.z_cog_north=np.array(69.0)
@@ -255,4 +255,3 @@ geo.z_anch_north=np.array(206.0-158.0)
 
 geo.x_tower_south=np.array(-1235.0/2)
 geo.x_tower_north=np.array(1235.0/2)
-

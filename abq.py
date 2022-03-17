@@ -15,6 +15,12 @@ import time
 #%%
 
 def PrintError(JobName,FolderName=''):
+
+    # Search through msg file for errors, print if found
+    
+    # Inputs:
+    # JobName: name of odb file
+    # FolderName: folder of odb file
     
     if len(FolderName)>0:
         FolderName=FolderName + '\\'
@@ -48,6 +54,11 @@ def PrintError(JobName,FolderName=''):
 
 def CheckDuplicateNumbers(InputFileName):
 
+    # Check input file, alert if duplicate node or element numbers
+    
+    # Inputs:
+    # InputFileName: name (and folder) of file file
+    
     fid=open(InputFileName, 'r')
     InputFileLines=fid.read().splitlines()
     fid.close()

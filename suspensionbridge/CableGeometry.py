@@ -211,7 +211,7 @@ def CableGeometry(fid,meta,geo,cable):
         return (meta,cablemesh)
     
 #%% Section
-    # raise Exception('*************************************')
+
     cablemesh=GenerateMeshStruct(fid,cablemesh)
     
     gen.BeamGeneralSection(fid,'Cable_main',cable.cs.rho,[cable.cs.A , cable.cs.I11 , cable.cs.I12 , cable.cs.I22 , cable.cs.It],cable.normaldir,[cable.cs.E,cable.cs.G])

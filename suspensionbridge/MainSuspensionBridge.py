@@ -26,6 +26,7 @@ from .HangerGeometry import *
 from .BearingGeometry import *
 from .ElementNormal import *
 from .EstimateCableDeflection import *
+from .EstimatePullbackForce import *
 
 #%%
 
@@ -50,23 +51,24 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 
     if np.isnan(tower.F_pullback_south) and np.isnan(tower.F_pullback_north):
         
-        dummy=np.nan
-        #numtools.starprint(['Estimating force for retraction of towers'],1)
-        
-        #raise Exception('***** OPTION NOT IMPLEMENTED YET')
-        #(tower.F_pullback_south,tower.F_pullback_north,tower.K_south,tower.K_north,tower.K_est)=EstimatePullbackForce(tower,geo,abaqus)
+        # dummy=np.nan
+        numtools.starprint(['Estimating force for retraction of towers'],1)
+        (tower.F_pullback_south,tower.F_pullback_north,tower.K_south,tower.K_north,tower.K_est)=EstimatePullbackForce(tower,geo,abaqus)
 
 #%%  Estimate cable deflection
 
     if IterateDeflection==True:
         
         numtools.starprint(['Estimating cable deflection'],1)
-        
-        # raise Exception('***** OPTION NOT IMPLEMENTED YET')
-        
+                
         (cable,geo)=EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo)
-        
-
+                
+        if 'K_south' in tower.fields():
+            tower.F_pullback_south=tower.K_south*geo.dx_pullback_south
+            
+        if 'K_north' in tower.fields():
+            tower.F_pullback_north=tower.K_north*geo.dx_pullback_north
+            
 #%%  Open file
 
     InputFileName=abaqus.FolderNameModel + '/' + abaqus.InputName + '.inp'
@@ -74,7 +76,6 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     fid=open(InputFileName,'w')
     
     GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time)
-
 
 #%%  Materials
     gen.Comment(fid,'MATERIALS',True)

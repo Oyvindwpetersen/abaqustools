@@ -10,31 +10,8 @@ def p(pstring):
     prettyPrint(pstring)
 
 
-###################################              
-#USER INPUT    
-###################################     
 
-# Folder of ODB-file
-FolderODB='C:\\Temp'
-
-# Folder of exported files
-FolderExport='C:\\Temp'
-
-# Name of job (odb-file)
-JobName='SB_TempJob_1'
-
-# Step of modal analysis (default -1 aka last step)
-FrequencyStepNumber=-1
-
-# Prefix in front of exported filenames (default empty)
-OutputPrefix=''
-
-# Export all to txt files rather than npy files (required for ABAQUS2019!)
-ExportToTXT=False
-
-###################################              
-#START EXPORT BELOW            
-###################################     
+# This file is imported in Abaqus by "import odbfunc"
 
 
 #%%
@@ -116,6 +93,9 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
         FrameNumber=range(len(SelectedStep.frames))
     elif FrameNumber=='skipfirst':
         FrameNumber=range(1,len(SelectedStep.frames))
+    elif isinstance(FrameNumber,int):
+        FrameNumber=np.array([FrameNumber])
+        
         
     SelectedFrame=SelectedStep.frames[-1]
     if not SelectedFrame.fieldOutputs.has_key('U'):
@@ -178,11 +158,15 @@ def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
     t_start=timer()
     CoordValues=SelectedFrame.fieldOutputs['COORD'].values
     NodeCoordMatrix=np.array([CoordValues[ii].data for ii in range(len(CoordValues))])
-    NodeCoordLabelVector=np.array([CoordValues[ii].nodeLabel for ii in range(len(CoordValues))])
+    NodeCoordLabelVector=np.zeros((np.shape(NodeCoordMatrix)[0],1))
+    NodeCoordLabelVector[:,0]=np.array([CoordValues[ii].nodeLabel for ii in range(len(CoordValues))])
+    
     t_end=timer()
     print('Time nodecoord ' + str(t_end-t_start) + ' s')
     
-    return NodeCoordMatrix,NodeCoordLabelVector
+    NodeCoord=np.hstack((NodeCoordLabelVector,NodeCoordMatrix))
+    
+    return NodeCoord
         
 #%%
 
@@ -205,6 +189,8 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
         FrameNumber=range(len(SelectedStep.frames))
     elif FrameNumber=='skipfirst':
         FrameNumber=range(1,len(SelectedStep.frames))
+    elif isinstance(FrameNumber,int):
+        FrameNumber=np.array([FrameNumber])
     
     SelectedFrame=SelectedStep.frames[-1]
     if 'SF' not in SelectedFrame.fieldOutputs.keys():
@@ -234,12 +220,12 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
         SectionForceMatrix[:,z]=Output_SF_temp
         
     SF_ComponentLabels=OutputSF.componentLabels
-    SM_componentLabels=('SM1', 'SM2', 'SM3') 
+    SM_ComponentLabels=('SM1', 'SM2', 'SM3') 
     # Error in abaqus documentation? States 2 1 3 in odb, but that is wrong
     # OutputSM.componentLabels
     # ('SM2', 'SM1', 'SM3')    
     
-    ElementLabelVectorTemp=[ [str(OutputSFValues[n].elementLabel) + '_' + s  for s in SF_ComponentLabels] + [str(OutputSMValues[n].elementLabel) + '_' + s  for s in SM_componentLabels] for n in index_B ]
+    ElementLabelVectorTemp=[ [str(OutputSFValues[n].elementLabel) + '_' + s  for s in SF_ComponentLabels] + [str(OutputSMValues[n].elementLabel) + '_' + s  for s in SM_ComponentLabels] for n in index_B ]
     ElementLabelVector=[item for sublist in ElementLabelVectorTemp for item in sublist]
     
     return SectionForceMatrix,ElementLabelVector
@@ -333,7 +319,7 @@ def SaveToTXT(FolderSave,NameSave,A_matrix,atype='string',Prefix=''):
     # Prefix: prefix in front of NameSave
     
     if atype=='number' or atype==1:
-        np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=',') 
+        np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=',', fmt='%.8e')
     elif atype=='string' or atype==2:
         np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=' ', fmt='%s')
     

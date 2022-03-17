@@ -9,10 +9,12 @@ Created on Wed Dec  1 11:39:19 2021
 
 import os
 import numpy as np
+import h5py
 
 from ypstruct import *
 
 from .CableGeometry import *
+from .TowerGeometry import *
 
 from .. import numtools
 
@@ -21,8 +23,11 @@ from ..fem_corot.ProcessModel import *
 from ..fem_corot.Assembly import *
 from ..fem_corot.Corot import *
 
+from .. import odbexport
 
-function [F_pullback_south,F_pullback_north,K_south,K_north,K_est]=
+from .. import abq
+
+
 def EstimatePullbackForce(tower,geo,abaqus):
 
 #%%  Function to run pullback of towers to estimate the force neccessary to reach the desired dx
@@ -30,24 +35,23 @@ def EstimatePullbackForce(tower,geo,abaqus):
     # Simulations are non-linear so this is just an approximation
     # One can always check the final abaqus model
 
-
 #%%  Estimate approx pullback force based on cantilever model, tapered cross section
 
     L_num=geo.z_tower_top_south-geo.z_tower_base_south
     I_num=1/12*(tower.cs.h_vec**3*tower.cs.b_vec-(tower.cs.h_vec-2*tower.cs.t_vec)**3*(tower.cs.b_vec-2*tower.cs.t_vec))
     E_num=tower.cs.E;
 
-    c=np.polyfit(tower.cs.z_vec,I_num,1) I_0_num=np.polyval(c,tower.cs.z_vec[1]) I_end_num=np.polyval(c,tower.cs.z_vec[-1]))
+    c=np.polyfit(tower.cs.z_vec,I_num,1)
+    I_0_num=np.polyval(c,tower.cs.z_vec[1])
+    I_end_num=np.polyval(c,tower.cs.z_vec[-1])
 
-    if abs(I_0_num./I_end_num-1)<1e-3:
+    if np.abs(I_0_num/I_end_num-1)<1e-3:
         I_0_num=1.001*I_end_num
         
-    K_num=K_cantilever(L_num,I_0_num,I_end_num,E_num)
+    K_est=K_cantilever(L_num,I_0_num,I_end_num,E_num)
 
     delta=abs(geo.dx_pullback_south)
-    F=delta*K_num
-    K_est=K_num
-
+    F=delta*K_est
 
     #%%  Assume 20% reduction due to nonlinear effects
 
@@ -56,20 +60,26 @@ def EstimatePullbackForce(tower,geo,abaqus):
 
     #%%  Abaqus info
 
-    abaqus.FolderNameModel='C:\Temp';
-    abaqus.InputName='SB_TempJob_1';
-    abaqus.JobName=abaqus.InputName;
-    abaqus.PartName='PartTower';
-    abaqus.AssemblyName='AssemblyTower';
-    abaqus.RunJob=False;
-
+    FolderODBExport=abaqus.FolderODBExport
+    abaqus=struct()
+    
+    abaqus.FolderNameModel='C:\Temp'
+    abaqus.InputName='SB_TempJob_1'
+    abaqus.JobName=abaqus.InputName
+    abaqus.PartName='PartTower'
+    abaqus.AssemblyName='AssemblyTower'
+    abaqus.RunJob=True
+    abaqus.cmd='abaqus'
+    abaqus.cpus=np.array(4)
+    abaqus.restart=False
+    abaqus.halt_error=True
+    
     #%%  Open file
 
     InputFileName=abaqus.FolderNameModel + '/' + abaqus.InputName + '.inp'
     
     fid=open(InputFileName,'w')
     
-
     #%%  Materials
 
     gen.Comment(fid,'MATERIALS',False)
@@ -83,6 +93,10 @@ def EstimatePullbackForce(tower,geo,abaqus):
     #%%  Tower
 
     meta=struct()
+    meta.tower=struct()
+    meta.crossbeamlow=struct()
+    meta.bearing=struct()
+    
     [meta,towermesh]=TowerGeometry(fid,meta,geo,tower)
 
     #%%  Part, instance, assembly
@@ -93,7 +107,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
 
     gen.Assembly(fid,abaqus.AssemblyName)
 
-    gen.Instance(fid,abaqus.PartName '',abaqus.PartName)
+    gen.Instance(fid,abaqus.PartName,abaqus.PartName)
 
     gen.InstanceEnd(fid)
 
@@ -101,7 +115,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
 
     #%%  Step
 
-    gen.Step(fid,['NLGEO=YES, NAME=STEP0'],'')
+    gen.Step(fid,'NLGEO=YES, NAME=STEP0','')
     gen.Static(fid,['1e-2, 1, 1e-6, 1'])
 
     gen.Cload(fid,'NEW',['Tower_top_south_east','Tower_top_south_west'],1,UnitLoadSouth,abaqus.PartName)
@@ -115,6 +129,10 @@ def EstimatePullbackForce(tower,geo,abaqus):
     gen.FieldOutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
     
     gen.StepEnd(fid)
+    
+    #%%  Close file
+
+    fid.close()
 
     #%%  Run job
 
@@ -127,40 +145,42 @@ def EstimatePullbackForce(tower,geo,abaqus):
 
     #%%  Export data
 
-    dir_odb=abaqus.FolderNameModel;
-    dir_export=abaqus.FolderNameModel;
-    dir_python='C:\Cloud\OD_OWP\Work\Abaqus\Python\exportmodal\';
-    FrequencyStepNumber=-1;
-    ExportFileName=[abaqus.JobName '_export']
-
-    AbaqusExportModal(dir_odb,dir_export,dir_python,abaqus.JobName,FrequencyStepNumber,ExportFileName,'AssemblyName','notrelevant','ShowText',false)
+    FolderODB=abaqus.FolderNameModel
+    NameODB=abaqus.JobName
+    FolderSave=FolderODB
+    FolderPython=FolderODBExport
+    
+    hf_name=odbexport.exportstatic.exportstatic(FolderODB,NameODB,FolderSave,FolderPython)
+    
 
     #%% 
 
-    StaticResults=load([dir_export '\' ExportFileName '.mat'])
+    hf=h5py.File(hf_name, 'r')
+    
+    u=np.array(hf['u'])
+    u_label=list(hf['u_label'])
+    
+    NodeSouth=towermesh.NodeMatrix[0][-1,0]
+    Index=numtools.listindex(u_label, str(int(NodeSouth)) + '_U1')[0]
+    u_south=u[Index]
+    
+    NodeNorth=towermesh.NodeMatrix[2][-1,0]
+    Index=numtools.listindex(u_label, str(int(NodeNorth)) + '_U1')[0]
+    u_north=u[Index]
+        
+    K_south=UnitLoadSouth/u_south
+    K_north=UnitLoadNorth/u_north
 
-    NodeSouth=towermesh.NodeMatrix{1}(end,1) 
-    u_south=getSubsetRow(StaticResults.phi,[num2str(NodeSouth) '_U1'],StaticResults.phi_label)
-    u_south=u_south(end)
+    F_pullback_south=K_south*geo.dx_pullback_south
+    F_pullback_north=K_north*geo.dx_pullback_north
 
-    NodeNorth=towermesh.NodeMatrix{3}(end,1)
-    u_north=getSubsetRow(StaticResults.phi,[num2str(NodeNorth) '_U1'],StaticResults.phi_label)
-    u_north=u_north(end)
+    numtools.starprint([ 'F_pullback_south=' + numtools.num2stre(F_pullback_south) + ' N' ,  'F_pullback_north=' + numtools.num2stre(F_pullback_north) + ' N'])
 
-    K_south=UnitLoadSouth/u_south;
-    K_north=UnitLoadNorth/u_north;
+    return F_pullback_south,F_pullback_north,K_south,K_north,K_est
 
-    F_pullback_south=K_south*geo.dx_pullback_south;
-    F_pullback_north=K_north*geo.dx_pullback_north;
-
-    numtools.starprint({['F_pullback_south=' + num2str(F_pullback_south,'%0.3e') ' N'] ['F_pullback_north=' + num2str(F_pullback_north,'%0.3e') ' N']},1)
-
-    return
 #%% 
-    def K_cantilever(L,I_0,I_end,E)
+def K_cantilever(L,I_0,I_end,E):
+        
+    K_val=(2*(E*I_0**3 - 3*E*I_0**2*I_end + 3*E*I_0*I_end**2 - E*I_end**3)) / (I_0**2*L**3 + 3*I_end**2*L**3 + 2*I_end**2*L**3*np.log(I_0*L) - 2*I_end**2*L**3*np.log(I_end*L) - 4*I_0*I_end*L**3)
 
-        K_val=
-        (2*(E*I_0**3 - 3*E*I_0**2*I_end + 3*E*I_0*I_end**2 - E*I_end**3))
-        /(I_0**2*L**3 + 3*I_end**2*L**3 + 2*I_end**2*L**3*log(I_0*L) - 2*I_end**2*L**3*log(I_end*L) - 4*I_0*I_end*L**3)
-
-        return K_val
+    return K_val

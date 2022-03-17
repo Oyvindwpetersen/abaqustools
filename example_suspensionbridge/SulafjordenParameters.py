@@ -1,11 +1,6 @@
 
 import numpy as np
 from ypstruct import *
-import numpy as np
-import numtools
-import gen
-import warnings
-import os
 
 ##########################
 ##########################
@@ -13,7 +8,7 @@ import os
 
 abaqus=struct()
 
-abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/TestModel'
+abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/sulafjorden'
 abaqus.InputName='TestSulafjorden'
 abaqus.JobName='TestSulafjorden'
 abaqus.PartName='SuspensionBridge'
@@ -23,6 +18,7 @@ abaqus.cmd='abaqus'
 abaqus.cpus=np.array(4)
 abaqus.restart=False
 abaqus.halt_error=True
+abaqus.FolderODBExport='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
 
 ##########################
 ##########################
@@ -158,11 +154,10 @@ tower.cs.v=np.array(0.2)
 tower.normaldir=np.array([0,1,0])
 tower.eltype='B31'
 
-tower.F_pullback_south=np.array(-6e5) #np.nan
-tower.F_pullback_north=np.array(6e5) #np.nan
+tower.F_pullback_south=np.nan
+tower.F_pullback_north=np.nan
 
-tower.z_crossbeam_south=30+145.5+np.array([0.0,0.0,70.0,140.0,210.0])
-tower.z_crossbeam_south[0]=57.5-2-4
+tower.z_crossbeam_south=np.hstack((57.5-2-4,30+145.5+np.array([0.0,70.0,140.0,210.0])))
 tower.z_crossbeam_north=tower.z_crossbeam_south
 
 tower.h_crossbeam=np.array([8.0,8.0,8.0,8.0,8.0])
@@ -210,8 +205,8 @@ geo.gap=np.array(29.974)
 geo.dx_hanger=np.array(24.0)
 geo.dx_endpiece_max=np.array(24.0)
 
-geo.dx_pullback_south=np.array(-1) #*np.nan
-geo.dx_pullback_north=np.array(1) #*np.nan
+geo.dx_pullback_south=np.array(-1)
+geo.dx_pullback_north=np.array(1)
 
 geo.z_cog_south=np.array(57.5)
 geo.z_cog_north=np.array(57.5)
@@ -260,4 +255,3 @@ geo.z_anch_north=np.array(200.6)
 
 geo.x_tower_south=np.array(-1400.0)
 geo.x_tower_north=np.array(1400.0)
-

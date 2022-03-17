@@ -31,6 +31,9 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
     dx_pullback_south_iter=np.zeros(cable.N_def_iter)*np.nan
     dx_pullback_north_iter=np.zeros(cable.N_def_iter)*np.nan
     dz_cable_deflection_iter=np.zeros(cable.N_def_iter)*np.nan
+    
+    dx_pullback_south_initial=geo.dx_pullback_south
+    dx_pullback_north_initial=geo.dx_pullback_north
 
     for iter in np.arange(cable.N_def_iter):
   
@@ -51,11 +54,11 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
     'Initial dz_cable_deflection=' + numtools.num2strf(dz_cable_deflection_iter[0],3) + ' m' ,
     'Iterated dz_cable_deflection=' + numtools.num2strf(dz_cable_deflection_iter[-1],3) + ' m'])
 
-    numtools.starprint(['Initial dx_pullback_south=' + numtools.num2strf(dx_pullback_south_iter[0],3) + ' m' ,
+    numtools.starprint(['Initial dx_pullback_south=' + numtools.num2strf(dx_pullback_south_initial,3) + ' m' ,
     'Iterated dx_pullback_south=' + numtools.num2strf(dx_pullback_south_iter[-1],3) + ' m'])
     
     numtools.starprint(['Initial dx_pullback_north=' + numtools.num2strf(dx_pullback_north_iter[0],3) + ' m' ,
-    'Iterated dx_pullback_north=' + numtools.num2strf(dx_pullback_north_iter[-1],3) + ' m'])
+    'Iterated dx_pullback_north=' + numtools.num2strf(dx_pullback_north_initial,3) + ' m'])
 
     #%%  Displacement in x-dir
 
@@ -72,15 +75,17 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
     # tower.F_pullback_north=geo.dx_pullback_north*tower.K_north
     
     #%%  Displacement of bridge deck
+    
+    
+    dz_cog_midspan_deflection_initial=geo.dz_cog_midspan_deflection
+    
     (r_step2,Nx,IndexSpan1_U1,IndexSpan2_U1,IndexSpan1_U2,IndexSpan2_U2,IndexSpan1_U3,IndexSpan2_U3,IndexSpan1TopSouth_U1,IndexSpan1TopNorth_U1)=EstimateCableDeflectionSub(meta,cable,bridgedeck,geo,cableonly=True)
    
     U3_temp1=dz_cable_deflection_iter[-1]-(-np.min(r_step2[0][IndexSpan1_U3]))
 
-    dz_cog_midspan_deflection_temp=geo.dz_cog_midspan_deflection
-
     geo.dz_cog_midspan_deflection=U3_temp1
 
-    numtools.starprint(['Initial dz_cog_midspan_deflection=' + numtools.num2strf(dz_cog_midspan_deflection_temp,3) + ' m' , 
+    numtools.starprint(['Initial dz_cog_midspan_deflection=' + numtools.num2strf(dz_cog_midspan_deflection_initial,3) + ' m' , 
     'Iterated dz_cog_midspan_deflection=' + numtools.num2strf(geo.dz_cog_midspan_deflection,3) + ' m'])
 
     return (cable,geo)

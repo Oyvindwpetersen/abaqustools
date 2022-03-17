@@ -247,7 +247,7 @@ def num2stre(a,digits=6,delimeter=', '):
         for a_element in np.nditer(a):
             str_out=str_out+np.format_float_scientific(a_element, unique=False, precision=digits) + delimeter
         
-        str_out=str_out[0:(-1-len(delimeter))]
+        str_out=str_out[0:(-len(delimeter))]
         
     return str_out
 
@@ -292,7 +292,7 @@ def num2strf(a,digits=6,delimeter=', '):
         for a_element in np.nditer(a):
             str_out=str_out + format_f.format(a_element) + delimeter
         
-        str_out=str_out[:(-1-len(delimeter))]
+        str_out=str_out[:(-len(delimeter))]
         
     return str_out
 
@@ -333,7 +333,7 @@ def writematrix(fid,matrix,digits=3,delimeter=', ',list_format='e'):
                 
             str_row=str_row + a_el_str + delimeter
             
-        str_row=str_row[:(-1-len(delimeter)+1)] + '\n'    
+        str_row=str_row[:(-len(delimeter))] + '\n'    
 
         fid.write(str_row)
 
@@ -376,7 +376,8 @@ def isnumeric(a):
 
     # Outputs:
     # isnum: logical
-
+    
+    
     isnum=False    
     if isinstance(a,int):
         isnum=True
@@ -393,6 +394,9 @@ def isnumeric(a):
         
     elif isinstance(a,np.ndarray):
         isnum=True
+        
+    if isinstance(a,bool):
+        isnum=False   
         
     return isnum
             
@@ -530,19 +534,6 @@ def cross_fast(a,b):
     
     return c
 
-#%%
-
-def block_diag_rep_old(A,n):
-    
-    a=np.shape(A)[0]
-    shapes=[a]*n
-    r=0
-    B=np.zeros((a*n,a*n))
-    for i, rr in enumerate(shapes):
-        B[r:r + rr, r:r + rr] = A
-        r += rr
-    return B
-    
 #%%
 
 def block_diag_rep(A,r):

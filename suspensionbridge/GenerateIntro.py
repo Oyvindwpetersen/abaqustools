@@ -11,6 +11,8 @@ from .. import numtools
 from .. import gen
 import datetime
 
+from ypstruct import *
+
 #%%
 
 def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time):
@@ -26,85 +28,78 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
 
     gen.Line(fid,'**')
 
-    struct_all=[None]*9
-    struct_all[0]=cable
-    struct_all[1]=bridgedeck
-    struct_all[2]=hanger
-    struct_all[3]=tower
-    struct_all[4]=bearing
-    struct_all[5]=sadle
-    struct_all[6]=geo
-    struct_all[7]=step
-    struct_all[8]=modal
+    struct_all=[None]*11
+    struct_all[0]=abaqus
+    struct_all[1]=step
+    struct_all[2]=cable
+    struct_all[3]=bridgedeck
+    struct_all[4]=hanger
+    struct_all[5]=tower
+    struct_all[6]=bearing
+    struct_all[7]=sadle
+    struct_all[8]=geo
+    struct_all[9]=step
+    struct_all[10]=modal
 
-    struct_all_name=[None]*9
-    struct_all_name[0]='cable'
-    struct_all_name[1]='bridgedeck'
-    struct_all_name[2]='hanger'
-    struct_all_name[3]='tower'
-    struct_all_name[4]='bearing'
-    struct_all_name[5]='sadle'
-    struct_all_name[6]='geo'
-    struct_all_name[7]='step'
-    struct_all_name[8]='modal'
+    struct_all_name=[None]*11
+    struct_all_name[0]='abaqus'
+    struct_all_name[1]='step'
+    struct_all_name[2]='cable'
+    struct_all_name[3]='bridgedeck'
+    struct_all_name[4]='hanger'
+    struct_all_name[5]='tower'
+    struct_all_name[6]='bearing'
+    struct_all_name[7]='sadle'
+    struct_all_name[8]='geo'
+    struct_all_name[9]='step'
+    struct_all_name[10]='modal'
 
     comment=[]
     comment.append('User parameter values:')
-    comment.append('To come')
+    # comment.append('To come')
 
     # TODO: format intro text
     
-# =============================================================================
-#     for k=1:length(struct_all)
-#             
-#         comment.append('')
-# 
-#         field_names=fieldnames(struct_all{k})
-#         for j=1:length(field_names)
-#                     
-#             field_value=getfield(struct_all{k},field_names{j})
-#             
-#             if ischar(field_value)
-#                 comment.append([struct_all_name{k} '.' field_names{j} '=' , '''' field_value '''' )
-#             end
-#             
-#             if isnumeric(field_value)    
-#                 field_value_str=PrintMatrix(field_value)
-#                 comment.append([struct_all_name{k} '.' field_names{j} '=' field_value_str)
-#             end
-#             
-#             if islogical(field_value)
-#                 if field_value==False
-#                     field_value_str='False'
-#                 elif field_value==false
-#                     field_value_str='false'
-#                 end
-#                 comment.append([struct_all_name{k} '.' field_names{j} '=' field_value_str)
-#             end
-#             
-#            if isstruct(field_value)    
-#                field_names_sub=fieldnames(field_value)
-#                for j2=1:length(field_names_sub)
-#                 field_value_sub=getfield(field_value,field_names_sub{j2})
-#                 
-#                 if ischar(field_value_sub)
-#                 comment.append([struct_all_name{k} '.' field_names{j} '.' field_names_sub{j2} '=' , '''' field_value_sub '''' )
-#                 end
-#                 
-#                 if isnumeric(field_value_sub)
-#                 field_value_sub_str=PrintMatrix(field_value_sub)
-#                 comment.append([struct_all_name{k} '.' field_names{j} '.' field_names_sub{j2} '=' field_value_sub_str)
-#                 
-#                 end
-#                end
-#            end
-#             
-#         end
-#     end
-# 
-#     gen.Comment(fid,comment,False)
-# 
-#     end
-# =============================================================================
+    for k in np.arange(len(struct_all)):
+            
+        comment.append('')
+        struct_k=struct_all[k]
+        field_names=struct_k.fields()
+        
+        for j in np.arange(len(field_names)):
 
+            field_value=struct_k[field_names[j]]
+            
+            if isinstance(field_value,str):
+                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value )
+            
+            if numtools.isnumeric(field_value):
+                field_value_str=numtools.num2stre(field_value,5)
+                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value_str)
+            
+            if isinstance(field_value,bool):
+                if field_value==False:
+                    field_value_str='False'
+                elif field_value==True:
+                    field_value_str='True'
+                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value_str)
+            
+            if isinstance(field_value,struct):
+                              
+                field_names_sub=field_value.fields()
+                
+                for j2 in np.arange(len(field_names_sub)):
+                
+                    field_value_sub=field_value[field_names_sub[j2]]
+                    
+                    if isinstance(field_value,str):
+                        comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
+                    
+                    if numtools.isnumeric(field_value):
+                        field_value_sub_str=numtools.num2stre(field_value_sub,5)
+                        comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
+                                    
+                
+                             
+                
     gen.Comment(fid,comment,False)

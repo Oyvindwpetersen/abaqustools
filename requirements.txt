@@ -1,0 +1,15 @@
+
+
+
+# These packages must be installed
+np
+ypstruct
+os
+sys
+time
+scipy
+nexusformat
+datetime
+h5py
+timeit
+warnings
