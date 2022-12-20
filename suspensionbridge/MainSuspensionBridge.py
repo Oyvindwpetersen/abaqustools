@@ -71,7 +71,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
             
 #%%  Open file
 
-    InputFileName=abaqus.FolderNameModel + '/' + abaqus.InputName + '.inp'
+    InputFileName=abaqus.FolderNameModel + '\\' + abaqus.InputName + '.inp'
     
     fid=open(InputFileName,'w')
     

@@ -269,9 +269,9 @@ def ProcessUserParameters(UserParameterFile):
         print(geo.dx_pullback_north)
         
     # Replace name
-    forwardslash='/'
-    backslash='\\'
-    abaqus.FolderNameModel=abaqus.FolderNameModel.replace(forwardslash,backslash)
+    # forwardslash='/'
+    # backslash='\\'
+    # abaqus.FolderNameModel=abaqus.FolderNameModel.replace(forwardslash,backslash)
 
     # Check if folder exists
     if os.path.isdir(abaqus.FolderNameModel)==0:

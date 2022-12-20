@@ -107,8 +107,8 @@ def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_
     # InputName: string with name of .inp file
     # JobName: string with name of .odb, if empty then equal to InputName
     # cpus: number of cores
+    # echo_cmd: true/false, echo console output from system
     # halt_error: true/false, halt or not if error in Abaqus analysis
-    # echo: true/false, echo console output from system
     # OldJobName: string with name of old .odb, only relevant for restart analysis, else set to empty
 
 

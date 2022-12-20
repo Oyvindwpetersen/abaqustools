@@ -1,0 +1,105 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2017 replay file
+# Internal Version: 2016_09_27-23.54.59 126836
+# Run by oyvinpet on Tue Apr 26 16:30:42 2022
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=342.558135986328, 
+    height=135.861099243164)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='TestSmallBridge.odb')
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/asmallbridge/TestSmallBridge.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       110
+#: Number of Node Sets:          57
+#: Number of Steps:              5
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+#: 
+#: Node: SUSPENSIONBRIDGE.1101
+#:                                         1             2             3        Magnitude
+#: Base coordinates:                  0.00000e+000,  0.00000e+000,  1.30000e+000,      -      
+#: No deformed coordinates for current plot.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=354.454, 
+    farPlane=425.303, width=130.222, height=78.0716, cameraPosition=(76.5022, 
+    227.994, 311.047), cameraUpVector=(0.279763, 0.470406, -0.836929), 
+    cameraTarget=(7.74882, -4.34296, 0.644128))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=367.298, 
+    farPlane=411.852, width=134.941, height=80.9008, cameraPosition=(1.65526, 
+    -35.8302, 392.067), cameraUpVector=(0.0110108, 0.968124, -0.250229), 
+    cameraTarget=(8.49641, -1.7078, -0.165127))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=354.402, 
+    farPlane=425.372, width=130.203, height=78.0605, cameraPosition=(-58.0001, 
+    -334.033, 196.78), cameraUpVector=(0.0815679, 0.753608, 0.652243), 
+    cameraTarget=(9.1393, 1.50583, 1.93941))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=317.784, 
+    farPlane=475.875, width=116.75, height=69.995, cameraPosition=(273.493, 
+    -267.695, 109.128), cameraUpVector=(-0.22729, 0.573757, 0.786856), 
+    cameraTarget=(5.83552, 0.844678, 2.81298))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=307.406, 
+    farPlane=488.491, width=112.938, height=67.7092, cameraPosition=(329.51, 
+    -138.837, 178.796), cameraUpVector=(-0.651532, 0.30323, 0.695383), 
+    cameraTarget=(6.267, 1.83722, 3.34961))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=322.966, 
+    farPlane=469.551, width=174.224, height=71.1364, cameraPosition=(228.873, 
+    -303.716, 115.483), cameraUpVector=(-0.330594, 0.488456, 0.807538), 
+    cameraTarget=(5.21093, 0.106983, 2.6852))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=320.249, 
+    farPlane=471.895, width=172.758, height=70.5381, cameraPosition=(231.285, 
+    -243.023, 214.628), cameraUpVector=(-0.244233, 0.794624, 0.555808), 
+    cameraTarget=(5.22606, 0.487801, 3.30728))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=303.764, 
+    farPlane=491.104, width=163.865, height=66.9071, cameraPosition=(314.742, 
+    -168.072, 179.161), cameraUpVector=(-0.4919, 0.566218, 0.661386), 
+    cameraTarget=(5.71068, 0.923033, 3.10133))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=321.496, 
+    farPlane=473.372, width=14.5962, height=5.95971, viewOffsetX=-2.65469, 
+    viewOffsetY=-0.18452)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=389.438, 
+    farPlane=405.696, width=17.6809, height=7.21919, cameraPosition=(-13.3801, 
+    -397.367, 1.97397), cameraUpVector=(0.181882, 0.326155, 0.927654), 
+    cameraTarget=(4.1278, -3.98369, 1.72492), viewOffsetX=-3.21572, 
+    viewOffsetY=-0.223515)
+#: Warning: The output database 'C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/asmallbridge/TestSmallBridge.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+session.viewports['Viewport: 1'].view.setValues(nearPlane=395.04, 
+    farPlane=401.143, width=24.5381, height=10.019, viewOffsetX=-1.0745, 
+    viewOffsetY=-0.595181)
+o1 = session.openOdb(
+    name='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/asmallbridge/TestSmallBridge.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/asmallbridge/TestSmallBridge.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       110
+#: Number of Node Sets:          57
+#: Number of Steps:              5
+session.viewports['Viewport: 1'].view.setValues(nearPlane=330.145, 
+    farPlane=457.401, width=64.165, height=26.1989, viewOffsetX=-22.7825, 
+    viewOffsetY=14.6309)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=287.609, 
+    farPlane=471.535, width=55.8979, height=22.8234, cameraPosition=(354.075, 
+    -7.08773, 142.859), cameraUpVector=(-0.565929, 0.601229, 0.564135), 
+    cameraTarget=(-5.66754, 20.5983, -14.8626), viewOffsetX=-19.8471, 
+    viewOffsetY=12.7459)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=300.58, 
+    farPlane=433.583, width=58.4189, height=23.8527, cameraPosition=(259.099, 
+    -255.856, -52.6599), cameraUpVector=(-0.352109, -0.0608, 0.933982), 
+    cameraTarget=(8.09476, 40.4599, 12.5373), viewOffsetX=-20.7422, 
+    viewOffsetY=13.3207)
+#: Specified element 'SUSPENSIONBRIDGE.8001' not found.

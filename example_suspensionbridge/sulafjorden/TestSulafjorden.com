@@ -46,7 +46,7 @@ options = {
     'moldflowFiles':[],
     'moldflowMaterial':OFF,
     'mp_file_system':(DETECT, DETECT),
-    'mp_head_node':('ntnu08422.win.ntnu.no', 'ntnu08422', '10.24.13.146', '129.241.193.42'),
+    'mp_head_node':('ntnu08422.win.ntnu.no', 'ntnu08422', '10.24.13.57'),
     'mp_host_list':(('ntnu08422', 4),),
     'mp_mode':MPI,
     'mp_mode_requested':MPI,

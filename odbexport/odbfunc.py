@@ -12,7 +12,7 @@ def p(pstring):
 
 
 # This file is imported in Abaqus by "import odbfunc"
-
+# The folder must first be added to the path
 
 #%%
 
@@ -31,7 +31,7 @@ def OpenODB(FolderODB,JobName):
     else:
         JobName=JobName+'.odb'
         
-    myOdb=odbAccess.openOdb(FolderODB+'\\'+JobName)
+    myOdb=odbAccess.openOdb(FolderODB+'/'+JobName)
     return myOdb
 
 def CloseODB(myOdb):
@@ -79,10 +79,10 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
     # Inputs:
     # myOdb: ODB object
     # StepNumber: step number for export, usually -1
-    # FrameNumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
+    # FrameNumber: frame number(s) for export, '' gives all frames in step, 'skipfirst' gives all except frame 0
     
     # Outputs:
-    # DisplacementMatrix: matrix with each frame as column ( e.g. N_DOF*N_MODES)
+    # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_MODES)
     # LabelVector: list with DOF labels of all NDOF
 
     StepNames=myOdb.steps.keys()

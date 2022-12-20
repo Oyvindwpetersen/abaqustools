@@ -63,7 +63,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
     FolderODBExport=abaqus.FolderODBExport
     abaqus=struct()
     
-    abaqus.FolderNameModel='C:\Temp'
+    abaqus.FolderNameModel='C:\\Temp'
     abaqus.InputName='SB_TempJob_1'
     abaqus.JobName=abaqus.InputName
     abaqus.PartName='PartTower'
@@ -76,7 +76,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
     
     #%%  Open file
 
-    InputFileName=abaqus.FolderNameModel + '/' + abaqus.InputName + '.inp'
+    InputFileName=abaqus.FolderNameModel + '\\' + abaqus.InputName + '.inp'
     
     fid=open(InputFileName,'w')
     

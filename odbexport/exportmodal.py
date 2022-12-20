@@ -74,7 +74,7 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         hf_name=FolderSave + '/' + NameODB + '_export' + '.h5'
         
         if os.path.exists(hf_name):
-            hf_name=FolderSave + '/' + NameODB + '_export_conflict3' + '.h5'
+            hf_name=FolderSave + '/' + NameODB + '_export_conflict' + '.h5'
         
         hf = h5py.File(hf_name,'w')
 
@@ -157,7 +157,8 @@ def writepyscript_modal(FolderODB,NameODB,FolderSave,FolderPython,ExportScript='
         Lines.append('# Frequencies')
         Lines.append( 'freq=odbfunc.Export_HistoryOutput(myOdb,-1,' + '\'' + 'EIGFREQ' + '\'' +  ')' )
         Lines.append( 'odbfunc.SaveToTXT(FolderSave,' +  '\'freq\'' + ',freq,atype=1,Prefix=Prefix)' )
-        
+        Lines.append('')
+
     if 'genmass' in Variables:
         Lines.append('# Generalized mass')
         Lines.append( 'genmass=odbfunc.Export_HistoryOutput(myOdb,-1,' + '\'' + 'GM' + '\'' +  ')' )
@@ -172,7 +173,7 @@ def writepyscript_modal(FolderODB,NameODB,FolderSave,FolderPython,ExportScript='
         Lines.append('')
 
     if 'phi_sf' in Variables:
-        Lines.append('#  Modal section forces')
+        Lines.append('# Modal section forces')
         Lines.append( '(phi_sf,phi_sf_label)=odbfunc.Export_SectionForce(myOdb,-1,FrameNumber=' '\'skipfirst\''    ')' )
         Lines.append( 'odbfunc.SaveToTXT(FolderSave,' + '\'phi_sf\'' + ',phi_sf,atype=1,Prefix=Prefix)' )
         Lines.append( 'odbfunc.SaveToTXT(FolderSave,' + '\'phi_sf_label\'' + ',phi_sf_label,atype=2,Prefix=Prefix)' )
