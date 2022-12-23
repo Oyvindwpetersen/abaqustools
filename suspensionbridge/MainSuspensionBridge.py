@@ -11,7 +11,7 @@ Created on
 import numpy as np
 import time
 
-from .. import numtools
+import putools
 from .. import gen
 from .. import abq
 
@@ -52,14 +52,14 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     if np.isnan(tower.F_pullback_south) and np.isnan(tower.F_pullback_north):
         
         # dummy=np.nan
-        numtools.starprint(['Estimating force for retraction of towers'],1)
+        putools.txt.starprint(['Estimating force for retraction of towers'],1)
         (tower.F_pullback_south,tower.F_pullback_north,tower.K_south,tower.K_north,tower.K_est)=EstimatePullbackForce(tower,geo,abaqus)
 
 #%%  Estimate cable deflection
 
     if IterateDeflection==True:
         
-        numtools.starprint(['Estimating cable deflection'],1)
+        putools.txt.starprint(['Estimating cable deflection'],1)
                 
         (cable,geo)=EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo)
                 
@@ -278,7 +278,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 # =============================================================================
 # if UpdateGeometry==False
 # 
-# numtools.starprint(['Automatic continuation to update geometry' ],1)
+# putools.txt.starprint(['Automatic continuation to update geometry' ],1)
 # 
 # # Copy file with user parameters
 # UserParameterFileNameAuto=[UserParameterFileName(1:end-2) '_postupdgeo' , '.m']
@@ -317,7 +317,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 # NodeCoordCableDefMid=getSubsetRow(StaticResults.nodecoord,NodeNumberCableMid,StaticResults.nodecoord_label)
 # dz_cable_actual=NodeCoordCable0Mid[3]-NodeCoordCableDefMid[3]
 # 
-# numtools.starprint(['Initialized dz_cable_deflection=' + num2str(geo.dz_cable_deflection,'%0.3f') ' m'] ['Actual dz_cable_deflection=' + num2str(dz_cable_actual,'%0.3f') ' m']},1)
+# putools.txt.starprint(['Initialized dz_cable_deflection=' + num2str(geo.dz_cable_deflection,'%0.3f') ' m'] ['Actual dz_cable_deflection=' + num2str(dz_cable_actual,'%0.3f') ' m']},1)
 # 
 # user_data_cell=inpReadFile(UserParameterFileNameAuto)
 # index=inpFindString(user_data_cell,'geo.dz_cable_deflection')
@@ -342,7 +342,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 #     NodeCoordBridgeCogDef=getSubsetRow(StaticResults.nodecoord,NodeNumberBridgeCog(ind_node),StaticResults.nodecoord_label)
 #     dz_actual=NodeCoordBridgeCog0(ind_node,3)-NodeCoordBridgeCogDef[3]
 #     
-#     numtools.starprint(['Initialized ' fieldnames{k} '=' + num2str(getfield(geo,fieldnames{k}),'%0.3f') ' m'] ['Actual ' fieldnames{k} '=' + num2str(dz_actual,'%0.3f') ' m']},1)
+#     putools.txt.starprint(['Initialized ' fieldnames{k} '=' + num2str(getfield(geo,fieldnames{k}),'%0.3f') ' m'] ['Actual ' fieldnames{k} '=' + num2str(dz_actual,'%0.3f') ' m']},1)
 # 
 #     index=inpFindString(user_data_cell,[ 'geo.' fieldnames{k} ] )
 #     user_data_cell{index}=[ 'geo.' fieldnames{k} '=' + num2str(dz_actual,'%0.3e') ';# automatic calcuation']

@@ -9,7 +9,7 @@ import numpy as np
 import sys
 from ypstruct import *
 
-from .. import numtools
+import putools
 
 import Corot
 from ProcessModel import *

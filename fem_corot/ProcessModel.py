@@ -11,7 +11,7 @@ from ypstruct import *
 from scipy import sparse
 from . Corot import *
 
-from .. import numtools
+import putools
 
 #%%
 
@@ -58,7 +58,7 @@ def ProcessModel(ModelInfo):
             NodeIndex=ModelInfo.ElementMatrix[k,j+1]
             NodeNo=ModelInfo.NodeMatrix[NodeIndex,0]
             
-            ElDofIndex_temp=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNo,'all'))
+            ElDofIndex_temp=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNo,'all'))
             ind=np.nonzero(ModelInfo.NodeMatrix[:,0]==NodeNo)[0]
             ElCoord_temp=ModelInfo.NodeMatrix[ind,1:][0]
             
@@ -76,7 +76,7 @@ def ProcessModel(ModelInfo):
     
         X1=ModelInfo.ElCoord_1[k]
         X2=ModelInfo.ElCoord_2[k]
-        L0=numtools.norm_fast(X2-X1)
+        L0=putools.num.norm_fast(X2-X1)
         
         ModelInfo.L0[k]=L0
     
@@ -84,16 +84,16 @@ def ProcessModel(ModelInfo):
         e2=ModelInfo.e2mat[k,1:]
         
         if np.abs(e1.dot(e2))>0.9:
-            numtools.starprint('Dot product between e1 and e2 larger than 0.9')
-            numtools.starprint('Element number =  ' + str(ModelInfo.ElementMatrix[k,0]))
-            numtools.starprint('k = ' + str(k))
+            putools.txt.starprint('Dot product between e1 and e2 larger than 0.9')
+            putools.txt.starprint('Element number =  ' + str(ModelInfo.ElementMatrix[k,0]))
+            putools.txt.starprint('k = ' + str(k))
 
         # Transformation matrix between global coordinates to initial (C0) configuration
         TC0=CoordinateTransform(e1,e2)
         ModelInfo.TC0[k]=TC0
         
     # Elimination of restrained DOFs
-    ModelInfo.IndexExclude=numtools.listindex(ModelInfo.DofLabel,ModelInfo.DofExclude)
+    ModelInfo.IndexExclude=putools.num.listindex(ModelInfo.DofLabel,ModelInfo.DofExclude)
     ModelInfo.IndexInclude=np.setdiff1d(np.arange(ModelInfo.N_DOF),ModelInfo.IndexExclude)
     
     row=ModelInfo.IndexInclude

@@ -14,7 +14,7 @@ from ypstruct import *
 
 from .CableGeometry import *
 
-from .. import numtools
+import putools
 
 from ..fem_corot.NonLinearSolver import *
 from ..fem_corot.ProcessModel import *
@@ -50,15 +50,15 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
         if not np.isnan(cable.cs.sigma_target):
             cable.cs.A=np.max(Nx)/(cable.cs.sigma_target)
     
-    numtools.starprint([
-    'Initial dz_cable_deflection=' + numtools.num2strf(dz_cable_deflection_iter[0],3) + ' m' ,
-    'Iterated dz_cable_deflection=' + numtools.num2strf(dz_cable_deflection_iter[-1],3) + ' m'])
+    putools.txt.starprint([
+    'Initial dz_cable_deflection=' + putools.num.num2strf(dz_cable_deflection_iter[0],3) + ' m' ,
+    'Iterated dz_cable_deflection=' + putools.num.num2strf(dz_cable_deflection_iter[-1],3) + ' m'])
 
-    numtools.starprint(['Initial dx_pullback_south=' + numtools.num2strf(dx_pullback_south_initial,3) + ' m' ,
-    'Iterated dx_pullback_south=' + numtools.num2strf(dx_pullback_south_iter[-1],3) + ' m'])
+    putools.txt.starprint(['Initial dx_pullback_south=' + putools.num.num2strf(dx_pullback_south_initial,3) + ' m' ,
+    'Iterated dx_pullback_south=' + putools.num.num2strf(dx_pullback_south_iter[-1],3) + ' m'])
     
-    numtools.starprint(['Initial dx_pullback_north=' + numtools.num2strf(dx_pullback_north_iter[0],3) + ' m' ,
-    'Iterated dx_pullback_north=' + numtools.num2strf(dx_pullback_north_initial,3) + ' m'])
+    putools.txt.starprint(['Initial dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_iter[0],3) + ' m' ,
+    'Iterated dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_initial,3) + ' m'])
 
     #%%  Displacement in x-dir
 
@@ -85,8 +85,8 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
 
     geo.dz_cog_midspan_deflection=U3_temp1
 
-    numtools.starprint(['Initial dz_cog_midspan_deflection=' + numtools.num2strf(dz_cog_midspan_deflection_initial,3) + ' m' , 
-    'Iterated dz_cog_midspan_deflection=' + numtools.num2strf(geo.dz_cog_midspan_deflection,3) + ' m'])
+    putools.txt.starprint(['Initial dz_cog_midspan_deflection=' + putools.num.num2strf(dz_cog_midspan_deflection_initial,3) + ' m' , 
+    'Iterated dz_cog_midspan_deflection=' + putools.num.num2strf(geo.dz_cog_midspan_deflection,3) + ' m'])
 
     return (cable,geo)
 
@@ -138,18 +138,18 @@ def EstimateCableDeflectionSub(meta,cable,bridgedeck,geo,cableonly=False):
     
     NodeNoTop=np.zeros(4)
     for k in np.arange(4):
-        NodeNoTop[k]=cablemesh_temp.NodeSet[ numtools.listindex(cablemesh_temp.NodeSetName,NodeSetNameTop[k])[0] ]
+        NodeNoTop[k]=cablemesh_temp.NodeSet[ putools.num.listindex(cablemesh_temp.NodeSetName,NodeSetNameTop[k])[0] ]
         
-    NodeNoAnch=cablemesh_temp.NodeSet[ numtools.listindex(cablemesh_temp.NodeSetName,NodeSetNameAnch)[0] ]
+    NodeNoAnch=cablemesh_temp.NodeSet[ putools.num.listindex(cablemesh_temp.NodeSetName,NodeSetNameAnch)[0] ]
     
-    ModelInfo.DofLabel=numtools.genlabel(ModelInfo.NodeMatrix[:,0],'all')
-    ModelInfo.DofExclude= numtools.genlabel(NodeNoAnch,['U1' , 'U2' , 'U3']) + numtools.genlabel(NodeNoTop,['U2' , 'U3']) 
+    ModelInfo.DofLabel=putools.num.genlabel(ModelInfo.NodeMatrix[:,0],'all')
+    ModelInfo.DofExclude= putools.num.genlabel(NodeNoAnch,['U1' , 'U2' , 'U3']) + putools.num.genlabel(NodeNoTop,['U2' , 'U3']) 
     
     ModelInfo=ProcessModel(ModelInfo)
     
 #%%  
     
-    NodeNoSpan=cablemesh_temp.NodeSet[ numtools.listindex(cablemesh_temp.NodeSetName,'Cable_main_span')[0] ]
+    NodeNoSpan=cablemesh_temp.NodeSet[ putools.num.listindex(cablemesh_temp.NodeSetName,'Cable_main_span')[0] ]
     
 #%% 
     
@@ -158,9 +158,9 @@ def EstimateCableDeflectionSub(meta,cable,bridgedeck,geo,cableonly=False):
     # Load for both bridgedecks (if two) 
     pz=-np.sum(bridgedeck.inertia.m)*9.81
     
-    ElementBridgeLoad=cablemesh_temp.ElementSet[numtools.listindex(cablemesh_temp.ElementSetName,'Cable_main_span')[0]]
+    ElementBridgeLoad=cablemesh_temp.ElementSet[putools.num.listindex(cablemesh_temp.ElementSetName,'Cable_main_span')[0]]
     
-    IndexElementBridgeLoad=numtools.argmin(ElementMatrix[:,0],ElementBridgeLoad)
+    IndexElementBridgeLoad=putools.num.argmin(ElementMatrix[:,0],ElementBridgeLoad)
     
     P_bridgedeck=DistLoadProjXY(ModelInfo,pz/2,IndexElementBridgeLoad)
     
@@ -180,17 +180,17 @@ def EstimateCableDeflectionSub(meta,cable,bridgedeck,geo,cableonly=False):
     NodeNoSpan1=NodeNoSpan[NodeNoSpan<15e3]
     NodeNoSpan2=NodeNoSpan[NodeNoSpan>15e3]
     
-    IndexSpan1_U1=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan1,['U1']))
-    IndexSpan2_U1=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan2,['U1']))
+    IndexSpan1_U1=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan1,['U1']))
+    IndexSpan2_U1=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan2,['U1']))
     
-    IndexSpan1_U2=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan1,['U2']))
-    IndexSpan2_U2=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan2,['U2']))
+    IndexSpan1_U2=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan1,['U2']))
+    IndexSpan2_U2=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan2,['U2']))
     
-    IndexSpan1_U3=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan1,['U3']))
-    IndexSpan2_U3=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoSpan2,['U3']))
+    IndexSpan1_U3=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan1,['U3']))
+    IndexSpan2_U3=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoSpan2,['U3']))
     
-    IndexSpan1TopSouth_U1=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoTop[0],['U1']))[0]
-    IndexSpan1TopNorth_U1=numtools.listindex(ModelInfo.DofLabel,numtools.genlabel(NodeNoTop[2],['U1']))[0]
+    IndexSpan1TopSouth_U1=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoTop[0],['U1']))[0]
+    IndexSpan1TopNorth_U1=putools.num.listindex(ModelInfo.DofLabel,putools.num.genlabel(NodeNoTop[2],['U1']))[0]
     
     return r_step,Nx,IndexSpan1_U1,IndexSpan2_U1,IndexSpan1_U2,IndexSpan2_U2,IndexSpan1_U3,IndexSpan2_U3,IndexSpan1TopSouth_U1,IndexSpan1TopNorth_U1
     

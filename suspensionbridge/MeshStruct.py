@@ -13,7 +13,7 @@ Created on
 
 from ypstruct import *
 import numpy as np
-from .. import numtools
+import putools
 from .. import gen
 
 #%% 

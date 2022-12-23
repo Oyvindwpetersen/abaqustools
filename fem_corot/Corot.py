@@ -15,8 +15,7 @@ from scipy.sparse.linalg import spsolve
 from scipy.spatial.transform import Rotation as Rotation
 import sys
 
-from .. import numtools
-
+import putools
 
 #%%
 
@@ -44,11 +43,11 @@ def CoordinateTransform_old(e1,e2):
     # # reference see Kolbein Bell "Matrise Statikk"
     
     # Normalize
-    e1=e1/numtools.norm_fast(e1)
-    e2=e2/numtools.norm_fast(e2)
+    e1=e1/putools.num.norm_fast(e1)
+    e2=e2/putools.num.norm_fast(e2)
 
     # Crossproduct
-    e3=numtools.cross_fast(e1,e2)
+    e3=putools.num.cross_fast(e1,e2)
     
     # T=np.vstack((e1.T,e2.T,e3.T))
     T=np.array([e1,e2,e3])
@@ -59,11 +58,11 @@ def CoordinateTransform_old(e1,e2):
 def CoordinateTransform(e1,e2):
     
     # Normalize
-    e1=e1/numtools.norm_fast(e1)
-    e2=e2/numtools.norm_fast(e2)
+    e1=e1/putools.num.norm_fast(e1)
+    e2=e2/putools.num.norm_fast(e2)
 
     # Crossproduct
-    e3=numtools.cross_fast(e1,e2)
+    e3=putools.num.cross_fast(e1,e2)
     
     # T=np.array([e1,e2,e3])
     
@@ -83,14 +82,14 @@ def CordinateTransfromInc(RT,e2,X1,X2,rA,rB,L):
     
     # e2ab=1*(e2a+e2b)
     
-    e3=numtools.cross_fast(e1,e2a+e2b)
+    e3=putools.num.cross_fast(e1,e2a+e2b)
     
-    # e3=e3/numtools.norm_fast(e3)
-    e2=numtools.cross_fast(e3,e1)
+    # e3=e3/putools.num.norm_fast(e3)
+    e2=putools.num.cross_fast(e3,e1)
     
     # TC0n=CoordinateTransform(e1,e2)
-    e2=e2/numtools.norm_fast(e2)
-    e3=numtools.cross_fast(e1,e2)
+    e2=e2/putools.num.norm_fast(e2)
+    e3=putools.num.cross_fast(e1,e2)
     TC0n=np.array([e1,e2,e3])
     
     return TC0n
@@ -102,7 +101,7 @@ def DistLoadProjXY(ModelInfo,pz,index=''):
     if index=='':
         index=np.arange(ModelInfo.N_el)
         
-    index=numtools.ensurenp(index)
+    index=putools.num.ensurenp(index)
 
     P=np.zeros(ModelInfo.N_DOF)
     
@@ -113,9 +112,9 @@ def DistLoadProjXY(ModelInfo,pz,index=''):
         X1=ModelInfo.ElCoord_1[k]
         X2=ModelInfo.ElCoord_2[k]
     
-        L0=numtools.norm_fast(X2-X1)
+        L0=putools.num.norm_fast(X2-X1)
     
-        L0_xy=numtools.norm_fast(X2[0:1]-X1[0:1])
+        L0_xy=putools.num.norm_fast(X2[0:1]-X1[0:1])
     
         # angle with projection line in xy-plane
         alpha=np.arctan2(X2[2]-X1[2],L0_xy)
@@ -132,7 +131,7 @@ def DistLoadProjXY(ModelInfo,pz,index=''):
         0 , 5*qn*L0 , 0])
     
         # TT=scipy.linalg.block_diag(TC0,TC0,TC0,TC0).T
-        TT=numtools.block_diag_rep(TC0,4).T
+        TT=putools.num.block_diag_rep(TC0,4).T
 
         P_glob=TT.dot(P_loc)
     
@@ -161,14 +160,14 @@ def ElementNormal(ElementMatrix,NodeMatrix):
         X2=NodeMatrix[Index2,1:]
         
         e1=X2-X1
-        e1=e1/numtools.norm_fast(e1)
+        e1=e1/putools.num.norm_fast(e1)
         e3_guess=np.array([0, 0 ,1])
         
-        e2=numtools.cross_fast(e3_guess,e1)
-        e2=e2/numtools.norm_fast(e2)
+        e2=putools.num.cross_fast(e3_guess,e1)
+        e2=e2/putools.num.norm_fast(e2)
         
-        e3=numtools.cross_fast(e1,e2)
-        e3=e3/numtools.norm_fast(e3)
+        e3=putools.num.cross_fast(e1,e2)
+        e3=e3/putools.num.norm_fast(e3)
         
         e2mat[k,1:]=e2
         e3mat[k,1:]=e3
@@ -211,7 +210,7 @@ def ExRot_fast(R):
                     R[1-1,3-1]-R[3-1,1-1],
                     R[2-1,1-1]-R[1-1,2-1]])
     
-    theta=np.arcsin(numtools.norm_fast(d))
+    theta=np.arcsin(putools.num.norm_fast(d))
     
     # Set to factor when angle is small
     if np.abs(theta)<1e-12:
@@ -242,9 +241,9 @@ def GravityLoad2(ModelInfo):
         X1=ModelInfo.ElCoord_1[k]
         X2=ModelInfo.ElCoord_2[k]
     
-        L0=numtools.norm_fast(X2-X1)
+        L0=putools.num.norm_fast(X2-X1)
     
-        L0_xy=numtools.norm_fast(X2[0:2]-X1[0:2])
+        L0_xy=putools.num.norm_fast(X2[0:2]-X1[0:2])
     
         # angle with projection line in xy-plane
         alpha=np.arctan2(X2[3-1]-X1[3-1],L0_xy)
@@ -263,7 +262,7 @@ def GravityLoad2(ModelInfo):
         0 , 5*qn*L0 , 0])
     
         # TT=scipy.linalg.block_diag(TC0,TC0,TC0,TC0).T
-        TT=numtools.block_diag_rep(TC0,4).T
+        TT=putools.num.block_diag_rep(TC0,4).T
 
         P_glob=TT.dot(P_loc)
     
@@ -314,7 +313,7 @@ def RodriguesRotationFormula(theta_vec):
     # See also https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
     
     # Find scalar magnitude
-    theta=numtools.norm_fast(theta_vec)
+    theta=putools.num.norm_fast(theta_vec)
     
     # If theta is almost zero, set R=I to avoid numerical 0/0 problems
     if theta<1e-10:
@@ -343,8 +342,8 @@ def K_el_matrix(r_sub,RT_sub,L0,A,Iz,Iy,It,E,G,X1,X2,e2,TC0):
     
     rA=r_sub[0:3]
     rB=r_sub[6:9]
-    # L0=numtools.norm_fast((X2-X1))
-    L=numtools.norm_fast(((X2+rB)-(X1+rA)))
+    # L0=putools.num.norm_fast((X2-X1))
+    L=putools.num.norm_fast(((X2+rB)-(X1+rA)))
     DL=L-L0
     
     # Linear strain
@@ -411,7 +410,7 @@ def K_el_matrix(r_sub,RT_sub,L0,A,Iz,Iy,It,E,G,X1,X2,e2,TC0):
     K_el=KK+N*KKG
     
     #  Calculate the residual and the stiffness matrix in global coordinates
-    TT1=numtools.block_diag_rep(TC0n,4)
+    TT1=putools.num.block_diag_rep(TC0n,4)
 
     RHS=TT1.T @ K_el @ rdef
     RHSsub1=RHS[0:6]
@@ -436,8 +435,8 @@ def K_el_matrix_old(r_sub,RT_sub,A,Iz,Iy,It,E,G,X1,X2,e2,TC0):
     
     rA=r_sub[0:3]
     rB=r_sub[6:9]
-    L0=numtools.norm_fast((X2-X1))
-    L=numtools.norm_fast(((X2+rB)-(X1+rA)))
+    L0=putools.num.norm_fast((X2-X1))
+    L=putools.num.norm_fast(((X2+rB)-(X1+rA)))
     DL=L-L0
     
     # Linear strain
@@ -612,7 +611,7 @@ def K_el_matrix_old(r_sub,RT_sub,A,Iz,Iy,It,E,G,X1,X2,e2,TC0):
     
     #  Calculate the residual and the stiffness matrix in global coordinates
     # TT1=scipy.linalg.block_diag(TC0n,TC0n,TC0n,TC0n)
-    TT1=numtools.block_diag_rep(TC0n,4)
+    TT1=putools.num.block_diag_rep(TC0n,4)
 
     K_el=np.concatenate( (np.concatenate((KKsub11,KKsub12),axis=1),np.concatenate((KKsub21,KKsub22),axis=1)),axis=0)
 

@@ -8,7 +8,7 @@ Created on
 #%%
 
 import numpy as np
-from .. import numtools
+import putools
 
 #%%
 
@@ -31,14 +31,14 @@ def ElementNormal(ElementMatrix,NodeMatrix):
         X2=NodeMatrix[Index2,1:]
 
         e1=X2-X1
-        e1=e1/numtools.norm_fast(e1)
+        e1=e1/putools.num.norm_fast(e1)
         e3_guess=np.array([0,0,1])
 
-        e2=numtools.cross_fast(e3_guess,e1)
-        e2=e2/numtools.norm_fast(e2)
+        e2=putools.num.cross_fast(e3_guess,e1)
+        e2=e2/putools.num.norm_fast(e2)
 
-        e3=numtools.cross_fast(e1,e2)
-        e3=e3/numtools.norm_fast(e3)
+        e3=putools.num.cross_fast(e1,e2)
+        e3=e3/putools.num.norm_fast(e3)
 
         e2mat[k,1:4]=e2
         e3mat[k,1:4]=e3

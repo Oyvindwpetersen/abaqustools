@@ -9,7 +9,7 @@ Created on
 
 import numpy as np
 from numpy import matlib
-from .. import numtools
+import putools
 from .. import gen
 from .MeshStruct import *
 
@@ -25,7 +25,7 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
           
     # Set as integer
     if np.abs(N_element_pr_hanger-round(N_element_pr_hanger)) > 1e-3:
-        print('***** Ratio geo.dx_hanger/bridgedeck.meshsize = '  + numtools.num2strf(N_element_pr_hanger,5))
+        print('***** Ratio geo.dx_hanger/bridgedeck.meshsize = '  + putools.num.num2strf(N_element_pr_hanger,5))
         raise Exception('***** The hanger distance and bridge deck mesh size must divide into an integer')
     else:
         N_element_pr_hanger=round(N_element_pr_hanger)
@@ -140,7 +140,7 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
         y_outer_east=(-geo.dy_cog_hanger-geo.gap/2)*np.ones(np.shape(x_outer_east))
 
     # Select only nodes where hangers are (and start/end)
-    IndexLatConn=numtools.argmin(x_bridgedeck_cog,meta.x_hanger)
+    IndexLatConn=putools.num.argmin(x_bridgedeck_cog,meta.x_hanger)
     IndexLatConn=np.hstack((0,IndexLatConn,-1))
 
     NodeNumberOuterEast=bridgedeck.NodeNumberBaseOuter[0]+np.arange(1,len(x_outer_east)+1).astype(int)

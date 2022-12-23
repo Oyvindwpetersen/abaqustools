@@ -16,7 +16,7 @@ from ypstruct import *
 from .CableGeometry import *
 from .TowerGeometry import *
 
-from .. import numtools
+import putools
 
 from ..fem_corot.NonLinearSolver import *
 from ..fem_corot.ProcessModel import *
@@ -161,11 +161,11 @@ def EstimatePullbackForce(tower,geo,abaqus):
     u_label=list(hf['u_label'])
     
     NodeSouth=towermesh.NodeMatrix[0][-1,0]
-    Index=numtools.listindex(u_label, str(int(NodeSouth)) + '_U1')[0]
+    Index=putools.num.listindex(u_label, str(int(NodeSouth)) + '_U1')[0]
     u_south=u[Index]
     
     NodeNorth=towermesh.NodeMatrix[2][-1,0]
-    Index=numtools.listindex(u_label, str(int(NodeNorth)) + '_U1')[0]
+    Index=putools.num.listindex(u_label, str(int(NodeNorth)) + '_U1')[0]
     u_north=u[Index]
         
     K_south=UnitLoadSouth/u_south
@@ -174,7 +174,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
     F_pullback_south=K_south*geo.dx_pullback_south
     F_pullback_north=K_north*geo.dx_pullback_north
 
-    numtools.starprint([ 'F_pullback_south=' + numtools.num2stre(F_pullback_south) + ' N' ,  'F_pullback_north=' + numtools.num2stre(F_pullback_north) + ' N'])
+    putools.txt.starprint([ 'F_pullback_south=' + putools.num.num2stre(F_pullback_south) + ' N' ,  'F_pullback_north=' + putools.num.num2stre(F_pullback_north) + ' N'])
 
     return F_pullback_south,F_pullback_north,K_south,K_north,K_est
 

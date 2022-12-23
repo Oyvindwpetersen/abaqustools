@@ -9,7 +9,7 @@ Created on
 
 import numpy as np
 import time
-from .. import numtools
+import putools
 from .. import gen
 from .MeshStruct import *
 

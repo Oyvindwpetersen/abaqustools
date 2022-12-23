@@ -31,7 +31,7 @@ Created on
          #  ]
 
 import numpy as np
-from . import numtools
+import putools
 
 #%%
 
@@ -68,7 +68,7 @@ def BeamAddedInertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
     fid.write('*BEAM ADDED INERTIA' + '\n')
     
     values_list=[linear_mass,x1,x2,alpha,I_11,I_22,I_12]
-    str_values=numtools.num2stre(values_list,digits=3,delimeter=', ')
+    str_values=putools.num.num2stre(values_list,digits=3,delimeter=', ')
     fid.write(str_values + '\n')
 
     fid.write('**' + '\n')
@@ -87,15 +87,15 @@ def BeamSection(fid,elset,material,sectiontype,sectionproperties,direction):
     if isinstance(elset,str):
         elset=[elset]
 
-    sectionproperties=numtools.ensurenp(sectionproperties)
-    direction=numtools.ensurenp(direction)
+    sectionproperties=putools.num.ensurenp(sectionproperties)
+    direction=putools.num.ensurenp(direction)
 
     for elset_sub in elset:
         fid.write('*BEAM SECTION, ELSET=' + elset_sub.upper() + ', MATERIAL=' + material.upper() + ', SECTION=' + sectiontype.upper() + '\n')
 
-        numtools.writematrix(fid,sectionproperties,5,', ','f')
+        putools.txt.writematrix(fid,sectionproperties,5,', ','f')
         
-        numtools.writematrix(fid,direction,3,', ','f')
+        putools.txt.writematrix(fid,direction,3,', ','f')
     
     fid.write('**' + '\n')
     
@@ -111,13 +111,13 @@ def BeamGeneralSection(fid,elset,density,sectionproperties,direction,materialpro
     # direction: array with n1-direction
     # materialproperties: array [E,G]
     
-    fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + numtools.num2strf(density,3) + '\n')
+    fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + putools.num.num2strf(density,3) + '\n')
     
-    numtools.writematrix(fid,sectionproperties,5,', ','e')
+    putools.txt.writematrix(fid,sectionproperties,5,', ','e')
     
-    numtools.writematrix(fid,direction,3,', ','f')
+    putools.txt.writematrix(fid,direction,3,', ','f')
     
-    numtools.writematrix(fid,materialproperties,5,', ','e')
+    putools.txt.writematrix(fid,materialproperties,5,', ','e')
     
     
     #fid.write('**' + '\n')
@@ -143,8 +143,8 @@ def Boundary(fid,op,nodename,BCmat,partname):
     if isinstance(nodename,str):
         nodename=[nodename]
         
-    if numtools.isnumeric(nodename):
-        nodename=numtools.ensurenp(nodename)
+    if putools.num.isnumeric(nodename):
+        nodename=putools.num.ensurenp(nodename)
         for k in nodename:
             fid.write(partname_str + str(nodename[k]) + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
     elif isinstance(nodename,list):
@@ -212,7 +212,7 @@ def Cload(fid,op,nset,dof,magnitude_force,partname=''):
     
     fid.write('*CLOAD, OP=' + op.upper() + '\n')
     
-    magnitude_force=numtools.ensurenp(magnitude_force)
+    magnitude_force=putools.num.ensurenp(magnitude_force)
     
     if isinstance(nset,str):
         nset=[nset]
@@ -220,12 +220,12 @@ def Cload(fid,op,nset,dof,magnitude_force,partname=''):
     if np.shape(magnitude_force)==():
         magnitude_force=magnitude_force*np.ones(len(nset))
 
-    if numtools.isnumeric(nset):
+    if putools.num.isnumeric(nset):
         for k in np.arange(len(nset)):
-            fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + numtools.num2stre(magnitude_force[k],3) + '\n')
+            fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
     elif isinstance(nset,list):
         for k in np.arange(len(nset)):
-            fid.write( partname_str + nset[k] + ', ' + str(int(dof)) + ', ' + numtools.num2stre(magnitude_force[k],3) + '\n')
+            fid.write( partname_str + nset[k] + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
         
     fid.write('**' + '\n')
     #fid.write('**' + '\n')
@@ -273,8 +273,8 @@ def Dload(fid,op,elset,type_id,magnitude):
         
     if isinstance(magnitude,str):
         magnitude_str=magnitude
-    elif numtools.isnumeric(magnitude):
-        magnitude_str=numtools.num2stre(magnitude)
+    elif putools.num.isnumeric(magnitude):
+        magnitude_str=putools.num.num2stre(magnitude)
         
     fid.write('*DLOAD, OP=' + op.upper() + '\n')
     fid.write( elset + ', ' + type_id + ', ' + magnitude_str + '\n')
@@ -291,7 +291,7 @@ def Element(fid,element_nodenumber,type_id,elsetname):
     # type_id: type, e.g. B31
     # elsetname: string with name
     
-    element_nodenumber=numtools.ensurenp(element_nodenumber)
+    element_nodenumber=putools.num.ensurenp(element_nodenumber)
 
     n_neg=sum(sum(element_nodenumber<=0))
     if n_neg>0:
@@ -311,7 +311,7 @@ def Element(fid,element_nodenumber,type_id,elsetname):
             
     fid.write('*ELEMENT, TYPE=' + type_id.upper() + ', ELSET=' + elsetname.upper() + '\n')
     
-    numtools.writematrix(fid,element_nodenumber,'',', ','int')
+    putools.txt.writematrix(fid,element_nodenumber,'',', ','int')
         
     fid.write('**' + '\n')
     fid.write('**' + '\n')
@@ -331,11 +331,11 @@ def Elset(fid,elsetname,elements,option=''):
         
         elements=[elements]
         
-    if numtools.isnumeric(elements):
-        elements=np.atleast_1d(numtools.ensurenp(elements))
-        bins=numtools.rangebin(len(elements),16)
+    if putools.num.isnumeric(elements):
+        elements=np.atleast_1d(putools.num.ensurenp(elements))
+        bins=putools.num.rangebin(len(elements),16)
         for bins_sub in bins:
-            numtools.writematrix(fid,elements[bins_sub],'',',','int')
+            putools.txt.writematrix(fid,elements[bins_sub],'',',','int')
     else:
         for elements_sub in elements:
             fid.write(elements_sub.upper() + '\n')
@@ -432,7 +432,7 @@ def Gravload(fid,op,elset,magnitude=9.81,partname=''):
     direction_str=' 0 , 0, -1'
     
     for elset_sub in elset:
-        fid.write(partname_str + elset_sub.upper() + ', GRAV, ' + numtools.num2strf(magnitude,5) + ',' + direction_str + '\n')
+        fid.write(partname_str + elset_sub.upper() + ', GRAV, ' + putools.num.num2strf(magnitude,5) + ',' + direction_str + '\n')
             
     fid.write('**' + '\n')
         
@@ -548,8 +548,8 @@ def MPC(fid,type_id,nodes):
     
     mpc_str=''
     
-    if numtools.isnumeric(nodes):
-        nodes=numtools.ensurenp(nodes)
+    if putools.num.isnumeric(nodes):
+        nodes=putools.num.ensurenp(nodes)
         for nodes_sub in np.nditer(nodes):
             mpc_str=mpc_str + ',' + str(int(nodes_sub))
     elif isinstance(nodes,list):
@@ -573,9 +573,9 @@ def Material(fid,materialname,emodulus,v,density):
 
     fid.write('*MATERIAL, NAME=' + materialname.upper() + '\n')
     fid.write('*ELASTIC' + '\n')
-    numtools.writematrix(fid,[emodulus,v],3,', ',['e' , 'f'])
+    putools.txt.writematrix(fid,[emodulus,v],3,', ',['e' , 'f'])
     fid.write('*DENSITY' + '\n')
-    numtools.writematrix(fid,[density],3,', ',['e'])
+    putools.txt.writematrix(fid,[density],3,', ',['e'])
     
     fid.write('**' + '\n')
     fid.write('**' + '\n')
@@ -614,16 +614,16 @@ def Node(fid,nodenumber_coord,nsetname):
     # nsetname: string with name
     
     if any(nodenumber_coord[:,0]<=0):
-        numtools.starprint('For NSET ' + nsetname,1)
+        putools.num.starprint('For NSET ' + nsetname,1)
         raise Exception('***** Negative node numbers')
         
         
     if np.isnan(nodenumber_coord).any():
-        numtools.starprint('For NSET ' + nsetname,1)
+        putools.num.starprint('For NSET ' + nsetname,1)
         raise Exception('***** Containing NAN')
     
     fid.write('*NODE' + ',NSET=' + nsetname.upper() + '\n')
-    numtools.writematrix(fid,nodenumber_coord,5,',',['int' , 'f', 'f', 'f'])
+    putools.txt.writematrix(fid,nodenumber_coord,5,',',['int' , 'f', 'f', 'f'])
 
     fid.write('**' + '\n')
     fid.write('**' + '\n')
@@ -640,7 +640,7 @@ def Nonstructuralmass(fid,elset,unit,mass):
 
     fid.write('*NONSTRUCTURAL MASS, ELSET=' + elset.upper() + ', UNITS=' + unit.upper() + '\n')
     
-    numtools.writematrix(fid,mass,5,',','e')
+    putools.txt.writematrix(fid,mass,5,',','e')
     
     fid.write('**' + '\n')
 
@@ -662,12 +662,12 @@ def Nset(fid,nsetname,nodes,option=''):
         
     fid.write('*NSET, NSET=' + nsetname.upper() + comma + option.upper() + '\n')
     
-    if numtools.isnumeric(nodes):
-        nodes=np.atleast_1d(numtools.ensurenp(nodes))
-        bins=numtools.rangebin(len(nodes),16)
+    if putools.num.isnumeric(nodes):
+        nodes=np.atleast_1d(putools.num.ensurenp(nodes))
+        bins=putools.num.rangebin(len(nodes),16)
             
         for bins_sub in bins:
-            numtools.writematrix(fid,nodes[bins_sub],'',',','int')
+            putools.txt.writematrix(fid,nodes[bins_sub],'',',','int')
                 
     elif isinstance(nodes,list):
         for nodes_sub in nodes:
@@ -694,7 +694,7 @@ def Parameter(fid,parameternames,values):
     fid.write('*PARAMETER' + '\n')
     
     for k in np.arange(len(parameternames)):
-        fid.write( parameternames[k] + '=' + numtools.num2stre(values[k],5,',') + '\n')
+        fid.write( parameternames[k] + '=' + putools.num.num2stre(values[k],5,',') + '\n')
     
     fid.write('**' + '\n')
 
@@ -740,8 +740,8 @@ def Release(fid,elset,end_id,release_id):
     for i in np.arange(len(end_id)):
         for j in np.arange(len(release_id)):
         
-            if numtools.isnumeric(elset):
-                elset=numtools.ensurenp(elset)
+            if putools.num.isnumeric(elset):
+                elset=putools.num.ensurenp(elset)
                 for elset_sub in np.nditer(elset):
                     fid.write( str(int(elset_sub)) + ', ' + end_id[i] + ', ' + release_id[j]  + '\n')
             else:
@@ -787,7 +787,7 @@ def ShellSection(fid,elset,material,options,shellproperties):
 
     fid.write('*SHELL SECTION, ELSET=' + elset.upper() + ',' + ' MATERIAL=' + material.upper() + ', ' + options.upper() + '\n')
 
-    numtools.writematrix(fid,shellproperties,3,',',['f','int'])
+    putools.txt.writematrix(fid,shellproperties,3,',',['f','int'])
 
     fid.write('**' + '\n')
 
@@ -800,7 +800,7 @@ def ShearCenter(fid,x1,x2):
     # x2: offset in 2-dir
  
     fid.write('*SHEAR CENTER' + '\n')
-    numtools.writematrix(fid,[x1,x2],3,',','e')
+    putools.txt.writematrix(fid,[x1,x2],3,',','e')
 
 #%%
 
@@ -826,14 +826,14 @@ def Spring(fid,elset,element_nodenumber,dofno,springstiffness):
         
     fid.write('*ELEMENT, TYPE=SPRING2, ELSET=' + elset.upper() + '\n')
 
-    numtools.writematrix(fid,element_nodenumber,'',',','int')
+    putools.txt.writematrix(fid,element_nodenumber,'',',','int')
 
     fid.write('*SPRING, ELSET=' + elset.upper() + '\n')
     
-    numtools.writematrix(fid,[dofno,dofno],'',',','int')
+    putools.txt.writematrix(fid,[dofno,dofno],'',',','int')
 
-    if numtools.isnumeric(springstiffness):
-        numtools.writematrix(fid,springstiffness,5,',','e')
+    if putools.num.isnumeric(springstiffness):
+        putools.txt.writematrix(fid,springstiffness,5,',','e')
     #elif isinstance(springstiffness,list):
         #fid.write( springstiffness + '\n')
 
@@ -853,12 +853,12 @@ def SpringA(fid,elset,element_nodenumber,springstiffness):
         
     fid.write('*ELEMENT, TYPE=SPRINGA, ELSET=' + elset.upper() + '\n')
 
-    numtools.writematrix(fid,element_nodenumber,'',',','int')
+    putools.txt.writematrix(fid,element_nodenumber,'',',','int')
 
     fid.write('*SPRING,ELSET=' + elset.upper() + '\n')
 
-    if numtools.isnumeric(springstiffness):
-        numtools.writematrix(fid,springstiffness,5,',','e')
+    if putools.num.isnumeric(springstiffness):
+        putools.txt.writematrix(fid,springstiffness,5,',','e')
     #elif isinstance(springstiffness,list):
         #fid.write( springstiffness + '\n')
 
@@ -874,8 +874,8 @@ def Static(fid,time):
 
     fid.write('*STATIC \n')
 
-    if numtools.isnumeric(time):
-        numtools.writematrix(fid,time,'1',',','e')
+    if putools.num.isnumeric(time):
+        putools.txt.writematrix(fid,time,'1',',','e')
     elif isinstance(time,str):
         fid.write(time)
 
@@ -919,14 +919,14 @@ def Temp(fid,op,nset,magnitude_temp):
 
     fid.write('*TEMPERATURE, OP=' + op.upper() + '\n')
     
-    magnitude_temp=numtools.ensurenp(magnitude_temp)
+    magnitude_temp=putools.num.ensurenp(magnitude_temp)
     
     if np.shape(magnitude_temp)==1:
         magnitude_temp=magnitude_temp*np.ones([1,len(nset)])
 
-    if numtools.isnumeric(nset):
+    if putools.num.isnumeric(nset):
         for k in enumerate(nset):
-           # fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + numtools.num2stre(magnitude_force[k],3) + '\n')
+           # fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
            print('')
     
     
@@ -935,7 +935,7 @@ def Temp(fid,op,nset,magnitude_temp):
         
     if isinstance(nset,list):
         for k,nset_sub in enumerate(nset):
-            #fid.write( partname_str + nset_sub + ', ' + str(int(dof)) + ', ' + numtools.num2stre(magnitude_force[k],3) + '\n')
+            #fid.write( partname_str + nset_sub + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
            print('')
            
     fid.write('**' + '\n')
@@ -955,7 +955,7 @@ def Tie(fid,tiename,adjust,postol,slavename,mastername):
     
     Checkarg(adjust,['YES','NO'])
     
-    fid.write('*TIE, NAME=' + tiename.upper() + ', ADJUST=' + adjust.upper() + ', ' 'POSITION TOLERANCE=' + numtools.num2stre(postol,3) + '\n')
+    fid.write('*TIE, NAME=' + tiename.upper() + ', ADJUST=' + adjust.upper() + ', ' 'POSITION TOLERANCE=' + putools.num.num2stre(postol,3) + '\n')
     fid.write(slavename.upper() + ', ' + mastername.upper() + '\n')
     
     fid.write('**' + '\n')
@@ -969,7 +969,7 @@ def TransverseShearStiffness(fid,k23,k13):
     # k13: shear stiffness in 1-dir
     
     fid.write('*TRANSVERSE SHEAR STIFFNESS' + '\n')
-    numtools.writematrix(fid,[k23,k13],3,',','e')
+    putools.txt.writematrix(fid,[k23,k13],3,',','e')
 
     # https://www.sharcnet.ca/Software/Abaqus/6.14.2/v6.14/books/usb/default.htm?startat=pt06ch29s03alm08.html#usb-elm-ebeamelem-transshear-override
 

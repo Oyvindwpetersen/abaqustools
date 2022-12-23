@@ -9,7 +9,7 @@ import numpy as np
 import sys
 from scipy import sparse
 
-from .. import numtools
+import putools
 
 from . Corot import *
 
@@ -17,7 +17,6 @@ from . Corot import *
 
 def Assembly(r,RT,ModelInfo):
 
-    # t00=numtools.tic()
     N_nodes=np.shape(ModelInfo.NodeMatrix)[0]
     N_NodeDof=6
     N_el=np.shape(ModelInfo.ElementMatrix)[0]
@@ -98,7 +97,6 @@ def Assembly(r,RT,ModelInfo):
         RHS[n]+=RHSsub1
         RHS[m]+=RHSsub2
         
-    # numtools.toc(t00)
     KT=K
     
     return RHS,KT,N
@@ -108,7 +106,7 @@ def Assembly(r,RT,ModelInfo):
 
 def Assembly_old(r,RT,ModelInfo):
 
-    t00=numtools.tic()
+    t00=putools.timing.tic()
     N_nodes=np.shape(ModelInfo.NodeMatrix)[0]
     N_NodeDof=6
     N_el=np.shape(ModelInfo.ElementMatrix)[0]
@@ -162,7 +160,7 @@ def Assembly_old(r,RT,ModelInfo):
         RHS[n]+=RHSsub1
         RHS[m]+=RHSsub2
         
-    numtools.toc(t00)
+    putools.timing.toc(t00)
     KT=K
     
     return RHS,KT,N

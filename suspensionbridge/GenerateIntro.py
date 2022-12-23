@@ -7,7 +7,7 @@ Created on Sat Jan 22 09:31:11 2022
 #%%
 
 import numpy as np
-from .. import numtools
+import putools
 from .. import gen
 import datetime
 
@@ -73,8 +73,8 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
             if isinstance(field_value,str):
                 comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value )
             
-            if numtools.isnumeric(field_value):
-                field_value_str=numtools.num2stre(field_value,5)
+            if putools.num.isnumeric(field_value):
+                field_value_str=putools.num.num2stre(field_value,5)
                 comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value_str)
             
             if isinstance(field_value,bool):
@@ -95,8 +95,8 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
                     if isinstance(field_value,str):
                         comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
                     
-                    if numtools.isnumeric(field_value):
-                        field_value_sub_str=numtools.num2stre(field_value_sub,5)
+                    if putools.num.isnumeric(field_value):
+                        field_value_sub_str=putools.num.num2stre(field_value_sub,5)
                         comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
                                     
                 

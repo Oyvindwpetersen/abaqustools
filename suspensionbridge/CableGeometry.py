@@ -8,7 +8,7 @@ Created on
 #%%
 
 import numpy as np
-from .. import numtools
+import putools
 from .. import gen
 from .MeshStruct import *
 

@@ -9,7 +9,7 @@ Created on Mon Feb 14 12:35:26 2022
 
 import numpy as np
 
-from .. import numtools
+import putools
 
 from .Corot import *
 from .Assembly import *
@@ -52,12 +52,12 @@ def NonLinearSolver(ModelInfo,P_loadstep,LoadIncrements=10,IterationMax=100,norm
     
     r_step=[None]*LoadSteps
 
-    t0=numtools.tic()
+    t0=putools.timing.tic()
 
     leadingzero2="{:02d}"    
     for j in np.arange(LoadSteps):
     
-        numtools.starprint('Load step ' + leadingzero2.format(j+1) + '/' + leadingzero2.format(LoadSteps) ,1)
+        putools.txt.starprint('Load step ' + leadingzero2.format(j+1) + '/' + leadingzero2.format(LoadSteps) ,1)
             
         if j==0:
             P_prev_loadstep=np.zeros(np.shape(P_loadstep[j]))
@@ -71,7 +71,7 @@ def NonLinearSolver(ModelInfo,P_loadstep,LoadIncrements=10,IterationMax=100,norm
 
         for l in np.arange(LoadIncrements):
 
-            numtools.starprint('Load increment ' + leadingzero2.format(l+1) + '/' + leadingzero2.format(LoadIncrements) ,1)
+            putools.txt.starprint('Load increment ' + leadingzero2.format(l+1) + '/' + leadingzero2.format(LoadIncrements) ,1)
             
             # Load for this step
             fn=P_prev_loadstep+f_scale[l]*P_add # Add load: from previos load step plus difference*scalefactor, where scale factor [0,1]
@@ -84,10 +84,10 @@ def NonLinearSolver(ModelInfo,P_loadstep,LoadIncrements=10,IterationMax=100,norm
             LoadIncrementConv=False
             while n<IterationMax and LoadIncrementConv==False:
                 
-                t_it=numtools.tic()
+                t_it=putools.timing.tic()
                 
                 n=n+1
-                numtools.starprint('Iteration ' + leadingzero2.format(n),0)
+                putools.txt.starprint('Iteration ' + leadingzero2.format(n),0)
                 
                 
                 # Build model
@@ -107,36 +107,36 @@ def NonLinearSolver(ModelInfo,P_loadstep,LoadIncrements=10,IterationMax=100,norm
                 # If norm of dr is too large, decrease
                 scale_iter=1
                 if n>1:
-                    if numtools.norm_fast(dr)>np.nanmax(norm_dr_iter[j][l]):
-                        numtools.starprint('norm(dr) large, dr scaled down')
+                    if putools.num.norm_fast(dr)>np.nanmax(norm_dr_iter[j][l]):
+                        putools.txt.starprint('norm(dr) large, dr scaled down')
                         scale_iter=0.5
 
                 # Update response
                 r=r+dr*scale_iter
             
                 # Check if converged
-                if numtools.norm_fast(dr)/(ModelInfo.N_DOF)<norm_tol:
+                if putools.num.norm_fast(dr)/(ModelInfo.N_DOF)<norm_tol:
                     LoadIncrementConv=True
 
                 # Save norms
-                norm_dr[j][l].append(numtools.norm_fast(dr))
-                norm_dr_iter[j][l].append(numtools.norm_fast(dr*scale_iter))
+                norm_dr[j][l].append(putools.num.norm_fast(dr))
+                norm_dr_iter[j][l].append(putools.num.norm_fast(dr*scale_iter))
                 
                 if LoadIncrementConv==True:
-                    numtools.starprint('Converged at iteration n=' + str(n))
+                    putools.txt.starprint('Converged at iteration n=' + str(n))
                     
                     
-                # numtools.starprint('Iter time ' + numtools.num2strf(t_it,0))
+                # putools.txt.starprint('Iter time ' + putools.num.num2strf(t_it,0))
             if LoadIncrementConv==False:
-                numtools.starprint('Break simulation at load increment ' + leadingzero2.format(l+1) + '/' + leadingzero2.format(LoadIncrements) + ', applied load ratio ' + numtools.num2strf(f_scale[l]) )
-                numtools.starprint('Not converged',4)
+                putools.txt.starprint('Break simulation at load increment ' + leadingzero2.format(l+1) + '/' + leadingzero2.format(LoadIncrements) + ', applied load ratio ' + putools.num.num2strf(f_scale[l]) )
+                putools.txt.starprint('Not converged',4)
                 #DoBreak=True
                             
         r_step[j]=r
 
-    t1=numtools.tocs(t0)
+    t1=putools.timing.tocs(t0)
     
-    numtools.starprint('Calculation time ' + numtools.num2strf(t1,2))
+    putools.txt.starprint('Calculation time ' + putools.num.num2strf(t1,2))
     
     
     return r,r_step,N,KT,RHS

@@ -11,7 +11,7 @@ Created on
 import os
 import numpy as np
 import warnings
-from .. import numtools
+import putools
 import time
 from ypstruct import *
 
@@ -186,8 +186,8 @@ def ProcessUserParameters(UserParameterFile):
     # Check if tower cross section properties is given for entire height
     if tower.cs.z_vec[-1]<geo.z_tower_top_south or tower.cs.z_vec[-1]<geo.z_tower_top_north:
         
-        warnings.warn('***** Tower cross section property specified to z=' + numtools.num2strf(tower.cs.z_vec[-1],3) + ' m', stacklevel=2)
-        warnings.warn('***** Max tower elevation z=' + numtools.num2strf(max(geo.z_tower_top_south,geo.z_tower_top_north),3) + ' m', stacklevel=2)
+        warnings.warn('***** Tower cross section property specified to z=' + putools.num.num2strf(tower.cs.z_vec[-1],3) + ' m', stacklevel=2)
+        warnings.warn('***** Max tower elevation z=' + putools.num.num2strf(max(geo.z_tower_top_south,geo.z_tower_top_north),3) + ' m', stacklevel=2)
         warnings.warn('***** Applying constant extrapolation of cross section properties beyond last point', stacklevel=2)
         
         tower.cs.z_vec=np.hstack((tower.cs.z_vec , max(geo.z_tower_top_south,geo.z_tower_top_north)))
@@ -199,8 +199,8 @@ def ProcessUserParameters(UserParameterFile):
     # Cross section of tower
     if tower.cs.z_vec[0]>geo.z_tower_base_south or tower.cs.z_vec[0]>geo.z_tower_base_south:
         
-        warnings.warn('***** Tower cross section property specified from z=' + numtools.num2strf(tower.cs.z_vec[0],3) + ' m', stacklevel=2)
-        warnings.warn('***** Min tower elevation z=' + numtools.num2strf(min(geo.z_tower_base_south,geo.z_tower_base_north),3) + ' m', stacklevel=2)
+        warnings.warn('***** Tower cross section property specified from z=' + putools.num.num2strf(tower.cs.z_vec[0],3) + ' m', stacklevel=2)
+        warnings.warn('***** Min tower elevation z=' + putools.num.num2strf(min(geo.z_tower_base_south,geo.z_tower_base_north),3) + ' m', stacklevel=2)
         warnings.warn('***** Applying constant extrapolation of cross section properties beyond first point', stacklevel=2)
     
         tower.cs.z_vec=np.hstack(( min(geo.z_tower_base_south,geo.z_tower_base_north) , tower.cs.z_vec))
