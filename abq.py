@@ -9,14 +9,14 @@
 
 import numpy as np
 import os
-from . import numtools
+import putools
 import time
 
 #%%
 
 def PrintError(JobName,FolderName=''):
 
-    # Search through msg file for errors, print if found
+    # Search through msg file for errors, print error if found
     
     # Inputs:
     # JobName: name of odb file
@@ -25,13 +25,15 @@ def PrintError(JobName,FolderName=''):
     if len(FolderName)>0:
         FolderName=FolderName + '\\'
         
+    # Remove odb extension if provided
     if JobName[-4:].casefold()=='.odb':
             JobName=JobName[:-4]
     
+    
     FileName=FolderName + JobName + '.msg'
     
+    # If msg file dont exist, set empty
     FileExistLogic=os.path.isfile(FileName)
-    
     if FileExistLogic==True:
         fid=open(FileName, 'r')
         Lines=fid.read().splitlines()
@@ -39,12 +41,12 @@ def PrintError(JobName,FolderName=''):
     else:
         Lines=['']
     
-    
+    # Search for error, print if found
     SearchedString=' ***ERROR'
-    IndexError=numtools.listindexsub(Lines,SearchedString)
+    IndexError=putools.num.listindexsub(Lines,SearchedString)
 
     if len(IndexError)>0:
-        numtools.starprint('ABAQUS ERRORS:',1)
+        putools.txt.starprint('ABAQUS ERRORS:',1)
 
         for k in np.arange(4):
             
@@ -57,7 +59,7 @@ def CheckDuplicateNumbers(InputFileName):
     # Check input file, alert if duplicate node or element numbers
     
     # Inputs:
-    # InputFileName: name (and folder) of file file
+    # InputFileName: name (and folder) of input file
     
     fid=open(InputFileName, 'r')
     InputFileLines=fid.read().splitlines()
@@ -65,11 +67,11 @@ def CheckDuplicateNumbers(InputFileName):
 
     type_list=['*NODE,' , '*ELEMENT,']
 
-    IndexStar=numtools.listindexsub(InputFileLines,'*')
+    IndexStar=putools.num.listindexsub(InputFileLines,'*')
 
     for index in np.arange(2):
         
-        IndexKeyword=numtools.listindexsub(InputFileLines,type_list[index])
+        IndexKeyword=putools.num.listindexsub(InputFileLines,type_list[index])
         
         NumbersAll=[None]*len(IndexKeyword)
     
@@ -80,7 +82,7 @@ def CheckDuplicateNumbers(InputFileName):
             LineRange=np.arange(IndexKeyword[k]+1,IndexStarNext)
             InputFileLinesSub = [InputFileLines[i] for i in LineRange]
             
-            NumericBlock=numtools.str2num(InputFileLinesSub,'int',1)
+            NumericBlock=putools.num.str2num(InputFileLinesSub,'int',1)
             NumbersAll[k]=NumericBlock[:,0]
             
             #[float(s) for s in example_string.split(',')]
@@ -147,10 +149,10 @@ def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_
     
     # [abaqus_cmd ' job=' JobName ' input=' InputName ' interactive' ' cpus=' num2str(cpus) ]
 
-    t0=numtools.tic()
+    t0=putools.timing.tic()
     #(sys_out)=os.system(system_cmd)
     sys_out=os.popen(system_cmd).read()
-    t1=numtools.tocs(t0)
+    t1=putools.timing.tocs(t0)
     
     os.chdir(OriginalFolder)
     
@@ -159,7 +161,7 @@ def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_
 
     LogicCompleted='COMPLETED' in sys_out
     if LogicCompleted:
-        print('***** ABAQUS job completed in ' + numtools.num2strf(t1,1) + ' s')
+        print('***** ABAQUS job completed in ' + putools.num.num2strf(t1,1) + ' s')
         
     LogicErrorAnalysis='Abaqus/Analysis exited with error' in sys_out
 
