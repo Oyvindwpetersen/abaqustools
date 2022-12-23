@@ -1,4 +1,3 @@
-
 import numpy as np
 from ypstruct import *
 
@@ -8,7 +7,7 @@ from ypstruct import *
 
 abaqus=struct()
 
-abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen'
+abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen_test2'
 abaqus.InputName='TestLangenuen'
 abaqus.JobName='TestLangenuen'
 abaqus.PartName='SuspensionBridge'
@@ -155,7 +154,7 @@ tower.normaldir=np.array([0,1,0])
 tower.eltype='B31'
 
 tower.F_pullback_south=np.nan # np.array(-6e5) #np.nan
-tower.F_pullback_north=np.nan # np.array(6e5) #
+tower.F_pullback_north=np.nan # np.array(6e5) #np.nan
 
 tower.z_crossbeam_south=np.array([60.0,205.0])
 tower.z_crossbeam_north=np.array([60.0,205.0])
