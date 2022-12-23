@@ -7,11 +7,8 @@ Created on Wed Dec  1 11:39:19 2021
 
 #%%
 
-
-
 from . import exportmodal
 from . import exportstatic
-
 
 #%%
 
