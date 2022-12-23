@@ -23,9 +23,8 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
     comment.append('Model input generated ' + c[:-7])
 
     gen.Comment(fid,comment)
-    gen.Comment(fid,'Part of abaqustools package')
-    gen.Comment(fid,'2022 Oyvind Wiig Petersen, NTNU')
-
+    gen.Comment(fid,['Part of abaqustools package','Oyvind Wiig Petersen, NTNU'])
+    
     gen.Line(fid,'**')
 
     struct_all=[None]*11
