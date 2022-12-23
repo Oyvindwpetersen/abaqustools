@@ -3,13 +3,18 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Old files
+__old__/
+
 # Python cache
+**/__pycache__/
 *.pyc
 
 # Abaqus replay
 *.rpy*
-*.rpy.1
-*.rpy.2
+*.rpy.*
+*.rpy.?
+*.rpy.??
 
 # C extensions
 *.so
