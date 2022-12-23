@@ -8,7 +8,7 @@ from ypstruct import *
 
 abaqus=struct()
 
-abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/sulafjorden'
+abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/sulafjorden_test2'
 abaqus.InputName='TestSulafjorden'
 abaqus.JobName='TestSulafjorden'
 abaqus.PartName='SuspensionBridge'
@@ -154,8 +154,8 @@ tower.cs.v=np.array(0.2)
 tower.normaldir=np.array([0,1,0])
 tower.eltype='B31'
 
-tower.F_pullback_south=np.nan
-tower.F_pullback_north=np.nan
+tower.F_pullback_south=np.nan #-3e6  
+tower.F_pullback_north=np.nan #+3e6 
 
 tower.z_crossbeam_south=np.hstack((57.5-2-4,30+145.5+np.array([0.0,70.0,140.0,210.0])))
 tower.z_crossbeam_north=tower.z_crossbeam_south
