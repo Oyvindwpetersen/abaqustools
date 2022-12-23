@@ -53,10 +53,10 @@ def EstimatePullbackForce(tower,geo,abaqus):
     delta=abs(geo.dx_pullback_south)
     F=delta*K_est
 
-    #%%  Assume 20% reduction due to nonlinear effects
+    #%%  Assume 30% reduction due to nonlinear effects (not sure why?)
 
-    UnitLoadSouth=-F*0.8
-    UnitLoadNorth=F*0.8
+    UnitLoadSouth=-F*0.7
+    UnitLoadNorth=F*0.7
 
     #%%  Abaqus info
 
