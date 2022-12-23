@@ -5,7 +5,7 @@
 import sys
 import os
 import numpy as np
-from .. import numtools
+import putools
 import h5py
 
 #%% Run that file in abaqus
@@ -106,7 +106,7 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
 
     if DeleteFiles==True:
         FileNameListDir=os.listdir(FolderSave)
-        IndexMatch=numtools.listindexsub(FileNameListDir,NameODB + '_export_')
+        IndexMatch=putools.num.listindexsub(FileNameListDir,NameODB + '_export_')
     
         for k in np.arange(len(IndexMatch)):
             

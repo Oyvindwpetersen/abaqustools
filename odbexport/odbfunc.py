@@ -17,6 +17,8 @@ def p(pstring):
 #%%
 
 def OpenODB(FolderODB,JobName):
+    
+    # Open ODB file
 
     # Inputs:
     # FolderODB: string with folder name
@@ -25,7 +27,6 @@ def OpenODB(FolderODB,JobName):
     # Outputs:
     # myOdb: ODB object
 
-    # Open ODB
     if JobName[-4:]=='.odb':
         JobName=JobName
     else:
@@ -35,6 +36,8 @@ def OpenODB(FolderODB,JobName):
     return myOdb
 
 def CloseODB(myOdb):
+
+    # Close ODB file
 
     # Inputs:
     # myOdb: ODB object
@@ -83,7 +86,7 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
     
     # Outputs:
     # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_MODES)
-    # LabelVector: list with DOF labels of all NDOF
+    # LabelVector: list with DOF labels of all N_DOF
 
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
@@ -221,6 +224,7 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
         
     SF_ComponentLabels=OutputSF.componentLabels
     SM_ComponentLabels=('SM1', 'SM2', 'SM3') 
+    # Overwrite 
     # Error in abaqus documentation? States 2 1 3 in odb, but that is wrong
     # OutputSM.componentLabels
     # ('SM2', 'SM1', 'SM3')    
@@ -230,6 +234,7 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
     
     return SectionForceMatrix,ElementLabelVector
     
+    # From abaqus manual:
     # Section forces, moments, and transverse shear forces
     # SF1 Axial force.
     # SF2 Transverse shear force in the local 2-direction (not available for B23, B23H, B33, B33H).

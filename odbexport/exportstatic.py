@@ -5,7 +5,7 @@
 import sys
 import os
 import numpy as np
-from .. import numtools
+import putools
 import h5py
 
 #%% Run that file in abaqus
