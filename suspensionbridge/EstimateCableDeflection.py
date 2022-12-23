@@ -57,8 +57,8 @@ def EstimateCableDeflectionMain(meta,cable,bridgedeck,tower,geo):
     putools.txt.starprint(['Initial dx_pullback_south=' + putools.num.num2strf(dx_pullback_south_initial,3) + ' m' ,
     'Iterated dx_pullback_south=' + putools.num.num2strf(dx_pullback_south_iter[-1],3) + ' m'])
     
-    putools.txt.starprint(['Initial dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_iter[0],3) + ' m' ,
-    'Iterated dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_initial,3) + ' m'])
+    putools.txt.starprint(['Initial dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_initial[0],3) + ' m' ,
+    'Iterated dx_pullback_north=' + putools.num.num2strf(dx_pullback_north_iter,3) + ' m'])
 
     #%%  Displacement in x-dir
 
