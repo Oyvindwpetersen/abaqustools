@@ -7,7 +7,7 @@ from ypstruct import *
 
 abaqus=struct()
 
-abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen_test2'
+abaqus.FolderNameModel='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen'
 abaqus.InputName='TestLangenuen'
 abaqus.JobName='TestLangenuen'
 abaqus.PartName='SuspensionBridge'

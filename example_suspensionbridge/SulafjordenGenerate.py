@@ -21,12 +21,12 @@ from abaqustools import odbexport
 UserParameterFolder='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge'
 UserParameterFileName='SulafjordenParameters.py'
 
-suspensionbridge.MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflection=True)
+suspensionbridge.MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflection=False)
 
 
 #%%
 
-FolderODB='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/Sulafjorden_test2'
+FolderODB='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/Sulafjorden'
 NameODB='TestSulafjorden'
 FolderSave=FolderODB
 FolderPython='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'

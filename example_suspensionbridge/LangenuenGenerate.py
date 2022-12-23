@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Dec 23 12:36:35 2022
+
+@author: oyvinpet
+"""
 
 #%%
 
@@ -15,12 +21,12 @@ from abaqustools import odbexport
 UserParameterFolder='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge'
 UserParameterFileName='LangenuenParameters.py'
 
-suspensionbridge.MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflection=True)
+suspensionbridge.MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflection=False)
 
 
 #%%
 
-FolderODB='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen_test2'
+FolderODB='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/example_suspensionbridge/langenuen'
 NameODB='TestLangenuen'
 FolderSave=FolderODB
 FolderPython='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
