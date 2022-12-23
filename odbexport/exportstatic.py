@@ -82,7 +82,7 @@ def exportstatic(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Crea
 
     if DeleteFiles==True:
         FileNameListDir=os.listdir(FolderSave)
-        IndexMatch=numtools.listindexsub(FileNameListDir,NameODB + '_export_')
+        IndexMatch=putools.num.listindexsub(FileNameListDir,NameODB + '_export_')
     
         for k in np.arange(len(IndexMatch)):
             
@@ -91,7 +91,6 @@ def exportstatic(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Crea
                 continue
             
             os.remove(FolderSave + '/' + FileNameRemove)
-        
         
     return hf_name
 #%% 
