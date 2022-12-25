@@ -12,7 +12,7 @@ import h5py
 
 def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,CreateH5=True):
     
-    Variables=['freq' , 'genmass' , 'phi' , 'phi_sf' , 'nodecoord']
+    Variables=['freq' , 'genmass' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
     
     # Name of export script
     ExportScript=NameODB + '_exportmodal'
@@ -66,6 +66,11 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         nodecoord=np.genfromtxt(FileName, delimiter=',')
         FileNameAll.append(FileName)
         
+    if 'elconn' in Variables:
+        FileName=FolderSave + '/' + NameODB + '_export_' + 'elconn.txt'
+        elconn=np.genfromtxt(FileName, delimiter=',')
+        FileNameAll.append(FileName)
+        
 
 #%%
 
@@ -99,6 +104,10 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         if 'nodecoord' in Variables:
             hf.create_dataset('nodecoord',data=nodecoord)
         
+                
+        if 'elconn' in Variables:
+            hf.create_dataset('elconn',data=elconn)
+            
         hf.close()
         
 
@@ -124,7 +133,7 @@ def writepyscript_modal(FolderODB,NameODB,FolderSave,FolderPython,ExportScript='
         Variables=[Variables]
         
     if Variables=='':
-        Variables=['freq' , 'genmass' , 'phi' , 'phi_sf' , 'nodecoord']
+        Variables=['freq' , 'genmass' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn']
     
     Lines=['']
     
@@ -183,6 +192,13 @@ def writepyscript_modal(FolderODB,NameODB,FolderSave,FolderPython,ExportScript='
         Lines.append('# Node coordinates')
         Lines.append( 'nodecoord=odbfunc.Export_NodeCoord(myOdb,-1,0)' )
         Lines.append( 'odbfunc.SaveToTXT(FolderSave,' + '\'nodecoord\'' + ',nodecoord,atype=1,Prefix=Prefix)' )
+        Lines.append('')
+        
+    if 'elconn' in Variables:
+        Lines.append('# Element connectivity')
+        Lines.append( '(ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32)=odbfunc.Export_ElConnectivity(myOdb)' )
+        Lines.append( 'elconn=np.vstack((ElementConnectivity_B31,ElementConnectivity_B33))' )
+        Lines.append( 'odbfunc.SaveToTXT(FolderSave,' + '\'elconn\'' + ',elconn,atype=1,Prefix=Prefix)' )
         Lines.append('')
     
     Lines.append('# Close ODB')
