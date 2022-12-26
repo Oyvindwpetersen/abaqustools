@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Old files
+# Other
+develop/
 __old__/
 
 # Python cache
@@ -15,6 +16,9 @@ __old__/
 *.rpy.*
 *.rpy.?
 *.rpy.??
+
+# TOML file
+*.toml
 
 # C extensions
 *.so
