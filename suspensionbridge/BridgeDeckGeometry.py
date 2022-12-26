@@ -11,20 +11,20 @@ import numpy as np
 from numpy import matlib
 import putools
 from .. import gen
-from .MeshStruct import *
+from . MeshStruct import *
 
 
 def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
-#%% [meta,bridgemesh]=
+#%% 
     
     bridgemesh=InitiateMeshStruct()
     
 #%%  Mesh size
     
     N_element_pr_hanger=(geo.dx_hanger/bridgedeck.meshsize)
-          
+    
     # Set as integer
-    if np.abs(N_element_pr_hanger-round(N_element_pr_hanger)) > 1e-3:
+    if np.abs(N_element_pr_hanger-round(N_element_pr_hanger)) > 1e-2:
         print('***** Ratio geo.dx_hanger/bridgedeck.meshsize = '  + putools.num.num2strf(N_element_pr_hanger,5))
         raise Exception('***** The hanger distance and bridge deck mesh size must divide into an integer')
     else:
@@ -36,11 +36,11 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
     # Nodes from first to last hanger
     x_node_mid=np.arange(meta.x_hanger[0],meta.x_hanger[-1]+bridgedeck.meshsize,bridgedeck.meshsize)
     
-    # Nodes beyond hangers
-    #np.arange(0,(np.ceil(10/1.25)+1)*1.25,1.25)
     x_node_endpiece=np.arange(bridgedeck.meshsize,(np.ceil(meta.bridgedeck.dx_endpiece/bridgedeck.meshsize)+1)*bridgedeck.meshsize,bridgedeck.meshsize)
-    x_node_endpiece[-1]=meta.bridgedeck.dx_endpiece
-            
+   
+    if np.abs(x_node_endpiece[-1]-meta.bridgedeck.dx_endpiece)>1e-3:
+        x_node_endpiece[-1]=meta.bridgedeck.dx_endpiece
+    
     # Merge all nodes
     x_bridgedeck_cog=np.hstack((x_node_mid[0]-np.flip(x_node_endpiece),x_node_mid,x_node_mid[-1]+x_node_endpiece))
     
@@ -224,7 +224,6 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
 
         bridgemesh.ElementSet.append(['LatConnGapWest' , 'LatConnGapEast'])
         bridgemesh.ElementSetName.append('LatConnGap')
-
 
 #%% 
 
