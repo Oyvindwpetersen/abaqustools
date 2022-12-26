@@ -53,14 +53,13 @@ def CableGeometry(fid,meta,geo,cable):
 
 #%% Geometry span
 
-    # Add hangers until exceeding limit
+    # Add hangers until exceeding limit dx_endpiece_max
     x_hanger=np.array([0.0])
     for k in np.arange(1000):
        
        if np.abs(x_hanger[-1]-geo.L_bridgedeck/2)>geo.dx_endpiece_max:
            x_hanger=np.hstack((x_hanger[0]-geo.dx_hanger , x_hanger , x_hanger[-1]+geo.dx_hanger))
        else:
-
           meta.bridgedeck.dx_endpiece=geo.L_bridgedeck/2-x_hanger[-1]
           break
       
@@ -120,48 +119,12 @@ def CableGeometry(fid,meta,geo,cable):
 
     cablemesh.NodeSet.append(np.array([NodeNumber_east[0],NodeNumber_east[-1],NodeNumber_west[0],NodeNumber_west[-1]]))
     cablemesh.NodeSetName.append('Cable_main_anchorage')
-    
-    meta.cable.NodeNumberTop=[]
-    
-    # Node set cable top
-    LogicSouth=x_east<0
-    LogicNorth=x_east>0
-    
-    IndexSub=np.argmax(z_east[LogicSouth])
-    IndexParent=np.arange(z_east.shape[0])[LogicSouth][IndexSub]
-    cablemesh.NodeSet.append(NodeNumber_east[IndexParent])
-    cablemesh.NodeSetName.append('Cable_main_top_south_east')
-    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
-    
-    IndexSub=np.argmax(z_west[LogicSouth])
-    IndexParent=np.arange(z_west.shape[0])[LogicSouth][IndexSub]
-    cablemesh.NodeSet.append(NodeNumber_west[IndexParent])
-    cablemesh.NodeSetName.append('Cable_main_top_south_west')
-    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
-    
-    IndexSub=np.argmax(z_east[LogicNorth])
-    IndexParent=np.arange(z_east.shape[0])[LogicNorth][IndexSub]
-    cablemesh.NodeSet.append(NodeNumber_east[IndexParent])
-    cablemesh.NodeSetName.append('Cable_main_top_north_east')
-    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
-    
-    IndexSub=np.argmax(z_west[LogicNorth])
-    IndexParent=np.arange(z_west.shape[0])[LogicNorth][IndexSub]
-    cablemesh.NodeSet.append(NodeNumber_west[IndexParent])
-    cablemesh.NodeSetName.append('Cable_main_top_north_west')
-    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
-    
-    cablemesh.NodeSet.append(['Cable_main_top_south_east' , 'Cable_main_top_south_west' , 'Cable_main_top_north_east' , 'Cable_main_top_north_west'])
-    cablemesh.NodeSetName.append('Cable_main_top')
 
     # Elset cable
     cablemesh.ElementSet.append(['Cable_main_east' , 'Cable_main_west'])
     cablemesh.ElementSetName.append('Cable_main')
     
     # Node set mainspan
-    # IndexMainEast=np.flatnonzero(np.abs(x_east)<geo.L_bridgedeck/2)
-    # IndexMainWest=np.flatnonzero(np.abs(x_west)<geo.L_bridgedeck/2)
-    
     IndexMainEast=np.arange(len(x_mainspan))-1+len(x_sidespan_south)
     IndexMainWest=IndexMainEast
     
@@ -169,12 +132,33 @@ def CableGeometry(fid,meta,geo,cable):
     cablemesh.NodeSetName.append('Cable_main_span')
     
     # El set mainspan
-    IndexMainEast2=IndexMainEast[:-1]
-    IndexMainWest2=IndexMainWest[:-1]
-    
-    cablemesh.ElementSet.append(np.hstack((ElementNumber_east[IndexMainEast2],ElementNumber_west[IndexMainWest2])))
+    cablemesh.ElementSet.append(np.hstack((ElementNumber_east[IndexMainEast[:-1]],ElementNumber_west[IndexMainWest[:-1]])))
     cablemesh.ElementSetName.append('Cable_main_span')
 
+    
+    # Node set cable top
+    meta.cable.NodeNumberTop=[]
+    
+    cablemesh.NodeSet.append(NodeNumber_east[IndexMainEast[0]])
+    cablemesh.NodeSetName.append('Cable_main_top_south_east')
+    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
+
+    cablemesh.NodeSet.append(NodeNumber_west[IndexMainWest[0]])
+    cablemesh.NodeSetName.append('Cable_main_top_south_west')
+    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
+
+    cablemesh.NodeSet.append(NodeNumber_east[IndexMainEast[-1]])
+    cablemesh.NodeSetName.append('Cable_main_top_north_east')
+    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
+
+    cablemesh.NodeSet.append(NodeNumber_west[IndexMainWest[-1]])
+    cablemesh.NodeSetName.append('Cable_main_top_north_west')
+    meta.cable.NodeNumberTop.append(cablemesh.NodeSet[-1])
+    
+    cablemesh.NodeSet.append(['Cable_main_top_south_east' , 'Cable_main_top_south_west' , 'Cable_main_top_north_east' , 'Cable_main_top_north_west'])
+    cablemesh.NodeSetName.append('Cable_main_top')
+    
+    
 #%% Meta
 
     meta.cable.NodeNumberEastHanger=NodeNumber_east[IndexMainEast[1:-1]]
