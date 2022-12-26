@@ -55,7 +55,6 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
 
     comment=[]
     comment.append('User parameter values:')
-    # comment.append('To come')
 
     # TODO: format intro text
     

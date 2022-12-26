@@ -15,18 +15,18 @@ import putools
 from .. import gen
 from .. import abq
 
-from .MeshStruct import *
-from .ProcessUserParameters import *
-from .GenerateIntro import *
-from .CableGeometry import *
-from .TowerGeometry import *
-from .SadleGeometry import *
-from .BridgeDeckGeometry import *
-from .HangerGeometry import *
-from .BearingGeometry import *
-from .ElementNormal import *
-from .EstimateCableDeflection import *
-from .EstimatePullbackForce import *
+from . MeshStruct import *
+from . ProcessUserParameters import *
+from . GenerateIntro import *
+from . CableGeometry import *
+from . TowerGeometry import *
+from . SadleGeometry import *
+from . BridgeDeckGeometry import *
+from . HangerGeometry import *
+from . BearingGeometry import *
+from . ElementNormal import *
+from . EstimateCableDeflection import *
+from . EstimatePullbackForce import *
 
 #%%
 
@@ -51,7 +51,6 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
 
     if np.isnan(tower.F_pullback_south) and np.isnan(tower.F_pullback_north):
         
-        # dummy=np.nan
         putools.txt.starprint(['Estimating force for retraction of towers'],1)
         (tower.F_pullback_south,tower.F_pullback_north,tower.K_south,tower.K_north,tower.K_est)=EstimatePullbackForce(tower,geo,abaqus)
 
