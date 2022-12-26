@@ -10,7 +10,7 @@ Created on
 import numpy as np
 from .. import gen
 
-from .MeshStruct import *
+from . MeshStruct import *
 
 #%%
 
@@ -116,8 +116,7 @@ def BearingGeometry(fid,meta,geo,bearing):
             bearingmesh.NodeMatrixName.append('BEARINGLOW' + str(n+1) + '_' + S_or_N[j])
             bearingmesh.ElementMatrixName.append('BEARINGLOW' + str(n+1) + '_' + S_or_N[j])
             bearingmesh.ElementType.append('B31')
-        
-        
+            
             # Add pendulum
             ElementNumber=ElementNumber[-1]+[1,2]
             NodeNumber=bearing.NodeNumberBase+j*1e3+n*1e2+[1,3,1+3,3+3]
@@ -130,7 +129,7 @@ def BearingGeometry(fid,meta,geo,bearing):
             bearingmesh.ElementType.append('B31')
 
             # Add springs
-            DirectionCell=['X' , 'Y' , 'Z' , 'RX' , 'RY' , 'RZ']
+            Direction_xyz=['X' , 'Y' , 'Z' , 'RX' , 'RY' , 'RZ']
             ElsetBearingDof=[None]*6
             for IndexDof in np.arange(6):
 
@@ -143,7 +142,7 @@ def BearingGeometry(fid,meta,geo,bearing):
                 elif j==1:
                     k_spring=bearing.stiffness_north[IndexDof]
 
-                ElSetNameTemp='BEARINGSPRING' + str(n+1) + '_' + S_or_N[j] + '_' + DirectionCell[IndexDof]
+                ElSetNameTemp='BEARINGSPRING' + str(n+1) + '_' + S_or_N[j] + '_' + Direction_xyz[IndexDof]
                 gen.Spring(fid,ElSetNameTemp,ElementNodeMatrix,IndexDof+1,k_spring)
                 ElsetBearingDof[IndexDof]=ElSetNameTemp
 
