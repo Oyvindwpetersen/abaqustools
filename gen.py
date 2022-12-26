@@ -119,7 +119,6 @@ def BeamGeneralSection(fid,elset,density,sectionproperties,direction,materialpro
     
     putools.txt.writematrix(fid,materialproperties,5,', ','e')
     
-    
     #fid.write('**' + '\n')
     
 #%%
@@ -278,7 +277,7 @@ def Dload(fid,op,elset,type_id,magnitude):
         
     fid.write('*DLOAD, OP=' + op.upper() + '\n')
     fid.write( elset + ', ' + type_id + ', ' + magnitude_str + '\n')
-
+    
     fid.write('**' + '\n')
     #fid.write('**' + '\n')
     
@@ -312,7 +311,7 @@ def Element(fid,element_nodenumber,type_id,elsetname):
     fid.write('*ELEMENT, TYPE=' + type_id.upper() + ', ELSET=' + elsetname.upper() + '\n')
     
     putools.txt.writematrix(fid,element_nodenumber,'',', ','int')
-        
+    
     fid.write('**' + '\n')
     fid.write('**' + '\n')
 
@@ -441,8 +440,7 @@ def Gravload(fid,op,elset,magnitude=9.81,partname=''):
 def HistoryOutput(fid,options=''):
     
     # Inputs:
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified DLOADS
-    # magnitude: signed number
+    # options: 
 
     comma=', '
     if len(options)<=1:
