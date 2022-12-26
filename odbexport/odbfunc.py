@@ -9,9 +9,7 @@ from timeit import default_timer as timer
 def p(pstring):
     prettyPrint(pstring)
 
-
-
-# This file is imported in Abaqus by "import odbfunc"
+# This module is imported in Abaqus by "import odbfunc"
 # The folder must first be added to the path
 
 #%%
@@ -145,8 +143,7 @@ def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
     # FrameNumber: frame number for export, usually 0
     
     # Outputs:
-    # NodeCoordMatrix: matrix with [x,y,z] as rows, size N_NODE*3
-    # NodeCoordLabelVector: vector with node numbers
+    # NodeCoord: matrix with [nodenumber,x,y,z] as rows, size N_NODE*4
 
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
@@ -224,8 +221,7 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
         
     SF_ComponentLabels=OutputSF.componentLabels
     SM_ComponentLabels=('SM1', 'SM2', 'SM3') 
-    # Overwrite 
-    # Error in abaqus documentation? States 2 1 3 in odb, but that is wrong
+    # Overwrite: error in abaqus documentation? States 2 1 3 in odb, but that is wrong
     # OutputSM.componentLabels
     # ('SM2', 'SM1', 'SM3')    
     
@@ -275,7 +271,7 @@ def Export_ElConnectivity(myOdb):
         ElementConnectivity_B32=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) , int(SelectedInstanceElements[j].connectivity[2]) ]  for j in Index_B32 ] )
 
     t_end=timer()
-    print('Time #ELEMENTS ' + str(t_end-t_start))
+    print('Time elconn ' + str(t_end-t_start))
     
     return ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32
 
@@ -309,7 +305,7 @@ def Export_ElSets(myOdb):
             ElementSetNumbers=np.append(ElementSetNumbers,ElementNumbers_temp)
             
     t_end=timer()
-    print('Time #ELEMENT SETS ' + str(t_end-t_start))
+    print('Time elsets ' + str(t_end-t_start))
     return ElementSetNumbers,ElementSetNames
     
 #%%
