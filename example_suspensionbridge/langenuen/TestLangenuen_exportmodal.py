@@ -39,5 +39,10 @@ odbfunc.SaveToTXT(FolderSave,'phi_sf_label',phi_sf_label,atype=2,Prefix=Prefix)
 nodecoord=odbfunc.Export_NodeCoord(myOdb,-1,0)
 odbfunc.SaveToTXT(FolderSave,'nodecoord',nodecoord,atype=1,Prefix=Prefix)
 
+# Element connectivity
+(ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32)=odbfunc.Export_ElConnectivity(myOdb)
+elconn=np.vstack((ElementConnectivity_B31,ElementConnectivity_B33))
+odbfunc.SaveToTXT(FolderSave,'elconn',elconn,atype=1,Prefix=Prefix)
+
 # Close ODB
 odbfunc.CloseODB(myOdb)

@@ -247,10 +247,8 @@ def Export_ElConnectivity(myOdb):
     # myOdb: ODB object
     
     # Outputs:
-    # ElementConnectivity_B31: matrix with rows [Elno,Nodeno1,Nodeno2]
-    # ElementConnectivity_B33: matrix with rows [Elno,Nodeno1,Nodeno2]
-    # ElementConnectivity_B32: matrix with rows [Elno,Nodeno1,Nodeno2,Nodeno3]
-
+    # ElementConnectivity: matrix with rows [Elno,Nodeno_start,Nodeno_end]
+    
     t_start=timer()
 
     InstanceKeys=myOdb.rootAssembly.instances.keys()
@@ -270,10 +268,25 @@ def Export_ElConnectivity(myOdb):
         ElementConnectivity_B33=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) ]  for j in Index_B33 ] )
         ElementConnectivity_B32=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) , int(SelectedInstanceElements[j].connectivity[2]) ]  for j in Index_B32 ] )
 
+    # If empty, then set shape to 3 or 4 columns
+    if Index_B31==[]:
+        ElementConnectivity_B31=np.array([]).reshape(0,3)
+    
+    if Index_B33==[]:
+        ElementConnectivity_B33=np.array([]).reshape(0,3)
+    
+    if Index_B32==[]:
+        ElementConnectivity_B32=np.array([]).reshape(0,4)
+        
+    # Delete middle node for 3 node element
+    ElementConnectivity_B32_del=np.delete(ElementConnectivity_B32,2,1)
+    
+    ElementConnectivity=np.vstack((ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32_del))
+    
     t_end=timer()
     print('Time elconn ' + str(t_end-t_start))
     
-    return ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32
+    return ElementConnectivity
 
 #%%
 

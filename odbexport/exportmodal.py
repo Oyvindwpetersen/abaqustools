@@ -196,8 +196,7 @@ def writepyscript_modal(FolderODB,NameODB,FolderSave,FolderPython,ExportScript='
         
     if 'elconn' in Variables:
         Lines.append('# Element connectivity')
-        Lines.append( '(ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32)=odbfunc.Export_ElConnectivity(myOdb)' )
-        Lines.append( 'elconn=np.vstack((ElementConnectivity_B31,ElementConnectivity_B33))' )
+        Lines.append( 'elconn=odbfunc.Export_ElConnectivity(myOdb)' )
         Lines.append( 'odbfunc.SaveToTXT(FolderSave,' + '\'elconn\'' + ',elconn,atype=1,Prefix=Prefix)' )
         Lines.append('')
     

@@ -33,3 +33,4 @@ FolderPython='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
 
 odbexport.exportmodal.exportmodal(FolderODB,NameODB,FolderSave,FolderPython)
 
+
