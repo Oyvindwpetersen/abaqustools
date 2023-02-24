@@ -346,7 +346,7 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
     elif bridgedeck.N_box==2:
             ElementName=['Bridgedeck1_cog' , 'Bridgedeck2_cog']
 
-    gen.BeamGeneralSection(fid,'LatConnOuter',0,[0.1,1,0,1,1],[1,0,0],[210e9*100,81e9*100])
+    gen.BeamGeneralSection(fid,'LatConnOuter',0,[0.1,1,0,1,1],[1,0,0],[210e9*10,81e9*10])
             
     for n in np.arange(bridgedeck.N_box):
 
@@ -357,12 +357,12 @@ def BridgeDeckGeometry(fid,meta,geo,bridgedeck):
             
     if bridgedeck.N_box==2:
         
-        gen.BeamGeneralSection(fid,'LatConnInner',0,[0.1,1,0,1,1],[1,0,0],[210e9*100,81e9*100])
+        gen.BeamGeneralSection(fid,'LatConnInner',0,[0.1,1,0,1,1],[1,0,0],[210e9*10,81e9*10])
 
         if bridgedeck.gapbeam.type.upper()=='BOX':
             gen.BeamSection(fid,'LatConnGap','Steel','BOX',[bridgedeck.gapbeam.b , bridgedeck.gapbeam.h , bridgedeck.gapbeam.t , bridgedeck.gapbeam.t , bridgedeck.gapbeam.t , bridgedeck.gapbeam.t],[1,0,0])
         elif bridgedeck.gapbeam.type.upper()=='STIFF':
-            gen.BeamGeneralSection(fid,'LatConnGap',0,[0.1,1,0,1,10],[1,0,0],[210e9*100,81e9*100])
+            gen.BeamGeneralSection(fid,'LatConnGap',0,[0.1,1,0,1,1],[1,0,0],[210e9*10,81e9*10])
 
     
     gen.ShellSection(fid,'Bridgedeck_shell','SOFT','OFFSET=SNEG',[0.01 , 3])

@@ -80,6 +80,7 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         
         if os.path.exists(hf_name):
             hf_name=FolderSave + '/' + NameODB + '_export_conflict' + '.h5'
+        #if os.path.exists(hf_name):
         
         hf = h5py.File(hf_name,'w')
 
