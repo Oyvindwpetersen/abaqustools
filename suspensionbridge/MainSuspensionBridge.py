@@ -184,7 +184,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     
     if cable.tempsupport==True:
         gen.ModelChange(fid,'ADD',['CABLE_TEMPSUPPORT'],abaqus.PartName)
-    
+        
     gen.Cload(fid,'NEW',[],[],[])
     
     gen.Gravload(fid,'new',[''],9.81)
@@ -213,6 +213,7 @@ def MainSuspensionBridge(UserParameterFileName,UserParameterFolder,IterateDeflec
     
     if cable.tempsupport==True:
         gen.ModelChange(fid,'REMOVE',['CABLE_TEMPSUPPORT'],abaqus.PartName)
+       
     
     GravList=['TOWER','CABLE_MAIN','HANGER','BRIDGEDECK','BEARINGTOP','BEARINGLOW']
     gen.Gravload(fid,'NEW',GravList,9.81,abaqus.PartName)  
