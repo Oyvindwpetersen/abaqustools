@@ -200,10 +200,13 @@ def CableGeometry(fid,meta,geo,cable):
     
     gen.BeamGeneralSection(fid,'Cable_main',cable.cs.rho,[cable.cs.A , cable.cs.I11 , cable.cs.I12 , cable.cs.I22 , cable.cs.It],cable.normaldir,[cable.cs.E,cable.cs.G])
     
+    gen.Nonstructuralmass(fid, 'Cable_main', 'MASS PER LENGTH', cable.nsmass)
+    
+    
     if cable.tempsupport==True:
-        gen.BeamGeneralSection(fid,'CABLE_TEMPSUPPORT',0,[0.1 , 1 , 0 , 1 , 1],[1,0,0],[210e9*100,81e9*100])
-
-
+        gen.BeamGeneralSection(fid,'CABLE_TEMPSUPPORT',0,[0.01 , .01 , 0 , .01 , .01],[1,0,0],[210e9,81e9])
+        gen.Release(fid,'CABLE_TEMPSUPPORT',['S1' , 'S2'],'M1-M2')
+        
 #%% 
 
     return (meta,cablemesh)
