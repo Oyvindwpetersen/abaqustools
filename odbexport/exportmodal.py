@@ -78,9 +78,8 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         
         hf_name=FolderSave + '/' + NameODB + '_export' + '.h5'
         
-        if os.path.exists(hf_name):
-            hf_name=FolderSave + '/' + NameODB + '_export_conflict' + '.h5'
         #if os.path.exists(hf_name):
+        #    hf_name=FolderSave + '/' + NameODB + '_export_conflict' + '.h5'
         
         hf = h5py.File(hf_name,'w')
 
@@ -105,7 +104,6 @@ def exportmodal(FolderODB,NameODB,FolderSave,FolderPython,DeleteFiles=True,Creat
         if 'nodecoord' in Variables:
             hf.create_dataset('nodecoord',data=nodecoord)
         
-                
         if 'elconn' in Variables:
             hf.create_dataset('elconn',data=elconn)
             
