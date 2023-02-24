@@ -10,6 +10,7 @@ Created on Wed Dec  1 11:39:19 2021
 import os
 import numpy as np
 import h5py
+import datetime
 
 from ypstruct import *
 
@@ -42,8 +43,8 @@ def EstimatePullbackForce(tower,geo,abaqus):
     E_num=tower.cs.E;
 
     c=np.polyfit(tower.cs.z_vec,I_num,1)
-    I_0_num=np.polyval(c,tower.cs.z_vec[1])
-    I_end_num=np.polyval(c,tower.cs.z_vec[-1])
+    I_0_num=np.polyval(c,geo.z_tower_base_south)
+    I_end_num=np.polyval(c,geo.z_tower_top_south)
 
     if np.abs(I_0_num/I_end_num-1)<1e-3:
         I_0_num=1.001*I_end_num
@@ -59,12 +60,16 @@ def EstimatePullbackForce(tower,geo,abaqus):
     UnitLoadNorth=F*0.7
 
     #%%  Abaqus info
-
+    
+    c=datetime.datetime.now().isoformat()
+    c=c[:-7]
+    c=c.replace(':','-')
+    
     FolderODBExport=abaqus.FolderODBExport
     abaqus=struct()
     
     abaqus.FolderNameModel='C:\\Temp'
-    abaqus.InputName='SB_TempJob_1'
+    abaqus.InputName='SB_TempJob_' + c
     abaqus.JobName=abaqus.InputName
     abaqus.PartName='PartTower'
     abaqus.AssemblyName='AssemblyTower'
@@ -158,7 +163,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
     hf=h5py.File(hf_name, 'r')
     
     u=np.array(hf['u'])
-    u_label=list(hf['u_label'])
+    u_label=hf['u_label'].asstr()[()].tolist()
     
     NodeSouth=towermesh.NodeMatrix[0][-1,0]
     Index=putools.num.listindex(u_label, str(int(NodeSouth)) + '_U1')[0]
@@ -180,6 +185,7 @@ def EstimatePullbackForce(tower,geo,abaqus):
 
 #%% 
 def K_cantilever(L,I_0,I_end,E):
+    
         
     K_val=(2*(E*I_0**3 - 3*E*I_0**2*I_end + 3*E*I_0*I_end**2 - E*I_end**3)) / (I_0**2*L**3 + 3*I_end**2*L**3 + 2*I_end**2*L**3*np.log(I_0*L) - 2*I_end**2*L**3*np.log(I_end*L) - 4*I_0*I_end*L**3)
 
