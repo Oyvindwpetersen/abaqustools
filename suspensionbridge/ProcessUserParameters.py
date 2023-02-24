@@ -36,9 +36,7 @@ def ProcessUserParameters(UserParameterFile):
     
     time.sleep(0.1)
     
-    print(abaqus.cpus)
-
-        
+            
 #%%  Check that inputs are provided (not exhaustive)
 
     fieldnames=['FolderNameModel' , 'InputName' , 'JobName' , 'PartName' , 'AssemblyName' , 'RunJob' , 'cmd' , 'cpus' , 'restart' , 'halt_error']
@@ -56,7 +54,7 @@ def ProcessUserParameters(UserParameterFile):
     fieldnames=['m' , 'x1' , 'x2' , 'alpha' , 'I11' , 'I22' , 'I12']
     CheckField(bridgedeck.inertia,'bridgedeck.inertia',fieldnames)
 
-    fieldnames=['normaldir' , 'NodeNumberBase' , 'ElementNumberBase' , 'meshsize_approx' , 'N_element' , 'tempsupport' , 'polycoeff_hanger_adjust']
+    fieldnames=['normaldir' , 'NodeNumberBase' , 'ElementNumberBase' , 'meshsize_approx' , 'N_element' , 'tempsupport' , 'polycoeff_hanger_adjust' , 'nsmass']
     CheckField(cable,'cable',fieldnames)
     
     fieldnames=['A' , 'I11' , 'I22' , 'I12' , 'It' , 'rho' , 'E' , 'G' , 'sigma_target']
