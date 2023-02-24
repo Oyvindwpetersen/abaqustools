@@ -31,9 +31,14 @@ def PrintError(JobName,FolderName=''):
     
     
     FileName=FolderName + JobName + '.msg'
-    
-    # If msg file dont exist, set empty
     FileExistLogic=os.path.isfile(FileName)
+    
+    # If msg file dont exist, try dat
+    if FileExistLogic==False:
+        FileName=FolderName + JobName + '.dat'
+        FileExistLogic=os.path.isfile(FileName)
+    
+    # If file dont exist, set empty
     if FileExistLogic==True:
         fid=open(FileName, 'r')
         Lines=fid.read().splitlines()
