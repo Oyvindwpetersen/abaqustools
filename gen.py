@@ -215,10 +215,12 @@ def Cload(fid,op,nset,dof,magnitude_force,partname=''):
     
     if isinstance(nset,str):
         nset=[nset]
-        
-    if np.shape(magnitude_force)==():
+    
+    magnitude_force=np.atleast_1d(magnitude_force)
+    
+    if np.shape(magnitude_force)==(1,):
         magnitude_force=magnitude_force*np.ones(len(nset))
-
+    
     if putools.num.isnumeric(nset):
         for k in np.arange(len(nset)):
             fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
@@ -633,7 +635,7 @@ def Nonstructuralmass(fid,elset,unit,mass):
     
     # Inputs:
     # elset: string with name
-    # unit: 
+    # unit: MASS PER LENGTH or TOTAL MASS
     # mass: 
 
     fid.write('*NONSTRUCTURAL MASS, ELSET=' + elset.upper() + ', UNITS=' + unit.upper() + '\n')
