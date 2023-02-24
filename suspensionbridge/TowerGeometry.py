@@ -222,8 +222,8 @@ def TowerGeometry(fid,meta,geo,tower):
             b_interp=np.interp(z_north_east[k],tower.cs.z_vec,tower.cs.b_vec)
             t_interp=np.interp(z_north_east[k],tower.cs.z_vec,tower.cs.t_vec)
 
-            gen.BeamSection(fid,'Tower_south_cs_' + str(k+1).zfill(3),'CONCRETE','BOX',[h_interp,b_interp,t_interp,t_interp,t_interp,t_interp],tower.normaldir)
-            gen.BeamSection(fid,'Tower_north_cs_' + str(k+1).zfill(3),'CONCRETE','BOX',[h_interp,b_interp,t_interp,t_interp,t_interp,t_interp],tower.normaldir)
+            gen.BeamSection(fid,'Tower_south_cs_' + str(k+1).zfill(3),'CONCRETE','BOX',[b_interp,h_interp,t_interp,t_interp,t_interp,t_interp],tower.normaldir)
+            gen.BeamSection(fid,'Tower_north_cs_' + str(k+1).zfill(3),'CONCRETE','BOX',[b_interp,h_interp,t_interp,t_interp,t_interp,t_interp],tower.normaldir)
 
 
     for k in np.arange(len(z_crossbeam_all)):
