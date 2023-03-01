@@ -39,17 +39,24 @@ def EstimatePullbackForce(tower,geo,abaqus):
 #%%  Estimate approx pullback force based on cantilever model, tapered cross section
 
     L_num=geo.z_tower_top_south-geo.z_tower_base_south
-    I_num=1/12*(tower.cs.h_vec**3*tower.cs.b_vec-(tower.cs.h_vec-2*tower.cs.t_vec)**3*(tower.cs.b_vec-2*tower.cs.t_vec))
     E_num=tower.cs.E;
-
-    c=np.polyfit(tower.cs.z_vec,I_num,1)
-    I_0_num=np.polyval(c,geo.z_tower_base_south)
-    I_end_num=np.polyval(c,geo.z_tower_top_south)
-
-    if np.abs(I_0_num/I_end_num-1)<1e-3:
-        I_0_num=1.001*I_end_num
+    
+    h_base=np.interp(geo.z_tower_base_south,tower.cs.z_vec,tower.cs.h_vec)
+    b_base=np.interp(geo.z_tower_base_south,tower.cs.z_vec,tower.cs.b_vec)
+    t_base=np.interp(geo.z_tower_base_south,tower.cs.z_vec,tower.cs.t_vec)
+    
+    h_top=np.interp(geo.z_tower_top_south,tower.cs.z_vec,tower.cs.h_vec)
+    b_top=np.interp(geo.z_tower_top_south,tower.cs.z_vec,tower.cs.b_vec)
+    t_top=np.interp(geo.z_tower_top_south,tower.cs.z_vec,tower.cs.t_vec)
+    
+    I_base=1/12*(h_base**3*b_base-(h_base-2*t_base)**3*(b_base-2*t_base))
+    
+    I_top=1/12*(h_top**3*b_top-(h_top-2*t_top)**3*(b_top-2*t_top))
+    
+    if np.abs(I_base/I_top-1)<1e-3:
+        I_base=1.001*I_top
         
-    K_est=K_cantilever(L_num,I_0_num,I_end_num,E_num)
+    K_est=K_cantilever(L_num,I_base,I_top,E_num)
 
     delta=abs(geo.dx_pullback_south)
     F=delta*K_est
