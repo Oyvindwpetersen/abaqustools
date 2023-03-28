@@ -877,7 +877,7 @@ def Static(fid,time):
     if putools.num.isnumeric(time):
         putools.txt.writematrix(fid,time,'1',',','e')
     elif isinstance(time,str):
-        fid.write(time)
+        fid.write(time +' \n')
 
     #fid.write('**' + '\n')
     fid.write('**' + '\n')
