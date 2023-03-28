@@ -1,0 +1,17 @@
+SF1
+Axial force.
+
+SF2
+Transverse shear force in the local 2-direction (not available for B23, B23H, B33, B33H).
+
+SF3
+Transverse shear force in the local 1-direction (available only for beams in space, not available for B33, B33H).
+
+SM1
+Bending moment about the local 1-axis.
+
+SM2
+Bending moment about the local 2-axis (available only for beams in space).
+
+SM3
+Twisting moment about the beam axis (available only for beams in space).
