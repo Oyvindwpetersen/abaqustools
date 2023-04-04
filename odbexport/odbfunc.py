@@ -10,14 +10,14 @@ def p(pstring):
     prettyPrint(pstring)
 
 # This module is imported in Abaqus by "import odbfunc"
-# The folder must first be added to the path
+# The folder must first be added to the system path
 
 #%%
 
-def OpenODB(FolderODB,JobName):
+def open_odb(FolderODB,JobName):
     
     # Open ODB file
-
+    
     # Inputs:
     # FolderODB: string with folder name
     # JobName: string with job name
@@ -25,15 +25,13 @@ def OpenODB(FolderODB,JobName):
     # Outputs:
     # myOdb: ODB object
 
-    if JobName[-4:]=='.odb':
-        JobName=JobName
-    else:
-        JobName=JobName+'.odb'
-        
-    myOdb=odbAccess.openOdb(FolderODB+'/'+JobName)
+    if JobName.endswith('.odb'):
+        JobName=JobName[:-4]
+    
+    myOdb=odbAccess.openOdb(FolderODB+'/'+JobName + '.odb')
     return myOdb
 
-def CloseODB(myOdb):
+def close_odb(myOdb):
 
     # Close ODB file
 
@@ -44,7 +42,7 @@ def CloseODB(myOdb):
 
 #%%
 
-def Export_HistoryOutput(myOdb,StepNumber,hist_str,AssemblyName=''):
+def exporthistoryoutput(myOdb,StepNumber,hist_str,AssemblyName=None):
 
     # Inputs:
     # myOdb: ODB object
@@ -57,7 +55,7 @@ def Export_HistoryOutput(myOdb,StepNumber,hist_str,AssemblyName=''):
     StepNames=myOdb.steps.keys()
     NameOfStep=StepNames[StepNumber]
     
-    if AssemblyName=='':
+    if AssemblyName is None:
         AssemblyNameKeys=myOdb.steps[NameOfStep].historyRegions.keys()
         AssemblyName=AssemblyNameKeys[0]
     
@@ -75,7 +73,7 @@ def Export_HistoryOutput(myOdb,StepNumber,hist_str,AssemblyName=''):
     
 #%%
 
-def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
+def exportdisplacement(myOdb,StepNumber,FrameNumber=None):
 
     # Inputs:
     # myOdb: ODB object
@@ -90,14 +88,13 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
     NameOfStep=StepNames[StepNumber]
     SelectedStep=myOdb.steps[NameOfStep]
     
-    if FrameNumber=='':
+    if FrameNumber is None:
         FrameNumber=range(len(SelectedStep.frames))
     elif FrameNumber=='skipfirst':
         FrameNumber=range(1,len(SelectedStep.frames))
     elif isinstance(FrameNumber,int):
         FrameNumber=np.array([FrameNumber])
-        
-        
+    
     SelectedFrame=SelectedStep.frames[-1]
     if not SelectedFrame.fieldOutputs.has_key('U'):
         DisplacementMatrix=np.array([0])
@@ -135,7 +132,7 @@ def Export_U_UR(myOdb,StepNumber,FrameNumber=''):
 
 #%%
 
-def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
+def exportnodecoord(myOdb,StepNumber,FrameNumber):
 
     # Inputs:
     # myOdb: ODB object
@@ -170,7 +167,7 @@ def Export_NodeCoord(myOdb,StepNumber,FrameNumber):
         
 #%%
 
-def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
+def exportsectionforce(myOdb,StepNumber,FrameNumber=None):
 
     # Inputs:
     # myOdb: ODB object
@@ -185,7 +182,7 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
     NameOfStep=StepNames[StepNumber]
     SelectedStep=myOdb.steps[NameOfStep]
     
-    if FrameNumber=='':
+    if FrameNumber is None:
         FrameNumber=range(len(SelectedStep.frames))
     elif FrameNumber=='skipfirst':
         FrameNumber=range(1,len(SelectedStep.frames))
@@ -241,7 +238,7 @@ def Export_SectionForce(myOdb,StepNumber,FrameNumber=''):
 
 #%%
 
-def Export_ElConnectivity(myOdb):
+def exportelconn(myOdb):
 
     # Inputs:
     # myOdb: ODB object
@@ -290,7 +287,7 @@ def Export_ElConnectivity(myOdb):
 
 #%%
 
-def Export_ElSets(myOdb):
+def exportelsets(myOdb):
     
     # Inputs:
     # myOdb: ODB object
@@ -323,29 +320,29 @@ def Export_ElSets(myOdb):
     
 #%%
 
-def SaveToTXT(FolderSave,NameSave,A_matrix,atype='string',Prefix=''):
+def save2txt(FolderSave,NameSave,A_matrix,atype='string',prefix=''):
     
     # Inputs:
     # FolderSave: string with folder name for export
     # NameSave: string with name for export
     # A_matrix: the quantity to export
     # atype: 'string' or 'number' specifies text or numeric data
-    # Prefix: prefix in front of NameSave
+    # prefix: prefix in front of NameSave
     
     if atype=='number' or atype==1:
-        np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=',', fmt='%.8e')
+        np.savetxt((FolderSave+'\\'+prefix+NameSave+'.txt'), A_matrix , delimiter=',', fmt='%.6e')
     elif atype=='string' or atype==2:
-        np.savetxt((FolderSave+'\\'+Prefix+NameSave+'.txt'), A_matrix , delimiter=' ', fmt='%s')
+        np.savetxt((FolderSave+'\\'+prefix+NameSave+'.txt'), A_matrix , delimiter=' ', fmt='%s')
     
 #%%
 
-def SaveToNPY(FolderSave,NameSave,A_matrix,Prefix=''):
+def save2npy(FolderSave,NameSave,A_matrix,prefix=''):
     
     # Inputs:
     # FolderSave: string with folder name for export
     # NameSave: string with name for export
     # A_matrix: the quantity to export
-    # Prefix: prefix in front of NameSave
+    # prefix: prefix in front of NameSave
     
-    np.save((FolderSave+'\\'+OutputPrefix+NameSave), A_matrix)
+    np.save((FolderSave+'\\'+prefix+NameSave), A_matrix)
     
