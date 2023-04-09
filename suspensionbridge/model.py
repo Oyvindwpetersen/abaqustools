@@ -256,7 +256,7 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
         #sigma=E*eps=E*alpha*dT
         #F=A*sigma=A*E*alpha*dT
         
-        temp_magnitude=-cable.F_clamp/(210e9*4e-3*1e-5)*2*2
+        temp_magnitude=-cable.F_clamp/(210e9*4e-3*1e-5)*2
         gen.Temp(fid,'MOD',['CABLE_CLAMP_TEMPERATURE'],temp_magnitude,abaqus.PartName)
         
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
