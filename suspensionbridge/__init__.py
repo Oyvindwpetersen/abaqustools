@@ -7,18 +7,17 @@ Created on Wed Dec  1 11:39:19 2021
 
 #%%
 
-from .BearingGeometry import *
-from .BridgeDeckGeometry import *
-from .CableGeometry import *
-from .ElementNormal import *
+from .bearing import *
+from .bridgedeck import *
+from .cable import *
 from .EstimateCableDeflection import *
-from .GenerateIntro import *
-from .HangerGeometry import *
-from .MainSuspensionBridge import *
-from .MeshStruct import *
-from .ProcessUserParameters import *
-from .SadleGeometry import *
-from .TowerGeometry import *
+from .hanger import *
+from .model import *
+from .mesh import *
+from .processpar import *
+from .retract import *
+from .sadle import *
+from .tower import *
 
 # import numpy as np
 # from ypstruct import *
