@@ -22,7 +22,7 @@ def clampgeometry(fid,meta,cable):
 
     N_hanger=len(meta.bridgedeck.nodenum_hanger_east)
     
-    idx_mid=int((N_hanger+1)/2)
+    idx_mid=int((N_hanger+1)/2)-1
     
     E_or_W=['EAST' , 'WEST']
     
