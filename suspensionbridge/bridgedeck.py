@@ -215,10 +215,10 @@ def bridgedeckgeometry(fid,meta,geo,bridgedeck):
     
         # Outer east, deck 1, inner east
         meta.bridgedeck.nodenum_end_box1[0]=[ nodenum_outer_east[0] , meta.bridgedeck.nodenum_bridgedeck[0][0] , meta.bridgedeck.nodenum_bridgedeck[2][0] ]
-        meta.bridgedeck.nodenum_end_box1[1]=[ meta.bridgedeck.nodenum_bridgedeck[0][-1] , meta.bridgedeck.nodenum_bridgedeck[1][0] , nodenum_outer_west[0] ]
+        meta.bridgedeck.nodenum_end_box1[1]=[ nodenum_outer_east[-1] , meta.bridgedeck.nodenum_bridgedeck[0][-1] , meta.bridgedeck.nodenum_bridgedeck[2][-1] ]
         
         # Inner west, deck 2, outer west
-        meta.bridgedeck.nodenum_end_box2[0]=[ nodenum_outer_east[-1] , meta.bridgedeck.nodenum_bridgedeck[0][-1] , meta.bridgedeck.nodenum_bridgedeck[2][-1] ]
+        meta.bridgedeck.nodenum_end_box2[0]=[ meta.bridgedeck.nodenum_bridgedeck[3][0] , meta.bridgedeck.nodenum_bridgedeck[1][0] , nodenum_outer_west[0] ]
         meta.bridgedeck.nodenum_end_box2[1]=[ meta.bridgedeck.nodenum_bridgedeck[3][-1] , meta.bridgedeck.nodenum_bridgedeck[1][-1] , nodenum_outer_west[-1] ]
         
 
