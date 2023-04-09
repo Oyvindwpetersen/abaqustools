@@ -15,7 +15,7 @@ from ypstruct import *
 
 #%%
 
-def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time):
+def generateintro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower,time):
 
     comment=[]
     comment.append('Parametrized suspension bridge model')
@@ -54,9 +54,8 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
     struct_all_name[10]='modal'
 
     comment=[]
+    comment.append('')
     comment.append('User parameter values:')
-
-    # TODO: format intro text
     
     for k in np.arange(len(struct_all)):
             
@@ -67,37 +66,40 @@ def GenerateIntro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
         for j in np.arange(len(field_names)):
 
             field_value=struct_k[field_names[j]]
-            
-            if isinstance(field_value,str):
-                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value )
-            
-            if putools.num.isnumeric(field_value):
-                field_value_str=putools.num.num2stre(field_value,5)
-                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value_str)
-            
-            if isinstance(field_value,bool):
-                if field_value==False:
-                    field_value_str='False'
-                elif field_value==True:
-                    field_value_str='True'
-                comment.append(struct_all_name[k] + '.' + field_names[j] + '=' + field_value_str)
-            
+      
             if isinstance(field_value,struct):
                               
                 field_names_sub=field_value.fields()
-                
+
                 for j2 in np.arange(len(field_names_sub)):
-                
                     field_value_sub=field_value[field_names_sub[j2]]
+                    addcommentvalue(comment,struct_all_name[k],field_names[j] + '.' + field_names_sub[j2],field_value_sub)
                     
-                    if isinstance(field_value,str):
-                        comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
-                    
-                    if putools.num.isnumeric(field_value):
-                        field_value_sub_str=putools.num.num2stre(field_value_sub,5)
-                        comment.append(struct_all_name[k] + '.' + field_names[j] + '.' + field_names_sub[j2] + '=' + field_value_sub )
-                                    
-                
-                             
-                
+            else:
+                addcommentvalue(comment,struct_all_name[k],field_names[j],field_value)
+
+
+    
     gen.Comment(fid,comment,False)
+
+#%%
+
+def addcommentvalue(comment,struct_name,field_name,field_value):
+
+    field_value_str='unknown'
+    
+    if isinstance(field_value,str):
+        field_value_str=field_value
+            
+    if putools.num.isnumeric(field_value):
+        field_value_str=putools.num.num2stre(field_value,5)
+            
+    if isinstance(field_value,bool):
+        if field_value==False:
+            field_value_str='False'
+        elif field_value==True:
+            field_value_str='True'
+    
+    comment.append(struct_name + '.' + field_name + '=' + field_value_str)
+            
+    return comment
