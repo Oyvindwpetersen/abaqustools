@@ -74,7 +74,11 @@ def generateintro(fid,abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,ste
                 for j2 in np.arange(len(field_names_sub)):
                     field_value_sub=field_value[field_names_sub[j2]]
                     addcommentvalue(comment,struct_all_name[k],field_names[j] + '.' + field_names_sub[j2],field_value_sub)
-                    
+
+            if isinstance(field_value,list):
+                              
+                comment.append(struct_all_name[k] + '.' + field_names[j] + '=list')
+
             else:
                 addcommentvalue(comment,struct_all_name[k],field_names[j],field_value)
 
