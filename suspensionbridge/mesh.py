@@ -81,7 +81,7 @@ class mesh_node_el:
         for k in np.arange(len(self.el_matrix)):
         
             if self.el_matrix_isgen[k]==False:
-                print(self.el_matrix_name[k])
+                #print(self.el_matrix_name[k])
                 gen.Element(fid,self.el_matrix[k],self.el_matrix_type[k],self.el_matrix_name[k])
                 self.el_matrix_isgen[k]=True
         
