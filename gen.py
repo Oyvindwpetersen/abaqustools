@@ -71,7 +71,7 @@ def BeamAddedInertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
     str_values=putools.num.num2stre(values_list,digits=3,delimeter=', ')
     fid.write(str_values + '\n')
 
-    fid.write('**' + '\n')
+    #fid.write('**' + '\n')
     
 #%%
 
@@ -119,7 +119,7 @@ def BeamGeneralSection(fid,elset,density,sectionproperties,direction,materialpro
     
     putools.txt.writematrix(fid,materialproperties,5,', ','e')
     
-    #fid.write('**' + '\n')
+    fid.write('**' + '\n')
     
 #%%
 
@@ -135,7 +135,7 @@ def Boundary(fid,op,nodename,BCmat,partname):
     
     partname_str=''
     if len(partname)>0:
-        partname_str=partname + '.'
+        partname_str=partname.upper() + '.'
         
     fid.write('*BOUNDARY, OP=' + op.upper() + '\n')
     
@@ -202,7 +202,7 @@ def Cload(fid,op,nset,dof,magnitude_force,partname=''):
 
     partname_str=''
     if len(partname)>0:
-        partname_str=partname + '.'
+        partname_str=partname.upper() + '.'
 
     if op.casefold()=='DELETE':
         fid.write('*CLOAD, OP=NEW' + '\n')
@@ -413,11 +413,9 @@ def Gravload(fid,op,elset,magnitude=9.81,partname=''):
     # op: 'MOD' or 'NEW' for new (erase all old) or modified DLOADS
     # magnitude: signed number
 
-    Checkarg(op,['MOD','NEW','DELETE'])
-
     partname_str=''
     if len(partname)>0:
-        partname_str=partname + '.'
+        partname_str=partname.upper() + '.'
                 
         
     Checkarg(op,['MOD','NEW'])
@@ -428,7 +426,7 @@ def Gravload(fid,op,elset,magnitude=9.81,partname=''):
         elset=[elset]
     
     if magnitude<0:
-        print('***** Gravity magntiude should generally be positive: magnitude 9.81 and direction [0 0 -1]')
+        print('***** Gravity magnitude should generally be positive: magnitude 9.81 and direction [0 0 -1]')
     
     direction_str=' 0 , 0, -1'
     
@@ -596,12 +594,12 @@ def ModelChange(fid,option,elset,partname=''):
 
     partname_str=''
     if len(partname)>0:
-        partname_str=partname + '.'
+        partname_str=partname.upper() + '.'
     
     fid.write('*MODEL CHANGE, ' + option.upper() + '\n')
 
     for elset_sub in elset:
-        fid.write(partname_str + elset_sub + '\n')
+        fid.write(partname_str + elset_sub.upper() + '\n')
 
     fid.write('**' + '\n')
 
@@ -725,6 +723,29 @@ def Release(fid,elset,end_id,release_id):
     # elset: string or list with element set name
     # end_id: string or list with end ids, e.g. 'S1' 'S2'
     # release_id: string or list with end ids, choose from M1, M2, T, M1-M2, M1-T, M2-T, ALLM
+    
+    # M1	
+    # refers to the rotation about the n1-axis,
+
+    # M2	
+    # refers to the rotation about the n2-axis,
+
+    # M1-M2	
+    # refers to a combination of rotational degrees of freedom about the n1-axis and the n2-axis,
+
+    # T	
+    # refers to the rotation about the t-axis,
+
+    # M1-T	
+    # refers to a combination of rotational degrees of freedom about the n1-axis and the t-axis,
+
+    # M2-T	
+    # refers to a combination of rotational degrees of freedom about the n2-axis and the t-axis, and
+
+    # ALLM	
+    # represents a combination of all the rotational degrees of freedom (i.e., M1, M2, and T).
+
+
 
     if isinstance(elset,str):
         elset=[elset]
@@ -801,7 +822,8 @@ def ShearCenter(fid,x1,x2):
  
     fid.write('*SHEAR CENTER' + '\n')
     putools.txt.writematrix(fid,[x1,x2],3,',','e')
-
+    fid.write('**' + '\n')
+    
 #%%
 
 def Spring(fid,elset,element_nodenumber,dofno,springstiffness):
@@ -908,7 +930,7 @@ def StepEnd(fid):
     
 #%%
 
-def Temp(fid,op,nset,magnitude_temp):
+def Temp(fid,op,nset,magnitude_temp,partname=''):
 
     # Inputs:
     # op: 'MOD' or 'NEW' for new (erase all old) or modified TEMP
@@ -919,27 +941,26 @@ def Temp(fid,op,nset,magnitude_temp):
 
     fid.write('*TEMPERATURE, OP=' + op.upper() + '\n')
     
-    magnitude_temp=putools.num.ensurenp(magnitude_temp)
-    
-    if np.shape(magnitude_temp)==1:
-        magnitude_temp=magnitude_temp*np.ones([1,len(nset)])
+    partname_str=''
+    if len(partname)>0:
+        partname_str=partname.upper() + '.'
 
-    if putools.num.isnumeric(nset):
-        for k in enumerate(nset):
-           # fid.write( partname_str + str(nset[k]) + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
-           print('')
-    
-    
     if isinstance(nset,str):
         nset=[nset]
         
+    magnitude_temp=putools.num.ensurenp(magnitude_temp)
+    
+    magnitude_temp=np.atleast_1d(magnitude_temp)
+    
+    if len(magnitude_temp)==1:
+        magnitude_temp=magnitude_temp*np.ones([1,len(nset)])
+        
     if isinstance(nset,list):
         for k,nset_sub in enumerate(nset):
-            #fid.write( partname_str + nset_sub + ', ' + str(int(dof)) + ', ' + putools.num.num2stre(magnitude_force[k],3) + '\n')
-           print('')
+           fid.write( partname_str + nset_sub + ', ' + putools.num.num2stre(magnitude_temp[k],3) + '\n')
            
     fid.write('**' + '\n')
-    #fid.write('**' + '\n')
+    fid.write('**' + '\n')
     
     
  #%%
