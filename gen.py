@@ -294,7 +294,8 @@ def Element(fid,element_nodenumber,type_id,elsetname):
     
     element_nodenumber=putools.num.ensurenp(element_nodenumber)
 
-    n_neg=sum(sum(element_nodenumber<=0))
+    id=element_nodenumber<=0
+    n_neg=np.sum(np.sum(id))
     if n_neg>0:
         print('***** For ELSET ' + elsetname)
         raise Exception('***** Negative element or node number' )
