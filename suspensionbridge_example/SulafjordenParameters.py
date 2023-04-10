@@ -28,7 +28,7 @@ step=struct()
 step.time=[None]*4
 step.time[0]=np.array([1e-1, 1, 1e-6, 1])
 step.time[1]=np.array([1e-6, 1, 1e-12, 1])
-step.time[2]=np.array([1e-4, 1, 1e-9, 1])
+step.time[2]=np.array([1e-5, 1, 1e-9, 1])
 step.time[3]=np.array([1e-1, 1, 1e-6, 1])
 
 ##########################
@@ -64,8 +64,8 @@ cable.N_element=np.array(50)
 cable.tempsupport=True
 cable.N_tempsupport=np.array(11)
 cable.clamp=True
-cable.N_clamp=np.array(3)
-cable.F_clamp=np.array(300e3)
+cable.N_clamp=np.array(5)
+cable.F_clamp=np.array(600e3)
 cable.polycoeff_hanger_adjust=np.nan
 cable.nsmass=50
 
@@ -208,20 +208,22 @@ geo.gap=np.array(29.974)
 geo.dx_hanger=np.array(24.0)
 geo.dx_endpiece_max=np.array(24.0)
 
-geo.dx_pullback_south=np.array(-1)
-geo.dx_pullback_north=np.array(1)
+geo.dx_pullback_south=np.array(-1-2.88)
+geo.dx_pullback_north=np.array(+1+2.88)
+#geo.dx_pullback_north=np.array(1+2.88-1.12)
 
 geo.z_cog_south=np.array(57.5)
 geo.z_cog_north=np.array(57.5)
 geo.z_cog_midspan=np.array(78.5)
 geo.dz_cog_midspan_deflection=np.array(25)
-geo.dz_cog_south_deflection=np.array(2.0)
-geo.dz_cog_north_deflection=np.array(2.0)
+geo.dz_cog_south_deflection=np.array(1.3)
+geo.dz_cog_north_deflection=np.array(1.3)
 
 geo.z_cable_top_south=np.array(400.0+0.1)
 geo.z_cable_top_north=np.array(400.0+0.1)
 geo.z_cable_midspan=np.array(81)
-geo.dz_cable_deflection=np.array(30)
+#geo.dz_cable_deflection=np.array(30)
+geo.dz_cable_deflection=np.array(32)
 
 geo.dy_cable_anch_south=np.array(52.0)
 geo.dy_cable_top_south=np.array(47.0)
@@ -250,11 +252,15 @@ geo.dy_tower_base_north=np.array(52.0)
 geo.dy_tower_top_south=np.array(47.0)
 geo.dy_tower_top_north=np.array(47.0)
 
-geo.dx_tower_anch_south=np.array(718.5)
-geo.dx_tower_anch_north=np.array(558.15)
+geo.dx_tower_anch_south=np.array(500)
+geo.dx_tower_anch_north=np.array(500)
+#geo.dx_tower_anch_south=np.array(718.5)
+#geo.dx_tower_anch_north=np.array(718.5)
 
-geo.z_anch_south=np.array(0)
-geo.z_anch_north=np.array(200.6)
+geo.z_anch_south=np.array(100)
+geo.z_anch_north=np.array(100)
+#geo.z_anch_south=np.array(0)
+#geo.z_anch_north=np.array(0)
 
 geo.x_tower_south=np.array(-1400.0)
 geo.x_tower_north=np.array(1400.0)
