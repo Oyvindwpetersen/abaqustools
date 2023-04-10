@@ -14,33 +14,33 @@ import time
 
 #%%
 
-def PrintError(JobName,FolderName=''):
+def printerror(jobname,foldername=''):
 
     # Search through msg file for errors, print error if found
     
     # Inputs:
-    # JobName: name of odb file
-    # FolderName: folder of odb file
+    # jobname: name of odb file
+    # foldername: folder of odb file
     
-    if len(FolderName)>0:
-        FolderName=FolderName + '\\'
+    if len(foldername)>0:
+        foldername=foldername + '\\'
         
     # Remove odb extension if provided
-    if JobName[-4:].casefold()=='.odb':
-            JobName=JobName[:-4]
+    if jobname.endswith('.odb'):
+            jobname=jobname[:-4]
     
     
-    FileName=FolderName + JobName + '.msg'
-    FileExistLogic=os.path.isfile(FileName)
+    filename=foldername + jobname + '.msg'
+    file_exist_logic=os.path.isfile(filename)
     
     # If msg file dont exist, try dat
-    if FileExistLogic==False:
-        FileName=FolderName + JobName + '.dat'
-        FileExistLogic=os.path.isfile(FileName)
+    if file_exist_logic==False:
+        filename=foldername + jobname + '.dat'
+        file_exist_logic=os.path.isfile(filename)
     
     # If file dont exist, set empty
-    if FileExistLogic==True:
-        fid=open(FileName, 'r')
+    if file_exist_logic==True:
+        fid=open(filename, 'r')
         Lines=fid.read().splitlines()
         fid.close()
     else:
@@ -59,14 +59,22 @@ def PrintError(JobName,FolderName=''):
     
 #%%
 
-def CheckDuplicateNumbers(InputFileName):
+def checkduplicate(inputfilename):
 
     # Check input file, alert if duplicate node or element numbers
     
     # Inputs:
-    # InputFileName: name (and folder) of input file
+    # Inputfilename: name (and folder) of input file
     
-    fid=open(InputFileName, 'r')
+    file_exist_logic=os.path.isfile(inputfilename)
+    
+    # If msg file dont exist, try dat
+    if file_exist_logic==False:
+        print('***** File ' + inputfilename)
+        raise Exception('***** File not found')
+        
+        
+    fid=open(inputfilename, 'r')
     InputFileLines=fid.read().splitlines()
     fid.close()
 
@@ -76,10 +84,12 @@ def CheckDuplicateNumbers(InputFileName):
 
     for index in np.arange(2):
         
+        # Find all lines with *NODE or *ELEMENT
         IndexKeyword=putools.num.listindexsub(InputFileLines,type_list[index])
         
-        NumbersAll=[None]*len(IndexKeyword)
+        numbers_list=[None]*len(IndexKeyword)
     
+        # Find node or element numbers 
         for k in np.arange(len(IndexKeyword)):
         
             IndexStarNext=next(x for x in IndexStar if x > IndexKeyword[k])
@@ -88,93 +98,98 @@ def CheckDuplicateNumbers(InputFileName):
             InputFileLinesSub = [InputFileLines[i] for i in LineRange]
             
             NumericBlock=putools.num.str2num(InputFileLinesSub,'int',1)
-            NumbersAll[k]=NumericBlock[:,0]
+            numbers_list[k]=NumericBlock[:,0]
             
             #[float(s) for s in example_string.split(',')]
     
         # Find duplicates
-        NumbersAllMerged=np.concatenate(NumbersAll,axis=0)
-        (u,c)= np.unique(NumbersAllMerged, return_counts=True)
-        NumbersDup=u[c>1]
+        numbers_all=np.concatenate(numbers_list,axis=0)
+        (u,c)= np.unique(numbers_all, return_counts=True)
+        numbers_dup=u[c>1]
 
-        if len(NumbersDup)>0:
+        if len(numbers_dup)>0:
             
             print('***** Duplicate ' + type_list[index] + ' numbers:')
-            print(NumbersDup)
+            print(numbers_dup)
             raise Exception('***** Duplicates not allowed, see above printed numbers')
             
             
 #%%
 
-def RunJob(abaqus_cmd,FolderName,InputName,JobName='',cpus=4,echo_cmd=True,halt_error=True,OldJobName=''):
+def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=True,halt_error=True,oldjobname=''):
 
     # Inputs:
+    # foldername: string with folder of input file
+    # inputname: string with name of .inp file
+    # jobname: string with name of .odb, if empty then equal to inputname
     # abaqus_cmd: string with system command, usually 'abaqus'
-    # FolderName: string with folder of input file
-    # InputName: string with name of .inp file
-    # JobName: string with name of .odb, if empty then equal to InputName
     # cpus: number of cores
     # echo_cmd: true/false, echo console output from system
     # halt_error: true/false, halt or not if error in Abaqus analysis
-    # OldJobName: string with name of old .odb, only relevant for restart analysis, else set to empty
+    # oldjobname: string with name of old .odb, only relevant for restart analysis, else set to empty
 
 
     if len(abaqus_cmd)<1:
         abaqus_cmd='abaqus'
 
-    if len(JobName)<1:
-        JobName=InputName;
+    if len(jobname)<1:
+        jobname=inputname;
 
-    if JobName[-4:].casefold()=='.inp' or JobName[-4:].casefold()=='.odb':
-        JobName=JobName[:-4]
+    if jobname[-4:].casefold()=='.inp' or jobname[-4:].casefold()=='.odb':
+        jobname=jobname[:-4]
 
-    print('***** Running ABAQUS job ' + JobName)
+    print('***** Running ABAQUS job ' + jobname)
 
-    OriginalFolder=os.getcwd()
-    os.chdir(FolderName)
+    
+    folder_current=os.getcwd()
+    # Change to folder where inputfile is
+    os.chdir(foldername)
     
     # Check if lock file exists
-    LockFile=FolderName + '\\' + JobName + '.lck'
-    if os.path.isfile(LockFile):
+    file_name_lock=foldername + '\\' + jobname + '.lck'
+    file_exist_logic=os.path.isfile(file_name_lock)
+    if file_exist_logic:
         print('***** Lock-file existing, deleting')
-        os.remove(LockFile)
+        os.remove(file_name_lock)
         time.sleep(0.1)
 
     # Create system command input
     system_cmd=''
     system_cmd=system_cmd + abaqus_cmd
-    system_cmd=system_cmd +' job=' + JobName
+    system_cmd=system_cmd +' job=' + jobname
     
-    if len(OldJobName)>0:
-        system_cmd=system_cmd + ' oldjob=' + OldJobName
+    # Add oldjob if provided
+    if len(oldjobname)>0:
+        system_cmd=system_cmd + ' oldjob=' + oldjobname
                                          
-    system_cmd=system_cmd + ' input=' + InputName
+    system_cmd=system_cmd + ' input=' + inputname
     system_cmd=system_cmd + ' interactive'
     system_cmd=system_cmd + ' cpus=' + str(cpus)
     
-    # [abaqus_cmd ' job=' JobName ' input=' InputName ' interactive' ' cpus=' num2str(cpus) ]
+    # [abaqus_cmd ' job=' jobname ' input=' inputname ' interactive' ' cpus=' num2str(cpus) ]
 
     t0=putools.timing.tic()
     #(sys_out)=os.system(system_cmd)
     sys_out=os.popen(system_cmd).read()
     t1=putools.timing.tocs(t0)
     
-    os.chdir(OriginalFolder)
+    # Change back to original folder
+    os.chdir(folder_current)
     
     if echo_cmd:
         print(sys_out)
 
-    LogicCompleted='COMPLETED' in sys_out
-    if LogicCompleted:
+    completed_logic='COMPLETED' in sys_out
+    if completed_logic:
         print('***** ABAQUS job completed in ' + putools.num.num2strf(t1,1) + ' s')
         
-    LogicErrorAnalysis='Abaqus/Analysis exited with error' in sys_out
+    error_logic='Abaqus/Analysis exited with error' in sys_out
 
-    if LogicErrorAnalysis:
+    if error_logic:
         time.sleep(1)
-        PrintError(JobName,FolderName)
+        printerror(jobname,foldername)
         
         if halt_error:
             raise Exception('***** Stopped due to ABAQUS errors, see message above')
             
-    return LogicCompleted
+    return completed_logic
