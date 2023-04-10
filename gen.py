@@ -524,7 +524,7 @@ def MPC(fid,id_type,nodes):
             mpc_str=mpc_str + ',' + str(int(nodes_sub))
     elif isinstance(nodes,list):
         for nodes_sub in nodes:
-            mpc_str=mpc_str + ',' + nodes_sub
+            mpc_str=mpc_str + ',' + nodes_sub.upper()
         
     mpc_str=mpc_str[1:]
     fid.write(id_type +  ', ' + mpc_str + '\n')
