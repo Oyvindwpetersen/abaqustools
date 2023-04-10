@@ -4,8 +4,9 @@ __pycache__/
 *$py.class
 
 # Other
-develop/
+dist/
 __old__/
+develop/
 
 # Python cache
 **/__pycache__/

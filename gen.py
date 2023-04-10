@@ -8,26 +8,8 @@ Created on
 
 #%%
 
-#import numpy as np
-
 #__all__ = [
   #  'Assembly',
-   # 'AssemblyEnd',
-   # 'BeamAddedInertia',
-   # 'BeamGeneralSection',
-   # 'Boundary',
-   # 'Cload',
-   # 'Comment',
-   # 'Dload',
-   # 'Element',
-   # 'Elset',
-   # 'FieldOutput',
-   # 'Frequency',
-   # 'Gravload',
-   # 'AssemblyEnd',
-   # 'AssemblyEnd',
-   # 'AssemblyEnd',
-   # 'BeamAddedInertia'
          #  ]
 
 import numpy as np
@@ -128,7 +110,7 @@ def Boundary(fid,op,nodename,BCmat,partname):
     # Inputs:
     # op: 'MOD' or 'NEW' for new (erase all old) or modified BCs
     # nodename: string with node set name or array with node numbers
-    # BCmat: e.g. [1,4,0] to set DOF1,2,3,4 to zero
+    # BCmat: e.g. [1,4,0] to set DOF 1,2,3,4 to zero
     # partname: string with part name
     
     Checkarg(op,['MOD','NEW'])
@@ -150,17 +132,6 @@ def Boundary(fid,op,nodename,BCmat,partname):
         for node in nodename:
             fid.write(partname_str + str(node) + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
   
-  # if isinstance(nodename,str):
-        # fid.write(partname_str + nodename + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
-    # elif isinstance(nodename,list):
-        # for node in nodename:
-            # fid.write(partname_str + str(node) + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
-    # elif isinstance(nodename,int):
-        # fid.write(partname_str + str(nodename) + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
-    # elif isinstance(nodename,np.ndarray):
-        # for node in np.nditer(nodename):
-            # fid.write(partname_str + str(node) + ',' + str(BCmat[0]) + ',' + str(BCmat[1]) + ',' + str(BCmat[2]) + '\n')
-    
     fid.write('**' + '\n')
     fid.write('**' + '\n')
     
@@ -285,33 +256,33 @@ def Dload(fid,op,elset,type_id,magnitude):
     
 #%%
     
-def Element(fid,element_nodenumber,type_id,elsetname):
+def Element(fid,element_nodenumber,element_type,elsetname):
     
     # Inputs:
     # element_nodenumber: array with rows [Elno,Nodeno1,Nodeno2]
-    # type_id: type, e.g. B31
+    # element_type: type, e.g. B31
     # elsetname: string with name
     
     element_nodenumber=putools.num.ensurenp(element_nodenumber)
 
-    id=element_nodenumber<=0
-    n_neg=np.sum(np.sum(id))
+    id_neg=element_nodenumber<=0
+    n_neg=np.sum(np.sum(id_neg))
     if n_neg>0:
         print('***** For ELSET ' + elsetname)
         raise Exception('***** Negative element or node number' )
     
 
-    if type_id=='B31' or type_id=='B33': 
+    if element_type=='B31' or element_type=='B33': 
         if np.shape(element_nodenumber)[1]!=3:
             print('***** For ELSET ' + elsetname)
             raise Exception('***** B31 or B33 must have 2 nodes')
         
-    if type_id=='B32':
+    if element_type=='B32':
         if np.shape(element_nodenumber)[1]!=4:
             print('***** For ELSET ' + elsetname)
             raise Exception('***** B32 must have 3 nodes')
             
-    fid.write('*ELEMENT, TYPE=' + type_id.upper() + ', ELSET=' + elsetname.upper() + '\n')
+    fid.write('*ELEMENT, TYPE=' + element_type.upper() + ', ELSET=' + elsetname.upper() + '\n')
     
     putools.txt.writematrix(fid,element_nodenumber,'',', ','int')
     
@@ -347,10 +318,10 @@ def Elset(fid,elsetname,elements,option=''):
 
 #%%
 
-def FieldOutput(fid,type_id,variables,set_id='',options=''):
+def FieldOutput(fid,id_type,variables,set_id='',options=''):
     
     # Inputs:
-    # type_id: 'NODE' or 'ELEMENT'
+    # id_type: 'NODE' or 'ELEMENT'
     # variables: response quantity, e.g. U or SF
     # set_id: name of nodeset or elset
 
@@ -361,13 +332,13 @@ def FieldOutput(fid,type_id,variables,set_id='',options=''):
 
     fid.write('*OUTPUT, FIELD' + comma + options.upper() + '\n')
     
-    if type_id.upper()=='NODE':
+    if id_type.upper()=='NODE':
         if len(set_id)<=1:
             fid.write('*NODE OUTPUT \n')
         else:
             fid.write('*NODE OUTPUT, NSET=' + set_id.upper() + '\n')
         
-    elif type_id.upper()=='ELEMENT':
+    elif id_type.upper()=='ELEMENT':
         if len(set_id)<=1:
             fid.write('*ELEMENT OUTPUT \n')
         else:
@@ -537,10 +508,10 @@ def Line(fid,line):
 
 #%%
 
-def MPC(fid,type_id,nodes):
+def MPC(fid,id_type,nodes):
     
     # Inputs:
-    # type_id: e.g. 'BEAM' or 'PIN'
+    # id_type: e.g. 'BEAM' or 'PIN'
     # nodes: array with node numbers or list with node names
 
     fid.write('*MPC' + '\n')
@@ -556,7 +527,7 @@ def MPC(fid,type_id,nodes):
             mpc_str=mpc_str + ',' + nodes_sub
         
     mpc_str=mpc_str[1:]
-    fid.write(type_id +  ', ' + mpc_str + '\n')
+    fid.write(id_type +  ', ' + mpc_str + '\n')
 
     fid.write('**' + '\n')
 
@@ -774,27 +745,27 @@ def Release(fid,elset,end_id,release_id):
 
 #%%
 
-def Restart(fid,type_id,step=-1,frequency=100):
+def Restart(fid,id_type,step=-1,frequency=100):
     
     # Inputs:
-    # type_id: 'READ' or 'WRITE'
+    # id_type: 'READ' or 'WRITE'
     # step: number, usually the last
     # frequency: frequency
 
-    Checkarg(type_id,['READ' , 'WRITE'])
+    Checkarg(id_type,['READ' , 'WRITE'])
     
-    if type_id.upper()=='READ':
+    if id_type.upper()=='READ':
         freq_str=''
     else:
         freq_str=', FREQUENCY=' + str(frequency)
     
-    if type_id.upper()=='WRITE':
+    if id_type.upper()=='WRITE':
         step_str=''
     else:
         step_str=', STEP=' + str(step)
     
     
-    fid.write('*RESTART' + type_id + step_str + freq_str + '\n')
+    fid.write('*RESTART' + id_type + step_str + freq_str + '\n')
     fid.write('**' + '\n')
 
 #%%
