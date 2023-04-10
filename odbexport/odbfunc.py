@@ -42,18 +42,18 @@ def close_odb(odb_id):
 
 #%%
 
-def exporthistoryoutput(odb_id,StepNumber,hist_str,AssemblyName=None):
+def exporthistoryoutput(odb_id,stepnumber,hist_str,AssemblyName=None):
 
     # Inputs:
     # odb_id: ODB object
-    # StepNumber: step number for export, usually -1
+    # stepnumber: step number for export, usually -1
     # hist_str: string with desired quantity, e.g. EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
     
     # Outputs:
     # OutputVector: vector with numbers
 
     StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[StepNumber]
+    NameOfStep=StepNames[stepnumber]
     
     if AssemblyName is None:
         AssemblyNameKeys=odb_id.steps[NameOfStep].historyRegions.keys()
@@ -73,27 +73,27 @@ def exporthistoryoutput(odb_id,StepNumber,hist_str,AssemblyName=None):
     
 #%%
 
-def exportdisplacement(odb_id,StepNumber,FrameNumber=None):
+def exportdisplacement(odb_id,stepnumber,framenumber=None):
 
     # Inputs:
     # odb_id: ODB object
-    # StepNumber: step number for export, usually -1
-    # FrameNumber: frame number(s) for export, '' gives all frames in step, 'skipfirst' gives all except frame 0
+    # stepnumber: step number for export, usually -1
+    # framenumber: frame number(s) for export, None gives all frames in step, 'skipfirst' gives all except frame 0
     
     # Outputs:
-    # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_MODES)
+    # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_frames)
     # LabelVector: list with DOF labels of all N_DOF
 
     StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[StepNumber]
+    NameOfStep=StepNames[stepnumber]
     SelectedStep=odb_id.steps[NameOfStep]
     
-    if FrameNumber is None:
-        FrameNumber=range(len(SelectedStep.frames))
-    elif FrameNumber=='skipfirst':
-        FrameNumber=range(1,len(SelectedStep.frames))
-    elif isinstance(FrameNumber,int):
-        FrameNumber=np.array([FrameNumber])
+    if framenumber is None:
+        framenumber=range(len(SelectedStep.frames))
+    elif framenumber=='skipfirst':
+        framenumber=range(1,len(SelectedStep.frames))
+    elif isinstance(framenumber,int):
+        framenumber=np.array([framenumber])
     
     SelectedFrame=SelectedStep.frames[-1]
     if not SelectedFrame.fieldOutputs.has_key('U'):
@@ -102,14 +102,14 @@ def exportdisplacement(odb_id,StepNumber,FrameNumber=None):
         return DisplacementMatrix,LabelVector
     
     N_node=len(SelectedFrame.fieldOutputs['U'].values)          
-    N_frame=len(FrameNumber)    
+    N_frame=len(framenumber)    
     
     DisplacementMatrix=np.zeros((N_node*6,N_frame))
     
     t_start=timer()
-    for z in np.arange(len(FrameNumber)):
+    for z in np.arange(len(framenumber)):
         
-        SelectedFrame=SelectedStep.frames[FrameNumber[z]]
+        SelectedFrame=SelectedStep.frames[framenumber[z]]
         
         OutputTrans=SelectedFrame.fieldOutputs['U']
         OutputTransValues=OutputTrans.values
@@ -132,21 +132,21 @@ def exportdisplacement(odb_id,StepNumber,FrameNumber=None):
 
 #%%
 
-def exportnodecoord(odb_id,StepNumber,FrameNumber):
+def exportnodecoord(odb_id,stepnumber,framenumber):
 
     # Inputs:
     # odb_id: ODB object
-    # StepNumber: step number for export, usually -1
-    # FrameNumber: frame number for export, usually 0
+    # stepnumber: step number for export, usually -1
+    # framenumber: frame number for export, usually 0
     
     # Outputs:
     # NodeCoord: matrix with [nodenumber,x,y,z] as rows, size N_NODE*4
 
     StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[StepNumber]
+    NameOfStep=StepNames[stepnumber]
     SelectedStep=odb_id.steps[NameOfStep]
             
-    SelectedFrame=SelectedStep.frames[FrameNumber]
+    SelectedFrame=SelectedStep.frames[framenumber]
     if 'COORD' not in SelectedFrame.fieldOutputs.keys():
         NodeCoordMatrix=np.array([0 , 0 , 0])
         NodeCoordLabelVector=np.array([0])
@@ -167,27 +167,27 @@ def exportnodecoord(odb_id,StepNumber,FrameNumber):
         
 #%%
 
-def exportsectionforce(odb_id,StepNumber,FrameNumber=None):
+def exportsectionforce(odb_id,stepnumber,framenumber=None):
 
     # Inputs:
     # odb_id: ODB object
-    # StepNumber: step number for export, usually -1
-    # FrameNumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
+    # stepnumber: step number for export, usually -1
+    # framenumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
     
     # Outputs:
     # SectionForceMatrix: matrix with each frame as column ( e.g. N_SF*N_MODES)
     # ElementLabelVector: list with SF labels
 
     StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[StepNumber]
+    NameOfStep=StepNames[stepnumber]
     SelectedStep=odb_id.steps[NameOfStep]
     
-    if FrameNumber is None:
-        FrameNumber=range(len(SelectedStep.frames))
-    elif FrameNumber=='skipfirst':
-        FrameNumber=range(1,len(SelectedStep.frames))
-    elif isinstance(FrameNumber,int):
-        FrameNumber=np.array([FrameNumber])
+    if framenumber is None:
+        framenumber=range(len(SelectedStep.frames))
+    elif framenumber=='skipfirst':
+        framenumber=range(1,len(SelectedStep.frames))
+    elif isinstance(framenumber,int):
+        framenumber=np.array([framenumber])
     
     SelectedFrame=SelectedStep.frames[-1]
     if 'SF' not in SelectedFrame.fieldOutputs.keys():
@@ -198,11 +198,11 @@ def exportsectionforce(odb_id,StepNumber,FrameNumber=None):
     ElementLabelAll=[ SelectedFrame.fieldOutputs['SF'].values[n].baseElementType for n in range(len(SelectedFrame.fieldOutputs['SF'].values)) ]
     index_B=[n for n, l in enumerate(ElementLabelAll) if l.startswith('B')]
         
-    SectionForceMatrix=np.zeros((len(index_B)*6,len(FrameNumber)))
+    SectionForceMatrix=np.zeros((len(index_B)*6,len(framenumber)))
     
-    for z in np.arange(len(FrameNumber)):
+    for z in np.arange(len(framenumber)):
         
-        SelectedFrame=SelectedStep.frames[FrameNumber[z]]
+        SelectedFrame=SelectedStep.frames[framenumber[z]]
         
         OutputSF=SelectedFrame.fieldOutputs['SF']
         OutputSFValues=OutputSF.values
