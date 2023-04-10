@@ -53,8 +53,7 @@ def bearinggeometry(fid,meta,geo,bearing):
                 nodecoord_crossbeamlow=meta.crossbeamlow.nodecoord_bearing_box2[j]
                 y_bearing=geo.y_bearing_box2
                 
-            # dz is distance between center crossbeam to cog bridge
-            dz=nodecoord_bridge[2]-nodecoord_crossbeamlow[2,1]
+
     
             x_node=np.zeros(3)
             y_node=np.zeros(3)
@@ -102,17 +101,19 @@ def bearinggeometry(fid,meta,geo,bearing):
             y_node[0]=y_bearing[0]
             z_node[0]=nodecoord_crossbeamlow[2,0]+meta.bearing.H_stiffbeam
             
-            # New node below bridge cog (upper slider)
+            # New node lower slider
             x_node[1]=nodecoord_crossbeamlow[0,1]
             y_node[1]=y_bearing[1]
-            z_node[1]=nodecoord_crossbeamlow[2,1]+(dz+geo.dz_slider)
-               
+            z_node[1]=nodecoord_bridge[2]+geo.dz_slider #same as upper slider
+            
+            # Adjust for deflection
+            z_node[1]=z_node[1]-geo.dz_cog_south_deflection*(j==0)-geo.dz_cog_north_deflection*(j==1)
+
             # New node lower pendulum insertion (right)
             x_node[2]=nodecoord_crossbeamlow[0,2]+dx_bearing_base
             y_node[2]=y_bearing[2]
             z_node[2]=nodecoord_crossbeamlow[2,2]+meta.bearing.H_stiffbeam
             
-            z_node[1]=z_node[1]-geo.dz_cog_south_deflection*(j==0)-geo.dz_cog_north_deflection*(j==1)
             
             bearingmesh.addnode(np.column_stack((nodenum_bearing_low,x_node,y_node,z_node)),'BEARINGLOW' + str(n+1) + '_' + S_or_N[j])
             
