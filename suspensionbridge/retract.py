@@ -70,7 +70,7 @@ def estimatepullbackforce(tower,geo,abaqus):
     
     c=datetime.datetime.now().isoformat()
     c=c[:-7]
-    c=c.replace(':','-')
+    c=c.replace(':','_')
     
     foldername_export=abaqus.foldername_export
     abaqus=struct()
@@ -158,16 +158,17 @@ def estimatepullbackforce(tower,geo,abaqus):
 
     #%%  Export data
 
-    FolderODB=abaqus.foldername
-    NameODB=abaqus.jobname
-    FolderSave=FolderODB
-    FolderPython=foldername_export
+    foldername_odb=abaqus.foldername
+    jobname=abaqus.jobname
+    folder_save=foldername_odb
+    folder_python=foldername_export
     
-    odbexport.export.static(FolderODB,NameODB,FolderSave,FolderPython)
+    odbexport.export.static(foldername_odb,jobname,folder_save,folder_python)
+    odbexport.export.deletefiles(foldername_odb,jobname,['.com' , '.dat' , '.msg' , '.prt' , '.sim' , '.sta' ])
     
     #%%
     
-    hf_name=FolderSave+ '\\' + NameODB + '_exportstatic' + '.h5'
+    hf_name=folder_save+ '\\' + jobname + '_exportstatic' + '.h5'
 
     hf=h5py.File(hf_name, 'r')
     
