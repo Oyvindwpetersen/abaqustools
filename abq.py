@@ -127,19 +127,17 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
     # echo_cmd: true/false, echo console output from system
     # halt_error: true/false, halt or not if error in Abaqus analysis
     # oldjobname: string with name of old .odb, only relevant for restart analysis, else set to empty
-
-
+    
     if len(abaqus_cmd)<1:
         abaqus_cmd='abaqus'
-
+    
     if len(jobname)<1:
         jobname=inputname;
-
+    
     if jobname[-4:].casefold()=='.inp' or jobname[-4:].casefold()=='.odb':
         jobname=jobname[:-4]
-
+    
     print('***** Running ABAQUS job ' + jobname)
-
     
     folder_current=os.getcwd()
     # Change to folder where inputfile is
