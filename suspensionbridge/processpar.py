@@ -43,22 +43,22 @@ def processpar(UserParameterFile):
     fieldnames=[]
     fieldtypes=[]
     
-    fieldnames.append('FolderNameModel')
+    fieldnames.append('foldername')
     fieldtypes.append('str')
     
-    fieldnames.append('InputName')
+    fieldnames.append('inputname')
     fieldtypes.append('str')
     
-    fieldnames.append('JobName')
+    fieldnames.append('jobname')
     fieldtypes.append('str')
     
-    fieldnames.append('PartName')
+    fieldnames.append('partname')
     fieldtypes.append('str')
         
-    fieldnames.append('AssemblyName')
+    fieldnames.append('assemblyname')
     fieldtypes.append('str')
         
-    fieldnames.append('RunJob')
+    fieldnames.append('runjob')
     fieldtypes.append('log')
         
     fieldnames.append('cmd')
@@ -504,9 +504,9 @@ def processpar(UserParameterFile):
 #%% Bearing
 
     # Check if folder exists
-    if os.path.isdir(abaqus.FolderNameModel)==0:
-        os.mkdir(abaqus.FolderNameModel);
-        print('***** Creating folder ' + abaqus.FolderNameModel )
+    if os.path.isdir(abaqus.foldername)==0:
+        os.mkdir(abaqus.foldername);
+        print('***** Creating folder ' + abaqus.foldername )
 
 
     return (abaqus,bearing,bridgedeck,cable,geo,hanger,modal,sadle,step,tower)
