@@ -138,7 +138,7 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
         
     # Delete txt files identified by prefix
     if deletetxt==True:
-        deletetxtfiles(folder_save,prefix)
+        deletefiles(folder_save,prefix,['.txt'])
 
 #%% 
 
@@ -157,21 +157,20 @@ def export2h5(hf_name,h5_var,h5_data,h5_isnum):
             hf.create_dataset(h5_var[k],data=data_temp)
         
 
-def deletetxtfiles(folder_save,name_match):
-
+def deletefiles(foldername,name_match,extensions):
+    
     # Find files that match
-    FileNameListDir=os.listdir(folder_save)
+    FileNameListDir=os.listdir(foldername)
     IndexMatch=putools.num.listindexsub(FileNameListDir,name_match)
     
     for k in np.arange(len(IndexMatch)):
             
         FileNameRemove=FileNameListDir[IndexMatch[k]]
-            
-        # Only txt files
-        if not '.txt' in FileNameRemove:
-            continue
-            
-        os.remove(folder_save + '/' + FileNameRemove)
+        
+        # Only selected files
+        match_logic=[list_sub in FileNameRemove for list_sub in extensions]
+        if sum(match_logic)>0:
+            os.remove(foldername + '/' + FileNameRemove)
 
 #%% Export modal script
 
@@ -207,7 +206,7 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     #Lines=writepyscript_begin(foldername_odb,jobname,folder_save,folder_python,prefix)
     
     Lines.append('# Open ODB')
-    Lines.append( 'odb_id=odbfunc.open_odb(foldername_odb,jobname')
+    Lines.append( 'odb_id=odbfunc.open_odb(foldername_odb,jobname)')
     Lines.append('')
     
     if isinstance(stepnumber,str):
