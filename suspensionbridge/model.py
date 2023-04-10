@@ -71,7 +71,7 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
             
 #%%  Open file
 
-    InputFileName=abaqus.folder_name + '\\' + abaqus.inputname + '.inp'
+    InputFileName=abaqus.foldername + '\\' + abaqus.inputname + '.inp'
     
     fid=open(InputFileName,'w')
     
@@ -289,7 +289,7 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
     LogicCompleted=False
     # Run
     if abaqus.runjob==True:
-        LogicCompleted=abq.runjob(abaqus.folder_name,abaqus.inputname,abaqus.jobname,abaqus.cmd,abaqus.cpus,True,True)
+        LogicCompleted=abq.runjob(abaqus.foldername,abaqus.inputname,abaqus.jobname,abaqus.cmd,abaqus.cpus,True,True)
 
     return LogicCompleted
 
