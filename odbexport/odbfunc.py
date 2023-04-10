@@ -14,58 +14,58 @@ def p(pstring):
 
 #%%
 
-def open_odb(FolderODB,JobName):
+def open_odb(foldername_odb,jobname):
     
     # Open ODB file
     
     # Inputs:
-    # FolderODB: string with folder name
-    # JobName: string with job name
+    # foldername_odb: string with folder name
+    # jobname: string with job name
     
     # Outputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
 
-    if JobName.endswith('.odb'):
-        JobName=JobName[:-4]
+    if jobname.endswith('.odb'):
+        jobname=jobname[:-4]
     
-    myOdb=odbAccess.openOdb(FolderODB+'/'+JobName + '.odb')
-    return myOdb
+    odb_id=odbAccess.openOdb(foldername_odb+'/'+jobname + '.odb')
+    return odb_id
 
-def close_odb(myOdb):
+def close_odb(odb_id):
 
     # Close ODB file
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
 
-    myOdb.close()
+    odb_id.close()
 
 #%%
 
-def exporthistoryoutput(myOdb,StepNumber,hist_str,AssemblyName=None):
+def exporthistoryoutput(odb_id,StepNumber,hist_str,AssemblyName=None):
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     # StepNumber: step number for export, usually -1
     # hist_str: string with desired quantity, e.g. EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
     
     # Outputs:
     # OutputVector: vector with numbers
 
-    StepNames=myOdb.steps.keys()
+    StepNames=odb_id.steps.keys()
     NameOfStep=StepNames[StepNumber]
     
     if AssemblyName is None:
-        AssemblyNameKeys=myOdb.steps[NameOfStep].historyRegions.keys()
+        AssemblyNameKeys=odb_id.steps[NameOfStep].historyRegions.keys()
         AssemblyName=AssemblyNameKeys[0]
     
-    HistoryOutputKeys=myOdb.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs.keys()
+    HistoryOutputKeys=odb_id.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs.keys()
     
     if hist_str not in HistoryOutputKeys:
         OutputVector=np.array([0])
         return OutputVector
     else:
-        HistoryOutput=myOdb.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs[hist_str]
+        HistoryOutput=odb_id.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs[hist_str]
         
     OutputVector=np.array([HistoryOutput.data[j][1] for j in range(0,len(HistoryOutput.data))])
     
@@ -73,10 +73,10 @@ def exporthistoryoutput(myOdb,StepNumber,hist_str,AssemblyName=None):
     
 #%%
 
-def exportdisplacement(myOdb,StepNumber,FrameNumber=None):
+def exportdisplacement(odb_id,StepNumber,FrameNumber=None):
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     # StepNumber: step number for export, usually -1
     # FrameNumber: frame number(s) for export, '' gives all frames in step, 'skipfirst' gives all except frame 0
     
@@ -84,9 +84,9 @@ def exportdisplacement(myOdb,StepNumber,FrameNumber=None):
     # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_MODES)
     # LabelVector: list with DOF labels of all N_DOF
 
-    StepNames=myOdb.steps.keys()
+    StepNames=odb_id.steps.keys()
     NameOfStep=StepNames[StepNumber]
-    SelectedStep=myOdb.steps[NameOfStep]
+    SelectedStep=odb_id.steps[NameOfStep]
     
     if FrameNumber is None:
         FrameNumber=range(len(SelectedStep.frames))
@@ -132,19 +132,19 @@ def exportdisplacement(myOdb,StepNumber,FrameNumber=None):
 
 #%%
 
-def exportnodecoord(myOdb,StepNumber,FrameNumber):
+def exportnodecoord(odb_id,StepNumber,FrameNumber):
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     # StepNumber: step number for export, usually -1
     # FrameNumber: frame number for export, usually 0
     
     # Outputs:
     # NodeCoord: matrix with [nodenumber,x,y,z] as rows, size N_NODE*4
 
-    StepNames=myOdb.steps.keys()
+    StepNames=odb_id.steps.keys()
     NameOfStep=StepNames[StepNumber]
-    SelectedStep=myOdb.steps[NameOfStep]
+    SelectedStep=odb_id.steps[NameOfStep]
             
     SelectedFrame=SelectedStep.frames[FrameNumber]
     if 'COORD' not in SelectedFrame.fieldOutputs.keys():
@@ -167,10 +167,10 @@ def exportnodecoord(myOdb,StepNumber,FrameNumber):
         
 #%%
 
-def exportsectionforce(myOdb,StepNumber,FrameNumber=None):
+def exportsectionforce(odb_id,StepNumber,FrameNumber=None):
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     # StepNumber: step number for export, usually -1
     # FrameNumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
     
@@ -178,9 +178,9 @@ def exportsectionforce(myOdb,StepNumber,FrameNumber=None):
     # SectionForceMatrix: matrix with each frame as column ( e.g. N_SF*N_MODES)
     # ElementLabelVector: list with SF labels
 
-    StepNames=myOdb.steps.keys()
+    StepNames=odb_id.steps.keys()
     NameOfStep=StepNames[StepNumber]
-    SelectedStep=myOdb.steps[NameOfStep]
+    SelectedStep=odb_id.steps[NameOfStep]
     
     if FrameNumber is None:
         FrameNumber=range(len(SelectedStep.frames))
@@ -238,21 +238,21 @@ def exportsectionforce(myOdb,StepNumber,FrameNumber=None):
 
 #%%
 
-def exportelconn(myOdb):
+def exportelconn(odb_id):
 
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     
     # Outputs:
     # ElementConnectivity: matrix with rows [Elno,Nodeno_start,Nodeno_end]
     
     t_start=timer()
 
-    InstanceKeys=myOdb.rootAssembly.instances.keys()
+    InstanceKeys=odb_id.rootAssembly.instances.keys()
     
     for k in range(len(InstanceKeys)):
 
-        SelectedInstance=myOdb.rootAssembly.instances[InstanceKeys[k]]
+        SelectedInstance=odb_id.rootAssembly.instances[InstanceKeys[k]]
         SelectedInstanceElements=SelectedInstance.elements
         
         ElType=[SelectedInstanceElements[j].type for j in range(len(SelectedInstanceElements))]
@@ -287,23 +287,23 @@ def exportelconn(myOdb):
 
 #%%
 
-def exportelsets(myOdb):
+def exportelsets(odb_id):
     
     # Inputs:
-    # myOdb: ODB object
+    # odb_id: ODB object
     
     # Outputs:
     # ElementSetNumbers: vector with set number (separated by 0 between each set)
     # ElementSetNames: list with names
 
-    InstanceKeys=myOdb.rootAssembly.instances.keys()
+    InstanceKeys=odb_id.rootAssembly.instances.keys()
     ElementSetNumbers=[]
     ElementSetNames=[]
     
     t_start=timer()
     for k in range(len(InstanceKeys)):
 
-        SelectedInstance=myOdb.rootAssembly.instances[InstanceKeys[k]]
+        SelectedInstance=odb_id.rootAssembly.instances[InstanceKeys[k]]
         ElementSetKeys=SelectedInstance.elementSets.keys()
         ElementSetNames=np.append(ElementSetNames,ElementSetKeys)
         

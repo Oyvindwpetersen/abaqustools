@@ -9,13 +9,13 @@ import putools
 import h5py
 
 #%%
-def static(FolderODB,NameODB,FolderSave,FolderPython,variables=None,StepNumber=None,FrameNumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,ExportScript=None):
+def static(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
 
-    # StepNumber
-    StepNumber=StepNumber or -1
+    # stepnumber
+    stepnumber=stepnumber or -1
     
-    # FrameNumber
-    FrameNumber=FrameNumber or -1
+    # framenumber
+    framenumber=framenumber or -1
     
     # Variables to export
     variables=variables or ['u' , 'sf' , 'nodecoord' , 'elconn' , 'elset']
@@ -24,17 +24,17 @@ def static(FolderODB,NameODB,FolderSave,FolderPython,variables=None,StepNumber=N
     postfixh5=postfixh5 or '_exportstatic'
 
     # Script py
-    ExportScript=ExportScript or NameODB + '_exportstatic'
+    exportscript=exportscript or jobname + '_exportstatic'
     
-    exportmain(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,FrameNumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,ExportScript=ExportScript)
+    exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
-def modal(FolderODB,NameODB,FolderSave,FolderPython,variables=None,StepNumber=None,FrameNumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,ExportScript=None):
+def modal(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
 
-    # StepNumber
-    StepNumber=StepNumber or -1
+    # stepnumber
+    stepnumber=stepnumber or -1
     
-    # FrameNumber
-    FrameNumber=FrameNumber or 'skipfirst'
+    # framenumber
+    framenumber=framenumber or 'skipfirst'
     
     # Variables to export
     variables=variables or ['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
@@ -43,32 +43,38 @@ def modal(FolderODB,NameODB,FolderSave,FolderPython,variables=None,StepNumber=No
     postfixh5=postfixh5 or '_exportmodal'
 
     # Script py
-    ExportScript=ExportScript or NameODB + '_exportmodal'
+    exportscript=exportscript or jobname + '_exportmodal'
     
-    exportmain(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,FrameNumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,ExportScript=ExportScript)
+    exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
 #%%
 
-def exportmain(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,FrameNumber,deletetxt=True,createh5=True,prefix=None,postfixh5=None,ExportScript=None):
+def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
 
     # Cut odb extension
-    if NameODB.endswith('.odb'):
-        NameODB=NameODB[:-4]
+    if jobname.endswith('.odb'):
+        jobname=jobname[:-4]
     
     # prefix
-    prefix=prefix or NameODB+'_export_'
+    prefix=prefix or jobname+'_export_'
     
     # prefix
     postfixh5=postfixh5 or '_export'
     
     # Name of export python script
-    ExportScript=ExportScript or NameODB + '_export'
+    exportscript=exportscript or jobname + '_export'
     
+    file_name=foldername_odb + '\\' + jobname + '.odb'
+    file_exist_logic=os.path.isfile(file_name)
+    if not file_exist_logic:
+        print('***** ' + file_name)
+        raise Exception('***** ODB file not found')
+        
     # Write py-file for export
-    writepyscript(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,FrameNumber,ExportScript=ExportScript,prefix=prefix)
+    writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix)
     
     # Run py-file in abaqus
-    system_cmd='abaqus cae noGUI=' + FolderSave + '/' + ExportScript + '.py'
+    system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
     sys_out=os.popen(system_cmd).read()
     
     # Collect data for h5
@@ -78,7 +84,7 @@ def exportmain(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,Fr
     
     for k in np.arange(len(variables)):
         
-        FileNameBase=FolderSave + '/' + prefix
+        FileNameBase=folder_save + '/' + prefix
         
         # Read txt file
         data_temp=np.genfromtxt(FileNameBase+variables[k]+'.txt', delimiter=',')
@@ -127,12 +133,12 @@ def exportmain(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,Fr
     if createh5==True:
         
         #if os.path.exists(hf_name):
-        hf_name=FolderSave + '/' + NameODB + postfixh5 + '.h5'
+        hf_name=folder_save + '/' + jobname + postfixh5 + '.h5'
         export2h5(hf_name,h5_var,h5_data,h5_isnum)
         
     # Delete txt files identified by prefix
     if deletetxt==True:
-        deletetxtfiles(FolderSave,prefix)
+        deletetxtfiles(folder_save,prefix)
 
 #%% 
 
@@ -151,10 +157,10 @@ def export2h5(hf_name,h5_var,h5_data,h5_isnum):
             hf.create_dataset(h5_var[k],data=data_temp)
         
 
-def deletetxtfiles(FolderSave,name_match):
+def deletetxtfiles(folder_save,name_match):
 
     # Find files that match
-    FileNameListDir=os.listdir(FolderSave)
+    FileNameListDir=os.listdir(folder_save)
     IndexMatch=putools.num.listindexsub(FileNameListDir,name_match)
     
     for k in np.arange(len(IndexMatch)):
@@ -165,11 +171,11 @@ def deletetxtfiles(FolderSave,name_match):
         if not '.txt' in FileNameRemove:
             continue
             
-        os.remove(FolderSave + '/' + FileNameRemove)
+        os.remove(folder_save + '/' + FileNameRemove)
 
 #%% Export modal script
 
-def writepyscript(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber,FrameNumber,ExportScript='ExportModal',prefix='_export'):
+def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript='ExportModal',prefix='_export'):
     
     if isinstance(variables,str):
         variables=[variables]
@@ -181,109 +187,109 @@ def writepyscript(FolderODB,NameODB,FolderSave,FolderPython,variables,StepNumber
     Lines.append('import numpy as np')
     Lines.append('')
     
-    Lines.append('FolderODB=' + '\'' + FolderODB + '\'')
-    Lines.append('JobName=' + '\'' + NameODB + '\'')
-    Lines.append('FolderSave=' + '\'' + FolderSave + '\'')
-    Lines.append('FolderPython=' + '\'' + FolderPython + '\'')
+    Lines.append('foldername_odb=' + '\'' + foldername_odb + '\'')
+    Lines.append('jobname=' + '\'' + jobname + '\'')
+    Lines.append('folder_save=' + '\'' + folder_save + '\'')
+    Lines.append('folder_python=' + '\'' + folder_python + '\'')
     
     Lines.append('prefix=' + '\'' + prefix + '\'')
     Lines.append('')
     
-    Lines.append('# Import functions for export')
-    Lines.append('sys.path.append(FolderPython)')
+    Lines.append('# Import functions for export (odbexport package)')
+    Lines.append('sys.path.append(folder_python)')
     
     #Lines.append('CurrentDir=os.getcwd()')
-    #Lines.append('os.chdir(FolderPython)')
+    #Lines.append('os.chdir(folder_python)')
     Lines.append('import odbfunc')
     #Lines.append('os.chdir(CurrentDir)')
     Lines.append('')
     
-    #Lines=writepyscript_begin(FolderODB,NameODB,FolderSave,FolderPython,prefix)
+    #Lines=writepyscript_begin(foldername_odb,jobname,folder_save,folder_python,prefix)
     
     Lines.append('# Open ODB')
-    Lines.append( 'myOdb=odbfunc.open_odb(FolderODB,' + '\'' + NameODB + '\'' + ')' )
+    Lines.append( 'odb_id=odbfunc.open_odb(foldername_odb,jobname')
     Lines.append('')
     
-    if isinstance(StepNumber,str):
-        StepNumber_str=StepNumber
+    if isinstance(stepnumber,str):
+        stepnumber_str=stepnumber
     else:
-        StepNumber_str=str(StepNumber)
+        stepnumber_str=str(stepnumber)
     
-    if isinstance(FrameNumber,str):
-        FrameNumber_str=FrameNumber
-        if FrameNumber_str=='skipfirst':
-            FrameNumber_str='\'skipfirst\''
+    if isinstance(framenumber,str):
+        framenumber_str=framenumber
+        if framenumber_str=='skipfirst':
+            framenumber_str='\'skipfirst\''
     else:
-        FrameNumber_str=str(FrameNumber)
+        framenumber_str=str(framenumber)
         
     Lines.append('# Step and frames to export')
-    Lines.append( 'StepNumber=' + StepNumber_str)
-    Lines.append( 'FrameNumber=' + FrameNumber_str)
+    Lines.append( 'stepnumber=' + stepnumber_str)
+    Lines.append( 'framenumber=' + framenumber_str)
     Lines.append('')
 
     if 'f' in variables:
         Lines.append('# Frequencies')
-        Lines.append( 'f=odbfunc.exporthistoryoutput(myOdb,StepNumber,' + '\'' + 'EIGFREQ' + '\'' +  ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' +  '\'f\'' + ',f,atype=1,prefix=prefix)' )
+        Lines.append( 'f=odbfunc.exporthistoryoutput(odb_id,stepnumber,' + '\'' + 'EIGFREQ' + '\'' +  ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' +  '\'f\'' + ',f,atype=1,prefix=prefix)' )
         Lines.append('')
 
     if 'gm' in variables:
         Lines.append('# Generalized mass')
-        Lines.append( 'gm=odbfunc.exporthistoryoutput(myOdb,StepNumber,' + '\'' + 'GM' + '\'' +  ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'gm\'' + ',gm,atype=1,prefix=prefix)' )
+        Lines.append( 'gm=odbfunc.exporthistoryoutput(odb_id,stepnumber,' + '\'' + 'GM' + '\'' +  ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'gm\'' + ',gm,atype=1,prefix=prefix)' )
         Lines.append('')
 
     if 'phi' in variables:
         Lines.append('# Mode shapes')
-        Lines.append( '(phi,phi_label)=odbfunc.exportdisplacement(myOdb,StepNumber,FrameNumber=FrameNumber' + ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'phi\'' + ',phi,atype=1,prefix=prefix)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'phi_label\'' + ',phi_label,atype=2,prefix=prefix)' )
+        Lines.append( '(phi,phi_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber' + ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'phi\'' + ',phi,atype=1,prefix=prefix)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'phi_label\'' + ',phi_label,atype=2,prefix=prefix)' )
         Lines.append('')
 
     if 'phi_sf' in variables:
         Lines.append('# Modal section forces')
-        Lines.append( '(phi_sf,phi_sf_label)=odbfunc.exportsectionforce(myOdb,StepNumber,FrameNumber=FrameNumber' + ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'phi_sf\'' + ',phi_sf,atype=1,prefix=prefix)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'phi_sf_label\'' + ',phi_sf_label,atype=2,prefix=prefix)' )
+        Lines.append( '(phi_sf,phi_sf_label)=odbfunc.exportsectionforce(odb_id,stepnumber,framenumber=framenumber' + ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'phi_sf\'' + ',phi_sf,atype=1,prefix=prefix)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'phi_sf_label\'' + ',phi_sf_label,atype=2,prefix=prefix)' )
         Lines.append('')
 
     if 'u' in variables:
         Lines.append('# Displacements')
-        Lines.append( '(u,u_label)=odbfunc.exportdisplacement(myOdb,StepNumber,FrameNumber=FrameNumber' + ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'u\'' + ',u,atype=1,prefix=prefix)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'u_label\'' + ',u_label,atype=2,prefix=prefix)' )
+        Lines.append( '(u,u_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber' + ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'u\'' + ',u,atype=1,prefix=prefix)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'u_label\'' + ',u_label,atype=2,prefix=prefix)' )
         Lines.append('')
 
     if 'sf' in variables:
         Lines.append('# Section forces')
-        Lines.append( '(sf,sf_label)=odbfunc.exportsectionforce(myOdb,StepNumber,FrameNumber=FrameNumber' + ')' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'sf\'' + ',sf,atype=1,prefix=prefix)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'sf_label\'' + ',sf_label,atype=2,prefix=prefix)' )
+        Lines.append( '(sf,sf_label)=odbfunc.exportsectionforce(odb_id,stepnumber,framenumber=framenumber' + ')' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'sf\'' + ',sf,atype=1,prefix=prefix)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'sf_label\'' + ',sf_label,atype=2,prefix=prefix)' )
         Lines.append('')
         
     if 'nodecoord' in variables:
         Lines.append('# Node coordinates')
-        Lines.append( 'nodecoord=odbfunc.exportnodecoord(myOdb,StepNumber' + ',0)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'nodecoord\'' + ',nodecoord,atype=1,prefix=prefix)' )
+        Lines.append( 'nodecoord=odbfunc.exportnodecoord(odb_id,stepnumber' + ',0)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'nodecoord\'' + ',nodecoord,atype=1,prefix=prefix)' )
         Lines.append('')
         
     if 'elconn' in variables:
         Lines.append('# Element connectivity')
-        Lines.append( 'elconn=odbfunc.exportelconn(myOdb)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'elconn\'' + ',elconn,atype=1,prefix=prefix)' )
+        Lines.append( 'elconn=odbfunc.exportelconn(odb_id)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'elconn\'' + ',elconn,atype=1,prefix=prefix)' )
         Lines.append('')
         
     if 'elset' in variables:
         Lines.append('# Element sets')
-        Lines.append( '(elset,elset_label)=odbfunc.exportelsets(myOdb)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'elset\'' + ',elset,atype=1,prefix=prefix)' )
-        Lines.append( 'odbfunc.save2txt(FolderSave,' + '\'elset_label\'' + ',elset_label,atype=2,prefix=prefix)' )
+        Lines.append( '(elset,elset_label)=odbfunc.exportelsets(odb_id)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'elset\'' + ',elset,atype=1,prefix=prefix)' )
+        Lines.append( 'odbfunc.save2txt(folder_save,' + '\'elset_label\'' + ',elset_label,atype=2,prefix=prefix)' )
         Lines.append('')
     
     Lines.append('# Close ODB')
-    Lines.append( 'odbfunc.close_odb(myOdb)' )
+    Lines.append( 'odbfunc.close_odb(odb_id)' )
         
-    fid=open(FolderSave + '\\' + ExportScript + '.py', 'w')
+    fid=open(folder_save + '\\' + exportscript + '.py', 'w')
     for Lines_sub in Lines:
         fid.write( Lines_sub + '\n')
 
