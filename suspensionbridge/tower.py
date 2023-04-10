@@ -110,8 +110,6 @@ def towergeometry(fid,meta,geo,tower):
 #%%  Crossbeams
     N_box=1*np.isnan(geo.gap)+2*(not np.isnan(geo.gap))
 
-
-    # TODO: Remove this syntax ?
     meta.crossbeamlow.nodenum_bearing_box1=[None]*2
     meta.crossbeamlow.nodecoord_bearing_box1=[None]*2
     meta.crossbeamlow.nodenum_bearing_box2=[None]*2
