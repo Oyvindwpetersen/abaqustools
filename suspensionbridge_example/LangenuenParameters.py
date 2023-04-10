@@ -63,9 +63,9 @@ cable.meshsize_approx=np.nan
 cable.N_element=np.array(30)
 cable.tempsupport=True
 cable.N_tempsupport=np.array(11)
-cable.clamp=True
-cable.N_clamp=np.array(3)
-cable.F_clamp=np.array(300e3)
+cable.clamp=False
+cable.N_clamp=np.nan
+cable.F_clamp=np.nan
 cable.polycoeff_hanger_adjust=np.nan
 cable.nsmass=50
 
