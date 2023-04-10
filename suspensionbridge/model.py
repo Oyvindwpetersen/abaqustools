@@ -71,7 +71,7 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
             
 #%%  Open file
 
-    InputFileName=abaqus.FolderNameModel + '\\' + abaqus.InputName + '.inp'
+    InputFileName=abaqus.FolderNameModel + '\\' + abaqus.inputname + '.inp'
     
     fid=open(InputFileName,'w')
     
@@ -86,7 +86,7 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
 
 #%%  Part
     
-    gen.Part(fid,abaqus.PartName)
+    gen.Part(fid,abaqus.partname)
 
 #%%  Cable Main
 
@@ -138,9 +138,9 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
     
     gen.Comment(fid,'ASSEMBLY',True)
     
-    gen.Assembly(fid,abaqus.AssemblyName)
+    gen.Assembly(fid,abaqus.assemblyname)
     
-    gen.Instance(fid,abaqus.PartName,abaqus.PartName)
+    gen.Instance(fid,abaqus.partname,abaqus.partname)
     
     gen.InstanceEnd(fid)
     
@@ -157,23 +157,23 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
 
     gen.Static(fid,Time_step)
     
-    gen.ModelChange(fid,'REMOVE',['CABLE_MAIN' , 'SADLESPRING' , 'BRIDGEDECK' , 'HANGER' , 'BEARINGTOP' , 'BEARINGPENDULUM' , 'BEARINGSPRING'],abaqus.PartName)
+    gen.ModelChange(fid,'REMOVE',['CABLE_MAIN' , 'SADLESPRING' , 'BRIDGEDECK' , 'HANGER' , 'BEARINGTOP' , 'BEARINGPENDULUM' , 'BEARINGSPRING'],abaqus.partname)
     
     if cable.tempsupport==True:
-        gen.ModelChange(fid,'REMOVE',['CABLE_TEMPSUPPORT'],abaqus.PartName)
+        gen.ModelChange(fid,'REMOVE',['CABLE_TEMPSUPPORT'],abaqus.partname)
     
     if bridgedeck.shell==True:
-        gen.ModelChange(fid,'REMOVE',['Bridgedeck_shell'],abaqus.PartName)
+        gen.ModelChange(fid,'REMOVE',['Bridgedeck_shell'],abaqus.partname)
     
     if cable.clamp==True:
-        gen.ModelChange(fid,'REMOVE',['Cable_clamp'],abaqus.PartName)    
+        gen.ModelChange(fid,'REMOVE',['Cable_clamp'],abaqus.partname)    
 
-    gen.Cload(fid,'NEW',['Tower_top_south_east','Tower_top_south_west'],1,tower.F_pullback_south,abaqus.PartName)
-    gen.Cload(fid,'NEW',['Tower_top_north_east','Tower_top_north_west'],1,tower.F_pullback_north,abaqus.PartName)
+    gen.Cload(fid,'NEW',['Tower_top_south_east','Tower_top_south_west'],1,tower.F_pullback_south,abaqus.partname)
+    gen.Cload(fid,'NEW',['Tower_top_north_east','Tower_top_north_west'],1,tower.F_pullback_north,abaqus.partname)
     
     gen.Gravload(fid,'new',[''],9.81)
     
-    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.PartName)
+    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.partname)
 
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
@@ -191,17 +191,17 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
             
     gen.Static(fid,Time_step)
     
-    gen.ModelChange(fid,'ADD',['CABLE_MAIN' , 'SADLESPRING'],abaqus.PartName)
+    gen.ModelChange(fid,'ADD',['CABLE_MAIN' , 'SADLESPRING'],abaqus.partname)
     
     if cable.tempsupport==True:
-        gen.ModelChange(fid,'ADD',['CABLE_TEMPSUPPORT'],abaqus.PartName)
+        gen.ModelChange(fid,'ADD',['CABLE_TEMPSUPPORT'],abaqus.partname)
         
     gen.Cload(fid,'NEW',[],[],[])
     
     gen.Gravload(fid,'new',[''],9.81)
     
-    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.PartName)
-    gen.Boundary(fid,'new','Cable_main_anchorage',[1,4,0],abaqus.PartName)
+    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.partname)
+    gen.Boundary(fid,'new','Cable_main_anchorage',[1,4,0],abaqus.partname)
     
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF' , 'S'],'','FREQUENCY=100')
@@ -220,14 +220,14 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
     
     gen.Static(fid,Time_step)
     
-    gen.ModelChange(fid,'ADD',['BRIDGEDECK' , 'HANGER' , 'BEARINGTOP'],abaqus.PartName)
+    gen.ModelChange(fid,'ADD',['BRIDGEDECK' , 'HANGER' , 'BEARINGTOP'],abaqus.partname)
     
     if cable.tempsupport==True:
-        gen.ModelChange(fid,'REMOVE',['CABLE_TEMPSUPPORT'],abaqus.PartName)
+        gen.ModelChange(fid,'REMOVE',['CABLE_TEMPSUPPORT'],abaqus.partname)
        
     
     GravList=['TOWER','CABLE_MAIN','HANGER','BRIDGEDECK','BEARINGTOP','BEARINGLOW']
-    gen.Gravload(fid,'NEW',GravList,9.81,abaqus.PartName)  
+    gen.Gravload(fid,'NEW',GravList,9.81,abaqus.partname)  
     
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF' , 'S'],'','FREQUENCY=100')
@@ -244,20 +244,20 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
         Time_step=step.time[3]
     
     gen.Static(fid,Time_step)
-    gen.ModelChange(fid,'ADD',['BEARINGPENDULUM' , 'BEARINGSPRING'],abaqus.PartName)
+    gen.ModelChange(fid,'ADD',['BEARINGPENDULUM' , 'BEARINGSPRING'],abaqus.partname)
     
     if bridgedeck.shell==True:
-        gen.ModelChange(fid,'ADD',['Bridgedeck_shell'],abaqus.PartName)
+        gen.ModelChange(fid,'ADD',['Bridgedeck_shell'],abaqus.partname)
 
     if cable.clamp==True:
-        gen.ModelChange(fid,'ADD',['CABLE_CLAMP'],abaqus.PartName)
+        gen.ModelChange(fid,'ADD',['CABLE_CLAMP'],abaqus.partname)
         
         #eps=alpha*dT
         #sigma=E*eps=E*alpha*dT
         #F=A*sigma=A*E*alpha*dT
         
         temp_magnitude=-cable.F_clamp/(210e9*4e-3*1e-5)*2
-        gen.Temp(fid,'MOD',['CABLE_CLAMP_TEMPERATURE'],temp_magnitude,abaqus.PartName)
+        gen.Temp(fid,'MOD',['CABLE_CLAMP_TEMPERATURE'],temp_magnitude,abaqus.partname)
         
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF' , 'S'],'','FREQUENCY=100')
@@ -284,12 +284,12 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
 #%%  Run job
     
     # Check input file for duplicate node or element numbers
-    abq.CheckDuplicateNumbers(InputFileName)
+    abq.checkduplicate(InputFileName)
     
     LogicCompleted=False
     # Run
-    if abaqus.RunJob==True:
-        LogicCompleted=abq.RunJob(abaqus.cmd,abaqus.FolderNameModel,abaqus.InputName,abaqus.JobName,abaqus.cpus,True,True)
+    if abaqus.runjob==True:
+        LogicCompleted=abq.runjob(abaqus.FolderNameModel,abaqus.inputname,abaqus.jobname,abaqus.cmd,abaqus.cpus,True,True)
 
     return LogicCompleted
 
@@ -313,8 +313,8 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
 # index=inpFindString(user_data_cell,'tower.F_pullback_north') user_data_cell{index}=['tower.F_pullback_north=' + num2str(tower.F_pullback_north,'%0.3e') ';# automatic calcuation']
 # 
 # # Add new names
-# index=inpFindString(user_data_cell,'abaqus.InputName=') user_data_cell{index}=['abaqus.InputName=' , '''' abaqus.InputName '_postupdgeo' , '''' ]
-# index=inpFindString(user_data_cell,'abaqus.JobName=') user_data_cell{index}=['abaqus.JobName=' , '''' abaqus.JobName '_postupdgeo' , '''' ]
+# index=inpFindString(user_data_cell,'abaqus.inputname=') user_data_cell{index}=['abaqus.inputname=' , '''' abaqus.inputname '_postupdgeo' , '''' ]
+# index=inpFindString(user_data_cell,'abaqus.jobname=') user_data_cell{index}=['abaqus.jobname=' , '''' abaqus.jobname '_postupdgeo' , '''' ]
 # inpWriteFile(user_data_cell,UserParameterFileNameAuto)
 # 
 # # Export to find deflected coordinates
@@ -322,9 +322,9 @@ def buildinput(UserParameterFileName,UserParameterFolder,IterateDeflection=False
 # dir_export=abaqus.FolderNameModel;
 # dir_python='C:\Cloud\OD_OWP\Work\Abaqus\Python\exportmodal\';
 # FrequencyStepNumber=-1;
-# ExportFileName=[abaqus.JobName '_export']
+# ExportFileName=[abaqus.jobname '_export']
 # 
-# AbaqusExportModal(dir_odb,dir_export,dir_python,[abaqus.JobName],FrequencyStepNumber,ExportFileName,'AssemblyName','','ShowText',false)
+# AbaqusExportModal(dir_odb,dir_export,dir_python,[abaqus.jobname],FrequencyStepNumber,ExportFileName,'AssemblyName','','ShowText',false)
 # StaticResults=load([dir_export '\' ExportFileName '.mat'])
 # 
 # # Find cable deflection
