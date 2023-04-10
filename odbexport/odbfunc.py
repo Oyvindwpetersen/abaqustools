@@ -320,29 +320,29 @@ def exportelsets(odb_id):
     
 #%%
 
-def save2txt(FolderSave,NameSave,A_matrix,atype='string',prefix=''):
+def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
     
     # Inputs:
-    # FolderSave: string with folder name for export
-    # NameSave: string with name for export
+    # folder_save: string with folder name for export
+    # name_save: string with name for export
     # A_matrix: the quantity to export
     # atype: 'string' or 'number' specifies text or numeric data
-    # prefix: prefix in front of NameSave
+    # prefix: prefix in front of name_save
     
     if atype=='number' or atype==1:
-        np.savetxt((FolderSave+'\\'+prefix+NameSave+'.txt'), A_matrix , delimiter=',', fmt='%.6e')
+        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'), A_matrix , delimiter=',', fmt='%.6e')
     elif atype=='string' or atype==2:
-        np.savetxt((FolderSave+'\\'+prefix+NameSave+'.txt'), A_matrix , delimiter=' ', fmt='%s')
+        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'), A_matrix , delimiter=' ', fmt='%s')
     
 #%%
 
-def save2npy(FolderSave,NameSave,A_matrix,prefix=''):
+def save2npy(folder_save,name_save,A_matrix,prefix=''):
     
     # Inputs:
-    # FolderSave: string with folder name for export
-    # NameSave: string with name for export
+    # folder_save: string with folder name for export
+    # name_save: string with name for export
     # A_matrix: the quantity to export
-    # prefix: prefix in front of NameSave
+    # prefix: prefix in front of name_save
     
-    np.save((FolderSave+'\\'+prefix+NameSave), A_matrix)
+    np.save((folder_save+'\\'+prefix+name_save), A_matrix)
     
