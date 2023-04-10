@@ -72,23 +72,24 @@ def estimatepullbackforce(tower,geo,abaqus):
     c=c[:-7]
     c=c.replace(':','-')
     
-    FolderODBExport=abaqus.FolderODBExport
+    foldername_export=abaqus.foldername_export
     abaqus=struct()
     
-    abaqus.FolderNameModel='C:\\Temp'
-    abaqus.InputName='SB_TempJob_' + c
-    abaqus.JobName=abaqus.InputName
-    abaqus.PartName='PartTower'
-    abaqus.AssemblyName='AssemblyTower'
-    abaqus.RunJob=True
+    abaqus.foldername='C:\\Temp'
+    abaqus.inputname='SB_TempJob_' + c
+    abaqus.jobname=abaqus.inputname
+    abaqus.partname='PartTower'
+    abaqus.assemblyname='AssemblyTower'
+    abaqus.runjob=True
     abaqus.cmd='abaqus'
     abaqus.cpus=np.array(4)
     abaqus.restart=False
     abaqus.halt_error=True
+    abaqus.foldername_export=foldername_export
     
     #%%  Open file
 
-    InputFileName=abaqus.FolderNameModel + '\\' + abaqus.InputName + '.inp'
+    InputFileName=abaqus.foldername + '\\' + abaqus.inputname + '.inp'
     
     fid=open(InputFileName,'w')
     
@@ -100,7 +101,7 @@ def estimatepullbackforce(tower,geo,abaqus):
 
     #%%  Part
 
-    gen.Part(fid,abaqus.PartName)
+    gen.Part(fid,abaqus.partname)
 
     #%%  Tower
 
@@ -117,9 +118,9 @@ def estimatepullbackforce(tower,geo,abaqus):
 
     gen.Comment(fid,'ASSEMBLY',False)
 
-    gen.Assembly(fid,abaqus.AssemblyName)
+    gen.Assembly(fid,abaqus.assemblyname)
 
-    gen.Instance(fid,abaqus.PartName,abaqus.PartName)
+    gen.Instance(fid,abaqus.partname,abaqus.partname)
 
     gen.InstanceEnd(fid)
 
@@ -130,12 +131,12 @@ def estimatepullbackforce(tower,geo,abaqus):
     gen.Step(fid,'NLGEO=YES, NAME=STEP0','')
     gen.Static(fid,['1e-2, 1, 1e-6, 1'])
 
-    gen.Cload(fid,'NEW',['Tower_top_south_east','Tower_top_south_west'],1,UnitLoadSouth,abaqus.PartName)
-    gen.Cload(fid,'NEW',['Tower_top_north_east','Tower_top_north_west'],1,UnitLoadNorth,abaqus.PartName)
+    gen.Cload(fid,'NEW',['Tower_top_south_east','Tower_top_south_west'],1,UnitLoadSouth,abaqus.partname)
+    gen.Cload(fid,'NEW',['Tower_top_north_east','Tower_top_north_west'],1,UnitLoadNorth,abaqus.partname)
     
     gen.Gravload(fid,'new',[''],9.81)
     
-    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.PartName)
+    gen.Boundary(fid,'new','Tower_base',[1,6,0],abaqus.partname)
 
     gen.FieldOutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
     gen.FieldOutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
@@ -149,18 +150,18 @@ def estimatepullbackforce(tower,geo,abaqus):
     #%%  Run job
 
     # Check input file for duplicate node/element numbers
-    abq.CheckDuplicateNumbers(InputFileName)
+    abq.checkduplicate(InputFileName)
     
     # Run
-    if abaqus.RunJob==True:
-        abq.RunJob(abaqus.cmd,abaqus.FolderNameModel,abaqus.InputName,abaqus.JobName,abaqus.cpus,True,True)
+    if abaqus.runjob==True:
+        abq.runjob(abaqus.foldername,abaqus.inputname,abaqus.jobname,abaqus.cmd,abaqus.cpus,True,True)
 
     #%%  Export data
 
-    FolderODB=abaqus.FolderNameModel
-    NameODB=abaqus.JobName
+    FolderODB=abaqus.foldername
+    NameODB=abaqus.jobname
     FolderSave=FolderODB
-    FolderPython=FolderODBExport
+    FolderPython=foldername_export
     
     odbexport.export.static(FolderODB,NameODB,FolderSave,FolderPython)
     
