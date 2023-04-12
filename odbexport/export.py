@@ -179,6 +179,9 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     if isinstance(variables,str):
         variables=[variables]
     
+    foldername_odb=foldername_odb.replace('\\','/')
+    folder_save=folder_save.replace('\\','/')
+    
     Lines=['']
     
     Lines.append('import os')
@@ -196,14 +199,8 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     
     Lines.append('# Import functions for export (odbexport package)')
     Lines.append('sys.path.append(folder_python)')
-    
-    #Lines.append('CurrentDir=os.getcwd()')
-    #Lines.append('os.chdir(folder_python)')
     Lines.append('import odbfunc')
-    #Lines.append('os.chdir(CurrentDir)')
     Lines.append('')
-    
-    #Lines=writepyscript_begin(foldername_odb,jobname,folder_save,folder_python,prefix)
     
     Lines.append('# Open ODB')
     Lines.append( 'odb_id=odbfunc.open_odb(foldername_odb,jobname)')
