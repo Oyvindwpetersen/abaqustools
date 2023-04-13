@@ -9,38 +9,36 @@ import putools
 import h5py
 
 #%%
-def static(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
+def static(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5='_exportstatic',exportscript=None):
 
     # stepnumber
-    stepnumber=stepnumber or -1
+    if stepnumber is None:
+        stepnumber=-1
     
     # framenumber
-    framenumber=framenumber or -1
-    
+    if framenumber is None:
+        framenumber=-1
+
     # Variables to export
     variables=variables or ['u' , 'sf' , 'nodecoord' , 'elconn' , 'elset']
-
-    # H5 name
-    postfixh5=postfixh5 or '_exportstatic'
 
     # Script py
     exportscript=exportscript or jobname + '_exportstatic'
     
     exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
-def modal(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
+def modal(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5='_exportmodal',exportscript=None):
 
     # stepnumber
-    stepnumber=stepnumber or -1
+    if stepnumber is None:
+        stepnumber=-1
     
     # framenumber
-    framenumber=framenumber or 'skipfirst'
+    if framenumber is None:
+        framenumber='skipfirst'
     
     # Variables to export
     variables=variables or ['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
-
-    # H5 name
-    postfixh5=postfixh5 or '_exportmodal'
 
     # Script py
     exportscript=exportscript or jobname + '_exportmodal'
@@ -69,7 +67,16 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
     if not file_exist_logic:
         print('***** ' + file_name)
         raise Exception('***** ODB file not found')
-        
+ 
+    if isinstance(variables,str)
+        variables=[variables]
+ 
+    variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elconn' , 'elset' ]
+    for k in np.arange(len(variables)):
+        if not variables[k] in variables_allowed:
+            print('***** ' + variables[k])
+            raise Exception('***** Variable identifier not allowed')
+            
     # Write py-file for export
     writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix)
     
@@ -91,8 +98,8 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
         h5_var.append(variables[k])
         h5_data.append(data_temp)
         h5_isnum.append(True)
-        
-        # Special cases
+                    
+        # Special cases where labels also need be imported
         if variables[k]=='phi':
             fid=open(FileNameBase+'phi_label.txt','r')
             phi_label=fid.read().splitlines()
@@ -128,7 +135,7 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
             h5_var.append('elset_label')
             h5_data.append(elset_label)
             h5_isnum.append(False)
-            
+
             
     if createh5==True:
         
