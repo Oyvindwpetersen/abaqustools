@@ -68,7 +68,7 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
         print('***** ' + file_name)
         raise Exception('***** ODB file not found')
  
-    if isinstance(variables,str)
+    if isinstance(variables,str):
         variables=[variables]
  
     variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elconn' , 'elset' ]
