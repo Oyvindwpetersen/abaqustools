@@ -9,27 +9,62 @@ import putools
 import h5py
 
 #%%
-def static(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5='_exportstatic',exportscript=None):
 
-    # stepnumber
+def static(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,saveh5=True,prefix=None,postfixh5='_exportstatic',exportscript=None):
+
+    # Export static response
+    #
+    # Inputs:
+    # folder_odb: folder of odb file
+    # jobname: name of odb file
+    # folder_save: folder to export to
+    # folder_python: folder where the python abaqustools repo is located (must be added in abaqus)
+    # variables: list of variables to export
+    # stepnumber: stepnumber to export
+    # framenumber: framenumber(s) to export
+    # deletetxt: delete txt files
+    # saveh5: save to h5
+    # prefix: prefix for txt files    # saveh5: save to h5
+    # postfixh5: postfix for h5 file
+    # exportscript: name of python script that is created
+
+    # Stepnumber
     if stepnumber is None:
         stepnumber=-1
     
-    # framenumber
+    # Framenumber
     if framenumber is None:
         framenumber=-1
 
     # Variables to export
-    variables=variables or ['u' , 'sf' , 'nodecoord' , 'elconn' , 'elset']
+    if variables is None:
+       variables=['u' , 'sf' , 'nodecoord' , 'elconn' , 'elset']
 
-    # Script py
-    exportscript=exportscript or jobname + '_exportstatic'
+    # Script py file
+    if exportscript is None:
+       exportscript=jobname + '_exportstatic'
     
-    exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
+    # Run main
+    exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,saveh5=saveh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
-def modal(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,createh5=True,prefix=None,postfixh5='_exportmodal',exportscript=None):
-
-    # stepnumber
+def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,saveh5=True,prefix=None,postfixh5='_exportmodal',exportscript=None):
+    
+    # Export modal response
+    #
+    # Inputs:
+    # folder_odb: folder of odb file
+    # jobname: name of odb file
+    # folder_save: folder to export to
+    # folder_python: folder where the python abaqustools repo is located (must be added in abaqus)
+    # variables: list of variables to export
+    # stepnumber: stepnumber to export
+    # framenumber: framenumber(s) to export
+    # deletetxt: delete txt files
+    # saveh5: save to h5
+    # prefix: prefix for txt files    # saveh5: save to h5
+    # postfixh5: postfix for h5 file
+    # exportscript: name of python script that is created    # stepnumber
+       
     if stepnumber is None:
         stepnumber=-1
     
@@ -38,47 +73,68 @@ def modal(foldername_odb,jobname,folder_save,folder_python,variables=None,stepnu
         framenumber='skipfirst'
     
     # Variables to export
-    variables=variables or ['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
+    if variables is None:
+       variables=['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
 
-    # Script py
-    exportscript=exportscript or jobname + '_exportmodal'
-    
-    exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,createh5=createh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
+    # Script py file
+    if exportscript is None:
+       exportscript=jobname + '_exportmodal'
+       
+    # Run main
+    exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,saveh5=saveh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
 #%%
 
-def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=True,createh5=True,prefix=None,postfixh5=None,exportscript=None):
+def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=True,saveh5=True,prefix=None,postfixh5=None,exportscript=None):
+
+    # Main script for export
+    #
+    # Inputs:
+    # folder_odb: folder of odb file
+    # jobname: name of odb file
+    # folder_save: folder to export to
+    # folder_python: folder where the python abaqustools repo is located (must be added in abaqus)
+    # variables: list of variables to export
+    # stepnumber: stepnumber to export
+    # framenumber: framenumber(s) to export
+    # deletetxt: delete txt files
+    # saveh5: save to h5
+    # prefix: prefix for txt files    # saveh5: save to h5
+    # postfixh5: postfix for h5 file
+    # exportscript: name of python script that is created
 
     # Cut odb extension
     if jobname.endswith('.odb'):
         jobname=jobname[:-4]
     
-    # prefix
-    prefix=prefix or jobname+'_export_'
+    # Prefix for saving txt files
+    if prefix is None:
+        prefix=jobname+'_export_'
     
-    # prefix
-    postfixh5=postfixh5 or '_export'
+    # Postfix for h5 file
+    if postfixh5 is None:
+        postfixh5=jobname+'_export'
     
-    # Name of export python script
-    exportscript=exportscript or jobname + '_export'
-    
-    file_name=foldername_odb + '\\' + jobname + '.odb'
+    # Check if ODB file is found
+    file_name=folder_odb + '\\' + jobname + '.odb'
     file_exist_logic=os.path.isfile(file_name)
     if not file_exist_logic:
         print('***** ' + file_name)
         raise Exception('***** ODB file not found')
  
+    # Ensure list
     if isinstance(variables,str):
         variables=[variables]
  
+    # Check input variables
     variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elconn' , 'elset' ]
     for k in np.arange(len(variables)):
         if not variables[k] in variables_allowed:
-            print('***** ' + variables[k])
+            print('***** Check variable ' + variables[k])
             raise Exception('***** Variable identifier not allowed')
             
     # Write py-file for export
-    writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix)
+    writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix)
     
     # Run py-file in abaqus
     system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
@@ -91,57 +147,58 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
     
     for k in np.arange(len(variables)):
         
-        FileNameBase=folder_save + '/' + prefix
+        # Base for txt files
+        filename_base=folder_save + '/' + prefix
         
         # Read txt file
-        data_temp=np.genfromtxt(FileNameBase+variables[k]+'.txt', delimiter=',')
+        data_temp=np.genfromtxt(filename_base+variables[k]+'.txt', delimiter=',')
         h5_var.append(variables[k])
         h5_data.append(data_temp)
         h5_isnum.append(True)
                     
         # Special cases where labels also need be imported
         if variables[k]=='phi':
-            fid=open(FileNameBase+'phi_label.txt','r')
+            fid=open(filename_base+'phi_label.txt','r')
             phi_label=fid.read().splitlines()
             fid.close()
             h5_var.append('phi_label')
             h5_data.append(phi_label)
             h5_isnum.append(False)
         elif variables[k]=='phi_sf':
-            fid=open(FileNameBase+'phi_sf_label.txt','r')
+            fid=open(filename_base+'phi_sf_label.txt','r')
             phi_sf_label=fid.read().splitlines()
             fid.close()
             h5_var.append('phi_sf_label')
             h5_data.append(phi_sf_label)
             h5_isnum.append(False)
         elif variables[k]=='u':
-            fid=open(FileNameBase+'u_label.txt','r')
+            fid=open(filename_base+'u_label.txt','r')
             u_label=fid.read().splitlines()
             fid.close()
             h5_var.append('u_label')
             h5_data.append(u_label)
             h5_isnum.append(False)
         elif variables[k]=='sf':
-            fid=open(FileNameBase+'sf_label.txt','r')
+            fid=open(filename_base+'sf_label.txt','r')
             sf_label=fid.read().splitlines()
             fid.close()
             h5_var.append('sf_label')
             h5_data.append(sf_label)
             h5_isnum.append(False)
         elif variables[k]=='elset':
-            fid=open(FileNameBase+'elset_label.txt','r')
+            fid=open(filename_base+'elset_label.txt','r')
             elset_label=fid.read().splitlines()
             fid.close()
             h5_var.append('elset_label')
             h5_data.append(elset_label)
             h5_isnum.append(False)
 
-            
-    if createh5==True:
+    # Save h5 file        
+    if saveh5==True:
         
         #if os.path.exists(hf_name):
         hf_name=folder_save + '/' + jobname + postfixh5 + '.h5'
-        export2h5(hf_name,h5_var,h5_data,h5_isnum)
+        exporth5(hf_name,h5_var,h5_data,h5_isnum)
         
     # Delete txt files identified by prefix
     if deletetxt==True:
@@ -149,7 +206,15 @@ def exportmain(foldername_odb,jobname,folder_save,folder_python,variables,stepnu
 
 #%% 
 
-def export2h5(hf_name,h5_var,h5_data,h5_isnum):
+def exporth5(hf_name,h5_var,h5_data,h5_isnum):
+    
+    # Save h5 file with data
+    #
+    # Inputs:
+    # hf_name: full name of h5 file
+    # h5_var: list of variable names
+    # h5_data: list of data
+    # h5_isnum: list of logics
     
     hf = h5py.File(hf_name,'w')
     dt = h5py.special_dtype(vlen=str)
@@ -166,6 +231,13 @@ def export2h5(hf_name,h5_var,h5_data,h5_isnum):
 
 def deletefiles(foldername,name_match,extensions):
     
+    # Delete files that match criteria
+    #
+    # Inputs:
+    # foldername: name of folder to search
+    # name_match: file name (partial match allowed)
+    # extensions: list of extensions allowed
+    
     # Find files that match
     FileNameListDir=os.listdir(foldername)
     IndexMatch=putools.num.listindexsub(FileNameListDir,name_match)
@@ -181,12 +253,26 @@ def deletefiles(foldername,name_match,extensions):
 
 #%% Export modal script
 
-def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript='ExportModal',prefix='_export'):
+def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript='Export',prefix='_export'):
     
+    # Write py script that exports in abaqus
+    # Inputs:
+    # folder_odb: folder of odb file
+    # jobname: name of odb file
+    # folder_save: folder to export to
+    # folder_python: folder where the python abaqustools repo is located (must be added in abaqus)
+    # variables: list of variables to export
+    # stepnumber: stepnumber to export
+    # framenumber: framenumber(s) to export
+    # exportscript: name of python script that is created
+    # prefix: prefix for txt files
+    
+    # Ensure list
     if isinstance(variables,str):
         variables=[variables]
     
-    foldername_odb=foldername_odb.replace('\\','/')
+    # Format folder
+    folder_odb=folder_odb.replace('\\','/')
     folder_save=folder_save.replace('\\','/')
     
     Lines=['']
@@ -196,7 +282,7 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     Lines.append('import numpy as np')
     Lines.append('')
     
-    Lines.append('foldername_odb=' + '\'' + foldername_odb + '\'')
+    Lines.append('folder_odb=' + '\'' + folder_odb + '\'')
     Lines.append('jobname=' + '\'' + jobname + '\'')
     Lines.append('folder_save=' + '\'' + folder_save + '\'')
     Lines.append('folder_python=' + '\'' + folder_python + '\'')
@@ -210,7 +296,7 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     Lines.append('')
     
     Lines.append('# Open ODB')
-    Lines.append( 'odb_id=odbfunc.open_odb(foldername_odb,jobname)')
+    Lines.append( 'odb_id=odbfunc.open_odb(folder_odb,jobname)')
     Lines.append('')
     
     if isinstance(stepnumber,str):
@@ -292,6 +378,7 @@ def writepyscript(foldername_odb,jobname,folder_save,folder_python,variables,ste
     Lines.append('# Close ODB')
     Lines.append( 'odbfunc.close_odb(odb_id)' )
         
+    # Write py script
     fid=open(folder_save + '\\' + exportscript + '.py', 'w')
     for Lines_sub in Lines:
         fid.write( Lines_sub + '\n')
