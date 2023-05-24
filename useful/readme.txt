@@ -1,0 +1,1 @@
+Plugins placed in C:\Users\USERNAME\abaqus_plugins
