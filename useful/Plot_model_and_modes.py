@@ -93,6 +93,7 @@ viewport_obj.odbDisplay.contourOptions.setValues(spectrum='Blue to red',numInter
 # Set size
 session.pngOptions.setValues(imageSize=png_size_modes)
 
+# Loop over selected modes
 for k in range(len(mode_print)):
 	
 	viewport_obj.odbDisplay.setFrame(step=stepkeys[-1], frame=mode_print[k])
