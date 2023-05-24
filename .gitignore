@@ -17,6 +17,7 @@ develop/
 *.rpy.*
 *.rpy.?
 *.rpy.??
+*.guiState*
 
 # TOML file
 *.toml
