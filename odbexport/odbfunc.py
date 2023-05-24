@@ -44,6 +44,8 @@ def close_odb(odb_id):
 
 def exporthistoryoutput(odb_id,stepnumber,hist_str,AssemblyName=None):
 
+    # Export history outputs
+    
     # Inputs:
     # odb_id: ODB object
     # stepnumber: step number for export, usually -1
@@ -61,6 +63,7 @@ def exporthistoryoutput(odb_id,stepnumber,hist_str,AssemblyName=None):
     
     HistoryOutputKeys=odb_id.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs.keys()
     
+    # If key not found, return zero
     if hist_str not in HistoryOutputKeys:
         OutputVector=np.array([0])
         return OutputVector
@@ -75,6 +78,8 @@ def exporthistoryoutput(odb_id,stepnumber,hist_str,AssemblyName=None):
 
 def exportdisplacement(odb_id,stepnumber,framenumber=None):
 
+    # Export displacement field (U,UR) for a single step and multiple frames
+    
     # Inputs:
     # odb_id: ODB object
     # stepnumber: step number for export, usually -1
@@ -134,6 +139,8 @@ def exportdisplacement(odb_id,stepnumber,framenumber=None):
 
 def exportnodecoord(odb_id,stepnumber,framenumber):
 
+    # Export node coordinates (Node,x,y,z) for a single step and a single frame
+    
     # Inputs:
     # odb_id: ODB object
     # stepnumber: step number for export, usually -1
@@ -169,6 +176,8 @@ def exportnodecoord(odb_id,stepnumber,framenumber):
 
 def exportsectionforce(odb_id,stepnumber,framenumber=None):
 
+    # Export section forces (SF,SM) for a single step and multiple frames
+    
     # Inputs:
     # odb_id: ODB object
     # stepnumber: step number for export, usually -1
@@ -217,10 +226,17 @@ def exportsectionforce(odb_id,stepnumber,framenumber=None):
         SectionForceMatrix[:,z]=Output_SF_temp
         
     SF_ComponentLabels=OutputSF.componentLabels
+    
+    
+    # For SM:
+    # Error in abaqus documentation? States 2 1 3 in odb file, but that is wrong.
+    # >> OutputSM.componentLabels
+    # >> ('SM2', 'SM1', 'SM3')    
+    
+    
+    # Overwrite labels manually:    
     SM_ComponentLabels=('SM1', 'SM2', 'SM3') 
-    # Overwrite: error in abaqus documentation? States 2 1 3 in odb, but that is wrong
-    # OutputSM.componentLabels
-    # ('SM2', 'SM1', 'SM3')    
+    # Important to verify results are reasonable
     
     ElementLabelVectorTemp=[ [str(OutputSFValues[n].elementLabel) + '_' + s  for s in SF_ComponentLabels] + [str(OutputSMValues[n].elementLabel) + '_' + s  for s in SM_ComponentLabels] for n in index_B ]
     ElementLabelVector=[item for sublist in ElementLabelVectorTemp for item in sublist]
@@ -240,6 +256,8 @@ def exportsectionforce(odb_id,stepnumber,framenumber=None):
 
 def exportelconn(odb_id):
 
+    # Export element connectivity (which elements are connected to which nodes)
+    
     # Inputs:
     # odb_id: ODB object
     
@@ -288,6 +306,8 @@ def exportelconn(odb_id):
 #%%
 
 def exportelsets(odb_id):
+
+    # Export element sets
     
     # Inputs:
     # odb_id: ODB object
@@ -321,11 +341,13 @@ def exportelsets(odb_id):
 #%%
 
 def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
+
+    # Save numeric array or string array to txt file
     
     # Inputs:
     # folder_save: string with folder name for export
     # name_save: string with name for export
-    # A_matrix: the quantity to export
+    # A_matrix: the array to export
     # atype: 'string' or 'number' specifies text or numeric data
     # prefix: prefix in front of name_save
     
@@ -337,11 +359,13 @@ def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
 #%%
 
 def save2npy(folder_save,name_save,A_matrix,prefix=''):
+
+    # Save numeric array or string array to npy file
     
     # Inputs:
     # folder_save: string with folder name for export
     # name_save: string with name for export
-    # A_matrix: the quantity to export
+    # A_matrix: the array to export
     # prefix: prefix in front of name_save
     
     np.save((folder_save+'\\'+prefix+name_save), A_matrix)
