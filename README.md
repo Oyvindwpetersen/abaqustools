@@ -1,9 +1,8 @@
 # abaqustools
 
-## Parametric suspension bridge 
-- Generation of abaqus input file
-- Fully generated from geometric and structural parameters
-- Example models provided
+## Input files
+- Generation of abaqus input file from commands
+- Run abaqus analysis
 
 ## ODB export
 - Export data from modal analysis
