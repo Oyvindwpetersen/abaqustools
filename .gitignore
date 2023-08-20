@@ -1,8 +1,6 @@
 
 # Github
 .idea
-.git
-.github*
 .gitignore*
 
 # Python cache
