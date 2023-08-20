@@ -41,17 +41,17 @@ def printerror(jobname,foldername=''):
     # If file dont exist, set empty
     if file_exist_logic==True:
         fid=open(filename, 'r')
-        Lines=fid.read().splitlines()
+        lines=fid.read().splitlines()
         fid.close()
     else:
-        Lines=['']
+        lines=['']
     
     # Search for error, print if found
-    SearchedString=' ***ERROR'
-    IndexError=putools.num.listindexsub(Lines,SearchedString)
+    search_string=' ***ERROR'
+    IndexError=putools.num.listindexsub(lines,search_string)
 
     if len(IndexError)>0:
-        putools.txt.starprint('ABAQUS ERRORS:',1)
+        putools.txt.starprint('FOUND ABAQUS ERRORS:',1)
 
         for k in np.arange(4):
             
@@ -68,37 +68,37 @@ def checkduplicate(inputfilename):
     
     file_exist_logic=os.path.isfile(inputfilename)
     
-    # If msg file dont exist, try dat
+    # Error if input file dont exist
     if file_exist_logic==False:
         print('***** File ' + inputfilename)
         raise Exception('***** File not found')
-        
-        
+    
     fid=open(inputfilename, 'r')
-    InputFileLines=fid.read().splitlines()
+    input_file_lines=fid.read().splitlines()
     fid.close()
 
-    type_list=['*NODE,' , '*ELEMENT,']
+    node_or_element=['*NODE,' , '*ELEMENT,']
 
-    IndexStar=putools.num.listindexsub(InputFileLines,'*')
+    # Index of lines with star, used for finding end of node/element block
+    idx_star=putools.num.listindexsub(input_file_lines,'*')
 
     for index in np.arange(2):
         
         # Find all lines with *NODE or *ELEMENT
-        IndexKeyword=putools.num.listindexsub(InputFileLines,type_list[index])
+        idx_keyword=putools.num.listindexsub(input_file_lines,node_or_element[index])
         
-        numbers_list=[None]*len(IndexKeyword)
+        numbers_list=[None]*len(idx_keyword)
     
         # Find node or element numbers 
-        for k in np.arange(len(IndexKeyword)):
+        for k in np.arange(len(idx_keyword)):
         
-            IndexStarNext=next(x for x in IndexStar if x > IndexKeyword[k])
+            idx_star_next=next(x for x in idx_star if x > idx_keyword[k])
             
-            LineRange=np.arange(IndexKeyword[k]+1,IndexStarNext)
-            InputFileLinesSub = [InputFileLines[i] for i in LineRange]
+            line_range=np.arange(idx_keyword[k]+1,idx_star_next)
+            input_file_lines_sub = [input_file_lines[i] for i in line_range]
             
-            NumericBlock=putools.num.str2num(InputFileLinesSub,'int',1)
-            numbers_list[k]=NumericBlock[:,0]
+            numeric_block=putools.num.str2num(input_file_lines_sub,'int',1)
+            numbers_list[k]=numeric_block[:,0]
             
             #[float(s) for s in example_string.split(',')]
     
@@ -109,7 +109,7 @@ def checkduplicate(inputfilename):
 
         if len(numbers_dup)>0:
             
-            print('***** Duplicate ' + type_list[index] + ' numbers:')
+            print('***** Duplicate ' + node_or_element[index] + ' numbers:')
             print(numbers_dup)
             raise Exception('***** Duplicates not allowed, see above printed numbers')
             
@@ -139,11 +139,13 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
     
     print('***** Running ABAQUS job ' + jobname)
     
+    # Save current folder
     folder_current=os.getcwd()
+    
     # Change to folder where inputfile is
     os.chdir(foldername)
     
-    # Check if lock file exists
+    # If lock file exists, delete
     file_name_lock=foldername + '\\' + jobname + '.lck'
     file_exist_logic=os.path.isfile(file_name_lock)
     if file_exist_logic:
