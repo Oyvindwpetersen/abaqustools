@@ -1,5 +1,14 @@
 function tilepictures(fignames,tile,crop,filename,text,textpos,fontsize)
 
+%% Tile jpg/png figures (e.g. mode plots)
+%
+% Inputs:
+% tile: [nh,nw] tile
+% crop: [1,4] crop in pixels
+% filename: name of saved png file
+% text: cell with text strings
+% textpos: position of text within each subfig
+% fontsize: size of text
 
 %%
 
@@ -14,7 +23,6 @@ end
 if nargin<7
     fontsize=60;
 end
-
     
 k=0;
 for k1=1:tile(1)
