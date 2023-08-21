@@ -212,11 +212,11 @@ def cload(fid,op,nset,dof,magnitude_force,partname=''):
     
 #%%
 
-def comment(fid,comment,logic_main=False):
+def comment(fid,comment_str,logic_main=False):
 
     # Inputs:
     # fid: file identifier
-    # comment: string or list with comments
+    # comment_str: string or list with comments
     # logic_main: many or few stars
 
     if logic_main==True:
@@ -224,11 +224,11 @@ def comment(fid,comment,logic_main=False):
     else:
         separatator='**********'
 
-    if isinstance(comment,str):
-        comment=[comment]
+    if isinstance(comment_str,str):
+        comment_str=[comment_str]
 
     fid.write(separatator + '\n')
-    for comment_sub in comment:
+    for comment_sub in comment_str:
         fid.write('** ' + comment_sub + '\n')
 
     fid.write(separatator + '\n')
@@ -236,7 +236,7 @@ def comment(fid,comment,logic_main=False):
 
 #%%
 
-def Dload(fid,op,elset,type_id,magnitude):
+def dload(fid,op,elset,type_id,magnitude):
 
     # Inputs:
     # fid: file identifier
@@ -915,7 +915,7 @@ def static(fid,time):
 
 #%%
 
-def step(fid,options='',comment=''):
+def step(fid,options='',comment_str=''):
 
     # Inputs:
 
@@ -924,7 +924,7 @@ def step(fid,options='',comment=''):
         comma=''
         options=''
     
-    Comment(fid,comment)
+    comment(fid,comment_str)
     fid.write('*STEP ' + comma + options.upper() + '\n')
     
 #%%
