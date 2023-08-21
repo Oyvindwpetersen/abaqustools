@@ -1,0 +1,482 @@
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:18
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine NTNU08422 
+                          you are authorized to run
+                          Abaqus/Standard until 30-Sep-2023
+
+                          Your site id is: 100000000001981 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2017x                * 
+                *                                                         * 
+                *          BUILD ID: 2016_09_27-23.54.59 126836           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2017x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Node
+  *Element, type=B31
+  *Nset, nset=ASSEMBLY_TRUSS_PART_TRUSS_NODES_BOTTOM
+  *Nset, nset=ASSEMBLY_TRUSS_PART_TRUSS_NODES_TOP
+  *Nset, nset=ASSEMBLY_TRUSS_PART_TRUSS_SUPPORT
+  *Elset, elset=ASSEMBLY_TRUSS_PART_TRUSS_TRUSS_ELEMENTS
+  *beamgeneralsection, elset=ASSEMBLY_TRUSS_PART_TRUSS_TRUSS_ELEMENTS, density=7850, section=GENERAL
+  *beamgeneralsection, elset=ASSEMBLY_TRUSS_PART_TRUSS_TRUSS_ELEMENTS, density=7850, section=GENERAL
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field
+  *output, field
+  *elementoutput
+  *elementoutput
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field
+  *output, field
+  *elementoutput
+  *elementoutput
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field
+  *output, field
+  *elementoutput
+  *elementoutput
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *output, field
+  *output, field
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *Step, name=STEP_MODAL
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *static
+  *dload, op=NEW
+
+ ***NOTE: ALL ELEMENTS THAT HAVE MASS ARE COLLECTED IN ELEMENT SET 
+          _Whole_Model_Gravity_Elset FOR APPLICATION OF GRAVITY LOAD.
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *output, field, frequency=100
+  *nodeoutput
+  *output, field, frequency=100
+  *elementoutput
+  *endstep
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *output, field
+  *nodeoutput
+  *output, field
+  *elementoutput
+  *endstep
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *static
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *endstep
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    15
+          NUMBER OF NODES IS                                       39
+          NUMBER OF NODES DEFINED BY THE USER                       9
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        30
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   54
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   0.0000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          0
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:21
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-03
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-06
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+
+
+                    TOTAL MASS OF MODEL
+
+                       62.58127    
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       10.00000           0.000000           2.343204    
+
+
+                    MOMENTS OF INERTIA ABOUT THE ORIGIN
+                           I(XX)               I(YY)               I(ZZ)
+
+                       734.1741           9057.328           8324.405    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE ORIGIN
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000          -1466.407           0.000000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XX)               I(YY)               I(ZZ)
+
+                       390.5651           2455.592           2066.278    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000         -6.8212103E-13       0.000000    
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         1.97E+004               17                 26
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:22
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    2  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       2     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   N A T U R A L   F R E Q U E N C I E S
+
+
+
+                                                                                          
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                     50
+     HIGHEST FREQUENCY OF INTEREST                  1.00000E+18
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               35
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  7
+     THE EIGENVECTORS ARE SCALED SO THAT 
+      THE LARGEST DISPLACEMENT ENTRY IN EACH VECTOR
+      IS UNITY
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         1.97E+004               16                 25
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ MODE NO      EIGENVALUE              FREQUENCY         GENERALIZED MASS   COMPOSITE MODAL DAMPING            
+                             (RAD/TIME)   (CYCLES/TIME)
+
+
+       1       32830.         181.19         28.838         32.284         0.0000    
+       2      1.10230E+05     332.01         52.841         44.194         0.0000    
+       3      1.86120E+05     431.42         68.662         38.318         0.0000    
+       4      4.19471E+05     647.67         103.08         35.900         0.0000    
+       5      5.45283E+05     738.43         117.53         25.543         0.0000    
+       6      5.65375E+05     751.91         119.67         20.722         0.0000    
+       7      7.35635E+05     857.69         136.51         31.659         0.0000    
+       8      9.60900E+05     980.26         156.01         36.537         0.0000    
+       9      1.15950E+06     1076.8         171.38        0.64058         0.0000    
+      10      1.23346E+06     1110.6         176.76         32.434         0.0000    
+      11      1.40342E+06     1184.7         188.54         26.468         0.0000    
+      12      1.45279E+06     1205.3         191.83         46.057         0.0000    
+      13      1.52571E+06     1235.2         196.59        0.53035         0.0000    
+      14      1.56122E+06     1249.5         198.86        0.63182         0.0000    
+      15      1.56474E+06     1250.9         199.09         39.568         0.0000    
+      16      2.01085E+06     1418.0         225.69         18.293         0.0000    
+      17      2.09261E+06     1446.6         230.23         22.831         0.0000    
+      18      2.27220E+06     1507.4         239.91        0.50551         0.0000    
+      19      2.96655E+06     1722.4         274.12        0.54326         0.0000    
+      20      3.06264E+06     1750.0         278.53        0.34585         0.0000    
+      21      3.68542E+06     1919.7         305.54        0.32637         0.0000    
+      22      4.09995E+06     2024.8         322.26        0.56442         0.0000    
+      23      4.44042E+06     2107.2         335.38        0.55078         0.0000    
+      24      4.54097E+06     2131.0         339.15        0.31968         0.0000    
+      25      5.01288E+06     2238.9         356.34        0.52251         0.0000    
+      26      5.30306E+06     2302.8         366.51        0.36459         0.0000    
+      27      6.47106E+06     2543.8         404.86        0.49037         0.0000    
+      28      6.92014E+06     2630.6         418.68        0.50385         0.0000    
+      29      7.11176E+06     2666.8         424.43        0.24263         0.0000    
+      30      7.34682E+06     2710.5         431.39        0.23251         0.0000    
+      31      8.70047E+06     2949.7         469.45        0.28075         0.0000    
+      32      9.83688E+06     3136.4         499.17        0.40490         0.0000    
+      33      1.05214E+07     3243.7         516.25        0.19418         0.0000    
+      34      1.36650E+07     3696.6         588.33        0.33029         0.0000    
+      35      1.64453E+07     4055.3         645.42        0.38399         0.0000    
+
+
+          P A R T I C I P A T I O N   F A C T O R S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1     -6.60264E-16     0.0000         1.2096        1.72348E-17    -12.096       -9.20275E-19
+       2      0.98537         0.0000        4.47168E-16   -5.18602E-18     1.1815        1.36406E-17
+       3      0.40811         0.0000       -2.20200E-16   -1.76085E-18     6.3757        7.87059E-18
+       4      1.21907E-14     0.0000       -0.29012       -2.36274E-19     2.9012        7.82083E-18
+       5      0.37643         0.0000        1.42436E-14    6.96534E-17    -1.9143        4.83641E-17
+       6     -3.94328E-15     0.0000       -0.31860        8.43278E-17     3.1860       -4.33932E-17
+       7      5.73961E-02     0.0000        1.20914E-14   -1.00208E-16     1.9284        2.61224E-16
+       8      2.01767E-15     0.0000        0.19914       -5.80714E-16    -1.9914        7.52196E-15
+       9     -3.28601E-13     0.0000       -6.66309E-12   -2.97721E-02    7.77529E-11   -3.07153E-11
+      10      0.14863         0.0000        2.11184E-13   -2.30571E-12     2.0495        2.52261E-11
+      11      2.44227E-10     0.0000        8.85341E-02    3.01070E-10   -0.88534        1.41340E-10
+      12     -2.46503E-12     0.0000       -7.15748E-02    9.11543E-12    0.71575        3.71438E-10
+      13      8.60618E-10     0.0000       -2.02152E-10    1.08010E-09    6.64022E-09   -7.05661E-02
+      14     -1.59443E-12     0.0000        7.40884E-12   -7.51566E-02   -5.20336E-11    4.57698E-10
+      15      2.91519E-03     0.0000       -7.37553E-12    3.96534E-11   -8.92559E-02    1.79704E-11
+      16     -0.17091         0.0000         0.0000       -1.16148E-17   -0.16506       -7.63600E-16
+      17     -6.02984E-15     0.0000        2.61957E-02   -4.93920E-15   -0.26196       -2.07494E-15
+      18     -2.38486E-12     0.0000        5.87134E-12    9.15681E-12   -5.04831E-11    4.93535E-03
+      19      1.05747E-12     0.0000       -8.28418E-15   -2.81932E-02    1.29483E-11    2.41115E-13
+      20     -3.52126E-12     0.0000        8.51004E-17   -3.31044E-16   -4.85246E-11    0.41585    
+      21      1.05626E-11     0.0000        7.58731E-16    0.60149        1.45543E-10    1.50313E-14
+      22      4.98847E-11     0.0000        1.22909E-11   -3.40357E-13   -2.70995E-10   -2.70056E-02
+      23     -9.89052E-11     0.0000       -6.97596E-12     1.1061       -5.92388E-11    1.78988E-12
+      24     -5.82761E-11     0.0000       -3.56662E-12   -1.42130E-12   -4.16385E-11   -3.29551E-02
+      25      2.85976E-15     0.0000       -1.38892E-17    0.14677        1.09978E-14    3.10484E-14
+      26      2.38429E-16     0.0000        2.99422E-15   -0.29549       -3.32290E-14    4.51445E-14
+      27     -1.47037E-17     0.0000       -1.91927E-16    2.37900E-16    5.04122E-15   -1.89714E-02
+      28      1.54413E-14     0.0000        3.24926E-16    2.51336E-16    1.23648E-14     1.1996    
+      29     -5.25326E-02     0.0000       -2.37103E-15    5.82283E-15   -0.39571        5.90001E-12
+      30     -5.03507E-12     0.0000        3.30780E-02   -1.16920E-13   -0.33078        1.45210E-11
+      31      1.40520E-09     0.0000        4.71621E-02    3.38510E-11   -0.47162       -2.86047E-12
+      32      2.03122E-02     0.0000       -8.27676E-10    1.44025E-10   -0.32877       -3.60034E-11
+      33      4.33253E-02     0.0000       -5.84273E-10    9.48125E-10    0.11493       -6.41523E-10
+      34      2.59266E-07     0.0000        3.82559E-02    5.76004E-09   -0.38256       -3.92338E-09
+      35     -1.00246E-02     0.0000       -1.13834E-07    2.76097E-08    0.15493       -1.76432E-08
+
+
+                    E F F E C T I V E   M A S S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1      1.40744E-29     0.0000         47.233        9.58973E-33     4723.3        2.73419E-35
+       2       42.910         0.0000        8.83692E-30    1.18858E-33     61.690        8.22288E-33
+       3       6.3822         0.0000        1.85798E-30    1.18810E-34     1557.6        2.37368E-33
+       4      5.33526E-27     0.0000         3.0217        2.00414E-36     302.17        2.19586E-33
+       5       3.6194         0.0000        5.18211E-27    1.23923E-31     93.605        5.97466E-32
+       6      3.22215E-28     0.0000         2.1034        1.47357E-31     210.34        3.90187E-32
+       7      0.10430         0.0000        4.62866E-27    3.17911E-31     117.73        2.16035E-30
+       8      1.48740E-28     0.0000         1.4489        1.23212E-29     144.89        2.06724E-27
+       9      6.91689E-26     0.0000        2.84397E-23    5.67796E-04    3.87263E-21    6.04344E-22
+      10      0.71649         0.0000        1.44653E-24    1.72431E-22     136.24        2.06398E-20
+      11      1.57871E-18     0.0000        0.20746        2.39911E-18     20.746        5.28740E-19
+      12      2.79859E-22     0.0000        0.23595        3.82692E-21     23.595        6.35429E-18
+      13      3.92812E-19     0.0000        2.16730E-20    6.18714E-19    2.33845E-17    2.64092E-03
+      14      1.60621E-24     0.0000        3.46809E-23    3.56882E-03    1.71064E-21    1.32358E-19
+      15      3.36259E-04     0.0000        2.15243E-21    6.22163E-20    0.31522        1.27779E-20
+      16      0.53432         0.0000         0.0000        2.46774E-33    0.49836        1.06662E-29
+      17      8.30114E-28     0.0000        1.56670E-02    5.56980E-28     1.5667        9.82958E-29
+      18      2.87511E-24     0.0000        1.74263E-23    4.23856E-23    1.28832E-21    1.23131E-05
+      19      6.07502E-25     0.0000        3.72828E-29    4.31815E-04    9.10828E-23    3.15835E-26
+      20      4.28829E-24     0.0000        2.50467E-33    3.79018E-32    8.14352E-22    5.98085E-02
+      21      3.64131E-23     0.0000        1.87884E-31    0.11808        6.91347E-21    7.37405E-29
+      22      1.40454E-21     0.0000        8.52641E-23    6.53837E-26    4.14497E-20    4.11631E-04
+      23      5.38788E-21     0.0000        2.68033E-23    0.67388        1.93283E-21    1.76453E-24
+      24      1.08566E-21     0.0000        4.06656E-24    6.45781E-25    5.54247E-22    3.47184E-04
+      25      4.27320E-30     0.0000        1.00798E-34    1.12557E-02    6.31985E-29    5.03703E-28
+      26      2.07261E-32     0.0000        3.26864E-30    3.18333E-02    4.02564E-28    7.43036E-28
+      27      1.06018E-34     0.0000        1.80634E-32    2.77535E-32    1.24623E-29    1.76492E-04
+      28      1.20135E-28     0.0000        5.31946E-32    3.18279E-32    7.70318E-29    0.72503    
+      29      6.69576E-04     0.0000        1.36400E-30    8.22639E-30    3.79922E-02    8.44591E-24
+      30      5.89448E-24     0.0000        2.54396E-04    3.17841E-27    2.54396E-02    4.90259E-23
+      31      5.54369E-19     0.0000        6.24465E-04    3.21710E-22    6.24465E-02    2.29718E-24
+      32      1.67057E-04     0.0000        2.77379E-19    8.39901E-21    4.37672E-02    5.24855E-22
+      33      3.64500E-04     0.0000        6.62896E-20    1.74560E-19    2.56492E-03    7.99168E-20
+      34      2.22018E-14     0.0000        4.83385E-04    1.09584E-17    4.83384E-02    5.08413E-18
+      35      3.85880E-05     0.0000        4.97578E-15    2.92710E-16    9.21696E-03    1.19527E-16
+
+ TOTAL         54.268         0.0000         54.268        0.83962         7394.6        0.78842    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE MSG FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   3.4000    
+       SYSTEM TIME (SEC)    =  0.60000    
+       TOTAL CPU TIME (SEC) =   4.0000    
+       WALLCLOCK TIME (SEC) =          4

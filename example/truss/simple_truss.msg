@@ -1,0 +1,1247 @@
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:21
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                 
+                                                                                 
+ STEP    1     INCREMENT     1     STEP TIME    0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-03
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-06
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+ CONVERGENCE TOLERANCE PARAMETERS FOR FORCE    
+     CRITERION FOR RESIDUAL FORCE     FOR A NONLINEAR PROBLEM          5.000E-03
+     CRITERION FOR DISP.    CORRECTION IN A NONLINEAR PROBLEM          1.000E-02
+     INITIAL VALUE OF TIME AVERAGE FORCE                               1.000E-02
+     AVERAGE FORCE     IS TIME AVERAGE FORCE    
+     ALTERNATE CRIT. FOR RESIDUAL FORCE     FOR A NONLINEAR PROBLEM    2.000E-02
+     CRITERION FOR ZERO FORCE     RELATIVE TO TIME AVRG. FORCE         1.000E-05
+     CRITERION FOR RESIDUAL FORCE     WHEN THERE IS ZERO FLUX          1.000E-05
+     CRITERION FOR DISP.    CORRECTION WHEN THERE IS ZERO FLUX         1.000E-03
+     CRITERION FOR RESIDUAL FORCE     FOR A LINEAR INCREMENT           1.000E-08
+     FIELD CONVERSION RATIO                                             1.00    
+     CRITERION FOR ZERO FORCE     REL. TO TIME AVRG. MAX. FORCE        1.000E-05
+     CRITERION FOR ZERO DISP.    RELATIVE TO CHARACTERISTIC LENGTH     1.000E-08
+
+ CONVERGENCE TOLERANCE PARAMETERS FOR MOMENT   
+     CRITERION FOR RESIDUAL MOMENT    FOR A NONLINEAR PROBLEM          5.000E-03
+     CRITERION FOR ROTATION CORRECTION IN A NONLINEAR PROBLEM          1.000E-02
+     INITIAL VALUE OF TIME AVERAGE MOMENT                              1.000E-02
+     AVERAGE MOMENT    IS TIME AVERAGE MOMENT   
+     ALTERNATE CRIT. FOR RESIDUAL MOMENT    FOR A NONLINEAR PROBLEM    2.000E-02
+     CRITERION FOR ZERO MOMENT    RELATIVE TO TIME AVRG. MOMENT        1.000E-05
+     CRITERION FOR RESIDUAL MOMENT    WHEN THERE IS ZERO FLUX          1.000E-05
+     CRITERION FOR ROTATION CORRECTION WHEN THERE IS ZERO FLUX         1.000E-03
+     CRITERION FOR RESIDUAL MOMENT    FOR A LINEAR INCREMENT           1.000E-08
+     FIELD CONVERSION RATIO                                             1.00    
+     CRITERION FOR ZERO MOMENT    REL. TO TIME AVRG. MAX. MOMENT       1.000E-05
+
+     VOLUMETRIC STRAIN COMPATIBILITY TOLERANCE FOR HYBRID SOLIDS       1.000E-05
+     AXIAL STRAIN COMPATIBILITY TOLERANCE FOR HYBRID BEAMS             1.000E-05
+     TRANS. SHEAR STRAIN COMPATIBILITY TOLERANCE FOR HYBRID BEAMS      1.000E-05
+     SOFT CONTACT CONSTRAINT COMPATIBILITY TOLERANCE FOR P>P0          5.000E-03
+     SOFT CONTACT CONSTRAINT COMPATIBILITY TOLERANCE FOR P=0.0         0.100    
+     CONTACT FORCE ERROR TOLERANCE FOR CONVERT SDI=YES                 1.00    
+     DISPLACEMENT COMPATIBILITY TOLERANCE FOR DCOUP ELEMENTS           1.000E-05
+     ROTATION COMPATIBILITY TOLERANCE FOR DCOUP ELEMENTS               1.000E-05
+
+ EQUILIBRIUM WILL BE CHECKED FOR SEVERE DISCONTINUITY ITERATIONS
+
+ TIME INCREMENTATION CONTROL PARAMETERS:
+     FIRST EQUILIBRIUM ITERATION FOR CONSECUTIVE DIVERGENCE CHECK              4
+     EQUILIBRIUM ITERATION AT WHICH LOG. CONVERGENCE RATE CHECK BEGINS         8
+     EQUILIBRIUM ITERATION AFTER WHICH ALTERNATE RESIDUAL IS USED              9
+     MAXIMUM EQUILIBRIUM ITERATIONS ALLOWED                                   16
+     EQUILIBRIUM ITERATION COUNT FOR CUT-BACK IN NEXT INCREMENT               10
+     MAXIMUM EQUILIB. ITERS IN TWO INCREMENTS FOR TIME INCREMENT INCREASE      4
+     MAXIMUM ITERATIONS FOR SEVERE DISCONTINUITIES                            50
+     MAXIMUM ATTEMPTS ALLOWED IN AN INCREMENT                                  5
+     MAXIMUM DISCON. ITERS IN TWO INCREMENTS FOR TIME INCREMENT INCREASE      50
+     MAXIMUM CONTACT AUGMENTATIONS FOR *SURFACE BEHAVIOR,AUGMENTED LAGRANGE   50
+     CUT-BACK FACTOR AFTER DIVERGENCE                                 0.2500    
+     CUT-BACK FACTOR FOR TOO SLOW CONVERGENCE                         0.5000    
+     CUT-BACK FACTOR AFTER TOO MANY EQUILIBRIUM ITERATIONS            0.7500    
+     CUT-BACK FACTOR AFTER TOO MANY SEVERE DISCONTINUITY ITERATIONS   0.2500    
+     CUT-BACK FACTOR AFTER PROBLEMS IN ELEMENT ASSEMBLY               0.2500    
+     INCREASE FACTOR AFTER TWO INCREMENTS THAT CONVERGE QUICKLY        1.500    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED                       1.500    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED (DYNAMICS)            1.250    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED (DIFFUSION)           2.000    
+     MINIMUM TIME INCREMENT RATIO FOR EXTRAPOLATION TO OCCUR          0.1000    
+     MAX. RATIO OF TIME INCREMENT TO STABILITY LIMIT                   1.000    
+     FRACTION OF STABILITY LIMIT FOR NEW TIME INCREMENT               0.9500    
+     TIME INCREMENT INCREASE FACTOR BEFORE A TIME POINT                1.000    
+     GLOBAL STABILIZATION CONTROL IS NOT USED
+
+          PRINT OF INCREMENT NUMBER, TIME, ETC., EVERY    1  INCREMENTS
+
+     THE MAXIMUM NUMBER OF INCREMENTS IN THIS STEP IS                     100
+
+     LINEAR EXTRAPOLATION WILL BE USED
+
+     CHARACTERISTIC ELEMENT LENGTH      5.31    
+
+     DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
+
+     DETAILED OUTPUT OF DIAGNOSTICS TO DATABASE REQUESTED
+
+     PRINT OF INCREMENT NUMBER, TIME, ETC., TO THE MESSAGE FILE EVERY     1  INCREMENTS
+
+     ELEMENT OPERATIONS WILL BE CARRIED OUT IN PARALLEL USING   4 PROCESSORS
+
+     PARALLEL CONTACT TRACKING ENABLED
+
+
+     COLLECTING MODEL CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
+
+     COLLECTING STEP CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
+  
+     ASYNCHRONOUS OUTPUT DATABASE FRAME FLUSH STARTED
+  
+
+
+  INCREMENT     1 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-03
+ 
+     INITIAL ELEMENT LOAD BALANCE
+        COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
+                              1            3
+                              2            3
+                              3            3
+                              4            6
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      2.431E-02   TIME AVG. FORCE       2.431E-02
+ LARGEST RESIDUAL FORCE             4.510E-16   AT NODE         12   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -3.551E-07   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -3.551E-07   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.301E-03   TIME AVG. MOMENT      1.301E-03
+ LARGEST RESIDUAL MOMENT            8.023E-18   AT NODE          3   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      3.878E-08   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     3.878E-08   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-03,  FRACTION OF STEP COMPLETED  1.000E-03
+ STEP TIME COMPLETED       1.000E-03,  TOTAL TIME COMPLETED        1.000E-03
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.149       TIME AVG. FORCE       8.674E-02
+ LARGEST RESIDUAL FORCE            -3.331E-16   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -3.551E-07   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        1.595E-21   AT NODE         12   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     7.808E-03   TIME AVG. MOMENT      4.555E-03
+ LARGEST RESIDUAL MOMENT           -7.373E-18   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -3.878E-08   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -2.173E-22   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    1.500E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-03,  FRACTION OF STEP COMPLETED  2.000E-03
+ STEP TIME COMPLETED       2.000E-03,  TOTAL TIME COMPLETED        2.000E-03
+
+
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.500E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.261       TIME AVG. FORCE       0.145    
+ LARGEST RESIDUAL FORCE             4.441E-16   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -5.326E-07   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -1.025E-21   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     1.366E-02   TIME AVG. MOMENT      7.591E-03
+ LARGEST RESIDUAL MOMENT            1.561E-17   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -5.817E-08   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     1.694E-22   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    2.250E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.500E-03,  FRACTION OF STEP COMPLETED  3.500E-03
+ STEP TIME COMPLETED       3.500E-03,  TOTAL TIME COMPLETED        3.500E-03
+
+
+  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.250E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.429       TIME AVG. FORCE       0.216    
+ LARGEST RESIDUAL FORCE            -6.661E-16   AT NODE         12   DOF  1
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -7.989E-07   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        6.153E-22   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     2.245E-02   TIME AVG. MOMENT      1.131E-02
+ LARGEST RESIDUAL MOMENT           -4.163E-17   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      8.725E-08   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     1.018E-22   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    3.375E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.250E-03,  FRACTION OF STEP COMPLETED  5.750E-03
+ STEP TIME COMPLETED       5.750E-03,  TOTAL TIME COMPLETED        5.750E-03
+
+
+  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.375E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.681       TIME AVG. FORCE       0.309    
+ LARGEST RESIDUAL FORCE            -9.992E-16   AT NODE         13   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -1.198E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -1.170E-21   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     3.562E-02   TIME AVG. MOMENT      1.617E-02
+ LARGEST RESIDUAL MOMENT           -5.031E-17   AT NODE         12   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -1.309E-07   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -2.250E-22   AT NODE         14   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    5.063E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.375E-03,  FRACTION OF STEP COMPLETED  9.125E-03
+ STEP TIME COMPLETED       9.125E-03,  TOTAL TIME COMPLETED        9.125E-03
+
+
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.063E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       1.06       TIME AVG. FORCE       0.434    
+ LARGEST RESIDUAL FORCE             2.220E-15   AT NODE          2   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -1.798E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -2.028E-21   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     5.539E-02   TIME AVG. MOMENT      2.270E-02
+ LARGEST RESIDUAL MOMENT            1.596E-16   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      1.963E-07   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     2.709E-22   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    7.594E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.063E-03,  FRACTION OF STEP COMPLETED  1.419E-02
+ STEP TIME COMPLETED       1.419E-02,  TOTAL TIME COMPLETED        1.419E-02
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.594E-03
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       1.62       TIME AVG. FORCE       0.604    
+ LARGEST RESIDUAL FORCE            -2.665E-15   AT NODE         11   DOF  1
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -2.696E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        2.630E-21   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     8.503E-02   TIME AVG. MOMENT      3.161E-02
+ LARGEST RESIDUAL MOMENT           -1.388E-16   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      2.945E-07   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     3.245E-22   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    1.139E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.594E-03,  FRACTION OF STEP COMPLETED  2.178E-02
+ STEP TIME COMPLETED       2.178E-02,  TOTAL TIME COMPLETED        2.178E-02
+
+
+  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.139E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       2.47       TIME AVG. FORCE       0.838    
+ LARGEST RESIDUAL FORCE            -4.441E-15   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -4.045E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -1.911E-21   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     0.129       TIME AVG. MOMENT      4.385E-02
+ LARGEST RESIDUAL MOMENT           -3.608E-16   AT NODE         12   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -4.417E-07   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -2.496E-22   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    1.709E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.139E-02,  FRACTION OF STEP COMPLETED  3.317E-02
+ STEP TIME COMPLETED       3.317E-02,  TOTAL TIME COMPLETED        3.317E-02
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.709E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       3.75       TIME AVG. FORCE        1.16    
+ LARGEST RESIDUAL FORCE             4.330E-15   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -6.067E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        4.871E-21   AT NODE         13   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     0.196       TIME AVG. MOMENT      6.077E-02
+ LARGEST RESIDUAL MOMENT            5.343E-16   AT NODE         12   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      6.626E-07   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     8.579E-22   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    2.563E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.709E-02,  FRACTION OF STEP COMPLETED  5.026E-02
+ STEP TIME COMPLETED       5.026E-02,  TOTAL TIME COMPLETED        5.026E-02
+
+
+  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.563E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       5.66       TIME AVG. FORCE        1.61    
+ LARGEST RESIDUAL FORCE            -7.105E-15   AT NODE         14   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -9.100E-06   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        8.556E-21   AT NODE          2   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     0.296       TIME AVG. MOMENT      8.432E-02
+ LARGEST RESIDUAL MOMENT            6.106E-16   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -9.939E-07   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -1.482E-21   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    3.844E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.563E-02,  FRACTION OF STEP COMPLETED  7.589E-02
+ STEP TIME COMPLETED       7.589E-02,  TOTAL TIME COMPLETED        7.589E-02
+
+
+  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.844E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       8.53       TIME AVG. FORCE        2.24    
+ LARGEST RESIDUAL FORCE            -1.776E-14   AT NODE         12   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -1.365E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        7.923E-21   AT NODE         11   DOF  1
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     0.446       TIME AVG. MOMENT      0.117    
+ LARGEST RESIDUAL MOMENT            1.082E-15   AT NODE         12   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      1.491E-06   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     2.071E-21   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    5.767E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.844E-02,  FRACTION OF STEP COMPLETED  0.114    
+ STEP TIME COMPLETED       0.114    ,  TOTAL TIME COMPLETED        0.114    
+
+
+  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.767E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       12.8       TIME AVG. FORCE        3.12    
+ LARGEST RESIDUAL FORCE             2.132E-14   AT NODE         11   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -2.048E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -1.029E-20   AT NODE         12   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                     0.671       TIME AVG. MOMENT      0.163    
+ LARGEST RESIDUAL MOMENT           -1.055E-15   AT NODE          3   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      2.236E-06   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -2.387E-21   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    8.650E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.767E-02,  FRACTION OF STEP COMPLETED  0.172    
+ STEP TIME COMPLETED       0.172    ,  TOTAL TIME COMPLETED        0.172    
+
+
+  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.650E-02
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       19.3       TIME AVG. FORCE        4.37    
+ LARGEST RESIDUAL FORCE             2.842E-14   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -3.071E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        1.999E-20   AT NODE         12   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                      1.01       TIME AVG. MOMENT      0.228    
+ LARGEST RESIDUAL MOMENT           -1.998E-15   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      3.354E-06   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     5.264E-21   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    0.130    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.650E-02,  FRACTION OF STEP COMPLETED  0.258    
+ STEP TIME COMPLETED       0.258    ,  TOTAL TIME COMPLETED        0.258    
+
+
+  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.130    
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       29.0       TIME AVG. FORCE        6.12    
+ LARGEST RESIDUAL FORCE             7.105E-14   AT NODE         13   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -4.607E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -1.821E-20   AT NODE         13   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                      1.52       TIME AVG. MOMENT      0.320    
+ LARGEST RESIDUAL MOMENT            2.887E-15   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -5.031E-06   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -7.878E-21   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    0.195    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.130    ,  FRACTION OF STEP COMPLETED  0.388    
+ STEP TIME COMPLETED       0.388    ,  TOTAL TIME COMPLETED        0.388    
+
+
+  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.195    
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       43.5       TIME AVG. FORCE        8.61    
+ LARGEST RESIDUAL FORCE            -7.105E-14   AT NODE         11   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -6.911E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -3.584E-20   AT NODE          4   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                      2.28       TIME AVG. MOMENT      0.451    
+ LARGEST RESIDUAL MOMENT           -2.665E-15   AT NODE         11   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      7.547E-06   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     7.949E-21   AT NODE         13   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          TIME INCREMENT MAY NOW INCREASE TO    0.292    
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.195    ,  FRACTION OF STEP COMPLETED  0.583    
+ STEP TIME COMPLETED       0.583    ,  TOTAL TIME COMPLETED        0.583    
+
+
+  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.292    
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       65.2       TIME AVG. FORCE        12.2    
+ LARGEST RESIDUAL FORCE            -8.882E-14   AT NODE         13   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -1.037E-04   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.       -3.727E-20   AT NODE         11   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                      3.42       TIME AVG. MOMENT      0.636    
+ LARGEST RESIDUAL MOMENT            7.994E-15   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION     -1.132E-05   AT NODE          4   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION    -1.500E-20   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.292    ,  FRACTION OF STEP COMPLETED  0.875    
+ STEP TIME COMPLETED       0.875    ,  TOTAL TIME COMPLETED        0.875    
+
+
+  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.125    
+
+  NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
+
+  USING THE DIRECT SOLVER WITH   4 PROCESSORS
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.6       TIME AVG. FORCE        15.8    
+ LARGEST RESIDUAL FORCE            -1.137E-13   AT NODE         13   DOF  1
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF DISP.        -4.446E-05   AT NODE          3   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO DISP.        8.089E-20   AT NODE          2   DOF  3
+   INSTANCE: PART_TRUSS                                                                      
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE MOMENT                      3.90       TIME AVG. MOMENT      0.828    
+ LARGEST RESIDUAL MOMENT           -7.994E-15   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST INCREMENT OF ROTATION      4.856E-06   AT NODE          2   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+ LARGEST CORRECTION TO ROTATION     1.245E-20   AT NODE         14   DOF  5
+   INSTANCE: PART_TRUSS                                                                      
+          THE MOMENT    EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.125    ,  FRACTION OF STEP COMPLETED   1.00    
+ STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:22
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                 
+                                                                                 
+ STEP    2     INCREMENT     1     STEP TIME    0.00    
+
+
+                        S T E P       2     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   N A T U R A L   F R E Q U E N C I E S
+
+
+
+                                                                                          
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                     50
+     HIGHEST FREQUENCY OF INTEREST                  1.00000E+18
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               35
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  7
+     THE EIGENVECTORS ARE SCALED SO THAT 
+      THE LARGEST DISPLACEMENT ENTRY IN EACH VECTOR
+      IS UNITY
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+
+     EXTRAPOLATION WILL NOT BE USED
+
+     CHARACTERISTIC ELEMENT LENGTH      5.31    
+
+     DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
+
+     DETAILED OUTPUT OF DIAGNOSTICS TO DATABASE REQUESTED
+
+     PRINT OF INCREMENT NUMBER, TIME, ETC., TO THE MESSAGE FILE EVERY     1  INCREMENTS
+
+ ***NOTE: SHARED MEMORY EXECUTION OF THE ELEMENT CALCULATIONS HAS BEEN TURNED 
+          OFF DUE TO THE FOLLOWING FEATURE: SIM ARCHITECTURE IS NOT ACTIVE
+
+     ELEMENT OPERATIONS WILL NOT BE CARRIED OUT IN PARALLEL
+
+     COLLECTING STEP CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
+
+     CHECK POINT   START OF SOLVER    
+  
+ COMPUTER PRECISION USED BY ABAQUS      2.22045e-016
+ CONVERGENCE CRITERION FOR LANCZOS RUN  1.81899e-012
+  
+ NUMBER OF EQUATIONS                                                          54
+
+ ***WARNING: ONLY 35 EIGENMODES WILL BE EXTRACTED BECAUSE THERE ARE NO MORE 
+             UNRESTRAINED DEGREES OF FREEDOM
+  
+ NUMBER OF UNRESTRAINED DEGREES OF FREEDOM                                    35
+ HEURISTIC SCALE FOR THE FIRST NONZERO EIGENVALUES (PROBLEM SCALE)  9.31046e+002
+ INITIAL SHIFT VALUE                                                0.00000e+000
+  
+ NUMBER OF CPUS USED BY DIRECT SOLVER     4
+  
+ NUMBER OF NEGATIVE EIGENVALUES     0
+ NUMBER OF POSITIVE EIGENVALUES    54
+ NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS     0
+ NUMBER OF LAGRANGE MULTIPLIERS     0
+  
+ BLOCK SIZE WAS REDUCED. NEW BLOCK SIZE     2
+  
+ COMPUTATIONAL INTERVAL FOR THE INITIAL LANCZOS RUN
+ 
+ EIGENVALUES NEEDED TO THE RIGHT OF SHIFT VALUE   35
+ EIGENVALUES NEEDED TO THE LEFT OF SHIFT VALUE     0
+ RIGHT BOUNDARY OF THE COMPUTATIONAL INTERVAL  3.95574e+037
+ LEFT BOUNDARY OF THE COMPUTATIONAL INTERVAL  -3.95574e+037
+  
+ LANCZOS RUN TERMINATED. NUMBER OF STEPS:   17
+ SINGULAR BLOCK BETA
+  
+ NUMBER OF ACCEPTED EIGENVALUES   10
+  
+ ACCEPTED EIGENVALUES
+  3.28305e+004 1.10230e+005 1.86120e+005 4.19471e+005 5.45283e+005 5.65375e+005
+  7.35635e+005 9.60900e+005 1.15950e+006 1.23346e+006
+  
+ FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
+  
+ TRUST INTERVALS AFTER LANCZOS RUN AND COMPRESSION
+  
+ NUMBER OF TRUST INTERVALS    1
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |      0 |        0        0 |     0     0 |     0     0 |      0    35       |
+ |-3.95574e+037 0.00000e+000 |-3.95574e+037 0.00000e+000 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+  
+ DATA FOR CHOOSING SHIFT
+  
+ NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL   35
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT   10
+ SHIFT RIGHT        3.37408e+006
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE LEFT     0
+ SHIFT LEFT         0.00000e+000
+  
+ SHIFTING TO THE RIGHT DIRECTION
+ NEW SHIFT          3.37408e+006
+  
+ NUMBER OF NEGATIVE EIGENVALUES    20
+ NUMBER OF POSITIVE EIGENVALUES    34
+ NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS    20
+ NUMBER OF LAGRANGE MULTIPLIERS     0
+  
+ NEW LANCZOS RUN IS REQUIRED
+  
+ TYPE OF RUN: EXPAND THE TRUST INTERVAL TO THE RIGHT
+ EIGENVALUES NEEDED TO THE RIGHT    15
+ EIGENVALUES NEEDED TO THE LEFT     10
+ RIGHT BOUNDARY OF THE INTERVAL  3.95574e+037
+ LEFT BOUNDARY OF THE INTERVAL   1.23346e+006
+  
+ TRUST INTERVALS AFTER FACTORIZATION AND COMPRESSION
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |      0 |        0        0 |     0    10 |     0    10 |      0    35       |
+ |-3.95574e+037 0.00000e+000 |-3.95574e+037 1.23346e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ |  -  |      0 |       20       20 |     0     0 |     0     0 |     10    15       |
+ | 3.37408e+006 3.37408e+006 | 3.37408e+006 3.37408e+006 | 1.23346e+006 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+  
+ LANCZOS RUN TERMINATED. NUMBER OF STEPS:   12
+ SINGULAR BLOCK BETA
+  
+ NUMBER OF ACCEPTED EIGENVALUES   14
+  
+ ACCEPTED EIGENVALUES
+  3.28305e+004 1.10230e+005 1.86120e+005 4.19471e+005 5.45283e+005 5.65375e+005
+  7.35635e+005 9.60900e+005 1.15950e+006 1.23346e+006 2.96655e+006 3.06264e+006
+  3.68542e+006 4.09995e+006
+  
+ FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
+  
+ TRUST INTERVALS AFTER LANCZOS RUN AND COMPRESSION
+  
+ NUMBER OF TRUST INTERVALS    2
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |      0 |        0        0 |     0    10 |     0    10 |      0    35       |
+ |-3.95574e+037 0.00000e+000 |-3.95574e+037 1.23346e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ |  -  |      0 |       20       20 |     0     0 |     0     0 |     10    15       |
+ | 3.37408e+006 3.37408e+006 | 3.37408e+006 3.37408e+006 | 1.23346e+006 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+  
+ DATA FOR CHOOSING SHIFT
+  
+ NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL   35
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT    2
+ SHIFT RIGHT        5.82866e+006
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE LEFT     2
+ SHIFT LEFT         9.19498e+005
+  
+ SHIFT IS DETERMINED IN ORDER TO CLOSE GAP BETWEEN TRUST INTERVALS
+ NEW SHIFT          1.91288e+006
+  
+ NUMBER OF NEGATIVE EIGENVALUES    15
+ NUMBER OF POSITIVE EIGENVALUES    39
+ NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS    15
+ NUMBER OF LAGRANGE MULTIPLIERS     0
+  
+ NEW LANCZOS RUN IS REQUIRED
+  
+ TYPE OF RUN: FILLING GAPS
+ EIGENVALUES NEEDED TO THE RIGHT     3
+ EIGENVALUES NEEDED TO THE LEFT      5
+ RIGHT BOUNDARY OF THE INTERVAL  2.96655e+006
+ LEFT BOUNDARY OF THE INTERVAL   1.23346e+006
+  
+ TRUST INTERVALS AFTER FACTORIZATION AND COMPRESSION
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |      0 |        0        0 |     0    10 |     0    10 |      0    35       |
+ |-3.95574e+037 0.00000e+000 |-3.95574e+037 1.23346e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ |  -  |      0 |       20       20 |     2     2 |     2     2 |     10    15       |
+ | 3.37408e+006 3.37408e+006 | 2.96655e+006 4.09995e+006 | 1.23346e+006 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ |  -  |      0 |       15       15 |     0     0 |     0     0 |      5     3       |
+ | 1.91288e+006 1.91288e+006 | 1.91288e+006 1.91288e+006 | 1.23346e+006 2.96655e+006 |
+ -------------------------------------------------------------------------------------
+  
+ LANCZOS RUN TERMINATED. NUMBER OF STEPS:    9
+ ALL THE EIGENVALUES REQUESTED ON THIS LANCZOS RUN ARE FOUND
+  
+ NUMBER OF ACCEPTED EIGENVALUES   22
+  
+ ACCEPTED EIGENVALUES
+  3.28305e+004 1.10230e+005 1.86120e+005 4.19471e+005 5.45283e+005 5.65375e+005
+  7.35635e+005 9.60900e+005 1.15950e+006 1.23346e+006 1.40342e+006 1.45279e+006
+  1.52571e+006 1.56122e+006 1.56474e+006 2.01085e+006 2.09261e+006 2.27220e+006
+  2.96655e+006 3.06264e+006 3.68542e+006 4.09995e+006
+  
+ FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
+  
+ TRUST INTERVALS AFTER LANCZOS RUN AND COMPRESSION
+  
+ NUMBER OF TRUST INTERVALS    1
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |     20 |        0       20 |     0     2 |     0     2 |      0    15       |
+ |-3.95574e+037 3.37408e+006 |-3.95574e+037 4.09995e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ SENTINEL WAS NOT INCLUDED INTO THE TRUST INTERVAL LIST. SHIFT  1.91288e+006
+  
+ DATA FOR CHOOSING SHIFT
+  
+ NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL   15
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT    3
+ SHIFT RIGHT        4.36746e+006
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE LEFT     5
+ SHIFT LEFT        -5.41700e+005
+  
+ SHIFTING TO THE RIGHT DIRECTION
+ NEW SHIFT          5.82866e+006
+  
+ NUMBER OF NEGATIVE EIGENVALUES    26
+ NUMBER OF POSITIVE EIGENVALUES    28
+ NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS    26
+ NUMBER OF LAGRANGE MULTIPLIERS     0
+  
+ NEW LANCZOS RUN IS REQUIRED
+  
+ TYPE OF RUN: EXPAND THE TRUST INTERVAL TO THE RIGHT
+ EIGENVALUES NEEDED TO THE RIGHT     9
+ EIGENVALUES NEEDED TO THE LEFT      4
+ RIGHT BOUNDARY OF THE INTERVAL  3.95574e+037
+ LEFT BOUNDARY OF THE INTERVAL   4.09995e+006
+  
+ TRUST INTERVALS AFTER FACTORIZATION AND COMPRESSION
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |     20 |        0       20 |     0     2 |     0     2 |      0    15       |
+ |-3.95574e+037 3.37408e+006 |-3.95574e+037 4.09995e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+ |  -  |      0 |       26       26 |     0     0 |     0     0 |      4     9       |
+ | 5.82866e+006 5.82866e+006 | 5.82866e+006 5.82866e+006 | 4.09995e+006 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+  
+ LANCZOS RUN TERMINATED. NUMBER OF STEPS:   15
+ ALL THE EIGENVALUES REQUESTED ON THIS LANCZOS RUN ARE FOUND
+  
+ NUMBER OF ACCEPTED EIGENVALUES   35
+  
+ ACCEPTED EIGENVALUES
+  3.28305e+004 1.10230e+005 1.86120e+005 4.19471e+005 5.45283e+005 5.65375e+005
+  7.35635e+005 9.60900e+005 1.15950e+006 1.23346e+006 1.40342e+006 1.45279e+006
+  1.52571e+006 1.56122e+006 1.56474e+006 2.01085e+006 2.09261e+006 2.27220e+006
+  2.96655e+006 3.06264e+006 3.68542e+006 4.09995e+006 4.44042e+006 4.54097e+006
+  5.01288e+006 5.30306e+006 6.47106e+006 6.92014e+006 7.11176e+006 7.34682e+006
+  8.70047e+006 9.83688e+006 1.05214e+007 1.36650e+007 1.64453e+007
+  
+ FACTORIZATION WITH NEW SHIFT VALUE IS REQUIRED
+  
+ TRUST INTERVALS AFTER LANCZOS RUN AND COMPRESSION
+  
+ NUMBER OF TRUST INTERVALS    1
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |     26 |        0       26 |     0     0 |     0     0 |      0     9       |
+ |-3.95574e+037 5.82866e+006 |-3.95574e+037 5.82866e+006 |-3.95574e+037 3.95574e+037 |
+ -------------------------------------------------------------------------------------
+  
+ DATA FOR CHOOSING SHIFT
+  
+ NUMBER OF EIGENVALUES NEEDED IN THE PRIMARY TRUST INTERVAL    9
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE RIGHT    9
+ SHIFT RIGHT        2.69558e+007
+  
+ NUMBER OF MODES FORMING SENTINEL TO THE LEFT     4
+ SHIFT LEFT         3.06606e+006
+  
+ SHIFTING TO THE RIGHT DIRECTION
+ NEW SHIFT          2.69558e+007
+  
+ NUMBER OF NEGATIVE EIGENVALUES    35
+ NUMBER OF POSITIVE EIGENVALUES    19
+ NUMBER OF NEGATIVE EIGENVALUES NOT ASSOCIATED WITH LAGRANGE MULTIPLIERS    35
+ NUMBER OF LAGRANGE MULTIPLIERS     0
+  
+ THE REQUIRED NUMBER OF EIGENVALUES IS FOUND
+  
+ FINAL TRUST INTERVAL
+  
+ -------------------------------------------------------------------------------------
+ | KEY | INSIDE |      INERTIAS     |  SENTINELS  |   OUTSIDE   |  NEED TO FIND      |
+ |      ENDS OF INTERVAL     |     ENDS OF SENTINEL      |   COMPUTATIONAL INTERVAL  |
+ -------------------------------------------------------------------------------------
+ |  +  |     35 |        0       35 |     0     0 |     0     0 |      0     0       |
+ |-3.95574e+037 2.69558e+007 |-3.95574e+037 2.69558e+007 |-3.95574e+037 2.69558e+007 |
+ -------------------------------------------------------------------------------------
+  
+ FIRST EIGENVALUE REQUESTED BY THE USER     1
+  
+ EIGENVALUES REQUESTED BY THE USER
+  3.28305e+004 1.10230e+005 1.86120e+005 4.19471e+005 5.45283e+005 5.65375e+005
+  7.35635e+005 9.60900e+005 1.15950e+006 1.23346e+006 1.40342e+006 1.45279e+006
+  1.52571e+006 1.56122e+006 1.56474e+006 2.01085e+006 2.09261e+006 2.27220e+006
+  2.96655e+006 3.06264e+006 3.68542e+006 4.09995e+006 4.44042e+006 4.54097e+006
+  5.01288e+006 5.30306e+006 6.47106e+006 6.92014e+006 7.11176e+006 7.34682e+006
+  8.70047e+006 9.83688e+006 1.05214e+007 1.36650e+007 1.64453e+007
+  
+ EIGENVALUE EXTRACTION USING THE LANCZOS EIGENSOLVER IS COMPLETE
+ NUMBER OF LANCZOS RUNS       :   4
+ NUMBER OF LANCZOS STEPS      :  53
+ NUMBER OF FACTORIZATIONS     :   5
+ NUMBER OF BACK SUBSTITUTIONS :  55
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   2.1000    
+       ELAPSED SYSTEM TIME (SEC)    =  0.20000    
+       ELAPSED TOTAL CPU TIME (SEC) =   2.3000    
+       ELAPSED WALLCLOCK TIME (SEC) =          3
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+     ANALYSIS SUMMARY:
+     TOTAL OF         18  INCREMENTS
+                       0  CUTBACKS IN AUTOMATIC INCREMENTATION
+                      17  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
+                      77  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
+                       6  INVOLVE MATRIX DECOMPOSITION, INCLUDING
+                       0  DECOMPOSITION(S) OF THE MASS MATRIX
+                       1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
+                       0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
+                       0  ADDITIONAL OPERATOR EVALUATIONS FOR LINE SEARCHES
+                       0  WARNING MESSAGES DURING USER INPUT PROCESSING
+                       1  WARNING MESSAGES DURING ANALYSIS
+                       0  ANALYSIS WARNINGS ARE NUMERICAL PROBLEM MESSAGES
+                       0  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
+                       0  ERROR MESSAGES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   3.4000    
+       SYSTEM TIME (SEC)    =  0.60000    
+       TOTAL CPU TIME (SEC) =   4.0000    
+       WALLCLOCK TIME (SEC) =          4
