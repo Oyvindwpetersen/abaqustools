@@ -8,10 +8,6 @@ Created on
 
 #%%
 
-#__all__ = [
-  #  'Assembly',
-         #  ]
-
 import numpy as np
 import putools
 
@@ -42,13 +38,13 @@ def beamaddedinertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
 
     # Inputs:
     # fid: file identifier
-    # linear_mass: mass kg/m
-    # x1: 1-dir offset
-    # x2: 2-dir offset
-    # alpha: rotation offset
-    # I_11: inertia kg*m^2
-    # I_22: inertia kg*m^2
-    # I_12: inertia kg*m^2
+    # linear_mass: mass [kg/m]
+    # x1: 1-dir offset [m]
+    # x2: 2-dir offset [m]
+    # alpha: rotation offset [deg]
+    # I_11: inertia [kg*m^2]
+    # I_22: inertia [kg*m^2]
+    # I_12: inertia [kg*m^2]
 
     fid.write('*BEAM ADDED INERTIA' + '\n')
     
@@ -66,9 +62,9 @@ def beamsection(fid,elset,material,sectiontype,sectionproperties,direction):
     # fid: file identifier
     # elset: string with element set
     # material: string with material name
-    # sectiontype: eg 'RECTANGULAR' or 'PIPE'
-    # sectionproperties: array with numbers required for the above
-    # direction: array with n1-direction
+    # sectiontype: e.g. 'RECTANGULAR' or 'PIPE'
+    # sectionproperties: array with numbers required for the section type above
+    # direction: array with n1-direction, e.g. [0,1,0]
     
     if isinstance(elset,str):
         elset=[elset]
@@ -92,11 +88,11 @@ def beamgeneralsection(fid,elset,density,sectionproperties,direction,materialpro
     
     # Inputs:
     # fid: file identifier
-    # elset: string with element set
-    # density: in kg/m^3
-    # sectionproperties: array with numbers required: A,I11,I12,I22,It
-    # direction: array with n1-direction
-    # materialproperties: array [E,G]
+    # elset: string with element set name
+    # density: in [kg/m^3]
+    # sectionproperties: [A,I11,I12,I22,It] array with cross section properties
+    # direction: array with n1-direction, e.g. [0,1,0]
+    # materialproperties: [E,G] array with elastic and shear modulus
     
     fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + putools.num.num2strf(density,3) + '\n')
     
@@ -114,9 +110,9 @@ def boundary(fid,op,nodename,BCmat,partname):
 
     # Inputs:
     # fid: file identifier
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified BCs
+    # op: 'MOD' for modified BCs or 'NEW' for new BCs (erase all old) 
     # nodename: string with node set name or array with node numbers
-    # BCmat: e.g. [1,4,0] to set DOF 1,2,3,4 to zero
+    # BCmat: array to specificy, e.g. [1,4,0] to set DOF 1,2,3,4 to zero
     # partname: string with part name
     
     checkarg(op,['MOD','NEW'])
@@ -146,7 +142,6 @@ def boundary(fid,op,nodename,BCmat,partname):
 def checkarg(a_str,arg_allowed):
 
     # Inputs:
-    # fid: file identifier
     # a_str: string with argument to check
     # arg_allowed: string or list with arguments that are allowed
     
@@ -172,10 +167,10 @@ def cload(fid,op,nset,dof,magnitude_force,partname=''):
 
     # Inputs:
     # fid: file identifier
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified CLOADS
+    # op: 'MOD' for modified CLOADS or 'NEW' for new CLOADS (erase all old) 
     # nset: string with node set name or array with node numbers
-    # dof: DOF number 1-6
-    # magnitude_force: signed number
+    # dof: DOF number between 1 and 6
+    # magnitude_force: signed force magnitude
     
     checkarg(op,['MOD','NEW','DELETE'])
 
@@ -240,10 +235,10 @@ def dload(fid,op,elset,type_id,magnitude):
 
     # Inputs:
     # fid: file identifier
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified DLOADS
+    # op: 'MOD' for modified DLOADS or 'NEW' for new DLOADS (erase all old) 
     # elset: name of element set
-    # type_id: type, e.g. PZ for line load in z-direction
-    # magnitude: signed number
+    # type_id: load type, e.g. PZ for line load in z-direction
+    # magnitude: signed load magnitude
     
     checkarg(op,['MOD','NEW','DELETE'])
 
@@ -270,8 +265,8 @@ def element(fid,element_nodenumber,element_type,elsetname):
     
     # Inputs:
     # fid: file identifier
-    # element_nodenumber: array with rows [Elno,Nodeno1,Nodeno2]
-    # element_type: type, e.g. B31
+    # element_nodenumber: array with rows [el_num,node_num1,node_num2]
+    # element_type: element type, e.g. B31
     # elsetname: string with name
     
     element_nodenumber=putools.num.ensurenp(element_nodenumber)
@@ -398,13 +393,12 @@ def gravload(fid,op,elset,magnitude=9.81,partname=''):
     # Inputs:
     # fid: file identifier
     # op: 'MOD' or 'NEW' for new (erase all old) or modified DLOADS
-    # magnitude: signed number
+    # magnitude: unsigned load magnitude
 
     partname_str=''
     if len(partname)>0:
         partname_str=partname.upper() + '.'
                 
-        
     checkarg(op,['MOD','NEW'])
 
     fid.write('*DLOAD, OP=' + op.upper() + '\n')
@@ -443,7 +437,7 @@ def historyoutputelement(fid,variables,elset,options=''):
     
     # Inputs:
     # fid: file identifier
-    # variables: response quantity, e.g. 'SF'
+    # variables: response quantity, e.g. SF
     # elset: string with element name
 
     fid.write('*ELEMENT OUTPUT, ELSET=' + elset + '\n')
@@ -508,15 +502,13 @@ def instanceend(fid):
     
     # Inputs:
     # fid: file identifier
-    # instancename: string with instance
-    # partname: string with part
-
+    
     fid.write('*END INSTANCE' + '\n')
     fid.write('**' + '\n')
 
 #%%
 
-def Line(fid,line):
+def line(fid,line):
     
     # Inputs:
     # fid: file identifier
@@ -556,18 +548,18 @@ def mpc(fid,id_type,nodes):
 
 #%%
 
-def material(fid,materialname,emodulus,v,density):
+def material(fid,materialname,E,v,density):
     
     # Inputs:
     # fid: file identifier
     # materialname: string with name
-    # emodulus: modulus in Pa
+    # E: elastic modulus in [Pa]
     # v: Poisson ratio
-    # density: in kg/m^3
+    # density: in [kg/m^3]
 
     fid.write('*MATERIAL, NAME=' + materialname.upper() + '\n')
     fid.write('*ELASTIC' + '\n')
-    putools.txt.writematrix(fid,[emodulus,v],3,', ',['e' , 'f'])
+    putools.txt.writematrix(fid,[E,v],3,', ',['e' , 'f'])
     fid.write('*DENSITY' + '\n')
     putools.txt.writematrix(fid,[density],3,', ',['e'])
     
@@ -606,7 +598,7 @@ def node(fid,nodenumber_coord,nsetname):
     
     # Inputs:
     # fid: file identifier
-    # nodenumber_coord: array with rows [Nodeno,CoordX,CoordY,CoordZ]
+    # nodenumber_coord: array with rows [node_num,coord_x,coord_y,coord_z]
     # nsetname: string with name
     
     if any(nodenumber_coord[:,0]<=0):
@@ -633,7 +625,7 @@ def nonstructuralmass(fid,elset,unit,mass):
     # fid: file identifier
     # elset: string with name
     # unit: MASS PER LENGTH or TOTAL MASS
-    # mass: 
+    # mass: magnitude 
 
     fid.write('*NONSTRUCTURAL MASS, ELSET=' + elset.upper() + ', UNITS=' + unit.upper() + '\n')
     
@@ -747,9 +739,7 @@ def release(fid,elset,end_id,release_id):
 
     # ALLM	
     # represents a combination of all the rotational degrees of freedom (i.e., M1, M2, and T).
-
-
-
+    
     if isinstance(elset,str):
         elset=[elset]
         
@@ -823,8 +813,8 @@ def shearcenter(fid,x1,x2):
     
     # Inputs:
     # fid: file identifier
-    # x1: offset in 1-dir
-    # x2: offset in 2-dir
+    # x1: offset in 1-dir in [m]
+    # x2: offset in 2-dir in [m]
  
     fid.write('*SHEAR CENTER' + '\n')
     putools.txt.writematrix(fid,[x1,x2],3,',','e')
@@ -942,6 +932,7 @@ def stepend(fid):
 def temperature(fid,op,nset,magnitude_temp,partname=''):
 
     # Inputs:
+    # fid: file identifier
     # op: 'MOD' or 'NEW' for new (erase all old) or modified TEMP
     # nset: string with node name
     # magnitude_temp: in K
@@ -977,6 +968,7 @@ def temperature(fid,op,nset,magnitude_temp,partname=''):
 def tie(fid,tiename,adjust,postol,slavename,mastername):
 
     # Inputs:
+    # fid: file identifier
     # tiename: string with name
     # adjust: 'YES' or 'NO' adjustment of slave node
     # postol: in m, nodes outside will not be tied
@@ -995,13 +987,13 @@ def tie(fid,tiename,adjust,postol,slavename,mastername):
 def transverseshearstiffness(fid,k23,k13):
 
     # Inputs:
+    # fid: file identifier
     # k23: shear stiffness in 2-dir
     # k13: shear stiffness in 1-dir
     
     fid.write('*TRANSVERSE SHEAR STIFFNESS' + '\n')
     putools.txt.writematrix(fid,[k23,k13],3,',','e')
 
-    # https://www.sharcnet.ca/Software/Abaqus/6.14.2/v6.14/books/usb/default.htm?startat=pt06ch29s03alm08.html#usb-elm-ebeamelem-transshear-override
-
+    
 
 
