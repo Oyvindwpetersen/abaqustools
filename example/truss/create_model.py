@@ -67,6 +67,8 @@ gen.element(fid,nodes_el,'B31','Truss_elements')
 
 gen.beamgeneralsection(fid, 'Truss_elements', 7850, [1e-4,1e-6,0,1e-6,1e-6], [0,1,0], [210e9,81e9])
 
+gen.release(fid, [301,302,303,304,305,306,307,308], ['S1','S2'], ['M1','M2'])
+
 gen.nset(fid,'support',[1,5])
 
 #%% 

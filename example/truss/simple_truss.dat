@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:18
+   Abaqus 3DEXPERIENCE R2017x                                  Date 22-Aug-2023   Time 07:44:19
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
 
@@ -171,13 +171,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   0.0000    
+       USER TIME (SEC)      =  0.10000    
        SYSTEM TIME (SEC)    =  0.10000    
-       TOTAL CPU TIME (SEC) =  0.10000    
-       WALLCLOCK TIME (SEC) =          0
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          1
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:21
+   Abaqus 3DEXPERIENCE R2017x                                  Date 22-Aug-2023   Time 07:44:22
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -271,7 +271,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:22
+   Abaqus 3DEXPERIENCE R2017x                                  Date 22-Aug-2023   Time 07:44:24
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    2  INCREMENT    1
@@ -476,7 +476,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   3.4000    
-       SYSTEM TIME (SEC)    =  0.60000    
-       TOTAL CPU TIME (SEC) =   4.0000    
+       USER TIME (SEC)      =   3.3000    
+       SYSTEM TIME (SEC)    =  0.40000    
+       TOTAL CPU TIME (SEC) =   3.7000    
        WALLCLOCK TIME (SEC) =          4

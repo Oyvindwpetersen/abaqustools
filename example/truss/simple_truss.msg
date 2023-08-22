@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:21
+   Abaqus 3DEXPERIENCE R2017x                                  Date 22-Aug-2023   Time 07:44:22
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -117,9 +117,9 @@
      INITIAL ELEMENT LOAD BALANCE
         COMPUTE NODE   1   PROCESS    NUMBER OF ELEMENTS
                               1            3
-                              2            3
+                              2            6
                               3            3
-                              4            6
+                              4            3
 
   NUMBER OF EQUATIONS =        54     NUMBER OF FLOATING PT. OPERATIONS =  1.97E+04
 
@@ -129,16 +129,16 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                      2.431E-02   TIME AVG. FORCE       2.431E-02
- LARGEST RESIDUAL FORCE             4.510E-16   AT NODE         12   DOF  3
+ LARGEST RESIDUAL FORCE             4.545E-16   AT NODE         12   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -3.551E-07   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -172,16 +172,16 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                      0.149       TIME AVG. FORCE       8.674E-02
- LARGEST RESIDUAL FORCE            -3.331E-16   AT NODE          4   DOF  3
+ LARGEST RESIDUAL FORCE            -2.776E-16   AT NODE          4   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -3.551E-07   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -260,9 +260,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
@@ -278,7 +278,7 @@
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     2.245E-02   TIME AVG. MOMENT      1.131E-02
- LARGEST RESIDUAL MOMENT           -4.163E-17   AT NODE         13   DOF  5
+ LARGEST RESIDUAL MOMENT           -3.990E-17   AT NODE         13   DOF  5
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF ROTATION      8.725E-08   AT NODE          2   DOF  5
    INSTANCE: PART_TRUSS                                                                      
@@ -304,16 +304,16 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                      0.681       TIME AVG. FORCE       0.309    
- LARGEST RESIDUAL FORCE            -9.992E-16   AT NODE         13   DOF  3
+ LARGEST RESIDUAL FORCE             8.882E-16   AT NODE         11   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -1.198E-06   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -322,7 +322,7 @@
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     3.562E-02   TIME AVG. MOMENT      1.617E-02
- LARGEST RESIDUAL MOMENT           -5.031E-17   AT NODE         12   DOF  5
+ LARGEST RESIDUAL MOMENT           -5.204E-17   AT NODE         12   DOF  5
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF ROTATION     -1.309E-07   AT NODE          4   DOF  5
    INSTANCE: PART_TRUSS                                                                      
@@ -454,7 +454,7 @@
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     0.129       TIME AVG. MOMENT      4.385E-02
- LARGEST RESIDUAL MOMENT           -3.608E-16   AT NODE         12   DOF  5
+ LARGEST RESIDUAL MOMENT           -3.591E-16   AT NODE         12   DOF  5
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF ROTATION     -4.417E-07   AT NODE          4   DOF  5
    INSTANCE: PART_TRUSS                                                                      
@@ -498,7 +498,7 @@
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     0.196       TIME AVG. MOMENT      6.077E-02
- LARGEST RESIDUAL MOMENT            5.343E-16   AT NODE         12   DOF  5
+ LARGEST RESIDUAL MOMENT            5.412E-16   AT NODE         12   DOF  5
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF ROTATION      6.626E-07   AT NODE          2   DOF  5
    INSTANCE: PART_TRUSS                                                                      
@@ -577,7 +577,7 @@
 
 
  AVERAGE FORCE                       8.53       TIME AVG. FORCE        2.24    
- LARGEST RESIDUAL FORCE            -1.776E-14   AT NODE         12   DOF  3
+ LARGEST RESIDUAL FORCE            -1.865E-14   AT NODE         12   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -1.365E-05   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -630,7 +630,7 @@
           THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
 
  AVERAGE MOMENT                     0.671       TIME AVG. MOMENT      0.163    
- LARGEST RESIDUAL MOMENT           -1.055E-15   AT NODE          3   DOF  5
+ LARGEST RESIDUAL MOMENT           -1.027E-15   AT NODE          3   DOF  5
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF ROTATION      2.236E-06   AT NODE          2   DOF  5
    INSTANCE: PART_TRUSS                                                                      
@@ -709,7 +709,7 @@
 
 
  AVERAGE FORCE                       29.0       TIME AVG. FORCE        6.12    
- LARGEST RESIDUAL FORCE             7.105E-14   AT NODE         13   DOF  3
+ LARGEST RESIDUAL FORCE             6.750E-14   AT NODE         13   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -4.607E-05   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -744,9 +744,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
@@ -788,16 +788,16 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
  AVERAGE FORCE                       65.2       TIME AVG. FORCE        12.2    
- LARGEST RESIDUAL FORCE            -8.882E-14   AT NODE         13   DOF  3
+ LARGEST RESIDUAL FORCE             8.527E-14   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -1.037E-04   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -840,7 +840,7 @@
 
 
  AVERAGE FORCE                       74.6       TIME AVG. FORCE        15.8    
- LARGEST RESIDUAL FORCE            -1.137E-13   AT NODE         13   DOF  1
+ LARGEST RESIDUAL FORCE             1.137E-13   AT NODE         12   DOF  1
    INSTANCE: PART_TRUSS                                                                      
  LARGEST INCREMENT OF DISP.        -4.446E-05   AT NODE          3   DOF  3
    INSTANCE: PART_TRUSS                                                                      
@@ -864,7 +864,7 @@
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 21-Aug-2023   Time 20:49:22
+   Abaqus 3DEXPERIENCE R2017x                                  Date 22-Aug-2023   Time 07:44:24
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -1213,9 +1213,9 @@
      CHECK POINT  END OF SOLVER       
 
        ELAPSED USER TIME (SEC)      =   2.1000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.20000    
-       ELAPSED TOTAL CPU TIME (SEC) =   2.3000    
-       ELAPSED WALLCLOCK TIME (SEC) =          3
+       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   2.2000    
+       ELAPSED WALLCLOCK TIME (SEC) =          2
 
 
           THE ANALYSIS HAS BEEN COMPLETED
@@ -1241,7 +1241,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   3.4000    
-       SYSTEM TIME (SEC)    =  0.60000    
-       TOTAL CPU TIME (SEC) =   4.0000    
+       USER TIME (SEC)      =   3.3000    
+       SYSTEM TIME (SEC)    =  0.40000    
+       TOTAL CPU TIME (SEC) =   3.7000    
        WALLCLOCK TIME (SEC) =          4
