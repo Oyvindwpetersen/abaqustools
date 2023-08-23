@@ -299,7 +299,6 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 #%%
 
-
 def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10):
                 
     # Inputs:
@@ -320,6 +319,9 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     # n_el: number of elements in member
     
     setname=setname.upper()
+    
+    
+    comment(fid,'Member ' + setname)
     
     # Vector for n1-direction (lateral)
     direction=putools.num.ensurenp(direction)
@@ -416,9 +418,11 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         
         fid.write('*JOINT, ELSET=' + elset_name + ori_str +'\n') #
         
+        dof_zero=[]
         for k in np.arange(0,6):
             
             if kj[k]==0:
+                dof_zero.append(DOFS[k])
                 continue
             
             # str_el=',ELSET=' + 'J1_' 'DOF' + DOFS[k] + '_' + setname
@@ -432,6 +436,11 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             fid.write('*SPRING' + str_el + '\n')
             fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
             putools.txt.writematrix(fid,kj[k],3,',','e')
+    
+    
+        if len(dof_zero)>0:
+            for dof in dof_zero:
+                fid.write('** Zero joint stiffnes in DOF ' + dof + '\n')
     
     
     fid.write('**' + '\n')
