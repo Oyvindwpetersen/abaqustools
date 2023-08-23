@@ -87,9 +87,10 @@ for k in np.arange(0,8):
     
     setname='Dia' + str(k+1)
     
+    # Stiffness for x,y,z,rx,ry,rz (local system)
     kj1=[1e12,1e12,1e12,1e14,1e14,1e14]
     kj2=[1e12,1e12,1e12,0,0,0]
-    kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
+   #kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
     
     gen.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1)
 

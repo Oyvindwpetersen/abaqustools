@@ -51,7 +51,7 @@
 1007, 1007, 1008
 1008, 1008, 1009
 1009, 1009, 1010
-1010, 1010, 11
+1010, 1010, 1011
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -85,7 +85,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA1 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA1_J2
+1012, 1011, 11
+*JOINT, ELSET=DIA1_J2, ORIENTATION=ORI_DIA1
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA1, SECTION=GENERAL, DENSITY=7850.000
@@ -117,7 +129,7 @@
 1107, 1107, 1108
 1108, 1108, 1109
 1109, 1109, 1110
-1110, 1110, 2
+1110, 1110, 1111
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -151,7 +163,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA2 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA2_J2
+1112, 1111, 2
+*JOINT, ELSET=DIA2_J2, ORIENTATION=ORI_DIA2
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA2, SECTION=GENERAL, DENSITY=7850.000
@@ -183,7 +207,7 @@
 1207, 1207, 1208
 1208, 1208, 1209
 1209, 1209, 1210
-1210, 1210, 12
+1210, 1210, 1211
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -217,7 +241,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA3 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA3_J2
+1212, 1211, 12
+*JOINT, ELSET=DIA3_J2, ORIENTATION=ORI_DIA3
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA3, SECTION=GENERAL, DENSITY=7850.000
@@ -249,7 +285,7 @@
 1307, 1307, 1308
 1308, 1308, 1309
 1309, 1309, 1310
-1310, 1310, 3
+1310, 1310, 1311
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -283,7 +319,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA4 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA4_J2
+1312, 1311, 3
+*JOINT, ELSET=DIA4_J2, ORIENTATION=ORI_DIA4
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA4, SECTION=GENERAL, DENSITY=7850.000
@@ -315,7 +363,7 @@
 1407, 1407, 1408
 1408, 1408, 1409
 1409, 1409, 1410
-1410, 1410, 13
+1410, 1410, 1411
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -349,7 +397,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA5 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA5_J2
+1412, 1411, 13
+*JOINT, ELSET=DIA5_J2, ORIENTATION=ORI_DIA5
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA5, SECTION=GENERAL, DENSITY=7850.000
@@ -381,7 +441,7 @@
 1507, 1507, 1508
 1508, 1508, 1509
 1509, 1509, 1510
-1510, 1510, 4
+1510, 1510, 1511
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -415,7 +475,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA6 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA6_J2
+1512, 1511, 4
+*JOINT, ELSET=DIA6_J2, ORIENTATION=ORI_DIA6
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA6, SECTION=GENERAL, DENSITY=7850.000
@@ -447,7 +519,7 @@
 1607, 1607, 1608
 1608, 1608, 1609
 1609, 1609, 1610
-1610, 1610, 14
+1610, 1610, 1611
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -481,7 +553,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA7 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA7_J2
+1612, 1611, 14
+*JOINT, ELSET=DIA7_J2, ORIENTATION=ORI_DIA7
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA7, SECTION=GENERAL, DENSITY=7850.000
@@ -513,7 +597,7 @@
 1707, 1707, 1708
 1708, 1708, 1709
 1709, 1709, 1710
-1710, 1710, 5
+1710, 1710, 1711
 **
 **
 ** Extra node (b) for definition of orientation system
@@ -547,7 +631,19 @@
 *SPRING
 6,6
 1.000e+14
-** Joint 2 for DIA8 is continuous, no stiffness defined
+** Joint J2
+*ELEMENT, TYPE=JOINTC, ELSET=DIA8_J2
+1712, 1711, 5
+*JOINT, ELSET=DIA8_J2, ORIENTATION=ORI_DIA8
+*SPRING
+1,1
+1.000e+12
+*SPRING
+2,2
+1.000e+12
+*SPRING
+3,3
+1.000e+12
 **
 **
 *BEAM GENERAL SECTION, ELSET=DIA8, SECTION=GENERAL, DENSITY=7850.000
