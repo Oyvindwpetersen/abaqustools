@@ -48,14 +48,14 @@ def printerror(jobname,foldername=''):
     
     # Search for error, print if found
     search_string=' ***ERROR'
-    IndexError=putools.num.listindexsub(lines,search_string)
+    idx_error=putools.num.listindexsub(lines,search_string)
 
-    if len(IndexError)>0:
+    if len(idx_error)>0:
         putools.txt.starprint('FOUND ABAQUS ERRORS:',1)
 
         for k in np.arange(4):
             
-            print(Lines[k+IndexError[0]])
+            print(lines[k+idx_error[0]])
     
 #%%
 
