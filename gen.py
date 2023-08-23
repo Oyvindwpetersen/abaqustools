@@ -325,6 +325,10 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     direction=putools.num.ensurenp(direction)
     direction=direction/np.sqrt(sum(direction**2))
     
+    # Stiffness
+    kj1=putools.num.ensurenp(kj1)
+    kj2=putools.num.ensurenp(kj2)
+    
     # Vector along member
     t_vec=putools.num.ensurenp(coord2)-putools.num.ensurenp(coord1)
     
@@ -351,7 +355,19 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     node(fid,np.column_stack((node_num,x,y,z)),setname)
     
     el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
-    # el_matrix[-1,-1]=node2
+    
+    if all(kj1>1e20):
+        J1_cont=True
+        el_matrix[0,1]=node1
+    else:
+        J1_cont=False
+    
+    if all(kj2>1e20):
+        J2_cont=True
+        el_matrix[-1,-1]=node2
+    else:
+        J2_cont=False
+        
     
     element(fid,el_matrix,element_type,setname)
         
@@ -374,10 +390,21 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             joint_str='J1'
             kj=kj1
             el_node_matrix=[el_num[-1]+1,node1,node_num[0]]
+            
+            if J1_cont==True:
+                fid.write('**'  + '\n')
+                fid.write('** Joint 1 for ' + setname + ' is continuous, no stiffness defined' +'\n') #
+                continue
+            
         elif j==1:
             joint_str='J2'
             kj=kj2
             el_node_matrix=[el_num[-1]+2,node_num[-1],node2]
+            
+            if J2_cont==True:
+                fid.write('**'  + '\n')
+                fid.write('** Joint 2 for ' + setname + ' is continuous, no stiffness defined' +'\n') #
+                continue
             
         line(fid,'** Joint ' + joint_str)
         
@@ -406,19 +433,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
             putools.txt.writematrix(fid,kj[k],3,',','e')
     
-    # Joint2
-    # comment(fid,'JOINT2')
-    # element(fid,[el_num[-1]+2,node_num[-1],node2],'JOINTC','J2_' + setname,star=False)
-
-    # fid.write('*JOINT, ELSET=' + 'J2_' + setname  +'\n') #+ ', ORIENTATION=' + 'ORI_' + setname 
-     
-    # for k in np.arange(0,6):
-    #     fid.write('*SPRING,ELSET=' + 'J2_' 'DOF' + DOFS[k] + '_' + setname + '\n')
-    #     fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
-    #     putools.txt.writematrix(fid,kj2[k],3,',','e')
-         
-
-
+    
     fid.write('**' + '\n')
     fid.write('**' + '\n')    
 
