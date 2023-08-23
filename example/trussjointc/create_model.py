@@ -29,7 +29,7 @@ fid=open(input_filename,'w')
 gen.part(fid,'part_truss')
 
 # Lower chord nodes
-x1=np.array([0,5,10,15,20])
+x1=np.array([0,6,10,14,20])
 y1=x1*0
 z1=x1*0
 nodenumber1=np.arange(1,len(x1)+1)
@@ -90,7 +90,8 @@ for k in np.arange(0,8):
     # Stiffness for x,y,z,rx,ry,rz (local system)
     kj1=[1e12,1e12,1e12,1e14,1e14,1e14]
     kj2=[1e12,1e12,1e12,0,0,0]
-   #kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
+    #kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
+       
     
     gen.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1)
 
