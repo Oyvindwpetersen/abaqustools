@@ -10,6 +10,12 @@ Created on
 
 import numpy as np
 import putools
+import warnings
+
+def warning_on_one_line(message, category, filename, lineno, file=None, line=None):
+    return '%s:%s: %s: %s\n' % (filename, lineno, category.__name__, message)
+
+warnings.formatwarning = warning_on_one_line
 
 #%%
 
@@ -301,10 +307,14 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10):
                 
+    # N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5    J2  N2
+    # O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
+    #
+    #
     # Inputs:
     # fid: file identifier
-    # node1: node number at joint 1
-    # node2: node number at joint 2
+    # node1: (super)node number at joint 1
+    # node2: (super)node number at joint 2
     # coord1: coordinates of node 1
     # coord2: coordinates of node 2
     # node_num_base: base node number for member
@@ -314,8 +324,8 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     # direction: array with n1-direction, e.g. [0,1,0]
     # kj1: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 1
     # kj2: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 2
-    # offset1: offset of member end 1 in [m]
-    # offset2: offset of member end 2 in [m]
+    # offset1: eccentricity offset of member end 1 in [m]
+    # offset2: eccentricity offset of member end 2 in [m]
     # n_el: number of elements in member
     
     setname=setname.upper()
@@ -331,6 +341,26 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     kj1=putools.num.ensurenp(kj1)
     kj2=putools.num.ensurenp(kj2)
     
+    
+    # Checks
+    
+    # Only allow 2-node elements
+    checkarg(element_type,['B31','B33'])
+    
+    
+    if any(kj1<0):
+        raise Exception('***** kj1 is negative for set ' + setname)
+    
+    if any(kj2<0):
+        raise Exception('***** kj2 is negative for set ' + setname)
+    
+    if all(kj1==0):
+        warnings.warn('***** kj1 is all zero for set ' + setname, stacklevel=2)
+    
+    if all(kj2==0):
+        warnings.warn('***** kj2 is all zero for set ' + setname, stacklevel=2)
+
+
     # Vector along member
     t_vec=putools.num.ensurenp(coord2)-putools.num.ensurenp(coord1)
     
@@ -339,14 +369,14 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     if L0==0:
         raise Exception('***** L0 is zero for set ' + setname)
     
-    # Shorten beam by offset
+    # Shorten member by offset
     if offset1>0:
         coord1=coord1+t_vec/L0*offset1
         
     if offset2>0:
         coord2=coord2-t_vec/L0*offset2
         
-    # Member nodes 
+    # Member nodes and elements
     x=np.linspace(coord1[0],coord2[0],n_el+1)    
     y=np.linspace(coord1[1],coord2[1],n_el+1)    
     z=np.linspace(coord1[2],coord2[2],n_el+1)
@@ -354,10 +384,12 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     node_num=np.arange(1,len(x)+1)+node_num_base
     el_num=np.arange(1,len(x))+el_num_base
     
+    # Write node sand elements
     node(fid,np.column_stack((node_num,x,y,z)),setname)
     
     el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
     
+    # If kj stiffnesses are all inf, the member in continuous, and instead directly linked to the supernode
     if all(kj1>1e20):
         J1_cont=True
         el_matrix[0,1]=node1
@@ -372,7 +404,9 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         
     
     element(fid,el_matrix,element_type,setname)
-        
+
+    # Create local orientation system along member
+    
     a=node2
     b=node_num[0]-1
     c=node1
@@ -424,9 +458,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             if kj[k]==0:
                 dof_zero.append(DOFS[k])
                 continue
-            
-            # str_el=',ELSET=' + 'J1_' 'DOF' + DOFS[k] + '_' + setname
-            
+                        
             # If the *SPRING option is being used to define part of the behavior 
             # of ITS or JOINTC elements, it must be used in conjunction with the
             # *ITS or *JOINT options and the ELSET and ORIENTATION parameters
@@ -436,7 +468,6 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             fid.write('*SPRING' + str_el + '\n')
             fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
             putools.txt.writematrix(fid,kj[k],3,',','e')
-    
     
         if len(dof_zero)>0:
             for dof in dof_zero:
@@ -1088,7 +1119,8 @@ def step(fid,options='',comment_str=''):
 def stepend(fid):
 
     # Inputs:
-
+    # fid: file identifier
+    
     fid.write('*END STEP' + '\n')
     fid.write('**' + '\n')
     fid.write('**' + '\n')
