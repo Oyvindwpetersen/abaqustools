@@ -36,7 +36,7 @@ nodenumber1=np.arange(1,len(x1)+1)
 node_matrix_bottom=np.column_stack((nodenumber1,x1,y1,z1))
 
 # Upper chord nodes
-x2=np.array([2.5,7.5,12.5,17.5])
+x2=np.array([2,7.5,12.5,18])
 y2=x2*0
 z2=5*np.ones(np.shape(x2))
 nodenumber2=np.arange(1,len(x2)+1)+10
