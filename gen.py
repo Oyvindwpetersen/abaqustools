@@ -261,7 +261,7 @@ def dload(fid,op,elset,type_id,magnitude):
     
 #%%
     
-def element(fid,element_nodenumber,element_type,elsetname):
+def element(fid,element_nodenumber,element_type,elsetname,star=True):
     
     # Inputs:
     # fid: file identifier
@@ -292,10 +292,136 @@ def element(fid,element_nodenumber,element_type,elsetname):
     
     putools.txt.writematrix(fid,element_nodenumber,'',', ','int')
     
-    fid.write('**' + '\n')
-    fid.write('**' + '\n')
+    if star==True:
+        fid.write('**' + '\n')
+        fid.write('**' + '\n')
 
+
+#%%
+
+
+def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10):
+                
+    # Inputs:
+    # fid: file identifier
+    # node1: node number at joint 1
+    # node2: node number at joint 2
+    # coord1: coordinates of node 1
+    # coord2: coordinates of node 2
+    # node_num_base: base node number for member
+    # el_num_base: base element number for member
+    # element_type: element type, e.g. B31
+    # setname: name for member
+    # direction: array with n1-direction, e.g. [0,1,0]
+    # kj1: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 1
+    # kj2: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 2
+    # offset1: offset of member end 1 in [m]
+    # offset2: offset of member end 2 in [m]
+    # n_el: number of elements in member
     
+    setname=setname.upper()
+    
+    # Vector for n1-direction (lateral)
+    direction=putools.num.ensurenp(direction)
+    direction=direction/np.sqrt(sum(direction**2))
+    
+    # Vector along member
+    t_vec=putools.num.ensurenp(coord2)-putools.num.ensurenp(coord1)
+    
+    L0=np.sqrt(sum(t_vec**2))
+    
+    if L0==0:
+        raise Exception('***** L0 is zero for set ' + setname)
+    
+    # Shorten beam by offset
+    if offset1>0:
+        coord1=coord1+t_vec/L0*offset1
+        
+    if offset2>0:
+        coord2=coord2-t_vec/L0*offset2
+        
+    # Member nodes 
+    x=np.linspace(coord1[0],coord2[0],n_el+1)    
+    y=np.linspace(coord1[1],coord2[1],n_el+1)    
+    z=np.linspace(coord1[2],coord2[2],n_el+1)
+    
+    node_num=np.arange(1,len(x)+1)+node_num_base
+    el_num=np.arange(1,len(x))+el_num_base
+    
+    node(fid,np.column_stack((node_num,x,y,z)),setname)
+    
+    el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
+    # el_matrix[-1,-1]=node2
+    
+    element(fid,el_matrix,element_type,setname)
+        
+    a=node2
+    b=node_num[0]-1
+    c=node1
+    
+    line(fid,'** Extra node (b) for definition of orientation system')
+    node(fid,np.array([b,x[0]+direction[0],y[0]+direction[1],z[0]+direction[2]]),setname + '_BNODE')
+    
+    orientation(fid,'ORI_' + setname,'NODES',a,b,c)
+    
+    DOFS=['1','2','3','4','5','6']
+    
+    # Joints
+    
+    for j in np.arange(0,2):
+        
+        if j==0:
+            joint_str='J1'
+            kj=kj1
+            el_node_matrix=[el_num[-1]+1,node1,node_num[0]]
+        elif j==1:
+            joint_str='J2'
+            kj=kj2
+            el_node_matrix=[el_num[-1]+2,node_num[-1],node2]
+            
+        line(fid,'** Joint ' + joint_str)
+        
+        elset_name=setname + '_' + joint_str
+        
+        element(fid,el_node_matrix,'JOINTC',elset_name,star=False)
+        
+        ori_str=', ORIENTATION=' + 'ORI_' + setname
+        
+        fid.write('*JOINT, ELSET=' + elset_name + ori_str +'\n') #
+        
+        for k in np.arange(0,6):
+            
+            if kj[k]==0:
+                continue
+            
+            # str_el=',ELSET=' + 'J1_' 'DOF' + DOFS[k] + '_' + setname
+            
+            # If the *SPRING option is being used to define part of the behavior 
+            # of ITS or JOINTC elements, it must be used in conjunction with the
+            # *ITS or *JOINT options and the ELSET and ORIENTATION parameters
+            # should not be used.
+            str_el=''
+                        
+            fid.write('*SPRING' + str_el + '\n')
+            fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
+            putools.txt.writematrix(fid,kj[k],3,',','e')
+    
+    # Joint2
+    # comment(fid,'JOINT2')
+    # element(fid,[el_num[-1]+2,node_num[-1],node2],'JOINTC','J2_' + setname,star=False)
+
+    # fid.write('*JOINT, ELSET=' + 'J2_' + setname  +'\n') #+ ', ORIENTATION=' + 'ORI_' + setname 
+     
+    # for k in np.arange(0,6):
+    #     fid.write('*SPRING,ELSET=' + 'J2_' 'DOF' + DOFS[k] + '_' + setname + '\n')
+    #     fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
+    #     putools.txt.writematrix(fid,kj2[k],3,',','e')
+         
+
+
+    fid.write('**' + '\n')
+    fid.write('**' + '\n')    
+
 #%%
 
 def elset(fid,elsetname,elements,option=''):
@@ -601,13 +727,15 @@ def node(fid,nodenumber_coord,nsetname):
     # nodenumber_coord: array with rows [node_num,coord_x,coord_y,coord_z]
     # nsetname: string with name
     
+    nodenumber_coord=np.atleast_2d(nodenumber_coord)
+    
     if any(nodenumber_coord[:,0]<=0):
-        putools.num.starprint('For NSET ' + nsetname,1)
+        putools.txt.starprint('For NSET ' + nsetname,1)
         raise Exception('***** Negative node numbers')
         
         
     if np.isnan(nodenumber_coord).any():
-        putools.num.starprint('For NSET ' + nsetname,1)
+        putools.txt.starprint('For NSET ' + nsetname,1)
         raise Exception('***** Containing NAN')
     
     fid.write('*NODE' + ',NSET=' + nsetname.upper() + '\n')
@@ -666,6 +794,20 @@ def nset(fid,nsetname,nodes,option=''):
     fid.write('**' + '\n')
     fid.write('**' + '\n')
     
+
+
+#%%
+
+def orientation(fid,name,defi,a,b,c):
+    # Inputs:
+    # fid: file identifier
+    # def: NODES
+    
+    fid.write('*ORIENTATION, NAME=' + name.upper() + ', DEFINITION=' + defi.upper() + '\n')
+
+    putools.txt.writematrix(fid,[a,b,c],'',',',['int'])
+    fid.write('**' + '\n')
+    fid.write('**' + '\n')
 
 #%%
 
