@@ -423,13 +423,13 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
 
     # Create local orientation system along member
     a=node2
-    b=node_num[-1]-1
+    b=node_num[0]-1
     c=node1
     
     line(fid,'** Extra node (b) for definition of orientation system')
     node(fid,np.array([b,x[0]+direction[0],y[0]+direction[1],z[0]+direction[2]]),setname + '_BNODE')
     
-    orientation(fid,'ORI_' + setname,'NODES',a,b,c)
+    orientation(fid,setname + '_LOCSYS','NODES',a,b,c)
     
     DOFS=['1','2','3','4','5','6']
     
@@ -463,7 +463,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         
         element(fid,el_node_matrix,'JOINTC',elset_name,star=False)
         
-        ori_str=', ORIENTATION=' + 'ORI_' + setname
+        ori_str=', ORIENTATION=' + setname + '_LOCSYS'
         
         fid.write('*JOINT, ELSET=' + elset_name + ori_str +'\n') #
         
