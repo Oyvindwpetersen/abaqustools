@@ -305,7 +305,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 #%%
 
-def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10):
+def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
                 
     # N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5    J2  N2
     # O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
@@ -327,9 +327,10 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     # offset1: eccentricity offset of member end 1 in [m]
     # offset2: eccentricity offset of member end 2 in [m]
     # n_el: number of elements in member
+    # max_length: max element length (overrides n_el)
+    
     
     setname=setname.upper()
-    
     
     comment(fid,'Member ' + setname)
     
@@ -346,8 +347,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
     # Only allow 2-node elements
     checkarg(element_type,['B31','B33'])
-    
-    
+        
     if any(kj1<0):
         raise Exception('***** kj1 is negative for set ' + setname)
     
@@ -368,14 +368,28 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
     if L0==0:
         raise Exception('***** L0 is zero for set ' + setname)
+        
+        
+    # Determine number of elements
+    if (n_el is None):
+        n_el=np.ceil(L0/max_length) 
+    elif max_length is not None:
     
+        # If n_el is specified then use it as a miniumum, else use only length
+        if n_el is not None:
+            n_el=np.max([n_el,np.ceil(L0/max_length)])
+        elif n_el is None:
+            n_el=np.ceil(L0/max_length)
+            
+    n_el=int(n_el)        
+        
     # Shorten member by offset
     if offset1>0:
         coord1=coord1+t_vec/L0*offset1
         
     if offset2>0:
         coord2=coord2-t_vec/L0*offset2
-        
+    
     # Member nodes and elements
     x=np.linspace(coord1[0],coord2[0],n_el+1)    
     y=np.linspace(coord1[1],coord2[1],n_el+1)    
@@ -389,7 +403,8 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
     el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
     
-    # If kj stiffnesses are all inf, the member in continuous, and instead directly linked to the supernode
+    # If kj stiffnesses are all inf, the member in continuous and therefore instead directly linked to the supernode
+    # The offset is thus ignored
     if all(kj1>1e20):
         J1_cont=True
         el_matrix[0,1]=node1
@@ -403,12 +418,12 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         J2_cont=False
         
     
+    # Write elements of member
     element(fid,el_matrix,element_type,setname)
 
     # Create local orientation system along member
-    
     a=node2
-    b=node_num[0]-1
+    b=node_num[-1]-1
     c=node1
     
     line(fid,'** Extra node (b) for definition of orientation system')
@@ -471,7 +486,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
         if len(dof_zero)>0:
             for dof in dof_zero:
-                fid.write('** Zero joint stiffnes in DOF ' + dof + '\n')
+                fid.write('** Zero joint stiffness in DOF ' + dof + '\n')
     
     
     fid.write('**' + '\n')
