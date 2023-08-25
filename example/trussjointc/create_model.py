@@ -87,12 +87,12 @@ for k in np.arange(0,8):
     setname='Dia' + str(k+1)
     
     # Stiffness for x,y,z,rx,ry,rz (local system)
-    kj1=[1e12,1e12,1e12,1e14,1e14,1e14]
-    kj2=[1e12,1e12,1e12,0,0,0]
+    kj1=[1e12,1e12,1e12,1e10,1e10,1e10]
+    kj2=[1e10,1e10,1e10,0,0,0]
     #kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
        
     
-    gen.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1)
+    gen.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1,max_length=0.2) #
 
     gen.beamgeneralsection(fid, setname, 7850, [1e-5,1e-7,0,1e-7,1e-7], [0,1,0], [210e9,81e9])
 
