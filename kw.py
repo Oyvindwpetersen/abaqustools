@@ -307,7 +307,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
                 
-    # N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5    J2  N2
+    # N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5     J2 N2
     # O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
     #
     #
@@ -354,6 +354,12 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     if any(kj2<0):
         raise Exception('***** kj2 is negative for set ' + setname)
     
+    if offset1<0:
+        raise Exception('***** offset1 is negative for set ' + setname)
+    
+    if offset2<0:
+        raise Exception('***** offset2 is negative for set ' + setname)
+        
     if all(kj1==0):
         warnings.warn('***** kj1 is all zero for set ' + setname, stacklevel=2)
     
