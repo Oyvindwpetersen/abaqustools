@@ -13,7 +13,7 @@ import numpy as np
 import sys
 sys.path.append('C:/Cloud/OD_OWP/Work/Python/Github')
 
-from abaqustools import gen
+from abaqustools import kw
 from abaqustools import abq
 
 #%%  Open input file
@@ -26,7 +26,7 @@ fid=open(input_filename,'w')
 
 #%%  Define structure
 
-gen.part(fid,'part_truss')
+kw.part(fid,'part_truss')
 
 # Lower chord nodes
 x1=np.array([0,6,10,14,20])
@@ -43,7 +43,7 @@ nodenumber2=np.arange(1,len(x2)+1)+10
 node_matrix_top=np.column_stack((nodenumber2,x2,y2,z2))
 
 node_matrix=np.vstack((node_matrix_bottom,node_matrix_top))
-gen.node(fid,node_matrix,'NODES_CHORD')
+kw.node(fid,node_matrix,'NODES_CHORD')
 
 
 # Elements and nodes for chord
@@ -57,8 +57,8 @@ nodes_el_chord=np.array([
     [203,13,14]
 ])
 
-gen.element(fid,nodes_el_chord,'B31','Truss_chord')
-gen.beamgeneralsection(fid,'Truss_chord', 7850, [1e-4,1e-6,0,1e-6,1e-6], [0,1,0], [210e9,81e9])
+kw.element(fid,nodes_el_chord,'B31','Truss_chord')
+kw.beamgeneralsection(fid,'Truss_chord', 7850, [1e-4,1e-6,0,1e-6,1e-6], [0,1,0], [210e9,81e9])
 
 # Diagonals
 nodes_el_dia=np.array([
@@ -92,59 +92,59 @@ for k in np.arange(0,8):
     #kj2=[1e99,1e99,1e99,1e99,1e99,1e99]
        
     
-    gen.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1,max_length=0.2) #
+    kw.elementjointc(fid, node1, node2, coord1 , coord2 , 1000+k*100, 1000+k*100,'B31',setname, [0,1,0],kj1,kj2,offset1=0.1,offset2=0.1,max_length=0.2) #
 
-    gen.beamgeneralsection(fid, setname, 7850, [1e-5,1e-7,0,1e-7,1e-7], [0,1,0], [210e9,81e9])
+    kw.beamgeneralsection(fid, setname, 7850, [1e-5,1e-7,0,1e-7,1e-7], [0,1,0], [210e9,81e9])
 
 
-gen.nset(fid,'support',[1,5])
+kw.nset(fid,'support',[1,5])
 
 #%% 
 
-gen.partend(fid)
+kw.partend(fid)
 
-gen.comment(fid,'ASSEMBLY',True)
+kw.comment(fid,'ASSEMBLY',True)
     
-gen.assembly(fid,'as_truss')
+kw.assembly(fid,'as_truss')
     
-gen.instance(fid,'part_truss','part_truss')
+kw.instance(fid,'part_truss','part_truss')
     
-gen.instanceend(fid)
+kw.instanceend(fid)
     
-gen.assemblyend(fid)
+kw.assemblyend(fid)
     
 #%%  Step static
 
-# gen.step(fid,'NLGEO=NO, NAME=STEP_STATIC','Dead load')
+# kw.step(fid,'NLGEO=NO, NAME=STEP_STATIC','Dead load')
 
-# gen.static(fid,'1e-3, 1, 1e-6, 1')
+# kw.static(fid,'1e-3, 1, 1e-6, 1')
 
-# gen.gravload(fid,'new',[''],9.81)
+# kw.gravload(fid,'new',[''],9.81)
     
-# gen.boundary(fid,'new','support',[1,6,0],'part_truss')
+# kw.boundary(fid,'new','support',[1,6,0],'part_truss')
 
-# gen.boundary(fid,'new','NODES_BOTTOM',[2,2,0],'part_truss')
-# gen.boundary(fid,'new','NODES_TOP',[2,2,0],'part_truss')
+# kw.boundary(fid,'new','NODES_BOTTOM',[2,2,0],'part_truss')
+# kw.boundary(fid,'new','NODES_TOP',[2,2,0],'part_truss')
 
 
-# gen.fieldoutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
-# gen.fieldoutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
+# kw.fieldoutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
+# kw.fieldoutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
     
-# gen.stepend(fid)
+# kw.stepend(fid)
 
 #%%  Step modal analysis
 
-gen.step(fid,'NAME=STEP_MODAL','')
-gen.frequency(fid,50,'displacement')
+kw.step(fid,'NAME=STEP_MODAL','')
+kw.frequency(fid,50,'displacement')
 
-gen.boundary(fid,'new','support',[1,6,0],'part_truss')
+kw.boundary(fid,'new','support',[1,6,0],'part_truss')
 
-gen.boundary(fid,'new','NODES_CHORD',[2,2,0],'part_truss')
+kw.boundary(fid,'new','NODES_CHORD',[2,2,0],'part_truss')
     
-gen.fieldoutput(fid,'NODE',['U' , 'COORD'],'','')
-gen.fieldoutput(fid,'ELEMENT',['SF','S'],'','')
+kw.fieldoutput(fid,'NODE',['U' , 'COORD'],'','')
+kw.fieldoutput(fid,'ELEMENT',['SF','S'],'','')
 
-gen.stepend(fid)
+kw.stepend(fid)
 
 #%%  Close file
 

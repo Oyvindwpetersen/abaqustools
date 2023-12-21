@@ -11,7 +11,7 @@ import numpy as np
 import sys
 sys.path.append('C:/Cloud/OD_OWP/Work/Python/Github')
 
-from abaqustools import gen
+from abaqustools import kw
 from abaqustools import abq
 
 #%%  Open file
@@ -24,7 +24,7 @@ fid=open(input_filename,'w')
 
 #%%  Geometry
 
-gen.part(fid,'part_truss')
+kw.part(fid,'part_truss')
 
 # Lower nodes
 x1=np.array([0,5,10,15,20])
@@ -33,7 +33,7 @@ z1=x1*0
 
 nodenumber1=np.arange(1,len(x1)+1)
 
-gen.node(fid,np.column_stack((nodenumber1,x1,y1,z1)),'NODES_BOTTOM')
+kw.node(fid,np.column_stack((nodenumber1,x1,y1,z1)),'NODES_BOTTOM')
 
 # Upper nodes
 x2=np.array([2.5,7.5,12.5,17.5])
@@ -42,7 +42,7 @@ z2=5*np.ones(np.shape(x2))
 
 nodenumber2=np.arange(1,len(x2)+1)+10
 
-gen.node(fid,np.column_stack((nodenumber2,x2,y2,z2)),'NODES_TOP')
+kw.node(fid,np.column_stack((nodenumber2,x2,y2,z2)),'NODES_TOP')
 
 # Elements and nodes
 nodes_el=np.array([
@@ -63,56 +63,56 @@ nodes_el=np.array([
     [308,14,5],
 ])
 
-gen.element(fid,nodes_el,'B31','Truss_elements')
+kw.element(fid,nodes_el,'B31','Truss_elements')
 
-gen.beamgeneralsection(fid, 'Truss_elements', 7850, [1e-4,1e-6,0,1e-6,1e-6], [0,1,0], [210e9,81e9])
+kw.beamgeneralsection(fid, 'Truss_elements', 7850, [1e-4,1e-6,0,1e-6,1e-6], [0,1,0], [210e9,81e9])
 
-gen.release(fid, [301,302,303,304,305,306,307,308], ['S1','S2'], ['M1','M2'])
+kw.release(fid, [301,302,303,304,305,306,307,308], ['S1','S2'], ['M1','M2'])
 
-gen.nset(fid,'support',[1,5])
+kw.nset(fid,'support',[1,5])
 
 #%% 
 
-gen.partend(fid)
+kw.partend(fid)
     
-gen.comment(fid,'ASSEMBLY',True)
+kw.comment(fid,'ASSEMBLY',True)
     
-gen.assembly(fid,'assembly_truss')
+kw.assembly(fid,'assembly_truss')
     
-gen.instance(fid,'part_truss','part_truss')
+kw.instance(fid,'part_truss','part_truss')
     
-gen.instanceend(fid)
+kw.instanceend(fid)
     
-gen.assemblyend(fid)
+kw.assemblyend(fid)
     
 #%%  Step static
 
-gen.step(fid,'NLGEO=NO, NAME=STEP_STATIC','Dead load')
+kw.step(fid,'NLGEO=NO, NAME=STEP_STATIC','Dead load')
 
-gen.static(fid,'1e-3, 1, 1e-6, 1')
+kw.static(fid,'1e-3, 1, 1e-6, 1')
 
-gen.gravload(fid,'new',[''],9.81)
+kw.gravload(fid,'new',[''],9.81)
     
-gen.boundary(fid,'new','support',[1,6,0],'part_truss')
+kw.boundary(fid,'new','support',[1,6,0],'part_truss')
 
-gen.boundary(fid,'new','NODES_BOTTOM',[2,2,0],'part_truss')
-gen.boundary(fid,'new','NODES_TOP',[2,2,0],'part_truss')
+kw.boundary(fid,'new','NODES_BOTTOM',[2,2,0],'part_truss')
+kw.boundary(fid,'new','NODES_TOP',[2,2,0],'part_truss')
 
 
-gen.fieldoutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
-gen.fieldoutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
+kw.fieldoutput(fid,'NODE',['U' , 'RF' , 'COORD'],'','FREQUENCY=100')
+kw.fieldoutput(fid,'ELEMENT',['SF'],'','FREQUENCY=100')
     
-gen.stepend(fid)
+kw.stepend(fid)
 
 #%%  Step modal analysis
 
-gen.step(fid,'NAME=STEP_MODAL','')
-gen.frequency(fid,50,'displacement')
+kw.step(fid,'NAME=STEP_MODAL','')
+kw.frequency(fid,50,'displacement')
     
-gen.fieldoutput(fid,'NODE',['U' , 'COORD'],'','')
-gen.fieldoutput(fid,'ELEMENT',['SF'],'','')
+kw.fieldoutput(fid,'NODE',['U' , 'COORD'],'','')
+kw.fieldoutput(fid,'ELEMENT',['SF'],'','')
 
-gen.stepend(fid)
+kw.stepend(fid)
 
 #%%  Close file
 
