@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 23-Aug-2023   Time 08:14:03
+   Abaqus 3DEXPERIENCE R2017x                                  Date 25-Aug-2023   Time 18:54:23
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
 
@@ -218,7 +218,7 @@
   *spring
   *spring
   *spring
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA1, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA1_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
           POINT B ARE CHANGED TO: 0.0000 1.0000 0.0000
@@ -229,10 +229,10 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA2, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA2_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
-          POINT B ARE CHANGED TO: 2.5000 1.0000 5.0000
+          POINT B ARE CHANGED TO: 2.0000 1.0000 5.0000
 
  ***WARNING: LOCAL DIRECTION ABOUT WHICH THE ADDITIONAL ROTATION IS GIVEN HAS 
              NOT BEEN SPECIFIED.  THE LOCAL 1 DIRECTION WITH NO ADDITIONAL 
@@ -240,10 +240,10 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA3, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA3_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
-          POINT B ARE CHANGED TO: 5.0000 1.0000 5.57880E-17
+          POINT B ARE CHANGED TO: 6.0000 1.0000 1.10092E-06
 
  ***WARNING: LOCAL DIRECTION ABOUT WHICH THE ADDITIONAL ROTATION IS GIVEN HAS 
              NOT BEEN SPECIFIED.  THE LOCAL 1 DIRECTION WITH NO ADDITIONAL 
@@ -251,7 +251,7 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA4, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA4_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
           POINT B ARE CHANGED TO: 7.5000 1.0000 5.0000
@@ -262,7 +262,7 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA5, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA5_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
           POINT B ARE CHANGED TO: 10.000 1.0000 5.57880E-17
@@ -273,7 +273,7 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA6, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA6_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
           POINT B ARE CHANGED TO: 12.500 1.0000 5.0000
@@ -284,10 +284,10 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA7, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA7_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
-          POINT B ARE CHANGED TO: 15.000 1.0000 5.57880E-17
+          POINT B ARE CHANGED TO: 14.000 1.0000 9.75610E-07
 
  ***WARNING: LOCAL DIRECTION ABOUT WHICH THE ADDITIONAL ROTATION IS GIVEN HAS 
              NOT BEEN SPECIFIED.  THE LOCAL 1 DIRECTION WITH NO ADDITIONAL 
@@ -295,10 +295,10 @@
              DIRECTIONS ON A SURFACE, THE MATERIAL AXES IN THE SHELL, MEMBRANE, 
              OR BEHAVIOR DIRECTIONS IN A GASKET MID-SURFACE ARE THE LOCAL 2 AND 
              3 DIRECTIONS.
-  *orientation, name=AS_TRUSS_PART_TRUSS_ORI_DIA8, definition=NODES
+  *orientation, name=AS_TRUSS_PART_TRUSS_DIA8_LOCSYS, definition=NODES
 
  ***NOTE: TO ADJUST FOR A RECTANGULAR COORDINATE SYSTEM THE COORDINATES FOR 
-          POINT B ARE CHANGED TO: 17.500 1.0000 5.0000
+          POINT B ARE CHANGED TO: 18.000 1.0000 5.0000
 
  ***WARNING: LOCAL DIRECTION ABOUT WHICH THE ADDITIONAL ROTATION IS GIVEN HAS 
              NOT BEEN SPECIFIED.  THE LOCAL 1 DIRECTION WITH NO ADDITIONAL 
@@ -319,91 +319,91 @@
   *boundary, op=NEW
   *boundary, op=NEW
   *boundary, op=NEW
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA1_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA1
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA1_J1, orientation=AS_TRUSS_PART_TRUSS_DIA1_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA1_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA1
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA1_J2, orientation=AS_TRUSS_PART_TRUSS_DIA1_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA2_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA2
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA2_J1, orientation=AS_TRUSS_PART_TRUSS_DIA2_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA2_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA2
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA2_J2, orientation=AS_TRUSS_PART_TRUSS_DIA2_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA3_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA3
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA3_J1, orientation=AS_TRUSS_PART_TRUSS_DIA3_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA3_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA3
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA3_J2, orientation=AS_TRUSS_PART_TRUSS_DIA3_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA4_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA4
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA4_J1, orientation=AS_TRUSS_PART_TRUSS_DIA4_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA4_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA4
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA4_J2, orientation=AS_TRUSS_PART_TRUSS_DIA4_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA5_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA5
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA5_J1, orientation=AS_TRUSS_PART_TRUSS_DIA5_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA5_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA5
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA5_J2, orientation=AS_TRUSS_PART_TRUSS_DIA5_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA6_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA6
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA6_J1, orientation=AS_TRUSS_PART_TRUSS_DIA6_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA6_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA6
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA6_J2, orientation=AS_TRUSS_PART_TRUSS_DIA6_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA7_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA7
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA7_J1, orientation=AS_TRUSS_PART_TRUSS_DIA7_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA7_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA7
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA7_J2, orientation=AS_TRUSS_PART_TRUSS_DIA7_LOCSYS
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA8_J1, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA8
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA8_J1, orientation=AS_TRUSS_PART_TRUSS_DIA8_LOCSYS
   *spring
   *spring
   *spring
   *spring
   *spring
   *spring
-  *joint, elset=AS_TRUSS_PART_TRUSS_DIA8_J2, orientation=AS_TRUSS_PART_TRUSS_ORI_DIA8
+  *joint, elset=AS_TRUSS_PART_TRUSS_DIA8_J2, orientation=AS_TRUSS_PART_TRUSS_DIA8_LOCSYS
   *spring
   *spring
   *spring
@@ -511,11 +511,11 @@
                             P R O B L E M   S I Z E
 
 
-          NUMBER OF ELEMENTS IS                                   103
-          NUMBER OF NODES IS                                      271
-          NUMBER OF NODES DEFINED BY THE USER                      97
-          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM       174
-          TOTAL NUMBER OF VARIABLES IN THE MODEL                  582
+          NUMBER OF ELEMENTS IS                                   253
+          NUMBER OF NODES IS                                      721
+          NUMBER OF NODES DEFINED BY THE USER                     247
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM       474
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                 1482
           (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
            VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
 
@@ -526,13 +526,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.20000    
+       USER TIME (SEC)      =  0.10000    
        SYSTEM TIME (SEC)    =  0.10000    
-       TOTAL CPU TIME (SEC) =  0.30000    
-       WALLCLOCK TIME (SEC) =          1
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          0
 1
 
-   Abaqus 3DEXPERIENCE R2017x                                  Date 23-Aug-2023   Time 08:14:07
+   Abaqus 3DEXPERIENCE R2017x                                  Date 25-Aug-2023   Time 18:54:26
    For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -565,36 +565,36 @@
 
                     TOTAL MASS OF MODEL
 
-                       30.86003    
+                       31.68238    
 
 
                     LOCATION OF THE CENTER OF MASS OF THE MODEL
 
-                       10.00000           0.000000           2.182032    
+                       10.00000           0.000000           2.252228    
 
 
                     MOMENTS OF INERTIA ABOUT THE ORIGIN
                            I(XX)               I(YY)               I(ZZ)
 
-                       322.8093           4379.868           4057.676    
+                       342.6470           4547.699           4205.686    
 
 
                     PRODUCTS OF INERTIA ABOUT THE ORIGIN
                            I(XY)               I(XZ)               I(YZ)
 
-                       0.000000          -673.3758           0.000000    
+                       0.000000          -713.5596           0.000000    
 
 
                     MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
                            I(XX)               I(YY)               I(ZZ)
 
-                       175.8765           1146.932           971.6727    
+                       181.9371           1218.751           1037.447    
 
 
                     PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
                            I(XY)               I(XZ)               I(YZ)
 
-                       0.000000          1.0231815E-12       0.000000    
+                       0.000000         -1.0231815E-12       0.000000    
   
                    M E M O R Y   E S T I M A T E
   
@@ -602,7 +602,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION           (MB)               (MB)
   
-     1         1.65E+005               16                 25
+     1         3.88E+005               16                 28
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -641,170 +641,170 @@
                              (RAD/TIME)   (CYCLES/TIME)
 
 
-       1       11200.         105.83         16.843         14.965         0.0000    
-       2       27065.         164.51         26.183        0.94411         0.0000    
-       3       40258.         200.65         31.934        0.45752         0.0000    
-       4       41696.         204.20         32.499        0.51594         0.0000    
-       5       42772.         206.81         32.916         5.8363         0.0000    
-       6       48447.         220.11         35.031         7.0670         0.0000    
-       7       54971.         234.46         37.315        0.42184         0.0000    
-       8       55178.         234.90         37.386        0.78171         0.0000    
-       9       60336.         245.63         39.094        0.47915         0.0000    
-      10       60599.         246.17         39.179        0.40406         0.0000    
-      11       65570.         256.07         40.754        0.54587         0.0000    
-      12       67757.         260.30         41.428        0.74147         0.0000    
-      13       69318.         263.28         41.903        0.55149         0.0000    
-      14       71075.         266.60         42.430        0.74819         0.0000    
-      15       73048.         270.27         43.016        0.56055         0.0000    
-      16       73732.         271.54         43.216        0.46766         0.0000    
-      17       73831.         271.72         43.245        0.18787         0.0000    
-      18       75714.         275.16         43.793         1.1096         0.0000    
-      19       79797.         282.48         44.959         1.1914         0.0000    
-      20      1.27173E+05     356.61         56.757         10.817         0.0000    
-      21      1.96866E+05     443.70         70.616         12.789         0.0000    
-      22      2.64433E+05     514.23         81.842         9.6685         0.0000    
-      23      2.68416E+05     518.09         82.456         1.0737         0.0000    
-      24      3.00662E+05     548.33         87.269        0.84595         0.0000    
-      25      3.46226E+05     588.41         93.648         5.9374         0.0000    
-      26      3.54414E+05     595.33         94.749         6.1600         0.0000    
-      27      3.63824E+05     603.18         95.999         1.3087         0.0000    
-      28      4.04572E+05     636.06         101.23         2.2543         0.0000    
-      29      4.15328E+05     644.46         102.57         9.7917         0.0000    
-      30      4.20077E+05     648.13         103.15         28.262         0.0000    
-      31      4.23431E+05     650.72         103.56         18.196         0.0000    
-      32      4.37246E+05     661.25         105.24        5.28911E-03     0.0000    
-      33      4.46237E+05     668.01         106.32         13.601         0.0000    
-      34      4.47714E+05     669.11         106.49         7.6782         0.0000    
-      35      4.60255E+05     678.42         107.97         2.7838         0.0000    
-      36      4.80954E+05     693.51         110.38         1.1379         0.0000    
-      37      5.23139E+05     723.28         115.11        0.78651         0.0000    
-      38      5.53358E+05     743.88         118.39        0.57261         0.0000    
-      39      5.65291E+05     751.86         119.66        0.79283         0.0000    
-      40      6.15674E+05     784.65         124.88         2.3430         0.0000    
-      41      6.68064E+05     817.35         130.09        0.62609         0.0000    
-      42      6.96262E+05     834.42         132.80        0.62785         0.0000    
-      43      7.06475E+05     840.52         133.77        0.94492         0.0000    
-      44      7.08820E+05     841.91         133.99        0.53456         0.0000    
-      45      7.29649E+05     854.19         135.95        0.56485         0.0000    
-      46      7.39214E+05     859.78         136.84        0.71839         0.0000    
-      47      7.47314E+05     864.47         137.59        0.25745         0.0000    
-      48      7.47367E+05     864.50         137.59        0.19117         0.0000    
-      49      7.84535E+05     885.74         140.97         1.1586         0.0000    
-      50      9.65437E+05     982.57         156.38        0.53501         0.0000    
+       1       10118.         100.59         16.009         15.634         0.0000    
+       2       22382.         149.61         23.811        0.33512         0.0000    
+       3       30400.         174.36         27.750        0.27130         0.0000    
+       4       35699.         188.94         30.071        0.75850         0.0000    
+       5       38112.         195.22         31.071        0.54033         0.0000    
+       6       39970.         199.93         31.819        0.65947         0.0000    
+       7       40991.         202.46         32.223         1.5052         0.0000    
+       8       48910.         221.15         35.198        0.31422         0.0000    
+       9       51593.         227.14         36.151         2.7104         0.0000    
+      10       52241.         228.56         36.377        0.36290         0.0000    
+      11       70341.         265.22         42.211        0.24907         0.0000    
+      12       70510.         265.54         42.262        0.27419         0.0000    
+      13       70732.         265.96         42.328        0.30177         0.0000    
+      14       73009.         270.20         43.004        0.32457         0.0000    
+      15       77675.         278.70         44.357        0.24705         0.0000    
+      16       85464.         292.34         46.528        0.18042         0.0000    
+      17       85645.         292.65         46.577        0.21843         0.0000    
+      18       93420.         305.65         48.645        0.31236         0.0000    
+      19       96236.         310.22         49.373        0.36032         0.0000    
+      20      1.55563E+05     394.41         62.773         13.902         0.0000    
+      21      2.07626E+05     455.66         72.521         10.069         0.0000    
+      22      2.23510E+05     472.77         75.243        0.58365         0.0000    
+      23      2.54310E+05     504.29         80.260        0.64280         0.0000    
+      24      2.60582E+05     510.47         81.244         6.8127         0.0000    
+      25      2.81849E+05     530.89         84.494         8.0408         0.0000    
+      26      3.21903E+05     567.37         90.299         10.297         0.0000    
+      27      3.24606E+05     569.74         90.677         2.3047         0.0000    
+      28      3.37849E+05     581.25         92.508         2.1571         0.0000    
+      29      3.49574E+05     591.25         94.100        0.62930         0.0000    
+      30      3.99658E+05     632.18         100.62        0.77680         0.0000    
+      31      4.05514E+05     636.80         101.35        0.37775         0.0000    
+      32      4.16157E+05     645.10         102.67         1.5128         0.0000    
+      33      4.22627E+05     650.10         103.47        0.37737         0.0000    
+      34      4.46582E+05     668.27         106.36         2.4798         0.0000    
+      35      4.48052E+05     669.37         106.53         3.6028         0.0000    
+      36      4.73345E+05     688.00         109.50        4.72161E-03     0.0000    
+      37      4.86043E+05     697.17         110.96         1.5298         0.0000    
+      38      5.02229E+05     708.68         112.79         4.0011         0.0000    
+      39      5.05070E+05     710.68         113.11         2.1720         0.0000    
+      40      5.98791E+05     773.82         123.16        0.60042         0.0000    
+      41      6.04909E+05     777.76         123.78        0.67218         0.0000    
+      42      6.07307E+05     779.30         124.03         1.9531         0.0000    
+      43      7.06345E+05     840.44         133.76        0.31102         0.0000    
+      44      7.32610E+05     855.93         136.22        0.34957         0.0000    
+      45      7.48812E+05     865.34         137.72        0.73156         0.0000    
+      46      7.74208E+05     879.89         140.04        0.23908         0.0000    
+      47      8.09763E+05     899.87         143.22        0.62750         0.0000    
+      48      8.45082E+05     919.28         146.31        0.24471         0.0000    
+      49      8.54499E+05     924.39         147.12        0.18206         0.0000    
+      50      9.11406E+05     954.68         151.94        0.33491         0.0000    
 
 
           P A R T I C I P A T I O N   F A C T O R S
 
  MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
 
-       1      3.01888E-03   -2.01666E-17     1.2745        8.79179E-18    -12.709       -2.79848E-16
-       2      5.17783E-16     1.1186        7.80844E-16    -2.6396       -4.73582E-15     12.563    
-       3      2.67598E-14     1.3899       -1.01850E-15    -3.7624        1.03715E-13     15.665    
-       4      1.20804E-14    3.02596E-07   -1.47817E-15   -6.99171E-07    7.25712E-14    -8.7193    
-       5       1.6354       -1.61294E-15    4.36579E-03    4.47433E-15     5.7328       -1.10040E-14
-       6      0.15637        1.07754E-16   -7.46766E-03   -2.48891E-16     8.2894        5.31268E-15
-       7     -2.55127E-15   -3.38709E-07   -8.93977E-15    9.24312E-07    1.57672E-14     6.1109    
-       8      2.15891E-17    4.41584E-02   -6.61392E-15   -0.12850        1.01381E-13    0.50009    
-       9     -4.44694E-15   -1.76459E-08   -8.30852E-17    4.13122E-08   -9.43859E-15    0.77429    
-      10      5.01644E-15   -0.25908        8.12689E-15    0.70881       -9.99657E-14    -2.9377    
-      11     -6.67671E-02   -1.69004E-15    0.18655        4.99786E-15    -5.1337       -5.23272E-15
-      12     -0.23392        6.49980E-16    0.52063       -2.17492E-15    -10.254        2.54530E-14
-      13      2.59838E-02    3.58536E-15    0.23740       -1.02716E-14    -3.6257        5.15815E-15
-      14      2.41396E-02   -4.91303E-16   -5.93898E-03    1.59130E-15    0.59378        5.34872E-15
-      15      5.96311E-02    7.95835E-15    0.38913       -2.23527E-14    -1.0958       -8.59028E-15
-      16      0.35529       -7.69309E-14   -0.10162        2.13395E-13   -0.25303       -8.47239E-14
-      17      5.36650E-14     1.2823       -3.83463E-14    -3.5444        2.92488E-13     1.7722    
-      18     -2.43863E-02    4.54837E-15   -9.20422E-02   -1.26149E-14    -5.3891       -2.87361E-15
-      19     -0.40749       -2.98165E-16   -2.55886E-02    8.74788E-16    -4.8068       -2.66294E-15
-      20      1.70199E-03    8.02397E-17    0.35941       -3.08524E-16    -3.4834        3.15829E-15
-      21      1.18401E-02   -9.76673E-17   -1.40543E-03    6.30004E-16    -1.8679       -1.19624E-15
-      22     -1.33705E-03    2.58808E-16    0.12267        6.04182E-16    -1.2215        3.25388E-15
-      23     -7.58723E-16    0.27213        5.78019E-15   -0.18734       -8.06970E-14     3.5184    
-      24      1.13383E-15    0.18926        2.52743E-15   -0.87211       -2.26595E-14     2.5693    
-      25      0.14287        3.00176E-16    1.82452E-02   -1.15559E-15    -3.1304        4.13037E-15
-      26     -6.30391E-03    7.98594E-17    0.26919       -4.51407E-16    -2.4407       -3.95569E-15
-      27     -3.92746E-15   -7.51767E-09    4.95101E-15   -1.13072E-08   -2.90347E-14    0.50131    
-      28      7.98708E-15    5.32433E-09    9.12216E-15   -5.44718E-08   -4.86017E-14   -9.35041E-02
-      29     -4.70010E-16    1.12169E-03   -3.74245E-16    1.60214E-02   -4.30635E-15    3.46973E-02
-      30      5.95425E-17   -4.94107E-11    1.98024E-15   -5.97415E-10   -1.81730E-14   -1.46933E-03
-      31     -8.78290E-16   -3.37125E-04    2.09259E-15    2.58424E-03   -1.99198E-14   -1.27783E-02
-      32      4.96384E-14   -6.16656E-05    1.06998E-13    0.50829       -6.03964E-13     1.0165    
-      33     -6.57648E-16    1.95993E-03   -2.43016E-15    7.23497E-02    1.45115E-14    2.43369E-02
-      34      2.42864E-15    2.36352E-03    2.86573E-15   -9.53747E-02   -1.09623E-14    3.35745E-02
-      35      1.16148E-14   -2.72496E-10    8.15234E-15   -1.43418E-08   -2.74199E-14    2.61637E-02
-      36     -1.43892E-14   -6.03818E-10   -2.51189E-14   -1.16874E-07    1.44673E-13    1.08890E-02
-      37      9.33506E-15    1.12367E-02    1.55987E-14   -0.40618       -9.78986E-14   -4.00402E-02
-      38     -7.30533E-15   -1.03835E-02   -3.62222E-14   -0.14656        3.41925E-13   -1.32868E-02
-      39      1.42162E-14   -3.29044E-09   -7.77109E-15    6.97149E-08    1.92031E-13    0.12101    
-      40       1.8856       -4.46983E-15   -6.62770E-04    1.71702E-14    0.47392       -5.36897E-14
-      41      0.16715        4.41483E-13    7.09167E-02   -1.46638E-12    -1.4613        4.70533E-12
-      42     -0.14304        1.91445E-12   -8.31675E-02   -6.49029E-12     1.2746        2.14253E-11
-      43     -3.93955E-02    8.42553E-13   -5.62758E-02   -2.81607E-12    0.63685        8.94543E-12
-      44     -5.20739E-02    1.14910E-12    5.21021E-02   -4.05949E-12    -1.3128        1.27574E-11
-      45     -1.85348E-02   -1.16179E-12    0.10220        3.81630E-12    -1.4542       -1.29555E-11
-      46     -9.22646E-02    1.37316E-12   -6.51189E-02   -4.37244E-12     1.0573        1.41606E-11
-      47      0.59624       -8.08581E-12   -0.19834       -2.12594E-11    0.11668       -2.24593E-11
-      48      2.52866E-11    0.13826       -9.54809E-12     1.0670        2.54474E-11   -0.53350    
-      49      -1.2416       -3.11015E-13   -4.49422E-03    1.17264E-12    4.95683E-02   -3.25060E-12
-      50      2.12854E-12    9.00348E-02    1.03258E-11     1.1667       -1.28292E-10    0.49360    
+       1      3.61711E-03    3.81653E-16     1.2405       -8.73059E-16    -12.364        3.29923E-15
+       2      6.98953E-16     1.6512       -7.19485E-15    -3.8856        7.49685E-14     12.824    
+       3      3.67058E-15     1.5801       -3.84321E-16    -4.2716        4.31595E-14     22.361    
+       4       3.3463        1.35207E-15   -8.01317E-02   -2.59358E-15     20.835        2.86567E-14
+       5     -1.23491E-14    0.73023        3.77478E-15    -1.7260       -1.39184E-13     14.524    
+       6       1.5701        4.22072E-15   -0.20891       -9.94756E-15     7.4939        7.92106E-14
+       7       2.0538       -6.01365E-16    0.10802        1.43662E-15    0.35042       -1.23180E-14
+       8      6.20556E-15    0.85554       -4.27069E-15    -2.2741        1.64309E-13     5.8659    
+       9     -0.37550        8.57007E-17   -5.03961E-02   -6.35670E-16    -10.276       -6.10862E-14
+      10      3.16967E-14   -8.03925E-02    1.02440E-14    0.19755        8.32811E-13    -5.5774    
+      11     -5.44717E-14    0.43768       -1.54560E-14    -1.1833       -1.46614E-13    0.61443    
+      12      5.71752E-14    6.28882E-02    5.52265E-14   -0.14017       -2.71152E-13   -0.23097    
+      13     -0.39421       -3.83189E-14   -0.37049        1.07211E-13     2.3589       -9.19429E-14
+      14     -0.16196       -4.97340E-15   -7.14404E-02    1.27610E-14    -7.7656       -1.37692E-14
+      15     -0.30200        3.22419E-15    0.64360       -9.21183E-15    -18.358       -2.29034E-14
+      16     -4.63038E-14     1.2902        1.06238E-13    -3.5756        5.67887E-14     1.4302    
+      17      0.20853        2.09108E-13   -0.43024       -5.80054E-13    -1.2475        2.23039E-13
+      18      0.24427        2.50902E-15    0.10314       -6.94416E-15    0.21313        8.26616E-15
+      19      9.39158E-02   -1.10287E-15    0.23113        2.99628E-15    -3.9137       -1.99252E-15
+      20      5.51505E-03   -2.81861E-16   -0.31870        1.10214E-15     3.0544       -5.23595E-15
+      21      1.23763E-02    7.41862E-16    1.31836E-03   -1.08605E-15    -3.4750        8.66098E-15
+      22      2.66835E-15    0.29405        2.62594E-15   -4.44252E-02    1.42320E-13     3.8151    
+      23     -7.47285E-15    0.16000       -9.45495E-15   -0.96629        3.78837E-14     2.2321    
+      24      9.99743E-03   -5.31480E-17    0.35209        3.82844E-16    -3.5554       -5.99233E-16
+      25     -0.20526       -3.96716E-17    8.85944E-03   -7.85830E-16     2.4029       -1.58186E-15
+      26     -6.56629E-03    3.25977E-15   -9.41168E-02   -2.19093E-15    0.99653        4.95830E-14
+      27      9.81642E-15    8.29350E-02    4.13564E-15   -7.94295E-03   -2.60002E-14     1.2562    
+      28      1.20879E-14   -1.60463E-02   -7.55229E-15    0.27668        9.13170E-14   -0.20998    
+      29     -9.64166E-15    0.17820        6.06515E-15   -0.64424       -6.89510E-14     2.0965    
+      30     -2.99477E-14    0.10400        2.19230E-14   -0.14662       -3.45739E-13     1.0477    
+      31     -0.24348       -4.01868E-15   -0.16943        4.54572E-14   -0.20678        7.06171E-15
+      32      8.54273E-15    1.92099E-02   -2.43900E-14    0.17883        2.97689E-13    0.63116    
+      33      0.48568       -1.89167E-14   -0.18279        1.14843E-13     4.0170       -1.40758E-13
+      34      1.60038E-15    2.60255E-02    2.31267E-15   -0.13297       -1.32815E-14    0.24232    
+      35      1.79474E-14    6.63755E-03   -8.56192E-14   -1.13405E-02    1.00713E-12   -3.86760E-02
+      36      6.81287E-12   -6.25759E-07   -1.21894E-11    0.43892        1.42910E-10     1.0973    
+      37      1.27809E-13    8.41261E-03   -2.26584E-13    8.97799E-02    2.71441E-12    0.29803    
+      38      1.59732E-13   -2.90590E-03   -2.96807E-13    3.36047E-02    3.68188E-12   -1.00785E-02
+      39     -5.14905E-14    7.41682E-03    1.85639E-14    0.12442       -3.79211E-13    0.13017    
+      40      4.84713E-13    2.91557E-02   -1.96458E-13   -0.22205        1.99407E-12    0.29379    
+      41     -1.60343E-12    3.19374E-02    3.70645E-12   -0.31817       -4.32839E-11    0.32335    
+      42       2.0208        2.14416E-13    2.06909E-03   -6.10249E-13    0.40044       -7.63363E-13
+      43      0.49674       -3.48378E-13    2.20520E-02   -5.34545E-11   -0.19674        1.99291E-10
+      44      -1.7645        5.49701E-12    7.05258E-03   -7.23111E-12   -0.33884       -9.09210E-12
+      45     -8.79608E-12    1.17971E-02    4.24953E-12    0.80593       -3.02879E-11   -0.35311    
+      46     -0.32953        1.24205E-11   -0.25362       -1.25827E-11     3.8304       -1.67810E-10
+      47     -3.80123E-11   -8.81523E-03    5.39037E-11   -0.81219       -6.55614E-10   -0.23965    
+      48      0.35508       -1.42571E-10   -0.20129       -3.14105E-10    0.56632        1.85174E-09
+      49     -3.11251E-11    0.13028        2.63851E-11     1.1232       -3.05238E-10   -0.44926    
+      50      3.98157E-03    4.78512E-10   -3.79023E-02    2.07911E-10    0.75964       -2.85946E-09
 
 
                     E F F E C T I V E   M A S S
 
  MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
 
-       1      1.36381E-04    6.08598E-33     24.306        1.15669E-33     2416.9        1.17195E-30
-       2      2.53116E-31     1.1813        5.75641E-31     6.5779        2.11745E-29     149.01    
-       3      3.27626E-28    0.88388        4.74609E-31     6.4765        4.92144E-27     112.27    
-       4      7.52946E-29    4.72419E-14    1.12733E-30    2.52213E-13    2.71725E-27     39.225    
-       5       15.609        1.51836E-29    1.11241E-04    1.16841E-28     191.81        7.06708E-28
-       6      0.17281        8.20555E-32    3.94100E-04    4.37781E-31     485.61        1.99465E-28
-       7      2.74575E-30    4.83953E-14    3.37134E-29    3.60402E-13    1.04872E-28     15.753    
-       8      3.64345E-34    1.52431E-03    3.41950E-29    1.29073E-02    8.03457E-27    0.19550    
-       9      9.47540E-30    1.49198E-16    3.30767E-33    8.17772E-16    4.26864E-29    0.28726    
-      10      1.01681E-29    2.71220E-02    2.66869E-29    0.20301        4.03786E-27     3.4871    
-      11      2.43340E-03    1.55914E-30    1.89975E-02    1.36351E-29     14.387        1.49467E-29
-      12      4.05732E-02    3.13251E-31    0.20098        3.50736E-30     77.957        4.80365E-28
-      13      3.72345E-04    7.08933E-30    3.10819E-02    5.81851E-29     7.2497        1.46733E-29
-      14      4.35986E-04    1.80598E-31    2.63898E-05    1.89460E-30    0.26379        2.14048E-29
-      15      1.99325E-03    3.55028E-29    8.48781E-02    2.80078E-28    0.67308        4.13649E-29
-      16      5.90320E-02    2.76775E-27    4.82899E-03    2.12957E-26    2.99404E-02    3.35690E-27
-      17      5.41056E-28    0.30892        2.76253E-28     2.3602        1.60723E-26    0.59006    
-      18      6.59850E-04    2.29544E-29    9.40001E-03    1.76572E-28     32.224        9.16240E-30
-      19      0.19783        1.05916E-31    7.80081E-04    9.11701E-31     27.527        8.44830E-30
-      20      3.13343E-05    6.96440E-32     1.3973        1.02963E-30     131.25        1.07897E-28
-      21      1.79287E-03    1.21992E-31    2.52613E-05    5.07600E-30     44.621        1.83007E-29
-      22      1.72845E-05    6.47614E-31    0.14549        3.52936E-30     14.426        1.02368E-28
-      23      6.18079E-31    7.95111E-02    3.58726E-29    3.76823E-02    6.99186E-27     13.291    
-      24      1.08753E-30    3.03009E-02    5.40383E-30    0.64340        4.34353E-28     5.5842    
-      25      0.12119        5.34995E-31    1.97648E-03    7.92876E-30     58.181        1.01292E-28
-      26      2.44793E-04    3.92854E-32    0.44637        1.25521E-30     36.696        9.63881E-29
-      27      2.01860E-29    7.39590E-17    3.20783E-29    1.67315E-16    1.10322E-27    0.32888    
-      28      1.43807E-28    6.39050E-17    1.87586E-28    6.68878E-15    5.32484E-27    1.97091E-02
-      29      2.16308E-30    1.23198E-05    1.37142E-30    2.51338E-03    1.81584E-28    1.17883E-02
-      30      1.00197E-31    6.89987E-20    1.10824E-28    1.00867E-17    9.33368E-27    6.10154E-05
-      31      1.40363E-29    2.06803E-06    7.96790E-29    1.21518E-04    7.22013E-27    2.97112E-03
-      32      1.30322E-29    2.01126E-11    6.05528E-29    1.36647E-03    1.92932E-27    5.46485E-03
-      33      5.88251E-30    5.22468E-05    8.03239E-29    7.11950E-02    2.86420E-27    8.05575E-03
-      34      4.52881E-29    4.28920E-05    6.30562E-29    6.98433E-02    9.22706E-28    8.65520E-03
-      35      3.75545E-28    2.06710E-19    1.85014E-28    5.72597E-16    2.09302E-27    1.90564E-03
-      36      2.35602E-28    4.14879E-19    7.17976E-28    1.55433E-14    2.38167E-26    1.34921E-04
-      37      6.85395E-29    9.93082E-05    1.91374E-28    0.12976        7.53807E-27    1.26096E-03
-      38      3.05590E-29    6.17377E-05    7.51291E-28    1.23000E-02    6.69454E-26    1.01088E-04
-      39      1.60232E-28    8.58401E-18    4.78791E-29    3.85331E-15    2.92366E-26    1.16104E-02
-      40       8.3303        4.68108E-29    1.02917E-06    6.90743E-28    0.52624        6.75375E-27
-      41      1.74926E-02    1.22029E-25    3.14870E-03    1.34625E-24     1.3370        1.38616E-23
-      42      1.28460E-02    2.30115E-24    4.34276E-03    2.64476E-23     1.0201        2.88211E-22
-      43      1.46653E-03    6.70795E-25    2.99253E-03    7.49348E-24    0.38324        7.56133E-23
-      44      1.44956E-03    7.05846E-25    1.45113E-03    8.80927E-24    0.92129        8.70011E-23
-      45      1.94049E-04    7.62418E-25    5.90018E-03    8.22662E-24     1.1945        9.48084E-23
-      46      6.11546E-03    1.35457E-24    3.04630E-03    1.37343E-23    0.80311        1.44054E-22
-      47      9.15242E-02    1.68322E-23    1.01277E-02    1.16357E-22    3.50523E-03    1.29863E-22
-      48      1.22236E-22    3.65450E-03    1.74280E-23    0.21764        1.23795E-22    5.44098E-02
-      49       1.7861        1.12070E-25    2.34011E-05    1.59316E-24    2.84666E-03    1.22421E-23
-      50      2.42395E-24    4.33692E-03    5.70439E-23    0.72819        8.80563E-21    0.13035    
+       1      2.04553E-04    2.27731E-30     24.061        1.19171E-29     2390.1        1.70181E-28
+       2      1.63719E-31    0.91369        1.73479E-29     5.0596        1.88349E-27     55.110    
+       3      3.65520E-30    0.67733        4.00710E-32     4.9503        5.05355E-28     135.65    
+       4       8.4935        1.38661E-30    4.87037E-03    5.10215E-30     329.25        6.22883E-28
+       5      8.24000E-29    0.28813        7.69914E-30     1.6096        1.04674E-26     113.98    
+       6       1.6258        1.17481E-29    2.87825E-02    6.52570E-29     37.035        4.13772E-27
+       7       6.3491        5.44355E-31    1.75630E-02    3.10662E-30    0.18483        2.28394E-28
+       8      1.21003E-29    0.22999        5.73102E-30     1.6249        8.48313E-27     10.812    
+       9      0.38216        1.99064E-32    6.88365E-03    1.09519E-30     286.22        1.01137E-26
+      10      3.64600E-28    2.34541E-03    3.80824E-29    1.41619E-02    2.51699E-25     11.289    
+      11      7.39048E-28    4.77133E-02    5.95006E-29    0.34877        5.35405E-27    9.40333E-02
+      12      8.96327E-28    1.08440E-03    8.36269E-28    5.38755E-03    2.01593E-26    1.46272E-02
+      13      4.68961E-02    4.43097E-28    4.14208E-02    3.46858E-27     1.6792        2.55099E-27
+      14      8.51381E-03    8.02808E-30    1.65651E-03    5.28540E-29     19.573        6.15352E-29
+      15      2.25328E-02    2.56821E-30    0.10233        2.09644E-29     83.262        1.29596E-28
+      16      3.86830E-28    0.30035        2.03633E-27     2.3067        5.81849E-28    0.36907    
+      17      9.49844E-03    9.55116E-27    4.04330E-02    7.34939E-26    0.33991        1.08661E-26
+      18      1.86386E-02    1.96637E-30    3.32288E-03    1.50625E-29    1.41892E-02    2.13436E-29
+      19      3.17804E-03    4.38261E-31    1.92492E-02    3.23480E-30     5.5190        1.43051E-30
+      20      4.22827E-04    1.10442E-30     1.4120        1.68863E-29     129.70        3.81114E-28
+      21      1.54230E-03    5.54163E-30    1.75009E-05    1.18765E-29     121.59        7.55310E-28
+      22      4.15569E-30    5.04658E-02    4.02463E-30    1.15190E-03    1.18219E-26     8.4953    
+      23      3.58963E-29    1.64561E-02    5.74639E-29    0.60020        9.22530E-28     3.2025    
+      24      6.80920E-04    1.92438E-32    0.84454        9.98534E-31     86.120        2.44630E-30
+      25      0.33877        1.26549E-32    6.31121E-04    4.96544E-30     46.428        2.01204E-29
+      26      4.43960E-04    1.09415E-28    9.12092E-02    4.94264E-29     10.225        2.53145E-26
+      27      2.22082E-28    1.58520E-02    3.94178E-29    1.45402E-04    1.55798E-27     3.6366    
+      28      3.15184E-28    5.55409E-04    1.23033E-28    0.16513        1.79873E-26    9.51111E-02
+      29      5.85011E-29    1.99832E-02    2.31496E-29    0.26119        2.99186E-27     2.7660    
+      30      6.96682E-28    8.40179E-03    3.73346E-28    1.67001E-02    9.28550E-26    0.85265    
+      31      2.23936E-02    6.10062E-30    1.08444E-02    7.80572E-28    1.61512E-02    1.88377E-29
+      32      1.10401E-28    5.58253E-04    8.99924E-28    4.83805E-02    1.34063E-25    0.60264    
+      33      8.90136E-02    1.35037E-28    1.26082E-02    4.97706E-27     6.0894        7.47672E-27
+      34      6.35127E-30    1.67962E-03    1.32630E-29    4.38451E-02    4.37432E-28    0.14561    
+      35      1.16048E-27    1.58728E-04    2.64106E-26    4.63343E-04    3.65434E-24    5.38915E-03
+      36      2.19154E-25    1.84886E-15    7.01541E-25    9.09629E-04    9.64313E-23    5.68525E-03
+      37      2.49895E-26    1.08267E-04    7.85409E-26    1.23309E-02    1.12717E-23    0.13588    
+      38      1.02086E-25    3.37865E-05    3.52478E-25    4.51839E-03    5.42403E-23    4.06418E-04
+      39      5.75858E-27    1.19480E-04    7.48512E-28    3.36232E-02    3.12337E-25    3.68050E-02
+      40      1.41067E-25    5.10390E-04    2.31736E-26    2.96054E-02    2.38745E-24    5.18254E-02
+      41      1.72818E-24    6.85626E-04    9.23430E-24    6.80469E-02    1.25933E-21    7.02804E-02
+      42       7.9760        8.97927E-26    8.36154E-06    7.27348E-25    0.31318        1.13812E-24
+      43      7.67430E-02    3.77477E-26    1.51246E-04    8.88704E-22    1.20387E-02    1.23527E-20
+      44       1.0883        1.05630E-23    1.73873E-05    1.82787E-23    4.01358E-02    2.88977E-23
+      45      5.66017E-23    1.01813E-04    1.32109E-23    0.47517        6.71103E-22    9.12148E-02
+      46      2.59617E-02    3.68820E-23    1.53776E-02    3.78513E-23     3.5078        6.73241E-21
+      47      9.06698E-22    4.87619E-05    1.82327E-21    0.41393        2.69719E-19    3.60392E-02
+      48      3.08537E-02    4.97409E-21    9.91491E-03    2.41435E-20    7.84820E-02    8.39098E-19
+      49      1.76375E-22    3.09018E-03    1.26745E-22    0.22966        1.69626E-20    3.67462E-02
+      50      5.30928E-06    7.66854E-20    4.81125E-04    1.44771E-20    0.19326        2.73838E-18
 
- TOTAL         26.456         2.5209         26.680         17.545         3546.0         340.28    
+ TOTAL         26.611         2.5794         26.725         18.324         3557.5         347.59    
 
 
           THE ANALYSIS HAS BEEN COMPLETED
@@ -817,7 +817,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   4.9000    
-       SYSTEM TIME (SEC)    =  0.80000    
-       TOTAL CPU TIME (SEC) =   5.7000    
-       WALLCLOCK TIME (SEC) =          6
+       USER TIME (SEC)      =   1.4000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =   1.5000    
+       WALLCLOCK TIME (SEC) =          2
