@@ -14,10 +14,10 @@ This repo contains useful tools for the pre and post processing of Abaqus models
 - Run jobs from python
 - Check input file for duplicate nodes/elements
 
-### gen
+### kw
 - Module to generate Abaqus .inp files efficiently
 - Supports most Abaqus keyword (*) for analysis of primarily beam structures
-- Additional useful custom functions: beam joints with used-defined joint stiffness
+- Additional useful custom functions: beam joints with used-defined joint stiffness for 6 degrees of freedom
 
 ## Required packages
 The following list of packages are required:
