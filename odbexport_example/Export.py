@@ -26,8 +26,7 @@ odbexport.export.static(folder_odb,jobname,folder_save,folder_python,stepnumber=
 
 #%% Import modal properties
 
-
-hf=h5py.File('HalogalandModel_exportmodal.h5', 'r')
+hf=h5py.File('Model_single_deck_exportmodal.h5', 'r')
 
 # Frequencies
 f=np.array(hf.get('f'))
@@ -90,8 +89,8 @@ phi_t=phi[index_t,:]
 
 #%% Plot single mode
 
-mode_plot=12 # Mode number to plot
-scale_factor=1e4 # Scale factor
+mode_plot=14 # Mode number to plot
+scale_factor=1 # Scale factor
 
 plt.figure()
 
