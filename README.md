@@ -1,7 +1,8 @@
 # abaqustools
-This repo contains useful tools for the pre and post processing of Abaqus models, mostly via python.
 
-## Contents overview
+This repo contains useful tools for the pre and post processing of Abaqus model, mostly via python.
+
+## Contents
 
 ### odbexport
 - Package for export from Abaqus ODB files
