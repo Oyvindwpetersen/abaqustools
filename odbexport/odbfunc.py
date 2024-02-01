@@ -157,7 +157,8 @@ def exportnodecoord(odb_id,stepnumber,framenumber):
     if 'COORD' not in SelectedFrame.fieldOutputs.keys():
         NodeCoordMatrix=np.array([0 , 0 , 0])
         NodeCoordLabelVector=np.array([0])
-        return NodeCoordMatrix,NodeCoordLabelVector
+        NodeCoord=np.hstack((NodeCoordLabelVector,NodeCoordMatrix))
+        return NodeCoord
         
     t_start=timer()
     CoordValues=SelectedFrame.fieldOutputs['COORD'].values
