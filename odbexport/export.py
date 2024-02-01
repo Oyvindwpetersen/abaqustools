@@ -4,6 +4,7 @@
 
 import sys
 import os
+import time
 import numpy as np
 import putools
 import h5py
@@ -24,7 +25,7 @@ def static(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumbe
     # framenumber: framenumber(s) to export
     # deletetxt: delete txt files
     # saveh5: save to h5
-    # prefix: prefix for txt files    # saveh5: save to h5
+    # prefix: prefix for txt files
     # postfixh5: postfix for h5 file
     # exportscript: name of python script that is created
 
@@ -61,7 +62,7 @@ def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber
     # framenumber: framenumber(s) to export
     # deletetxt: delete txt files
     # saveh5: save to h5
-    # prefix: prefix for txt files    # saveh5: save to h5
+    # prefix: prefix for txt files
     # postfixh5: postfix for h5 file
     # exportscript: name of python script that is created    # stepnumber
        
@@ -74,7 +75,7 @@ def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber
     
     # Variables to export
     if variables is None:
-       variables=['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' ]
+       variables=['f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn']
 
     # Script py file
     if exportscript is None:
@@ -121,13 +122,23 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     if not file_exist_logic:
         print('***** ' + file_name)
         raise Exception('***** ODB file not found')
+        
+    # Check if python folder and python files are given correctly
+    file_name=folder_python + '\\' + 'odbfunc.py'
+    file_exist_logic=os.path.isfile(file_name)
+    if not file_exist_logic:
+        print('***** ' + folder_python)
+        raise Exception('***** Supplied python folder and odbfunc module not found')    
  
     # Ensure list
     if isinstance(variables,str):
         variables=[variables]
- 
+        
+    # Lower case
+    variables=[x.lower() for x in variables]
+
     # Check input variables
-    variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elconn' , 'elset' ]
+    variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elset' ]
     for k in np.arange(len(variables)):
         if not variables[k] in variables_allowed:
             print('***** Check variable ' + variables[k])
@@ -140,6 +151,13 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
     sys_out=os.popen(system_cmd).read()
     
+    idx_error=sys_out.find('error')
+
+    if idx_error>0:
+        print(sys_out)
+        raise Exception('***** Export aborted due to errors, see above')
+            
+            
     # Collect data for h5
     h5_var=[]
     h5_data=[]
@@ -196,8 +214,13 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     # Save h5 file        
     if saveh5==True:
         
-        #if os.path.exists(hf_name):
         hf_name=folder_save + '/' + jobname + postfixh5 + '.h5'
+        
+        # Overwrite file
+        if os.path.exists(hf_name):
+            os.remove(hf_name)
+            time.sleep(1)
+            
         exporth5(hf_name,h5_var,h5_data,h5_isnum)
         
     # Delete txt files identified by prefix
