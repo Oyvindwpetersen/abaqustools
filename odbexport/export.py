@@ -163,6 +163,7 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     h5_data=[]
     h5_isnum=[]
     
+    # hf['test_var'].attrs.modify('Unit', 'Hz')
     for k in np.arange(len(variables)):
         
         # Base for txt files
@@ -262,17 +263,17 @@ def deletefiles(foldername,name_match,extensions):
     # extensions: list of extensions allowed
     
     # Find files that match
-    FileNameListDir=os.listdir(foldername)
-    IndexMatch=putools.num.listindexsub(FileNameListDir,name_match)
+    filenames_dir=os.listdir(foldername)
+    idx_match=putools.num.listindexsub(filenames_dir,name_match)
     
-    for k in np.arange(len(IndexMatch)):
+    for k in np.arange(len(idx_match)):
             
-        FileNameRemove=FileNameListDir[IndexMatch[k]]
+        filename_remove=filenames_dir[idx_match[k]]
         
-        # Only selected files
-        match_logic=[list_sub in FileNameRemove for list_sub in extensions]
+        # Only files with specified extensions
+        match_logic=[list_sub in filename_remove for list_sub in extensions]
         if sum(match_logic)>0:
-            os.remove(foldername + '/' + FileNameRemove)
+            os.remove(foldername + '/' + filename_remove)
 
 #%% Export modal script
 
