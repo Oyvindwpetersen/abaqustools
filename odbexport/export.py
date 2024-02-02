@@ -138,7 +138,6 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     variables=[x.lower() for x in variables]
 
     # Check input variables
-    variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elset' ]
     variables_allowed= ['u' , 'sf' , 'phi' , 'phi_sf' , 'f' , 'gm' , 'nodecoord' , 'elconn' , 'elset' ]
     for k in np.arange(len(variables)):
         if not variables[k] in variables_allowed:
@@ -158,64 +157,11 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
         print(sys_out)
         raise Exception('***** Export aborted due to errors, see above')
             
-            
-    # Collect data for h5
-    h5_var=[]
-    h5_data=[]
-    h5_isnum=[]
-    
-    # hf['test_var'].attrs.modify('Unit', 'Hz')
-    for k in np.arange(len(variables)):
-        
-        # Base for txt files
-        filename_base=folder_save + '/' + prefix
-        
-        # Read txt file
-        data_temp=np.genfromtxt(filename_base+variables[k]+'.txt', delimiter=',')
-        h5_var.append(variables[k])
-        h5_data.append(data_temp)
-        h5_isnum.append(True)
-                    
-        # Special cases where labels also need be imported
-        if variables[k]=='phi':
-            fid=open(filename_base+'phi_label.txt','r')
-            phi_label=fid.read().splitlines()
-            fid.close()
-            h5_var.append('phi_label')
-            h5_data.append(phi_label)
-            h5_isnum.append(False)
-        elif variables[k]=='phi_sf':
-            fid=open(filename_base+'phi_sf_label.txt','r')
-            phi_sf_label=fid.read().splitlines()
-            fid.close()
-            h5_var.append('phi_sf_label')
-            h5_data.append(phi_sf_label)
-            h5_isnum.append(False)
-        elif variables[k]=='u':
-            fid=open(filename_base+'u_label.txt','r')
-            u_label=fid.read().splitlines()
-            fid.close()
-            h5_var.append('u_label')
-            h5_data.append(u_label)
-            h5_isnum.append(False)
-        elif variables[k]=='sf':
-            fid=open(filename_base+'sf_label.txt','r')
-            sf_label=fid.read().splitlines()
-            fid.close()
-            h5_var.append('sf_label')
-            h5_data.append(sf_label)
-            h5_isnum.append(False)
-        elif variables[k]=='elset':
-            fid=open(filename_base+'elset_label.txt','r')
-            elset_label=fid.read().splitlines()
-            fid.close()
-            h5_var.append('elset_label')
-            h5_data.append(elset_label)
-            h5_isnum.append(False)
-
+                
     # Save h5 file        
     if saveh5==True:
-        
+
+        # Base for txt files
         hf_name=folder_save + '/' + jobname + postfixh5 + '.h5'
         
         # Overwrite file
@@ -223,8 +169,96 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
             os.remove(hf_name)
             time.sleep(1)
             
-        exporth5(hf_name,h5_var,h5_data,h5_isnum)
-        
+        hf = h5py.File(hf_name,'w')
+        dt = h5py.special_dtype(vlen=str)
+            
+        # hf['test_var'].attrs.modify('Unit', 'Hz')
+        for k in np.arange(len(variables)):
+            
+            # Base for txt files
+            filename_base=folder_save + '/' + prefix      
+            
+            # Read txt file
+            data_from_txt=np.genfromtxt(filename_base+variables[k]+'.txt', delimiter=',')
+            
+            
+            if variables[k]=='u':
+            
+                hf.create_dataset('u',data=data_from_txt)
+                hf['u'].attrs.modify('Type', 'Displacement')
+                hf['u'].attrs.modify('Unit', 'm, rad')
+                
+                fid=open(filename_base+'u_label.txt','r'); label=fid.read().splitlines(); fid.close()  
+                hf.create_dataset('u_label',data=label,dtype=dt)
+                hf['u_label'].attrs.modify('Type', 'DOF labels')
+                
+            elif variables[k]=='sf':
+            
+                hf.create_dataset('sf',data=data_from_txt)
+                hf['sf'].attrs.modify('Type', 'Section force')
+                hf['sf'].attrs.modify('Unit', 'm, rad')
+                
+                fid=open(filename_base+'sf_label.txt','r'); label=fid.read().splitlines(); fid.close()  
+                hf.create_dataset('sf_label',data=label,dtype=dt)
+                hf['sf_label'].attrs.modify('Type', 'Element labels')
+                
+            elif variables[k]=='phi':
+            
+                hf.create_dataset('phi',data=data_from_txt)
+                hf['phi'].attrs.modify('Type', 'Modal displacement')
+                hf['phi'].attrs.modify('Unit', 'm, rad')
+                
+                fid=open(filename_base+'phi_label.txt','r'); label=fid.read().splitlines(); fid.close()  
+                hf.create_dataset('phi_label',data=label,dtype=dt)
+                hf['phi_label'].attrs.modify('Type', 'DOF labels')
+                
+            elif variables[k]=='phi_sf':
+            
+                hf.create_dataset('phi_sf',data=data_from_txt)
+                hf['phi_sf'].attrs.modify('Type', 'Modal section force')
+                hf['phi_sf'].attrs.modify('Unit', 'N, Nm')
+                
+                fid=open(filename_base+'phi_sf_label.txt','r'); label=fid.read().splitlines(); fid.close()  
+                hf.create_dataset('phi_sf_label',data=label,dtype=dt)
+                hf['phi_sf_label'].attrs.modify('Type', 'Element labels')        
+                
+            elif variables[k]=='f':
+            
+                hf.create_dataset('f',data=data_from_txt)
+                hf['f'].attrs.modify('Type', 'Natural frequency')
+                hf['f'].attrs.modify('Unit', 'Hz')
+                
+            elif variables[k]=='gm':
+            
+                hf.create_dataset('gm',data=data_from_txt)
+                hf['gm'].attrs.modify('Type', 'Generalized mass')
+                hf['gm'].attrs.modify('Unit', 'kg')
+                
+            elif variables[k]=='nodecoord':
+            
+                hf.create_dataset('nodecoord',data=data_from_txt)
+                hf['nodecoord'].attrs.modify('Type', 'Node coordinate')
+                hf['nodecoord'].attrs.modify('Unit', 'Node number, m')     
+                
+            elif variables[k]=='elconn':
+            
+                hf.create_dataset('elconn',data=data_from_txt)
+                hf['elconn'].attrs.modify('Type', 'Element connectivity')
+                hf['elconn'].attrs.modify('Unit', 'Node number, element number')                     
+                
+            elif variables[k]=='elset':
+           
+                hf.create_dataset('elset',data=data_from_txt)
+                hf['elset'].attrs.modify('Type', 'Element sets')
+                hf['elset'].attrs.modify('Unit', 'Element number')      
+           
+                fid=open(filename_base+'elset_label.txt','r'); label=fid.read().splitlines(); fid.close()  
+                hf.create_dataset('elset_label',data=label,dtype=dt)
+                hf['elset_label'].attrs.modify('Type', 'Element labels')    
+                            
+
+    hf.close()
+    
     # Delete txt files identified by prefix
     if deletetxt==True:
         deletefiles(folder_save,prefix,['.txt'])
@@ -232,6 +266,8 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
 #%% 
 
 def exporth5(hf_name,h5_var,h5_data,h5_isnum):
+    
+    # NOT USED
     
     # Save h5 file with data
     #
