@@ -139,6 +139,7 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
 
     # Check input variables
     variables_allowed= ['u' , 'sf' , 'f' , 'gm' , 'phi' , 'phi_sf' , 'nodecoord' , 'elconn' , 'elset' ]
+    variables_allowed= ['u' , 'sf' , 'phi' , 'phi_sf' , 'f' , 'gm' , 'nodecoord' , 'elconn' , 'elset' ]
     for k in np.arange(len(variables)):
         if not variables[k] in variables_allowed:
             print('***** Check variable ' + variables[k])
