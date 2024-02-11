@@ -66,7 +66,7 @@ for k in np.arange(len(node_deck)):
 nodecoord_deck=nodecoord[index_node_deck,:]
 
    
-# Create list of index of y-DOFs,z-DOFs, and t-DOFs in bridge deck
+# Create list of indices of y,z,t DOFs in bridge deck
 index_y=[]
 index_z=[]
 index_t=[]
@@ -89,7 +89,7 @@ phi_t=phi[index_t,:]
 
 #%% Plot single mode
 
-mode_plot=14 # Mode number to plot
+mode_plot=0 # Mode number to plot
 scale_factor=1 # Scale factor
 
 plt.figure()
