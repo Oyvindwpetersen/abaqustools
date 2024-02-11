@@ -21,9 +21,19 @@ warnings.formatwarning = warning_on_one_line
 
 def assembly(fid,assembly_name):
     
-    # Inputs:
-    # fid: file identifier
-    # assembly_name: string with name
+    '''
+    *ASSEMBLY
+    
+    Arguments
+    ------------
+    fid: file identifier
+    assembly_name: string with name
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*ASSEMBLY, NAME=' + assembly_name.upper() + '\n')
     fid.write('**' + '\n')
@@ -32,8 +42,18 @@ def assembly(fid,assembly_name):
 
 def assemblyend(fid):
 
-    # Inputs:
-    # fid: file identifier
+    '''
+    *END ASSEMBLY
+    
+    Arguments
+    ------------
+    fid: file identifier
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*END ASSEMBLY' + '\n')
     fid.write('**' + '\n')
@@ -42,15 +62,26 @@ def assemblyend(fid):
 
 def beamaddedinertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
 
-    # Inputs:
-    # fid: file identifier
-    # linear_mass: mass [kg/m]
-    # x1: 1-dir offset [m]
-    # x2: 2-dir offset [m]
-    # alpha: rotation offset [deg]
-    # I_11: inertia [kg*m^2]
-    # I_22: inertia [kg*m^2]
-    # I_12: inertia [kg*m^2]
+    '''
+    *BEAM ADDED INERTIA
+    
+    Arguments
+    ------------
+    fid: file identifier
+    linear_mass: mass [kg/m]
+    x1: 1-dir offset [m]
+    x2: 2-dir offset [m]
+    alpha: rotation offset [deg]
+    I_11: inertia [kg*m^2]
+    I_22: inertia [kg*m^2]
+    I_12: inertia [kg*m^2]
+    id.write('**' + '\n')
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*BEAM ADDED INERTIA' + '\n')
     
@@ -64,13 +95,23 @@ def beamaddedinertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
 
 def beamsection(fid,elset,material,sectiontype,sectionproperties,direction):
     
-    # Inputs:
-    # fid: file identifier
-    # elset: string with element set
-    # material: string with material name
-    # sectiontype: e.g. 'RECTANGULAR' or 'PIPE'
-    # sectionproperties: array with numbers required for the section type above
-    # direction: array with n1-direction, e.g. [0,1,0]
+    '''
+    *BEAM SECTION
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set
+    material: string with material name
+    sectiontype: e.g. 'RECTANGULAR' or 'PIPE'
+    sectionproperties: array with numbers required for the section type above
+    direction: array with n1-direction, e.g. [0,1,0]
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     if isinstance(elset,str):
         elset=[elset]
@@ -92,13 +133,23 @@ def beamsection(fid,elset,material,sectiontype,sectionproperties,direction):
 
 def beamgeneralsection(fid,elset,density,sectionproperties,direction,materialproperties):
     
-    # Inputs:
-    # fid: file identifier
-    # elset: string with element set name
-    # density: in [kg/m^3]
-    # sectionproperties: [A,I11,I12,I22,It] array with cross section properties
-    # direction: array with n1-direction, e.g. [0,1,0]
-    # materialproperties: [E,G] array with elastic and shear modulus
+    '''
+    *BEAM GENERAL SECTION
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set name
+    density: in [kg/m^3]
+    sectionproperties: [A,I11,I12,I22,It] array with cross section properties
+    direction: array with n1-direction, e.g. [0,1,0]
+    materialproperties: [E,G] array with elastic and shear modulus
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + putools.num.num2strf(density,3) + '\n')
     
@@ -114,12 +165,22 @@ def beamgeneralsection(fid,elset,density,sectionproperties,direction,materialpro
 
 def boundary(fid,op,nodename,BCmat,partname):
 
-    # Inputs:
-    # fid: file identifier
-    # op: 'MOD' for modified BCs or 'NEW' for new BCs (erase all old) 
-    # nodename: string with node set name or array with node numbers
-    # BCmat: array to specificy, e.g. [1,4,0] to set DOF 1,2,3,4 to zero
-    # partname: string with part name
+    '''
+    *BOUNDARY
+    
+    Arguments
+    ------------
+    fid: file identifier
+    op: 'MOD' for modified BCs or 'NEW' for new BCs (erase all old) 
+    nodename: string with node set name or array with node numbers
+    BCmat: array to specificy, e.g. [1,4,0] to set DOF 1,2,3,4 to zero
+    partname: string with part name
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     checkarg(op,['MOD','NEW'])
     
@@ -147,9 +208,19 @@ def boundary(fid,op,nodename,BCmat,partname):
 
 def checkarg(a_str,arg_allowed):
 
-    # Inputs:
-    # a_str: string with argument to check
-    # arg_allowed: string or list with arguments that are allowed
+    '''
+    Check allowable arguments
+    
+    Arguments
+    ------------
+    a_str: string with argument to check
+    arg_allowed: string or list with arguments that are allowed
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     if isinstance(arg_allowed,str):
         arg_allowed=[arg_allowed]
@@ -171,12 +242,22 @@ def checkarg(a_str,arg_allowed):
 #%%
 def cload(fid,op,nset,dof,magnitude_force,partname=''):
 
-    # Inputs:
-    # fid: file identifier
-    # op: 'MOD' for modified CLOADS or 'NEW' for new CLOADS (erase all old) 
-    # nset: string with node set name or array with node numbers
-    # dof: DOF number between 1 and 6
-    # magnitude_force: signed force magnitude
+    '''
+    *CLOAD
+    
+    Arguments
+    ------------
+    fid: file identifier
+    op: 'MOD' for modified CLOADS or 'NEW' for new CLOADS (erase all old) 
+    nset: string with node set name or array with node numbers
+    dof: DOF number between 1 and 6
+    magnitude_force: signed force magnitude
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     checkarg(op,['MOD','NEW','DELETE'])
 
@@ -215,10 +296,20 @@ def cload(fid,op,nset,dof,magnitude_force,partname=''):
 
 def comment(fid,comment_str,logic_main=False):
 
-    # Inputs:
-    # fid: file identifier
-    # comment_str: string or list with comments
-    # logic_main: many or few stars
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    comment_str: string or list with comments
+    logic_main: many or few stars
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     if logic_main==True:
         separatator='***********************************************************'
@@ -239,12 +330,22 @@ def comment(fid,comment_str,logic_main=False):
 
 def dload(fid,op,elset,type_id,magnitude):
 
-    # Inputs:
-    # fid: file identifier
-    # op: 'MOD' for modified DLOADS or 'NEW' for new DLOADS (erase all old) 
-    # elset: name of element set
-    # type_id: load type, e.g. PZ for line load in z-direction
-    # magnitude: signed load magnitude
+    '''
+    *DLOAD
+
+    Arguments
+    ------------
+    fid: file identifier
+    op: 'MOD' for modified DLOADS or 'NEW' for new DLOADS (erase all old) 
+    elset: name of element set
+    type_id: load type, e.g. PZ for line load in z-direction
+    magnitude: signed load magnitude
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     checkarg(op,['MOD','NEW','DELETE'])
 
@@ -269,11 +370,21 @@ def dload(fid,op,elset,type_id,magnitude):
     
 def element(fid,element_nodenumber,element_type,elsetname,star=True):
     
-    # Inputs:
-    # fid: file identifier
-    # element_nodenumber: array with rows [el_num,node_num1,node_num2]
-    # element_type: element type, e.g. B31
-    # elsetname: string with name
+    '''
+    *ELEMENT
+    
+    Arguments
+    ------------
+    fid: file identifier
+    element_nodenumber: array with rows [el_num,node_num1,node_num2]
+    element_type: element type, e.g. B31
+    elsetname: string with name
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     element_nodenumber=putools.num.ensurenp(element_nodenumber)
 
@@ -307,28 +418,35 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
                 
-    # N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5     J2 N2
-    # O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
-    #
-    #
-    # Inputs:
-    # fid: file identifier
-    # node1: (super)node number at joint 1
-    # node2: (super)node number at joint 2
-    # coord1: coordinates of node 1
-    # coord2: coordinates of node 2
-    # node_num_base: base node number for member
-    # el_num_base: base element number for member
-    # element_type: element type, e.g. B31
-    # setname: name for member
-    # direction: array with n1-direction, e.g. [0,1,0]
-    # kj1: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 1
-    # kj2: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 2
-    # offset1: eccentricity offset of member end 1 in [m]
-    # offset2: eccentricity offset of member end 2 in [m]
-    # n_el: number of elements in member
-    # max_length: max element length (overrides n_el)
+    '''
     
+    N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5     J2 N2
+    O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
+
+    Arguments
+    ------------
+    fid: file identifier
+    node1: (super)node number at joint 1
+    node2: (super)node number at joint 2
+    coord1: coordinates of node 1
+    coord2: coordinates of node 2
+    node_num_base: base node number for member
+    el_num_base: base element number for member
+    element_type: element type, e.g. B31
+    setname: name for member
+    direction: array with n1-direction, e.g. [0,1,0]
+    kj1: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 1
+    kj2: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 2
+    offset1: eccentricity offset of member end 1 in [m]
+    offset2: eccentricity offset of member end 2 in [m]
+    n_el: number of elements in member
+    max_length: max element length (overrides n_el)
+
+    Returns
+    ------------
+    None
+    
+    '''
     
     setname=setname.upper()
     
@@ -375,7 +493,6 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     if L0==0:
         raise Exception('***** L0 is zero for set ' + setname)
         
-        
     # Determine number of elements
     if (n_el is None):
         n_el=np.ceil(L0/max_length) 
@@ -409,8 +526,9 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
     el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
     
-    # If kj stiffnesses are all inf, the member in continuous and therefore instead directly linked to the supernode
-    # The offset is thus ignored
+    # If kj stiffnesses are all inf, the member in continuous and therefore
+    # instead directly linked to the supernode, the offset is thus ignored
+    
     if all(kj1>1e20):
         J1_cont=True
         el_matrix[0,1]=node1
@@ -480,6 +598,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
                 dof_zero.append(DOFS[k])
                 continue
                         
+            # From Abaqus doc:
             # If the *SPRING option is being used to define part of the behavior 
             # of ITS or JOINTC elements, it must be used in conjunction with the
             # *ITS or *JOINT options and the ELSET and ORIENTATION parameters
@@ -502,10 +621,20 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
 
 def elset(fid,elsetname,elements,option=''):
     
-    # Inputs:
-    # fid: file identifier
-    # elsetname: string with name
-    # elements: element numbers or list of strings to include in elset
+    '''
+    *ELSET
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elsetname: string with name
+    elements: element numbers or list of strings to include in elset
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*ELSET, ELSET=' + elsetname.upper() + '\n')
     
@@ -529,11 +658,21 @@ def elset(fid,elsetname,elements,option=''):
 
 def fieldoutput(fid,id_type,variables,set_id='',options=''):
     
-    # Inputs:
-    # fid: file identifier
-    # id_type: 'NODE' or 'ELEMENT'
-    # variables: response quantity, e.g. U or SF
-    # set_id: name of nodeset or elset
+    '''
+    *FIELD OUTPUT
+    
+    Arguments
+    ------------
+    fid: file identifier
+    id_type: 'NODE' or 'ELEMENT'
+    variables: response quantity, e.g. U or SF
+    set_id: name of nodeset or elset
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     comma=', '
     if len(options)<=1:
@@ -543,13 +682,13 @@ def fieldoutput(fid,id_type,variables,set_id='',options=''):
     fid.write('*OUTPUT, FIELD' + comma + options.upper() + '\n')
     
     if id_type.upper()=='NODE':
-        if len(set_id)<=1:
+        if not set_id:
             fid.write('*NODE OUTPUT \n')
         else:
             fid.write('*NODE OUTPUT, NSET=' + set_id.upper() + '\n')
         
     elif id_type.upper()=='ELEMENT':
-        if len(set_id)<=1:
+        if not set_id:
             fid.write('*ELEMENT OUTPUT \n')
         else:
             fid.write('*ELEMENT OUTPUT, ELSET=' + set_id.upper() + '\n')
@@ -561,16 +700,25 @@ def fieldoutput(fid,id_type,variables,set_id='',options=''):
         fid.write(variables_sub + '\n')
     
     fid.write('**' + '\n')
-    # fid.write('**' + '\n')
-    
+        
 #%%
 
 def frequency(fid,n_modes,normalization='DISPLACEMENT'):
     
-    # Inputs:
-    # fid: file identifier
-    # n_modes: number of modes
-    # normalization: 'DISPLACEMENT' or 'MASS'
+    '''
+    *FREQUENCY
+    
+    Arguments
+    ------------
+    fid: file identifier
+    n_modes: number of modes
+    normalization: 'DISPLACEMENT' or 'MASS'
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     if normalization.upper()=='MASS':
         norm='MASS'
@@ -590,12 +738,25 @@ def frequency(fid,n_modes,normalization='DISPLACEMENT'):
         
 #%%
 
-def gravload(fid,op,elset,magnitude=9.81,partname=''):
+def gravload(fid,op,elset,magnitude=9.81,direction='z',partname=''):
     
-    # Inputs:
-    # fid: file identifier
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified DLOADS
-    # magnitude: unsigned load magnitude
+    '''
+    Gravity load through *DLOAD
+    
+    Arguments
+    ------------
+    fid: file identifier
+    op: 'MOD' or 'NEW'
+    elset: element set
+    magnitude: gravitational constant
+    direction: 'x','y', or 'z'
+    partname: unsigned load magnitude
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     partname_str=''
     if len(partname)>0:
@@ -611,8 +772,13 @@ def gravload(fid,op,elset,magnitude=9.81,partname=''):
     if magnitude<0:
         print('***** Gravity magnitude should generally be positive: magnitude 9.81 and direction [0 0 -1]')
     
-    direction_str=' 0 , 0, -1'
-    
+    if direction=='x':
+        direction_str=' -1 , 0, 0'
+    elif direction=='y':
+        direction_str=' 0 , -1, 0'
+    elif direction=='z':
+        direction_str=' 0 , 0, -1'
+        
     for elset_sub in elset:
         fid.write(partname_str + elset_sub.upper() + ', GRAV, ' + putools.num.num2strf(magnitude,5) + ',' + direction_str + '\n')
             
@@ -622,9 +788,19 @@ def gravload(fid,op,elset,magnitude=9.81,partname=''):
 
 def historyoutput(fid,options=''):
     
-    # Inputs:
-    # fid: file identifier
-    # options: 
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    options: 
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     comma=', '
     if len(options)<=1:
@@ -637,10 +813,20 @@ def historyoutput(fid,options=''):
 
 def historyoutputelement(fid,variables,elset,options=''):
     
-    # Inputs:
-    # fid: file identifier
-    # variables: response quantity, e.g. SF
-    # elset: string with element name
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    variables: response quantity, e.g. SF
+    elset: string with element name
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*ELEMENT OUTPUT, ELSET=' + elset + '\n')
 
@@ -657,10 +843,20 @@ def historyoutputelement(fid,variables,elset,options=''):
     
 def historyoutputnode(fid,variables,nset,options=''):
     
-    # Inputs:
-    # fid: file identifier
-    # variables: response quantity, e.g. 'U'
-    # nset: string with node name
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    variables: response quantity, e.g. 'U'
+    nset: string with node name
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*NODE OUTPUT, NSET=' + nset + '\n')
 
@@ -677,9 +873,19 @@ def historyoutputnode(fid,variables,nset,options=''):
 
 def include(fid,filename):
     
-    # Inputs:
-    # fid: file identifier
-    # filename: string with name of inp file
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    filename: string with name of inp file
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('**' + '\n')
     fid.write('*INCLUDE, INPUT=' + filename + '\n')
@@ -689,10 +895,20 @@ def include(fid,filename):
 
 def instance(fid,instancename,partname):
     
-    # Inputs:
-    # fid: file identifier
-    # instancename: string with instance
-    # partname: string with part
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    instancename: string with instance
+    partname: string with part
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*INSTANCE, NAME=' + instancename.upper() + ', PART=' + partname.upper() + '\n')
     fid.write('**' + '\n')
@@ -702,8 +918,18 @@ def instance(fid,instancename,partname):
 
 def instanceend(fid):
     
-    # Inputs:
-    # fid: file identifier
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*END INSTANCE' + '\n')
     fid.write('**' + '\n')
@@ -712,9 +938,19 @@ def instanceend(fid):
 
 def line(fid,line):
     
-    # Inputs:
-    # fid: file identifier
-    # line: string or list with lines to write to file
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    line: string or list with lines to write to file
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     if isinstance(line,str):
         line=[line]
@@ -726,10 +962,20 @@ def line(fid,line):
 
 def mpc(fid,id_type,nodes):
     
-    # Inputs:
-    # fid: file identifier
-    # id_type: e.g. 'BEAM' or 'PIN'
-    # nodes: array with node numbers or list with node names
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    id_type: e.g. 'BEAM' or 'PIN'
+    nodes: array with node numbers or list with node names
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*MPC' + '\n')
     
@@ -752,12 +998,22 @@ def mpc(fid,id_type,nodes):
 
 def material(fid,materialname,E,v,density):
     
-    # Inputs:
-    # fid: file identifier
-    # materialname: string with name
-    # E: elastic modulus in [Pa]
-    # v: Poisson ratio
-    # density: in [kg/m^3]
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    materialname: string with name
+    E: elastic modulus in [Pa]
+    v: Poisson ratio
+    density: in [kg/m^3]
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*MATERIAL, NAME=' + materialname.upper() + '\n')
     fid.write('*ELASTIC' + '\n')
@@ -773,10 +1029,20 @@ def material(fid,materialname,E,v,density):
 
 def modelchange(fid,option,elset,partname=''):
     
-    # Inputs:
-    # fid: file identifier
-    # option: 'ADD' or 'REMOVE'
-    # elset: string or list with element sets
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    option: 'ADD' or 'REMOVE'
+    elset: string or list with element sets
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     checkarg(option,['ADD','REMOVE'])
 
@@ -798,10 +1064,20 @@ def modelchange(fid,option,elset,partname=''):
     
 def node(fid,nodenumber_coord,nsetname):
     
-    # Inputs:
-    # fid: file identifier
-    # nodenumber_coord: array with rows [node_num,coord_x,coord_y,coord_z]
-    # nsetname: string with name
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    nodenumber_coord: array with rows [node_num,coord_x,coord_y,coord_z]
+    nsetname: string with name
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     nodenumber_coord=np.atleast_2d(nodenumber_coord)
     
@@ -825,11 +1101,21 @@ def node(fid,nodenumber_coord,nsetname):
 
 def nonstructuralmass(fid,elset,unit,mass):
     
-    # Inputs:
-    # fid: file identifier
-    # elset: string with name
-    # unit: MASS PER LENGTH or TOTAL MASS
-    # mass: magnitude 
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with name
+    unit: MASS PER LENGTH or TOTAL MASS
+    mass: magnitude 
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*NONSTRUCTURAL MASS, ELSET=' + elset.upper() + ', UNITS=' + unit.upper() + '\n')
     
@@ -841,10 +1127,20 @@ def nonstructuralmass(fid,elset,unit,mass):
 
 def nset(fid,nsetname,nodes,option=''):
     
-    # Inputs:
-    # fid: file identifier
-    # nsetname: string with name
-    # nodes: array with numbers or list with node set names
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    nsetname: string with name
+    nodes: array with numbers or list with node set names
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     comma=', '
     if len(option)<=1:
@@ -875,9 +1171,20 @@ def nset(fid,nsetname,nodes,option=''):
 #%%
 
 def orientation(fid,name,defi,a,b,c):
-    # Inputs:
-    # fid: file identifier
-    # def: NODES
+
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    def: NODES
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*ORIENTATION, NAME=' + name.upper() + ', DEFINITION=' + defi.upper() + '\n')
 
@@ -889,10 +1196,20 @@ def orientation(fid,name,defi,a,b,c):
 
 def parameter(fid,parameternames,values):
     
-    # Inputs:
-    # fid: file identifier
-    # parameternames: string or list with names
-    # values: array with numbers
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    parameternames: string or list with names
+    values: array with numbers
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     if isinstance(parameternames,str):
         parameternames=[parameternames]
@@ -911,9 +1228,19 @@ def parameter(fid,parameternames,values):
 
 def part(fid,partname):
     
-    # Inputs:
-    # fid: file identifier
-    # partname: string with name
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    partname: string with name
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*PART, NAME=' + partname.upper() + '\n')
     fid.write('**' + '\n')
@@ -931,32 +1258,29 @@ def partend(fid):
 
 def release(fid,elset,end_id,release_id):
     
-    # Inputs:
-    # fid: file identifier
-    # elset: string or list with element set name
-    # end_id: string or list with end ids, e.g. 'S1' 'S2'
-    # release_id: string or list with end ids, choose from M1, M2, T, M1-M2, M1-T, M2-T, ALLM
+    '''
     
-    # M1	
-    # refers to the rotation about the n1-axis,
-
-    # M2	
-    # refers to the rotation about the n2-axis,
-
-    # M1-M2	
-    # refers to a combination of rotational degrees of freedom about the n1-axis and the n2-axis,
-
-    # T	
-    # refers to the rotation about the t-axis,
-
-    # M1-T	
-    # refers to a combination of rotational degrees of freedom about the n1-axis and the t-axis,
-
-    # M2-T	
-    # refers to a combination of rotational degrees of freedom about the n2-axis and the t-axis, and
-
-    # ALLM	
-    # represents a combination of all the rotational degrees of freedom (i.e., M1, M2, and T).
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string or list with element set name
+    end_id: string or list with end ids, e.g. 'S1' 'S2'
+    release_id: string or list with end ids
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    # M1: refers to the rotation about the n1-axis,
+    # M2 refers to the rotation about the n2-axis,
+    # M1-M2: refers to a combination of rotational degrees of freedom about the n1-axis and the n2-axis,
+    # T: refers to the rotation about the t-axis,
+    # M1-T: refers to a combination of rotational degrees of freedom about the n1-axis and the t-axis,
+    # M2-T: refers to a combination of rotational degrees of freedom about the n2-axis and the t-axis, and
+    # ALLM: represents a combination of all the rotational degrees of freedom (i.e., M1, M2, and T).
     
     if isinstance(elset,str):
         elset=[elset]
@@ -986,11 +1310,21 @@ def release(fid,elset,end_id,release_id):
 
 def restart(fid,id_type,step=-1,frequency=100):
     
-    # Inputs:
-    # fid: file identifier
-    # id_type: 'READ' or 'WRITE'
-    # step: number, usually the last
-    # frequency: frequency
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    id_type: 'READ' or 'WRITE'
+    step: number, usually the last
+    frequency: frequency
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     checkarg(id_type,['READ' , 'WRITE'])
     
@@ -1012,13 +1346,23 @@ def restart(fid,id_type,step=-1,frequency=100):
 
 def shellsection(fid,elset,material,options,shellproperties):
     
-    # Inputs:
-    # fid: file identifier
-    # elset: string with element set name
-    # material: string with material set name
-    # options: e.g.  OFFSET=SNEG
-    # shellproperties: array with [thickness,number of integration points]
-
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set name
+    material: string with material set name
+    options: e.g.  OFFSET=SNEG
+    shellproperties: array with [thickness,number of integration points]
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
     fid.write('*SHELL SECTION, ELSET=' + elset.upper() + ',' + ' MATERIAL=' + material.upper() + ', ' + options.upper() + '\n')
 
     putools.txt.writematrix(fid,shellproperties,3,',',['f','int'])
@@ -1029,10 +1373,20 @@ def shellsection(fid,elset,material,options,shellproperties):
 
 def shearcenter(fid,x1,x2):
     
-    # Inputs:
-    # fid: file identifier
-    # x1: offset in 1-dir in [m]
-    # x2: offset in 2-dir in [m]
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    x1: offset in 1-dir in [m]
+    x2: offset in 2-dir in [m]
+    
+    Returns
+    ------------
+    None
+    
+    '''
  
     fid.write('*SHEAR CENTER' + '\n')
     putools.txt.writematrix(fid,[x1,x2],3,',','e')
@@ -1042,12 +1396,22 @@ def shearcenter(fid,x1,x2):
 
 def spring(fid,elset,element_nodenumber,dofno,springstiffness):
 
-    # Inputs:
-    # fid: file identifier
-    # elset: string with element set name
-    # element_nodenumber: [Elno,Nodeno1,Nodeno2]
-    # dofno: DOF 1-6
-    # springstiffness: in N/m
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set name
+    element_nodenumber: [Elno,Nodeno1,Nodeno2]
+    dofno: DOF 1-6
+    springstiffness: in N/m
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     #*ELEMENT, TYPE=SPRING2, ELSET=SADLESPRING_X
     #301001, 100075, 10051
@@ -1081,11 +1445,21 @@ def spring(fid,elset,element_nodenumber,dofno,springstiffness):
 
 def springa(fid,elset,element_nodenumber,springstiffness):
 
-    # Inputs:
-    # fid: file identifier
-    # elset: string with element set name
-    # element_nodenumber: [Elno,Nodeno1,Nodeno2]
-    # springstiffness: in N/m
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set name
+    element_nodenumber: [Elno,Nodeno1,Nodeno2]
+    springstiffness: in N/m
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     # For now, springstiffness is a scalar
         
@@ -1107,9 +1481,19 @@ def springa(fid,elset,element_nodenumber,springstiffness):
     
 def static(fid,time):
 
-    # Inputs:
-    # fid: file identifier
-    # time: string or array with [Initial Total Min Max]
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    time: string or array with [Initial Total Min Max]
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     fid.write('*STATIC \n')
 
@@ -1125,7 +1509,17 @@ def static(fid,time):
 
 def step(fid,options='',comment_str=''):
 
-    # Inputs:
+    '''
+    
+    
+    Arguments
+    ------------
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     comma=', '
     if len(options)<1:
@@ -1139,8 +1533,18 @@ def step(fid,options='',comment_str=''):
 
 def stepend(fid):
 
-    # Inputs:
-    # fid: file identifier
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*END STEP' + '\n')
     fid.write('**' + '\n')
@@ -1150,11 +1554,21 @@ def stepend(fid):
 
 def temperature(fid,op,nset,magnitude_temp,partname=''):
 
-    # Inputs:
-    # fid: file identifier
-    # op: 'MOD' or 'NEW' for new (erase all old) or modified TEMP
-    # nset: string with node name
-    # magnitude_temp: in K
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    op: 'MOD' or 'NEW' for new (erase all old) or modified TEMP
+    nset: string with node name
+    magnitude_temp: in K
+    
+    Returns
+    ------------
+    None
+    
+    '''
 
     checkarg(op,['MOD','NEW'])
 
@@ -1186,13 +1600,23 @@ def temperature(fid,op,nset,magnitude_temp,partname=''):
 
 def tie(fid,tiename,adjust,postol,slavename,mastername):
 
-    # Inputs:
-    # fid: file identifier
-    # tiename: string with name
-    # adjust: 'YES' or 'NO' adjustment of slave node
-    # postol: in m, nodes outside will not be tied
-    # slavename: name of surface
-    # mastername: name of surface
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    tiename: string with name
+    adjust: 'YES' or 'NO' adjustment of slave node
+    postol: in m, nodes outside will not be tied
+    slavename: name of surface
+    mastername: name of surface
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     checkarg(adjust,['YES','NO'])
     
@@ -1205,10 +1629,20 @@ def tie(fid,tiename,adjust,postol,slavename,mastername):
    
 def transverseshearstiffness(fid,k23,k13):
 
-    # Inputs:
-    # fid: file identifier
-    # k23: shear stiffness in 2-dir
-    # k13: shear stiffness in 1-dir
+    '''
+    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    k23: shear stiffness in 2-dir
+    k13: shear stiffness in 1-dir
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     fid.write('*TRANSVERSE SHEAR STIFFNESS' + '\n')
     putools.txt.writematrix(fid,[k23,k13],3,',','e')
