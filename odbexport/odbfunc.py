@@ -6,243 +6,276 @@ import os
 from textRepr import *
 from timeit import default_timer as timer
 
-def p(pstring):
-    prettyPrint(pstring)
-
 # This module is imported in Abaqus by "import odbfunc"
-# The folder must first be added to the system path
+# The folder containing odbfunc.py must first be added to the system path
 
 #%%
 
-def open_odb(foldername_odb,jobname):
+def p(pstring):
+    prettyPrint(pstring)
+
+#%%
+
+def open_odb(folder_odb,jobname):
     
-    # Open ODB file
+    '''
+    Open ODB file
+
+    Arguments
+    ------------
+    folder_odb (str): folder of odb file
+    jobname (str): name of odb file
+
+    Returns
+    ------------
+    odb_id (odb object): odb file identifier
     
-    # Inputs:
-    # foldername_odb: string with folder name
-    # jobname: string with job name
-    
-    # Outputs:
-    # odb_id: ODB object
+    '''
 
     if jobname.endswith('.odb'):
         jobname=jobname[:-4]
     
-    odb_id=odbAccess.openOdb(foldername_odb+'/'+jobname + '.odb')
+    odb_id=odbAccess.openOdb(folder_odb + '/' + jobname + '.odb',readOnly=True)
+    
     return odb_id
+    
+#%%
 
 def close_odb(odb_id):
 
-    # Close ODB file
+    '''
+    Close ODB file
 
-    # Inputs:
-    # odb_id: ODB object
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+
+    Returns
+    ------------
+    None
+    
+    '''
 
     odb_id.close()
 
 #%%
 
-def exporthistoryoutput(odb_id,stepnumber,hist_str,AssemblyName=None):
+def exporthistoryoutput(odb_id,stepnumber,hist_key,assembly_name=None):
+    
+    '''
+    Export history outputs
 
-    # Export history outputs
-    
-    # Inputs:
-    # odb_id: ODB object
-    # stepnumber: step number for export, usually -1
-    # hist_str: string with desired quantity, e.g. EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
-    
-    # Outputs:
-    # OutputVector: vector with numbers
+    Arguments
+    ------------
+    odb_id (odb object): odb object
+    stepnumber (int): step number for export, usually -1
+    hist_key (str): output to export, e.g. EIGFREQ,GM,DAMPRATIO,EIGREAL,EIGIMAG
+    assembly_name (str): assembly
 
-    StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[stepnumber]
+    Returns
+    ------------
+    output_vec (np array): vector with history outputs
     
-    if AssemblyName is None:
-        AssemblyNameKeys=odb_id.steps[NameOfStep].historyRegions.keys()
-        AssemblyName=AssemblyNameKeys[0]
+    '''
+
+    step_name=odb_id.steps.keys()[stepnumber]
+    step_id=odb_id.steps[step_name]
     
-    HistoryOutputKeys=odb_id.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs.keys()
+    if assembly_name is None:
+        assembly_keys=step_id.historyRegions.keys()
+        assembly_name=assembly_keys[0]
+    
+    hist_output_keys=step_id.historyRegions[assembly_name].historyOutputs.keys()
     
     # If key not found, return zero
-    if hist_str not in HistoryOutputKeys:
-        OutputVector=np.array([0])
-        return OutputVector
+    if hist_key not in hist_output_keys:
+        output_vec=np.array([0])
+        return output_vec
     else:
-        HistoryOutput=odb_id.steps[NameOfStep].historyRegions[AssemblyName].historyOutputs[hist_str]
+        hist_output=step_id.historyRegions[assembly_name].historyOutputs[hist_key]
         
-    OutputVector=np.array([HistoryOutput.data[j][1] for j in range(0,len(HistoryOutput.data))])
+    output_vec=np.array([hist_output.data[j][1] for j in range(0,len(hist_output.data))])
     
-    return OutputVector
+    return output_vec
     
 #%%
 
 def exportdisplacement(odb_id,stepnumber,framenumber=None):
 
-    # Export displacement field (U,UR) for a single step and multiple frames
-    
-    # Inputs:
-    # odb_id: ODB object
-    # stepnumber: step number for export, usually -1
-    # framenumber: frame number(s) for export, None gives all frames in step, 'skipfirst' gives all except frame 0
-    
-    # Outputs:
-    # DisplacementMatrix: matrix with each frame as column (e.g. N_DOF*N_frames)
-    # LabelVector: list with DOF labels of all N_DOF
+    '''
+    Export displacement field (U,UR) for a single step and multiple frames
 
-    StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[stepnumber]
-    SelectedStep=odb_id.steps[NameOfStep]
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+    stepnumber (int): step number for export, usually -1
+    framenumber (list): frame number(s) for export; None gives all frames; 'skipfirst' gives all except 0
+    
+    Returns
+    ------------
+    disp_matrix: matrix with each frame as column (e.g. N_DOF*N_frames)
+    label_vec: list with DOF labels of all N_DOF
+    
+    '''
+    
+    step_name=odb_id.steps.keys()[stepnumber]
+    step_id=odb_id.steps[step_name]
     
     if framenumber is None:
-        framenumber=range(len(SelectedStep.frames))
+        framenumber=range(len(step_id.frames))
     elif framenumber=='skipfirst':
-        framenumber=range(1,len(SelectedStep.frames))
+        framenumber=range(1,len(step_id.frames))
     elif isinstance(framenumber,int):
         framenumber=np.array([framenumber])
     
-    SelectedFrame=SelectedStep.frames[-1]
-    if not SelectedFrame.fieldOutputs.has_key('U'):
-        DisplacementMatrix=np.array([0])
-        LabelVector=np.array([0])
-        return DisplacementMatrix,LabelVector
+    frame_id=step_id.frames[-1]
+    if not frame_id.fieldOutputs.has_key('U'):
+        disp_matrix=np.array([0])
+        label_vec=np.array([0])
+        return disp_matrix,label_vec
     
-    N_node=len(SelectedFrame.fieldOutputs['U'].values)          
+    N_node=len(frame_id.fieldOutputs['U'].values)          
     N_frame=len(framenumber)    
     
-    DisplacementMatrix=np.zeros((N_node*6,N_frame))
+    disp_matrix=np.zeros((N_node*6,N_frame))
     
     t_start=timer()
     for z in np.arange(len(framenumber)):
         
-        SelectedFrame=SelectedStep.frames[framenumber[z]]
+        frame_id=step_id.frames[framenumber[z]]
         
-        OutputTrans=SelectedFrame.fieldOutputs['U']
-        OutputTransValues=OutputTrans.values
+        disp_trans=frame_id.fieldOutputs['U']
+        disp_trans_val=disp_trans.values
         
-        OutputRot=SelectedFrame.fieldOutputs['UR']
-        OutputRotValues=OutputRot.values
+        disp_rot=frame_id.fieldOutputs['UR']
+        disp_rot_val=disp_rot.values
         
-        U_temp=np.array([OutputTransValues[n].data for n in range(N_node) ])
-        UR_temp=np.array([OutputRotValues[n].data for n in range(N_node) ])
+        U_temp=np.array([disp_trans_val[n].data for n in range(N_node) ])
+        UR_temp=np.array([disp_rot_val[n].data for n in range(N_node) ])
         
-        Displacement_temp=np.hstack((U_temp,UR_temp)).flatten()
-        DisplacementMatrix[:,z]=Displacement_temp
+        disp_matrix[:,z]=np.hstack((U_temp,UR_temp)).flatten()
     
-    LabelVectorTemp=[ [str(OutputTransValues[n].nodeLabel) + '_' + s  for s in OutputTrans.componentLabels] + [str(OutputRotValues[n].nodeLabel) + '_' + s  for s in OutputRot.componentLabels] for n in range(N_node) ]
-    LabelVector=[item for sublist in LabelVectorTemp for item in sublist]
+    label_vec_temp=[ [str(disp_trans_val[n].nodeLabel) + '_' + s  for s in disp_trans.componentLabels] + [str(disp_rot_val[n].nodeLabel) + '_' + s  for s in disp_rot.componentLabels] for n in range(N_node) ]
+    label_vec=[item for sublist in label_vec_temp for item in sublist]
     
     t_end=timer()
     print('Time displacement ' + str(t_end-t_start) + ' s')
-    return DisplacementMatrix,LabelVector
+    return disp_matrix,label_vec
 
 #%%
 
 def exportnodecoord(odb_id,stepnumber,framenumber):
-
-    # Export node coordinates (Node,x,y,z) for a single step and a single frame
     
-    # Inputs:
-    # odb_id: ODB object
-    # stepnumber: step number for export, usually -1
-    # framenumber: frame number for export, usually 0
-    
-    # Outputs:
-    # NodeCoord: matrix with [nodenumber,x,y,z] as rows, size N_NODE*4
+    '''
+    Export node coordinates for a single step and a single frame
 
-    StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[stepnumber]
-    SelectedStep=odb_id.steps[NameOfStep]
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+    stepnumber (int): step number for export, usually -1
+    framenumber (int): frame number for export
+    
+    Returns
+    ------------
+    nodecoord: matrix with [nodenumber,x,y,z] as rows, size N_NODE*4
+    
+    '''
+
+    step_name=odb_id.steps.keys()[stepnumber]
+    step_id=odb_id.steps[step_name]
             
-    SelectedFrame=SelectedStep.frames[framenumber]
-    if 'COORD' not in SelectedFrame.fieldOutputs.keys():
-        NodeCoordMatrix=np.array([0 , 0 , 0])
-        NodeCoordLabelVector=np.array([0])
-        NodeCoord=np.hstack((NodeCoordLabelVector,NodeCoordMatrix))
-        return NodeCoord
+    frame_id=step_id.frames[framenumber]
+    if 'COORD' not in frame_id.fieldOutputs.keys():
+        nodecoord_matrix=np.array([0 , 0 , 0])
+        nodecoord_label=np.array([0])
+        nodecoord=np.hstack((nodecoord_label,nodecoord_matrix))
+        return nodecoord
         
     t_start=timer()
-    CoordValues=SelectedFrame.fieldOutputs['COORD'].values
-    NodeCoordMatrix=np.array([CoordValues[ii].data for ii in range(len(CoordValues))])
-    NodeCoordLabelVector=np.zeros((np.shape(NodeCoordMatrix)[0],1))
-    NodeCoordLabelVector[:,0]=np.array([CoordValues[ii].nodeLabel for ii in range(len(CoordValues))])
+    coord_val=frame_id.fieldOutputs['COORD'].values
+    nodecoord_matrix=np.array([coord_val[ii].data for ii in range(len(coord_val))])
+    nodecoord_label=np.zeros((np.shape(nodecoord_matrix)[0],1))
+    nodecoord_label[:,0]=np.array([coord_val[ii].nodeLabel for ii in range(len(coord_val))])
     
     t_end=timer()
     print('Time nodecoord ' + str(t_end-t_start) + ' s')
     
-    NodeCoord=np.hstack((NodeCoordLabelVector,NodeCoordMatrix))
+    nodecoord=np.hstack((nodecoord_label,nodecoord_matrix))
     
-    return NodeCoord
+    return nodecoord
         
 #%%
 
 def exportsectionforce(odb_id,stepnumber,framenumber=None):
-
-    # Export section forces (SF,SM) for a single step and multiple frames
     
-    # Inputs:
-    # odb_id: ODB object
-    # stepnumber: step number for export, usually -1
-    # framenumber: frame number for export, '' gives all frames in skip, 'skipfirst' gives all except frame 0
+    '''
+    Export section forces (SF,SM) (beam only) for a single step and multiple frames
     
-    # Outputs:
-    # SectionForceMatrix: matrix with each frame as column ( e.g. N_SF*N_MODES)
-    # ElementLabelVector: list with SF labels
-
-    StepNames=odb_id.steps.keys()
-    NameOfStep=StepNames[stepnumber]
-    SelectedStep=odb_id.steps[NameOfStep]
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+    stepnumber (int): step number for export, usually -1
+    framenumber (list): frame number(s) for export; None gives all frames; 'skipfirst' gives all except 0
+    
+    Returns
+    ------------
+    sf_matrix: matrix with each frame as columns ( e.g. N_SF*N_MODES)
+    label_vec: list with DOF labels of all N_DOF
+    
+    '''
+    
+    step_name=odb_id.steps.keys()[stepnumber]
+    step_id=odb_id.steps[step_name]
     
     if framenumber is None:
-        framenumber=range(len(SelectedStep.frames))
+        framenumber=range(len(step_id.frames))
     elif framenumber=='skipfirst':
-        framenumber=range(1,len(SelectedStep.frames))
+        framenumber=range(1,len(step_id.frames))
     elif isinstance(framenumber,int):
         framenumber=np.array([framenumber])
     
-    SelectedFrame=SelectedStep.frames[-1]
-    if 'SF' not in SelectedFrame.fieldOutputs.keys():
-        SectionForceMatrix=np.array([0 , 0 , 0])
-        ElementLabelVector=np.array(['SF_not_found'])
-        return SectionForceMatrix,ElementLabelVector
+    frame_id=step_id.frames[-1]
+    if 'SF' not in frame_id.fieldOutputs.keys():
+        sf_matrix=np.array([0 , 0 , 0])
+        label_vec=np.array(['SF_not_found'])
+        return sf_matrix,label_vec
     
-    ElementLabelAll=[ SelectedFrame.fieldOutputs['SF'].values[n].baseElementType for n in range(len(SelectedFrame.fieldOutputs['SF'].values)) ]
-    index_B=[n for n, l in enumerate(ElementLabelAll) if l.startswith('B')]
+    el_label_all=[ frame_id.fieldOutputs['SF'].values[n].baseElementType for n in range(len(frame_id.fieldOutputs['SF'].values)) ]
+    index_B=[n for n, l in enumerate(el_label_all) if l.startswith('B')]
         
-    SectionForceMatrix=np.zeros((len(index_B)*6,len(framenumber)))
+    sf_matrix=np.zeros((len(index_B)*6,len(framenumber)))
     
     for z in np.arange(len(framenumber)):
         
-        SelectedFrame=SelectedStep.frames[framenumber[z]]
+        frame_id=step_id.frames[framenumber[z]]
         
-        OutputSF=SelectedFrame.fieldOutputs['SF']
-        OutputSFValues=OutputSF.values
+        output_sf=frame_id.fieldOutputs['SF']
+        output_sf_val=output_sf.values
         
-        OutputSM=SelectedFrame.fieldOutputs['SM']
-        OutputSMValues=OutputSM.values
+        output_sm=frame_id.fieldOutputs['SM']
+        output_sm_val=output_sm.values
         
-        SF_temp=np.array([OutputSFValues[n].data for n in index_B ])
-        SM_temp=np.array([OutputSMValues[n].data for n in index_B ])
+        sf_temp=np.array([output_sf_val[n].data for n in index_B ])
+        sm_temp=np.array([output_sm_val[n].data for n in index_B ])
         
-        Output_SF_temp=np.hstack((SF_temp,SM_temp)).flatten()
-        SectionForceMatrix[:,z]=Output_SF_temp
+        output_sf_temp=np.hstack((sf_temp,sm_temp)).flatten()
+        sf_matrix[:,z]=output_sf_temp
         
-    SF_ComponentLabels=OutputSF.componentLabels
-    
+    sf_component_labels=output_sf.componentLabels
     
     # For SM:
     # Error in abaqus documentation? States 2 1 3 in odb file, but that is wrong.
     # >> OutputSM.componentLabels
     # >> ('SM2', 'SM1', 'SM3')    
     
-    
     # Overwrite labels manually:    
-    SM_ComponentLabels=('SM1', 'SM2', 'SM3') 
-    # Important to verify results are reasonable
+    sm_component_labels=('SM1', 'SM2', 'SM3') 
+    # NB! Important to verify results are reasonable
     
-    ElementLabelVectorTemp=[ [str(OutputSFValues[n].elementLabel) + '_' + s  for s in SF_ComponentLabels] + [str(OutputSMValues[n].elementLabel) + '_' + s  for s in SM_ComponentLabels] for n in index_B ]
-    ElementLabelVector=[item for sublist in ElementLabelVectorTemp for item in sublist]
+    label_vec_temp=[ [str(output_sf_val[n].elementLabel) + '_' + s  for s in sf_component_labels] + [str(output_sm_val[n].elementLabel) + '_' + s  for s in sm_component_labels] for n in index_B ]
+    label_vec=[item for sublist in label_vec_temp for item in sublist]
     
-    return SectionForceMatrix,ElementLabelVector
+    return sf_matrix,label_vec
     
     # From abaqus manual:
     # Section forces, moments, and transverse shear forces
@@ -256,106 +289,123 @@ def exportsectionforce(odb_id,stepnumber,framenumber=None):
 #%%
 
 def exportelconn(odb_id):
-
-    # Export element connectivity (which elements are connected to which nodes)
     
-    # Inputs:
-    # odb_id: ODB object
+    '''
+    Export element connectivity (which elements are connected to which nodes)
     
-    # Outputs:
-    # ElementConnectivity: matrix with rows [Elno,Nodeno_start,Nodeno_end]
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+    
+    Returns
+    ------------
+    # elconn: matrix with rows [Elno,Nodeno_start,Nodeno_end]
+    
+    '''
     
     t_start=timer()
 
-    InstanceKeys=odb_id.rootAssembly.instances.keys()
+    instance_keys=odb_id.rootAssembly.instances.keys()
     
-    for k in range(len(InstanceKeys)):
-
-        SelectedInstance=odb_id.rootAssembly.instances[InstanceKeys[k]]
-        SelectedInstanceElements=SelectedInstance.elements
+    for k in range(len(instance_keys)):
         
-        ElType=[SelectedInstanceElements[j].type for j in range(len(SelectedInstanceElements))]
+        instance_id=odb_id.rootAssembly.instances[instance_keys[k]]
+        instance_elements=instance_id.elements
         
-        Index_B31 = [i for i, s in enumerate(ElType) if 'B31' in s]
-        Index_B33 = [i for i, s in enumerate(ElType) if 'B33' in s]
-        Index_B32 = [i for i, s in enumerate(ElType) if 'B32' in s]
+        eltype=[instance_elements[j].type for j in range(len(instance_elements))]
         
-        ElementConnectivity_B31=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) ]  for j in Index_B31 ] )
-        ElementConnectivity_B33=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) ]  for j in Index_B33 ] )
-        ElementConnectivity_B32=np.array( [ [SelectedInstanceElements[j].label , int(SelectedInstanceElements[j].connectivity[0]) , int(SelectedInstanceElements[j].connectivity[1]) , int(SelectedInstanceElements[j].connectivity[2]) ]  for j in Index_B32 ] )
+        idx_B31 = [i for i, s in enumerate(eltype) if 'B31' in s]
+        idx_B33 = [i for i, s in enumerate(eltype) if 'B33' in s]
+        idx_B32 = [i for i, s in enumerate(eltype) if 'B32' in s]
+        
+        elconn_B31=np.array( [ [instance_elements[j].label , int(instance_elements[j].connectivity[0]) , int(instance_elements[j].connectivity[1]) ]  for j in idx_B31 ] )
+        elconn_B33=np.array( [ [instance_elements[j].label , int(instance_elements[j].connectivity[0]) , int(instance_elements[j].connectivity[1]) ]  for j in idx_B33 ] )
+        elconn_B32=np.array( [ [instance_elements[j].label , int(instance_elements[j].connectivity[0]) , int(instance_elements[j].connectivity[1]) , int(instance_elements[j].connectivity[2]) ]  for j in idx_B32 ] )
 
     # If empty, then set shape to 3 or 4 columns
-    if Index_B31==[]:
-        ElementConnectivity_B31=np.array([]).reshape(0,3)
+    if idx_B31==[]:
+        elconn_B31=np.array([]).reshape(0,3)
     
-    if Index_B33==[]:
-        ElementConnectivity_B33=np.array([]).reshape(0,3)
+    if idx_B33==[]:
+        elconn_B33=np.array([]).reshape(0,3)
     
-    if Index_B32==[]:
-        ElementConnectivity_B32=np.array([]).reshape(0,4)
+    if idx_B32==[]:
+        elconn_B32=np.array([]).reshape(0,4)
         
     # Delete middle node for 3 node element
-    ElementConnectivity_B32_del=np.delete(ElementConnectivity_B32,2,1)
+    elconn_B32_del=np.delete(elconn_B32,2,1)
     
-    ElementConnectivity=np.vstack((ElementConnectivity_B31,ElementConnectivity_B33,ElementConnectivity_B32_del))
+    elconn=np.vstack((elconn_B31,elconn_B33,elconn_B32_del))
     
     t_end=timer()
     print('Time elconn ' + str(t_end-t_start))
     
-    return ElementConnectivity
+    return elconn
 
 #%%
 
 def exportelsets(odb_id):
-
-    # Export element sets
     
-    # Inputs:
-    # odb_id: ODB object
+    '''
+    Export element sets
     
-    # Outputs:
-    # ElementSetNumbers: vector with set number (separated by 0 between each set)
-    # ElementSetNames: list with names
-
-    InstanceKeys=odb_id.rootAssembly.instances.keys()
-    ElementSetNumbers=[]
-    ElementSetNames=[]
+    Arguments
+    ------------
+    odb_id (odb object): odb file identifier
+    
+    Returns
+    ------------
+    elset_numbers: vector with set number (separated by 0 between each set)
+    elset_names: list with names
+    
+    '''
+    
+    instance_keys=odb_id.rootAssembly.instances.keys()
+    elset_numbers=[]
+    elset_names=[]
     
     t_start=timer()
-    for k in range(len(InstanceKeys)):
+    for k in range(len(instance_keys)):
 
-        SelectedInstance=odb_id.rootAssembly.instances[InstanceKeys[k]]
-        ElementSetKeys=SelectedInstance.elementSets.keys()
-        ElementSetNames=np.append(ElementSetNames,ElementSetKeys)
+        instance_id=odb_id.rootAssembly.instances[instance_keys[k]]
+        elset_keys=instance_id.elementSets.keys()
+        elset_names=np.append(elset_names,elset_keys)
         
-        for i in range(len(ElementSetKeys)):
+        for i in range(len(elset_keys)):
             
-            Elements=SelectedInstance.elementSets[ElementSetKeys[i]].elements
-            ElementNumbers_temp=[Elements[ii].label for ii in range(len(Elements))]
-            ElementNumbers_temp=np.append(ElementNumbers_temp,0)
-            ElementSetNumbers=np.append(ElementSetNumbers,ElementNumbers_temp)
+            el_temp=instance_id.elementSets[elset_keys[i]].elements
+            elnumbers_temp=[el_temp[ii].label for ii in range(len(el_temp))]
+            elset_numbers=np.append(elset_numbers,np.append(elnumbers_temp,0))
             
     t_end=timer()
     print('Time elsets ' + str(t_end-t_start))
-    return ElementSetNumbers,ElementSetNames
+    return elset_numbers,elset_names
     
 #%%
 
 def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
-
-    # Save numeric array or string array to txt file
     
-    # Inputs:
-    # folder_save: string with folder name for export
-    # name_save: string with name for export
-    # A_matrix: the array to export
-    # atype: 'string' or 'number' specifies text or numeric data
-    # prefix: prefix in front of name_save
+    '''
+    Export element sets
+    
+    Arguments
+    ------------
+    folder_save: string with folder name for export
+    name_save: string with name for export
+    A_matrix: the array to export
+    atype: 'string' or 'number' specifies text or numeric data
+    prefix: prefix in front of name_save
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     if atype=='number' or atype==1:
-        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'), A_matrix , delimiter=',', fmt='%.6e')
+        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'),A_matrix ,delimiter=',',fmt='%.6e')
     elif atype=='string' or atype==2:
-        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'), A_matrix , delimiter=' ', fmt='%s')
+        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'),A_matrix ,delimiter=' ',fmt='%s')
     
 #%%
 
@@ -369,5 +419,5 @@ def save2npy(folder_save,name_save,A_matrix,prefix=''):
     # A_matrix: the array to export
     # prefix: prefix in front of name_save
     
-    np.save((folder_save+'\\'+prefix+name_save), A_matrix)
+    np.save((folder_save+'\\'+prefix+name_save),A_matrix)
     
