@@ -122,7 +122,7 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
     # foldername: string with folder of input file
     # inputname: string with name of .inp file
     # jobname: string with name of .odb, if empty then equal to inputname
-    # abaqus_cmd: string with system command, usually 'abaqus'
+    # abaqus_cmd: string supplied to system command, usually 'abaqus'
     # cpus: number of cores
     # echo_cmd: true/false, echo console output from system
     # halt_error: true/false, halt or not if error in Abaqus analysis
