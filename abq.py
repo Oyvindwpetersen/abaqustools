@@ -16,11 +16,19 @@ import time
 
 def printerror(jobname,foldername=''):
 
-    # Search through msg file for errors, print error if found
+    '''
+    Search through msg or dat file for errors, print error if found
     
-    # Inputs:
-    # jobname: name of odb file
-    # foldername: folder of odb file
+    Arguments
+    ------------
+    jobname (string): name of odb file
+    foldername (string): folder of odb file
+    
+    Returns
+    ------------
+    None
+    
+    '''
     
     if len(foldername)>0:
         foldername=foldername + '\\'
@@ -31,15 +39,15 @@ def printerror(jobname,foldername=''):
     
     
     filename=foldername + jobname + '.msg'
-    file_exist_logic=os.path.isfile(filename)
+    file_exist=os.path.isfile(filename)
     
     # If msg file dont exist, try dat
-    if file_exist_logic==False:
+    if file_exist==False:
         filename=foldername + jobname + '.dat'
-        file_exist_logic=os.path.isfile(filename)
+        file_exist=os.path.isfile(filename)
     
     # If file dont exist, set empty
-    if file_exist_logic==True:
+    if file_exist==True:
         fid=open(filename, 'r')
         lines=fid.read().splitlines()
         fid.close()
@@ -59,21 +67,29 @@ def printerror(jobname,foldername=''):
     
 #%%
 
-def checkduplicate(inputfilename):
-
-    # Check input file, alert if duplicate node or element numbers
+def checkduplicate(inputname):
     
-    # Inputs:
-    # Inputfilename: name (and folder) of input file
+    '''
+    Check input file, alert if duplicate node or element numbers
     
-    file_exist_logic=os.path.isfile(inputfilename)
+    Arguments
+    ------------
+    inputname (string): name of input file
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    file_exist=os.path.isfile(inputname)
     
     # Error if input file dont exist
-    if file_exist_logic==False:
-        print('***** File ' + inputfilename)
+    if file_exist==False:
+        print('***** File ' + inputname)
         raise Exception('***** File not found')
     
-    fid=open(inputfilename, 'r')
+    fid=open(inputname, 'r')
     input_file_lines=fid.read().splitlines()
     fid.close()
 
@@ -117,16 +133,27 @@ def checkduplicate(inputfilename):
 #%%
 
 def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=True,halt_error=True,oldjobname=''):
-
-    # Inputs:
-    # foldername: string with folder of input file
-    # inputname: string with name of .inp file
-    # jobname: string with name of .odb, if empty then equal to inputname
-    # abaqus_cmd: string supplied to system command, usually 'abaqus'
-    # cpus: number of cores
-    # echo_cmd: true/false, echo console output from system
-    # halt_error: true/false, halt or not if error in Abaqus analysis
-    # oldjobname: string with name of old .odb, only relevant for restart analysis, else set to empty
+    
+    '''
+    Check input file, alert if duplicate node or element numbers
+    
+    Arguments
+    ------------
+    foldername (string): folder of input file
+    inputname (string): name of input file
+    jobname (string): name of odb file, if empty then equal to inputname
+    abaqus_cmd (string): string supplied to system command, usually 'abaqus'
+    cpus (number): number of cores
+    echo_cmd (bool): echo console output from system
+    halt_error (bool): halt or not if error in Abaqus analysis
+    oldjobname (string): name of old odb file, only relevant for restart analysis, else set to empty
+        
+    Returns
+    ------------
+    completed (bool): if the job is completed or not
+    
+    
+    '''        
     
     if len(abaqus_cmd)<1:
         abaqus_cmd='abaqus'
@@ -147,8 +174,8 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
     
     # If lock file exists, delete
     file_name_lock=foldername + '\\' + jobname + '.lck'
-    file_exist_logic=os.path.isfile(file_name_lock)
-    if file_exist_logic:
+    file_exist=os.path.isfile(file_name_lock)
+    if file_exist:
         print('***** Lock-file existing, deleting')
         os.remove(file_name_lock)
         time.sleep(0.1)
@@ -178,18 +205,19 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
     
     if echo_cmd:
         print(sys_out)
-
-    completed_logic='COMPLETED' in sys_out
-    if completed_logic:
+    
+    # Check if job is successful
+    completed='COMPLETED' in sys_out
+    if completed:
         print('***** ABAQUS job completed in ' + putools.num.num2strf(t1,1) + ' s')
-        
-    error_logic='Abaqus/Analysis exited with error' in sys_out
+    
+    error_bool='Abaqus/Analysis exited with error' in sys_out
 
-    if error_logic:
+    if error_bool:
         time.sleep(1)
         printerror(jobname,foldername)
         
         if halt_error:
             raise Exception('***** Stopped due to ABAQUS errors, see message above')
             
-    return completed_logic
+    return completed
