@@ -75,7 +75,6 @@ def beamaddedinertia(fid,linear_mass,x1,x2,alpha,I_11,I_22,I_12):
     I_11: inertia [kg*m^2]
     I_22: inertia [kg*m^2]
     I_12: inertia [kg*m^2]
-    id.write('**' + '\n')
     
     Returns
     ------------
@@ -297,7 +296,7 @@ def cload(fid,op,nset,dof,magnitude_force,partname=''):
 def comment(fid,comment_str,logic_main=False):
 
     '''
-    
+    Add comment to input file
     
     Arguments
     ------------
@@ -419,6 +418,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
                 
     '''
+    Beam member with user-defined stiffness at member joints
     
     N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5     J2 N2
     O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
@@ -456,12 +456,11 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     direction=putools.num.ensurenp(direction)
     direction=direction/np.sqrt(sum(direction**2))
     
-    # Stiffness
+    # Joint stiffness
     kj1=putools.num.ensurenp(kj1)
     kj2=putools.num.ensurenp(kj2)
     
-    
-    # Checks
+    # Misc checks
     
     # Only allow 2-node elements
     checkarg(element_type,['B31','B33'])
@@ -529,13 +528,17 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     # If kj stiffnesses are all inf, the member in continuous and therefore
     # instead directly linked to the supernode, the offset is thus ignored
     
-    if all(kj1>1e20):
+    # In the future, this should be replaced by an input argument instead
+    
+    inf_threshold=1e30
+    
+    if all(kj1>inf_threshold):
         J1_cont=True
         el_matrix[0,1]=node1
     else:
         J1_cont=False
     
-    if all(kj2>1e20):
+    if all(kj2>inf_threshold):
         J2_cont=True
         el_matrix[-1,-1]=node2
     else:
@@ -789,7 +792,7 @@ def gravload(fid,op,elset,magnitude=9.81,direction='z',partname=''):
 def historyoutput(fid,options=''):
     
     '''
-    
+    *OUTPUT, HISTORY
     
     Arguments
     ------------
@@ -814,7 +817,7 @@ def historyoutput(fid,options=''):
 def historyoutputelement(fid,variables,elset,options=''):
     
     '''
-    
+    *ELEMENT OUTPUT
     
     Arguments
     ------------
@@ -844,7 +847,7 @@ def historyoutputelement(fid,variables,elset,options=''):
 def historyoutputnode(fid,variables,nset,options=''):
     
     '''
-    
+    *NODE OUTPUT
     
     Arguments
     ------------
@@ -874,7 +877,7 @@ def historyoutputnode(fid,variables,nset,options=''):
 def include(fid,filename):
     
     '''
-    
+    *INCLUDE
     
     Arguments
     ------------
@@ -896,7 +899,7 @@ def include(fid,filename):
 def instance(fid,instancename,partname):
     
     '''
-    
+    *INSTANCE
     
     Arguments
     ------------
@@ -919,7 +922,7 @@ def instance(fid,instancename,partname):
 def instanceend(fid):
     
     '''
-    
+    *END INSTANCE
     
     Arguments
     ------------
@@ -939,7 +942,7 @@ def instanceend(fid):
 def line(fid,line):
     
     '''
-    
+    Write line(s) of code in input file
     
     Arguments
     ------------
@@ -963,7 +966,7 @@ def line(fid,line):
 def mpc(fid,id_type,nodes):
     
     '''
-    
+    *MPC
     
     Arguments
     ------------
@@ -999,7 +1002,7 @@ def mpc(fid,id_type,nodes):
 def material(fid,materialname,E,v,density):
     
     '''
-    
+    *MATERIAL
     
     Arguments
     ------------
@@ -1030,7 +1033,7 @@ def material(fid,materialname,E,v,density):
 def modelchange(fid,option,elset,partname=''):
     
     '''
-    
+    *MODEL CHANGE
     
     Arguments
     ------------
@@ -1065,7 +1068,7 @@ def modelchange(fid,option,elset,partname=''):
 def node(fid,nodenumber_coord,nsetname):
     
     '''
-    
+    *NODE
     
     Arguments
     ------------
@@ -1088,7 +1091,7 @@ def node(fid,nodenumber_coord,nsetname):
         
     if np.isnan(nodenumber_coord).any():
         putools.txt.starprint('For NSET ' + nsetname,1)
-        raise Exception('***** Containing NAN')
+        raise Exception('***** Coordinates containing NAN')
     
     fid.write('*NODE' + ',NSET=' + nsetname.upper() + '\n')
     putools.txt.writematrix(fid,nodenumber_coord,5,',',['int' , 'f', 'f', 'f'])
@@ -1102,7 +1105,7 @@ def node(fid,nodenumber_coord,nsetname):
 def nonstructuralmass(fid,elset,unit,mass):
     
     '''
-    
+    *NONSTRUCTURAL MASS
     
     Arguments
     ------------
@@ -1173,7 +1176,7 @@ def nset(fid,nsetname,nodes,option=''):
 def orientation(fid,name,defi,a,b,c):
 
     '''
-    
+    *ORIENTATION
     
     Arguments
     ------------
@@ -1197,7 +1200,7 @@ def orientation(fid,name,defi,a,b,c):
 def parameter(fid,parameternames,values):
     
     '''
-    
+    *PARAMETER
     
     Arguments
     ------------
@@ -1229,7 +1232,7 @@ def parameter(fid,parameternames,values):
 def part(fid,partname):
     
     '''
-    
+    *PART
     
     Arguments
     ------------
@@ -1249,8 +1252,19 @@ def part(fid,partname):
 
 def partend(fid):
     
-    # Inputs:
-
+    '''
+    *END PART
+    
+    Arguments
+    ------------
+    fid: file identifier
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
     fid.write('*END PART' + '\n')
     fid.write('**' + '\n')
 
@@ -1259,7 +1273,7 @@ def partend(fid):
 def release(fid,elset,end_id,release_id):
     
     '''
-    
+    *RELEASE
     
     Arguments
     ------------
@@ -1311,7 +1325,7 @@ def release(fid,elset,end_id,release_id):
 def restart(fid,id_type,step=-1,frequency=100):
     
     '''
-    
+    *RESTART
     
     Arguments
     ------------
@@ -1347,7 +1361,7 @@ def restart(fid,id_type,step=-1,frequency=100):
 def shellsection(fid,elset,material,options,shellproperties):
     
     '''
-    
+    *SHELL SECTION
     
     Arguments
     ------------
@@ -1374,7 +1388,7 @@ def shellsection(fid,elset,material,options,shellproperties):
 def shearcenter(fid,x1,x2):
     
     '''
-    
+    *SHEAR CENTER
     
     Arguments
     ------------
@@ -1397,13 +1411,14 @@ def shearcenter(fid,x1,x2):
 def spring(fid,elset,element_nodenumber,dofno,springstiffness):
 
     '''
-    
+    *ELEMENT, TYPE=SPRING2
+    *SPRING
     
     Arguments
     ------------
     fid: file identifier
     elset: string with element set name
-    element_nodenumber: [Elno,Nodeno1,Nodeno2]
+    element_nodenumber: [el,node1,node2]
     dofno: DOF 1-6
     springstiffness: in N/m
     
@@ -1421,9 +1436,7 @@ def spring(fid,elset,element_nodenumber,dofno,springstiffness):
     #*SPRING,ELSET=SADLESPRING_X
     # 1,1
     # 1.00000e+12
-
-    # For now, springstiffness is a scalar
-    # For now, dofno is a scalar
+    
         
     fid.write('*ELEMENT, TYPE=SPRING2, ELSET=' + elset.upper() + '\n')
 
@@ -1435,8 +1448,7 @@ def spring(fid,elset,element_nodenumber,dofno,springstiffness):
 
     if putools.num.isnumeric(springstiffness):
         putools.txt.writematrix(fid,springstiffness,5,',','e')
-    #elif isinstance(springstiffness,list):
-        #fid.write( springstiffness + '\n')
+    
 
     fid.write('**' + '\n')
     fid.write('**' + '\n')
@@ -1446,7 +1458,8 @@ def spring(fid,elset,element_nodenumber,dofno,springstiffness):
 def springa(fid,elset,element_nodenumber,springstiffness):
 
     '''
-    
+    *ELEMENT, TYPE=SPRINGA
+    *SPRING    
     
     Arguments
     ------------
@@ -1460,8 +1473,6 @@ def springa(fid,elset,element_nodenumber,springstiffness):
     None
     
     '''
-
-    # For now, springstiffness is a scalar
         
     fid.write('*ELEMENT, TYPE=SPRINGA, ELSET=' + elset.upper() + '\n')
 
@@ -1482,7 +1493,7 @@ def springa(fid,elset,element_nodenumber,springstiffness):
 def static(fid,time):
 
     '''
-    
+    *STATIC    
     
     Arguments
     ------------
@@ -1501,8 +1512,7 @@ def static(fid,time):
         putools.txt.writematrix(fid,time,'1',',','e')
     elif isinstance(time,str):
         fid.write(time +' \n')
-
-    #fid.write('**' + '\n')
+    
     fid.write('**' + '\n')
 
 #%%
@@ -1510,7 +1520,7 @@ def static(fid,time):
 def step(fid,options='',comment_str=''):
 
     '''
-    
+    *STEP    
     
     Arguments
     ------------
@@ -1534,7 +1544,7 @@ def step(fid,options='',comment_str=''):
 def stepend(fid):
 
     '''
-    
+    *END STEP
     
     Arguments
     ------------
@@ -1555,7 +1565,7 @@ def stepend(fid):
 def temperature(fid,op,nset,magnitude_temp,partname=''):
 
     '''
-    
+    *TEMPERATURE
     
     Arguments
     ------------
@@ -1601,7 +1611,7 @@ def temperature(fid,op,nset,magnitude_temp,partname=''):
 def tie(fid,tiename,adjust,postol,slavename,mastername):
 
     '''
-    
+    *TIE
     
     Arguments
     ------------
@@ -1630,7 +1640,7 @@ def tie(fid,tiename,adjust,postol,slavename,mastername):
 def transverseshearstiffness(fid,k23,k13):
 
     '''
-    
+    *TRANSVERSE SHEAR STIFFNESS
     
     Arguments
     ------------
