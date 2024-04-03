@@ -753,7 +753,7 @@ def gravload(fid,op,elset,magnitude=9.81,direction='z',partname=''):
     elset: element set
     magnitude: gravitational constant
     direction: 'x','y', or 'z'
-    partname: unsigned load magnitude
+    partname: name of part
     
     Returns
     ------------
@@ -766,7 +766,9 @@ def gravload(fid,op,elset,magnitude=9.81,direction='z',partname=''):
         partname_str=partname.upper() + '.'
                 
     checkarg(op,['MOD','NEW'])
-
+    
+    checkarg(direction,['x','y','z'])
+    
     fid.write('*DLOAD, OP=' + op.upper() + '\n')
     
     if isinstance(elset,str):
@@ -781,7 +783,8 @@ def gravload(fid,op,elset,magnitude=9.81,direction='z',partname=''):
         direction_str=' 0 , -1, 0'
     elif direction=='z':
         direction_str=' 0 , 0, -1'
-        
+    
+    
     for elset_sub in elset:
         fid.write(partname_str + elset_sub.upper() + ', GRAV, ' + putools.num.num2strf(magnitude,5) + ',' + direction_str + '\n')
             
