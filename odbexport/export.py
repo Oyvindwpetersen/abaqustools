@@ -8,6 +8,7 @@ import time
 import numpy as np
 import putools
 import h5py
+from timeit import default_timer as timer
 
 #%%
 
@@ -173,14 +174,19 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     
     # Run py-file in abaqus
     system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
+    
+    t0=timer()
     sys_out=os.popen(system_cmd).read()
+    t1=timer()
     
     idx_error=sys_out.find('error')
 
     if idx_error>0:
         print(sys_out)
         raise Exception('***** Export aborted due to errors, see above')
-            
+    else:
+        print('***** ABAQUS export completed in ' + putools.num.num2strf(t1-t0,1) + ' s')
+
     # Save h5 file        
     if saveh5==True:
 
@@ -320,7 +326,13 @@ def deletefiles(foldername,name_match,extensions):
         
         # Only files with specified extensions
         if any(match_ext):
-            os.remove(foldername + '/' + filename_remove)
+        
+            try:
+                os.remove(foldername + '/' + filename_remove)
+            except:
+                print('***** Was not able to delete file ' + foldername + '/' + filename_remove)
+                    
+            
 
 #%% Export modal script
 
