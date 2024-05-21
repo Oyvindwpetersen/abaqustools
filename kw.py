@@ -386,6 +386,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
     '''
     
     element_nodenumber=putools.num.ensurenp(element_nodenumber)
+    element_nodenumber=np.atleast_2d(element_nodenumber)
 
     id_neg=element_nodenumber<=0
     n_neg=np.sum(np.sum(id_neg))
@@ -415,7 +416,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 
 #%%
 
-def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,direction,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
+def memberjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element_type,setname,n1,kj1,kj2,offset1=0,offset2=0,n_el=10,max_length=None):
                 
     '''
     Beam member with user-defined stiffness at member joints
@@ -434,7 +435,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     el_num_base: base element number for member
     element_type: element type, e.g. B31
     setname: name for member
-    direction: array with n1-direction, e.g. [0,1,0]
+    n1: array with n1-direction, e.g. [0,1,0]
     kj1: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 1
     kj2: [kx,ky,kz,krx,kry,krz] array with 6 spring stiffnesses in [N/m] and [Nm/rad] for joint 2
     offset1: eccentricity offset of member end 1 in [m]
@@ -452,15 +453,12 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     
     comment(fid,'Member ' + setname)
     
-    # Vector for n1-direction (lateral)
-    direction=putools.num.ensurenp(direction)
-    direction=direction/np.sqrt(sum(direction**2))
+    if el_num_base is None:
+        el_num_base=node_num_base
     
     # Joint stiffness
     kj1=putools.num.ensurenp(kj1)
     kj2=putools.num.ensurenp(kj2)
-    
-    # Misc checks
     
     # Only allow 2-node elements
     checkarg(element_type,['B31','B33'])
@@ -483,14 +481,66 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     if all(kj2==0):
         warnings.warn('***** kj2 is all zero for set ' + setname, stacklevel=2)
 
+    # if any(kj1>1e36) and not all(kj1>1e36):
+        # raise Exception('***** kj1 is too large for set ' + setname)
+    
+    # if any(kj2>1e36) and not all(kj2>1e36):
+        # raise Exception('***** kj2 is too large for set ' + setname)
 
+    # Vector for n1-direction (lateral)
+    n1=putools.num.ensurenp(n1)
+    n1=n1/np.linalg.norm(n1)
+    
+    coord1=coord1.flatten()
+    coord2=coord2.flatten()
+    
     # Vector along member
     t_vec=putools.num.ensurenp(coord2)-putools.num.ensurenp(coord1)
+    L0=np.linalg.norm(t_vec)
     
-    L0=np.sqrt(sum(t_vec**2))
+    t_vec=t_vec/L0
     
+    n1_tmp=n1
+    n2=np.cross(t_vec,n1_tmp)
+    n1=np.cross(n2,t_vec)
+
+    if all(np.abs(t_vec)<1e-12):
+        raise Exception('***** t_vec is zero for set ' + setname)
+        
+    if all(np.abs(n1)<1e-12):
+        raise Exception('***** n1 is zero for set ' + setname)
+        
+    if all(np.abs(n2)<1e-12):
+        raise Exception('***** n2 is zero for set ' + setname)
+        
     if L0==0:
         raise Exception('***** L0 is zero for set ' + setname)
+    
+    # If kj stiffnesses are all inf, the member is continuous and therefore
+    # instead directly linked to the supernode, the offset is thus ignored
+        
+    # In the future, this should be replaced by an input argument instead
+        
+    inf_threshold=1e36
+        
+    if all(kj1>inf_threshold):
+        J1_cont=True
+        offset1=0
+    else:
+        J1_cont=False
+        
+    if all(kj2>inf_threshold):
+        J2_cont=True
+        offset2=0
+    else:
+        J2_cont=False     
+        
+    # Shorten member by offset
+    if offset1>0:
+        coord1=coord1+t_vec*offset1
+        
+    if offset2>0:
+        coord2=coord2-t_vec*offset2
         
     # Determine number of elements
     if (n_el is None):
@@ -503,14 +553,7 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         elif n_el is None:
             n_el=np.ceil(L0/max_length)
             
-    n_el=int(n_el)        
-        
-    # Shorten member by offset
-    if offset1>0:
-        coord1=coord1+t_vec/L0*offset1
-        
-    if offset2>0:
-        coord2=coord2-t_vec/L0*offset2
+    n_el=int(n_el)
     
     # Member nodes and elements
     x=np.linspace(coord1[0],coord2[0],n_el+1)    
@@ -520,48 +563,59 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
     node_num=np.arange(1,len(x)+1)+node_num_base
     el_num=np.arange(1,len(x))+el_num_base
     
-    # Write node sand elements
+    # Write nodes and elements
     node(fid,np.column_stack((node_num,x,y,z)),setname)
     
     el_matrix=np.column_stack((el_num,node_num[0:-1],node_num[1:]))
     
-    # If kj stiffnesses are all inf, the member in continuous and therefore
-    # instead directly linked to the supernode, the offset is thus ignored
-    
-    # In the future, this should be replaced by an input argument instead
-    
-    inf_threshold=1e30
-    
-    if all(kj1>inf_threshold):
-        J1_cont=True
+    if J1_cont==True:
         el_matrix[0,1]=node1
-    else:
-        J1_cont=False
     
-    if all(kj2>inf_threshold):
-        J2_cont=True
+    if J2_cont==True:
         el_matrix[-1,-1]=node2
-    else:
-        J2_cont=False
-        
     
     # Write elements of member
     element(fid,el_matrix,element_type,setname)
 
     # Create local orientation system along member
-    a=node2
-    b=node_num[0]-1
-    c=node1
+    # a=node2
+    # b=node_num[0]-1
+    # c=node1
     
-    line(fid,'** Extra node (b) for definition of orientation system')
-    node(fid,np.array([b,x[0]+direction[0],y[0]+direction[1],z[0]+direction[2]]),setname + '_BNODE')
+    #fid.write('** Extra node (b) for definition of orientation system' + '\n')
+    #node(fid,np.array([b,x[0]+n1[0],y[0]+n1[1],z[0]+n1[2]]),setname + '_BNODE')
+    #orientation(fid,setname + '_LOCSYS','NODES',[a,b,c])
+ 
+    fid.write('** Local coordinate system' + '\n')
+    fid.write('** t: ')
+    putools.txt.writematrix(fid,t_vec,format='f')
+    fid.write('** n1: ')
+    putools.txt.writematrix(fid,n1,format='f')
+    fid.write('** n2: ')
+    putools.txt.writematrix(fid,n2,format='f')
     
-    orientation(fid,setname + '_LOCSYS','NODES',a,b,c)
+    coord_b=np.array([x[0]+n1[0],y[0]+n1[1],z[0]+n1[2]])
+    data=np.hstack((coord2,coord_b,coord1))
+    orientation(fid,setname + '_LOCSYS','coordinates',data)
     
     DOFS=['1','2','3','4','5','6']
     
-    # Joints
+    if all(kj1[0:2]>inf_threshold) and any(kj1[3:]<inf_threshold):
+        J1_link=True
+    else:
+        J1_link=False
+        
+    if all(kj2[0:2]>inf_threshold) and any(kj2[3:]<inf_threshold):
+        J2_link=True
+    else:
+        J2_link=False
+        
+        
+    #Turn off for now
+    J1_link=False
+    J2_link=False
     
+    # Joints
     for j in np.arange(0,2):
         
         if j==0:
@@ -570,8 +624,8 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             el_node_matrix=[el_num[-1]+1,node1,node_num[0]]
             
             if J1_cont==True:
-                fid.write('**'  + '\n')
-                fid.write('** Joint 1 for ' + setname + ' is continuous, no stiffness defined' +'\n') #
+                line(fid,'** Joint J1 for ' + setname + ' is continuous, no stiffness defined') #
+                line(fid,'**')
                 continue
             
         elif j==1:
@@ -580,10 +634,11 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             el_node_matrix=[el_num[-1]+2,node_num[-1],node2]
             
             if J2_cont==True:
-                fid.write('**'  + '\n')
-                fid.write('** Joint 2 for ' + setname + ' is continuous, no stiffness defined' +'\n') #
+                line(fid,'** Joint J2 for ' + setname + ' is continuous, no stiffness defined') #
+                line(fid,'**')
                 continue
-            
+              
+        line(fid,'**')
         line(fid,'** Joint ' + joint_str)
         
         elset_name=setname + '_' + joint_str
@@ -592,13 +647,20 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
         
         ori_str=', ORIENTATION=' + setname + '_LOCSYS'
         
-        fid.write('*JOINT, ELSET=' + elset_name + ori_str +'\n') #
+        line(fid,'*JOINT, ELSET=' + elset_name + ori_str) #
         
-        dof_zero=[]
         for k in np.arange(0,6):
             
+            if j==0 and J1_link==True and (k==0 or k==1 or k==2):
+                fid.write('** MPC link created for DOF ' + DOFS[k] + '\n')
+                continue
+            
+            if j==1 and J2_link==True and (k==0 or k==1 or k==2):
+                fid.write('** MPC link created for DOF ' + DOFS[k] + '\n')
+                continue
+            
             if kj[k]==0:
-                dof_zero.append(DOFS[k])
+                fid.write('** Zero joint stiffness in DOF ' + DOFS[k] + '\n')
                 continue
                         
             # From Abaqus doc:
@@ -612,51 +674,113 @@ def elementjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,elemen
             fid.write(DOFS[k] + ',' + DOFS[k] + '\n')
             putools.txt.writematrix(fid,kj[k],3,',','e')
     
-        if len(dof_zero)>0:
-            for dof in dof_zero:
-                fid.write('** Zero joint stiffness in DOF ' + dof + '\n')
-    
-    
+        
+        line(fid,'**')
+        line(fid,'**')
+        
+        if j==0 and J1_link==True:
+            mpc(fid,'LINK',[node_num[0],node1])
+            
+        if j==1 and J2_link==True:
+            mpc(fid,'LINK',[node_num[-1],node2])
+      
     fid.write('**' + '\n')
     fid.write('**' + '\n')    
 
+
 #%%
 
-def elset(fid,elsetname,elements,option=''):
+
+def getcoord(nodes,node_matrix):
     
+    nodes=putools.num.ensure_1d_list(nodes)
+
+    coord=np.zeros((len(nodes),3))
+    for k in np.arange(len(nodes)):
+        
+        idx=np.where(node_matrix[:,0]==int(nodes[k]))[0][0]
+        coord[k,:]=node_matrix[idx,1:]
+    
+    return coord
+    
+def member_prop(list_el,k,num_base):
+
+    el_base=list_el[k][0]+num_base
+    node1=list_el[k][1]+num_base
+    node2=list_el[k][2]+num_base
+    
+    k_type1=list_el[k][3]
+    k_type2=list_el[k][4]    
+    
+    offset1=list_el[k][5]
+    offset2=list_el[k][6]
+    
+    return el_base,node1,node2,k_type1,k_type2,offset1,offset2
+
+def memberjointc_wrap(fid,node_matrix,members,sec_dict,kj_dict,setname,node_offset,max_length):
+        
     '''
-    *ELSET
+    Member with joints at ends (wrapper)
     
     Arguments
     ------------
     fid: file identifier
-    elsetname: string with name
-    elements: element numbers or list of strings to include in elset
-    
+    node_matrix: array with rows [node_num,coord_x,coord_y,coord_z]
+    members: dict
+    sec_dict: dict
+    kj_dict: list of dict
+    setname: name of nodes and elements in member
+    node_offset: offset of node and element numbers
+    max_length: max length of elements in member
+
     Returns
     ------------
     None
     
     '''
     
-    fid.write('*ELSET, ELSET=' + elsetname.upper() + '\n')
+    setname_all=[]
     
-    if isinstance(elements,str):
-        
-        elements=[elements]
-        
-    if putools.num.isnumeric(elements):
-        elements=np.atleast_1d(putools.num.ensurenp(elements))
-        bins=putools.num.rangebin(len(elements),16)
-        for bins_sub in bins:
-            putools.txt.writematrix(fid,elements[bins_sub],'',',','int')
-    else:
-        for elements_sub in elements:
-            fid.write(elements_sub.upper() + '\n')
-                    
-    fid.write('**' + '\n')
-    fid.write('**' + '\n')
+    for k in np.arange(len(members)):
+          
+        (el_base,node1,node2,k_type1,k_type2,offset1,offset2)=member_prop(members,k,node_offset)
 
+        kj1,kj2=None,None
+
+        for idx in np.arange(len(kj_dict)):
+            
+            if kj_dict[idx]['name']==k_type1:
+                kj1=kj_dict[idx]['data']
+          
+            if kj_dict[idx]['name']==k_type2:
+                kj2=kj_dict[idx]['data']
+                
+        if kj1 is None:
+                raise Exception('***** Missing data for joint stiffness ' + k_type1)
+                
+        if kj2 is None:
+                raise Exception('***** Missing data for joint stiffness ' + k_type2)
+                
+        coord1=getcoord(node1,node_matrix)
+        coord2=getcoord(node2,node_matrix)
+        
+        elsetname=setname + '_' + str(int(el_base))
+    
+        memberjointc(fid,node1,node2,coord1,coord2,el_base*100,None,'B31',elsetname,sec_dict['dir'],kj1,kj2,offset1=offset1,offset2=offset2,max_length=max_length,n_el=None) 
+          
+        if sec_dict['type']=='general':
+            beamgeneralsection(fid,elsetname,sec_dict['rho'],sec_dict['data'],sec_dict['dir'],[sec_dict['E'],sec_dict['G']])
+        else:
+            beamsection(fid,elsetname,sec_dict['material'],sec_dict['type'],sec_dict['data'],sec_dict['dir'])
+              
+        
+        setname_all.append(elsetname)
+        
+        
+        
+    elset(fid,setname,setname_all)
+    nset(fid,setname,setname_all)
+    
 #%%
 
 def fieldoutput(fid,id_type,variables,set_id='',options=''):
@@ -702,6 +826,43 @@ def fieldoutput(fid,id_type,variables,set_id='',options=''):
     for variables_sub in variables:
         fid.write(variables_sub + '\n')
     
+    fid.write('**' + '\n')
+    
+#%%
+
+def elset(fid,elsetname,elements,option=''):
+    
+    '''
+    *ELSET
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elsetname: string with name
+    elements: element numbers or list of strings to include in elset
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    fid.write('*ELSET, ELSET=' + elsetname.upper() + '\n')
+    
+    if isinstance(elements,str):
+        
+        elements=[elements]
+        
+    if putools.num.isnumeric(elements):
+        elements=np.atleast_1d(putools.num.ensurenp(elements))
+        bins=putools.num.rangebin(len(elements),16)
+        for bins_sub in bins:
+            putools.txt.writematrix(fid,elements[bins_sub],'',',','int')
+    else:
+        for elements_sub in elements:
+            fid.write(elements_sub.upper() + '\n')
+                    
+    fid.write('**' + '\n')
     fid.write('**' + '\n')
         
 #%%
@@ -1002,7 +1163,7 @@ def mpc(fid,id_type,nodes):
 
 #%%
 
-def material(fid,materialname,E,v,density):
+def material(fid,materialname,E,v,density,alpha=None):
     
     '''
     *MATERIAL
@@ -1026,6 +1187,10 @@ def material(fid,materialname,E,v,density):
     putools.txt.writematrix(fid,[E,v],3,', ',['e' , 'f'])
     fid.write('*DENSITY' + '\n')
     putools.txt.writematrix(fid,[density],3,', ',['e'])
+    
+    if alpha is not None:
+        fid.write('*EXPANSION' + '\n')
+        putools.txt.writematrix(fid,[alpha],3,', ',['e'])
     
     fid.write('**' + '\n')
     fid.write('**' + '\n')
@@ -1176,7 +1341,7 @@ def nset(fid,nsetname,nodes,option=''):
 
 #%%
 
-def orientation(fid,name,defi,a,b,c):
+def orientation(fid,name,defi,node_data):
 
     '''
     *ORIENTATION
@@ -1192,9 +1357,15 @@ def orientation(fid,name,defi,a,b,c):
     
     '''
     
+    checkarg(defi, ['nodes','coordinates'])
+    
     fid.write('*ORIENTATION, NAME=' + name.upper() + ', DEFINITION=' + defi.upper() + '\n')
 
-    putools.txt.writematrix(fid,[a,b,c],'',',',['int'])
+    if defi.upper()=='NODES':
+        putools.txt.writematrix(fid,node_data,'',',',['int'])
+    elif defi.upper()=='COORDINATES':
+        putools.txt.writematrix(fid,node_data,5,',','e')
+        
     fid.write('**' + '\n')
     fid.write('**' + '\n')
 
@@ -1358,6 +1529,47 @@ def restart(fid,id_type,step=-1,frequency=100):
     
     fid.write('*RESTART' + id_type + step_str + freq_str + '\n')
     fid.write('**' + '\n')
+
+#%%
+
+def shellgrid(fid,elsetname,nsetname,material,thickness,x0,y0,x1,y1,z0,nx,ny,node_num,offs_y,offset='0'):
+    
+    dx=(x1-x0)/nx
+    dy=(y1-y0)/ny
+    
+    x_prime=np.linspace(x0,x1,nx+1)
+    y_prime=np.linspace(y0,y1,ny+1)
+    
+    node_matrix=np.zeros((0,4))
+    for j in range(ny+1):
+        x=x_prime
+        y=y_prime[j]*np.ones_like(x)
+        z=z0*np.ones_like(x)
+        
+        n=np.arange(1,nx+1+1)+offs_y*(j+1)+node_num
+        node_tmp=np.column_stack((n,x,y,z))
+        node_matrix=np.vstack((node_matrix,node_tmp))
+        
+            
+    el_matrix=np.zeros((0,5))
+        
+    for j in range(ny):
+            
+        n1=np.arange(1,nx+1)+offs_y*(j+1)
+        n2=n1+1
+        n3=n2+offs_y
+        n4=n3-1
+        e=n1
+            
+        el_tmp=np.column_stack((e,n1,n2,n3,n4))+node_num
+        el_matrix=np.vstack((el_matrix,el_tmp))
+            
+            
+    node(fid,node_matrix,nsetname)         
+    element(fid,el_matrix,'S4',elsetname)
+    shellsection(fid,elsetname,material,'OFFSET=' + offset,[thickness,5])
+    
+    return node_matrix,el_matrix
 
 #%%
 
@@ -1562,6 +1774,37 @@ def stepend(fid):
     fid.write('*END STEP' + '\n')
     fid.write('**' + '\n')
     fid.write('**' + '\n')
+    
+#%%
+
+def surface(fid,surfname,stype,name,idf):
+
+    '''
+    *SURFACE
+    
+    Arguments
+    ------------
+    fid: file identifier
+    name: name of element set
+    stype: surface type, e.g. ELEMENT
+    idf: edge or face identifier, e.g. SPOS
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    fid.write('*SURFACE, NAME=' + surfname.upper() + ', TYPE=' + stype.upper() + '\n')
+    
+    if stype.upper()=='ELEMENT':
+        fid.write(name.upper() + ', ' + idf.upper() + '\n')
+    elif stype.upper()=='NODE':
+        fid.write(name.upper() + '\n')        
+    
+    fid.write('**' + '\n')    
+    
+
     
 #%%
 
