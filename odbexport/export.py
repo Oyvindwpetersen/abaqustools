@@ -57,7 +57,7 @@ def static(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumbe
     # Run main
     exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,saveh5=saveh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
 
-def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,saveh5=True,prefix=None,postfixh5='_exportmodal',exportscript=None):
+def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber=None,framenumber=None,deletetxt=True,saveh5=True,prefix=None,postfixh5='_exportmodal',exportscript=None,nodes=None):
     
     '''
     Export modal results from odb file
@@ -99,11 +99,11 @@ def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber
        exportscript=jobname + '_exportmodal'
        
     # Run main
-    exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,saveh5=saveh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript)
+    exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=deletetxt,saveh5=saveh5,prefix=prefix,postfixh5=postfixh5,exportscript=exportscript,nodes=nodes)
 
 #%%
 
-def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=True,saveh5=True,prefix=None,postfixh5=None,exportscript=None):
+def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,deletetxt=True,saveh5=True,prefix=None,postfixh5=None,exportscript=None,nodes=None):
 
     '''
     Export outputs from odb file to txt or h5 file
@@ -170,7 +170,7 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
             raise Exception('***** Variable identifier not allowed')
             
     # Write py-file for export
-    writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix)
+    writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript=exportscript,prefix=prefix,nodes=nodes)
     
     # Run py-file in abaqus
     system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
@@ -336,7 +336,7 @@ def deletefiles(foldername,name_match,extensions):
 
 #%% Export modal script
 
-def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript='Export',prefix='_export'):
+def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnumber,framenumber,exportscript='Export',prefix='_export',nodes=None):
     
     '''
     Write py script that for export within Abaqus environment
@@ -404,9 +404,27 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
     else:
         framenumber_str=str(framenumber)
         
+
     lines.append('# Step and frames to export')
     lines.append('stepnumber=' + stepnumber_str)
     lines.append('framenumber=' + framenumber_str)
+    lines.append('')
+    
+    lines.append('# Node numbers to export')
+    
+    if nodes is None:
+        lines.append('nodes=' + 'None')
+    else:
+    
+        nodes = [int(num) for num in nodes]
+        lines.append('nodes=' + '[')
+
+        for i in range(0, len(nodes), 20):
+            str_nodes_sub=', '.join(map(str, nodes[i:i+20]))
+            lines.append(str_nodes_sub + ',')
+        
+        lines.append(']')
+        
     lines.append('')
 
     if 'f' in variables:
@@ -423,7 +441,7 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
 
     if 'phi' in variables:
         lines.append('# Mode shapes')
-        lines.append('(phi,phi_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber' + ')')
+        lines.append('(phi,phi_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber,nodes=nodes' + ')')
         lines.append('odbfunc.save2txt(folder_save,' + '\'phi\'' + ',phi,atype=1,prefix=prefix)')
         lines.append('odbfunc.save2txt(folder_save,' + '\'phi_label\'' + ',phi_label,atype=2,prefix=prefix)')
         lines.append('')
@@ -437,7 +455,7 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
 
     if 'u' in variables:
         lines.append('# Displacements')
-        lines.append('(u,u_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber' + ')')
+        lines.append('(u,u_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber,nodes=nodes' + ')')
         lines.append('odbfunc.save2txt(folder_save,' + '\'u\'' + ',u,atype=1,prefix=prefix)')
         lines.append('odbfunc.save2txt(folder_save,' + '\'u_label\'' + ',u_label,atype=2,prefix=prefix)')
         lines.append('')
