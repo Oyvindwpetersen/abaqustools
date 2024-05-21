@@ -100,7 +100,7 @@ def exporthistoryoutput(odb_id,stepnumber,hist_key,assembly_name=None):
     
 #%%
 
-def exportdisplacement(odb_id,stepnumber,framenumber=None):
+def exportdisplacement(odb_id,stepnumber,framenumber=None,nodes=None):
 
     '''
     Export displacement field (U,UR) for a single step and multiple frames
@@ -133,11 +133,24 @@ def exportdisplacement(odb_id,stepnumber,framenumber=None):
         disp_matrix=np.array([0])
         label_vec=np.array([0])
         return disp_matrix,label_vec
+        
     
     N_node=len(frame_id.fieldOutputs['U'].values)          
     N_frame=len(framenumber)    
     
-    disp_matrix=np.zeros((N_node*6,N_frame))
+    if nodes is None:
+        N_node_export=N_node
+        idx_export=range(N_node)
+    else:
+        disp_trans=frame_id.fieldOutputs['U']
+        disp_trans_val=disp_trans.values
+        
+        nodes_all=[disp_trans_val[n].nodeLabel for n in range(N_node) ]
+        
+        idx_export=[nodes_all.index(x) for x in nodes if x in nodes_all] 
+        N_node_export=len(idx_export)
+        
+    disp_matrix=np.zeros((N_node_export*6,N_frame))
     
     t_start=timer()
     for z in np.arange(len(framenumber)):
@@ -150,12 +163,12 @@ def exportdisplacement(odb_id,stepnumber,framenumber=None):
         disp_rot=frame_id.fieldOutputs['UR']
         disp_rot_val=disp_rot.values
         
-        U_temp=np.array([disp_trans_val[n].data for n in range(N_node) ])
-        UR_temp=np.array([disp_rot_val[n].data for n in range(N_node) ])
+        U_temp=np.array([disp_trans_val[n].data for n in idx_export ])
+        UR_temp=np.array([disp_rot_val[n].data for n in idx_export ])
         
         disp_matrix[:,z]=np.hstack((U_temp,UR_temp)).flatten()
     
-    label_vec_temp=[ [str(disp_trans_val[n].nodeLabel) + '_' + s  for s in disp_trans.componentLabels] + [str(disp_rot_val[n].nodeLabel) + '_' + s  for s in disp_rot.componentLabels] for n in range(N_node) ]
+    label_vec_temp=[ [str(disp_trans_val[n].nodeLabel) + '_' + s  for s in disp_trans.componentLabels] + [str(disp_rot_val[n].nodeLabel) + '_' + s  for s in disp_rot.componentLabels] for n in idx_export ]
     label_vec=[item for sublist in label_vec_temp for item in sublist]
     
     t_end=timer()
