@@ -20,6 +20,9 @@ odb_id=odbfunc.open_odb(folder_odb,jobname)
 stepnumber=-1
 framenumber='skipfirst'
 
+# Node numbers to export
+nodes=None
+
 # Frequencies
 f=odbfunc.exporthistoryoutput(odb_id,stepnumber,'EIGFREQ')
 odbfunc.save2txt(folder_save,'f',f,atype=1,prefix=prefix)
@@ -29,7 +32,7 @@ gm=odbfunc.exporthistoryoutput(odb_id,stepnumber,'GM')
 odbfunc.save2txt(folder_save,'gm',gm,atype=1,prefix=prefix)
 
 # Mode shapes
-(phi,phi_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber)
+(phi,phi_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber,nodes=nodes)
 odbfunc.save2txt(folder_save,'phi',phi,atype=1,prefix=prefix)
 odbfunc.save2txt(folder_save,'phi_label',phi_label,atype=2,prefix=prefix)
 

@@ -20,8 +20,11 @@ odb_id=odbfunc.open_odb(folder_odb,jobname)
 stepnumber=-2
 framenumber=-1
 
+# Node numbers to export
+nodes=None
+
 # Displacements
-(u,u_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber)
+(u,u_label)=odbfunc.exportdisplacement(odb_id,stepnumber,framenumber=framenumber,nodes=nodes)
 odbfunc.save2txt(folder_save,'u',u,atype=1,prefix=prefix)
 odbfunc.save2txt(folder_save,'u_label',u_label,atype=2,prefix=prefix)
 
