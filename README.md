@@ -22,10 +22,10 @@ This repo contains useful tools for the pre and post processing of Abaqus model,
 
 ## Required packages
 The following list of packages are required:
--numpy
--scipy
--nexusformat
--h5py
--ypstruct
--putools @ https://github.com/Oyvindwpetersen/putools
+- numpy
+- scipy
+- nexusformat
+- h5py
+- ypstruct
+- putools @ https://github.com/Oyvindwpetersen/putools
 
