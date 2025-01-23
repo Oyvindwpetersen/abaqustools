@@ -76,6 +76,7 @@ def modal(folder_odb,jobname,folder_save,folder_python,variables=None,stepnumber
     prefix (str): prefix for txt files
     postfixh5 (str): postfix for h5 file
     exportscript (str): name of python script that is created
+    nodes (list): selected nodes to export
     
     Returns
     ------------
@@ -206,6 +207,14 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
             # Base for txt files
             filename_base=folder_save + '/' + prefix      
             
+            # Check if file exists
+            
+            do_exist=os.path.exists(filename_base+variables[k]+'.txt')
+            if do_exist==False:
+                print('***** ' + 'File ' + filename_base+variables[k] + '.txt' + ' not found, skipping')
+                print('***** ' + 'This means that variable ' + variables[k] + ' will not be exported to h5 file')
+                continue
+            
             # Read txt file
             data_from_txt=np.genfromtxt(filename_base+variables[k]+'.txt', delimiter=',')
             
@@ -283,8 +292,9 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
                 hf.create_dataset('elset_label',data=label,dtype=dt)
                 hf['elset_label'].attrs.modify('Type','Element labels')    
                             
-
-    hf.close()
+                
+    if saveh5==True:
+        hf.close()
     
     # Delete txt files identified by prefix
     if deletetxt==True:
@@ -410,7 +420,7 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
     lines.append('framenumber=' + framenumber_str)
     lines.append('')
     
-    lines.append('# Node numbers to export')
+    lines.append('# Node numbers to export (if set to None, all will be exported)')
     
     if nodes is None:
         lines.append('nodes=' + 'None')
