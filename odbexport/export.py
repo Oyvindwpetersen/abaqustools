@@ -154,7 +154,7 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     file_exist_logic=os.path.isfile(file_name)
     if not file_exist_logic:
         print('***** ' + folder_python)
-        raise Exception('***** Supplied python (odbexport) folder and odbfunc module not found')    
+        raise Exception('***** Supplied python (odbexport) folder and odbfunc module not found, please check that "folder_python" is correctly specified')    
  
     # Ensure list
     if isinstance(variables,str):
@@ -181,13 +181,28 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     t1=timer()
     
     idx_error=sys_out.find('error')
-
+        
     if idx_error>0:
         print(sys_out)
-        raise Exception('***** Export aborted due to errors, see above')
+        raise Exception('***** Export aborted due to ABAQUS errors, see above')
     else:
-        print('***** ABAQUS export completed in ' + putools.num.num2strf(t1-t0,1) + ' s')
-
+        print('***** ABAQUS txt export completed in ' + putools.num.num2strf(t1-t0,1) + ' s')
+        
+    
+    time.sleep(0.5)
+    
+    # Check that txt files are generated
+    for k in np.arange(len(variables)):
+         
+        # Base for txt files
+        filename_base=folder_save + '/' + prefix      
+        
+        # Check that txt files have been created
+        do_exist=os.path.exists(filename_base+variables[k]+'.txt')
+        if do_exist==False:
+            print('***** ' + 'File ' + filename_base+variables[k] + '.txt' + ' not found')
+            
+     
     # Save h5 file        
     if saveh5==True:
 
@@ -340,7 +355,7 @@ def deletefiles(foldername,name_match,extensions):
             try:
                 os.remove(foldername + '/' + filename_remove)
             except:
-                print('***** Was not able to delete file ' + foldername + '/' + filename_remove)
+                print('***** Unable to delete file ' + foldername + '/' + filename_remove)
                     
             
 
