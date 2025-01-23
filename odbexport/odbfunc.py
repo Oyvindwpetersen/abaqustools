@@ -138,6 +138,7 @@ def exportdisplacement(odb_id,stepnumber,framenumber=None,nodes=None):
     N_node=len(frame_id.fieldOutputs['U'].values)          
     N_frame=len(framenumber)    
     
+    # If nodes are not provided, export for all
     if nodes is None:
         N_node_export=N_node
         idx_export=range(N_node)
