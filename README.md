@@ -26,6 +26,5 @@ The following list of packages are required:
 - scipy
 - nexusformat
 - h5py
-- ypstruct
 - putools @ https://github.com/Oyvindwpetersen/putools
 

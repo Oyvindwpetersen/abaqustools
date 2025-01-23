@@ -16,6 +16,7 @@
 
 # TOML file
 *.toml
+*.in
 
 # Other
 dist/
