@@ -13,7 +13,7 @@ from abaqustools import odbexport
 
 #%% Export from odb
 
-folder_odb='C:/Cloud\OD_OWP/Work/Python/Github/abaqustools/odbexport_example'
+folder_odb='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport_example'
 jobname='Model_single_deck'
 folder_save=folder_odb
 folder_python='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
@@ -22,7 +22,7 @@ folder_python='C:/Cloud/OD_OWP/Work/Python/Github/abaqustools/odbexport'
 odbexport.export.modal(folder_odb,jobname,folder_save,folder_python)
 
 # Export static state for dead loads to h5 file
-odbexport.export.static(folder_odb,jobname,folder_save,folder_python,stepnumber=-2,framenumber=-1)
+odbexport.export.static(folder_odb,jobname,folder_save,folder_python,stepnumber=-2,framenumber=-1,deletetxt=False,saveh5=False)
 
 #%% Import modal properties
 
