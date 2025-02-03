@@ -20,7 +20,7 @@ odb_id=odbfunc.open_odb(folder_odb,jobname)
 stepnumber=-2
 framenumber=-1
 
-# Node numbers to export
+# Node numbers to export (if set to None, all will be exported)
 nodes=None
 
 # Displacements
