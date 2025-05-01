@@ -223,11 +223,9 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
             filename_base=folder_save + '/' + prefix      
             
             # Check if file exists
-            
             do_exist=os.path.exists(filename_base+variables[k]+'.txt')
             if do_exist==False:
-                print('***** ' + 'File ' + filename_base+variables[k] + '.txt' + ' not found, skipping')
-                print('***** ' + 'This means that variable ' + variables[k] + ' will not be exported to h5 file')
+                print('***** ' + 'File ' + filename_base+variables[k] + '.txt' + ' not found, will not be exported to h5 file')
                 continue
             
             # Read txt file
