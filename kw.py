@@ -130,8 +130,10 @@ def beammember(fid,coord1,coord2,nset,elset,node_num_base,el_num_base,n_el=10,ma
             n_el=np.max([n_el,np.ceil(L0/max_length)])
         elif n_el is None:
             n_el=np.ceil(L0/max_length)
-            
-    n_node=n_el-1
+
+    n_el=int(n_el)
+
+    n_node=n_el+1
     
     x=np.linspace(coord1[0],coord2[0],n_node)
     y=np.linspace(coord1[1],coord2[1],n_node)
@@ -331,6 +333,7 @@ def cload(fid,op,nset,dof,magnitude_force,partname=''):
     
     fid.write('*CLOAD, OP=' + op.upper() + '\n')
     
+       
     magnitude_force=putools.num.ensurenp(magnitude_force)
     
     if isinstance(nset,str):
@@ -2019,7 +2022,3 @@ def transverseshearstiffness(fid,k23,k13):
     
     fid.write('*TRANSVERSE SHEAR STIFFNESS' + '\n')
     putools.txt.writematrix(fid,[k23,k13],3,',','e')
-
-    
-
-
