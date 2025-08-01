@@ -837,6 +837,48 @@ def line(fid,line):
     for line_sub in line:
         fid.write(line_sub + '\n')
 
+
+
+#%%
+
+def mass_matrix(fid,mass_matrix,el_type,elsetname,el_num,node_num):
+    
+    '''
+    *USER ELEMENT
+    *MATRIX, TYPE=MASS'
+    
+    Arguments
+    ------------
+    fid: file identifier
+    mass_matrix: 6*6 mass matrix in global coordinates
+    el_type: string for the element type, must start with U and then a number, e.g. U100
+    elsetname: string with names of element set
+    el_num: element number of user element
+    node_num: node number
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    fid.write('*USER ELEMENT, LINEAR, NODES=1, UNSYM, TYPE=' + el_type + '\n')
+    fid.write('1, 2, 3, 4, 5, 6' + '\n')
+    fid.write('*MATRIX, TYPE=MASS' + '\n')
+    
+    for idx in range(6):
+        
+        putools.txt.writematrix(fid,mass_matrix[idx,0:4])
+        putools.txt.writematrix(fid,mass_matrix[idx,4:])
+        
+    element(fid,[el_num,node_num],el_type,elsetname,star=False)
+    
+    fid.write('*UEL PROPERTY, ELSET=' + elsetname + '\n')
+    
+    fid.write('**' + '\n')
+    fid.write('**' + '\n')
+    
+    
 #%%
 
 def material(fid,materialname,E,v,density,alpha=None):
@@ -1789,6 +1831,46 @@ def spring(fid,elset,element_nodenumber,dofno,springstiffness):
     fid.write('**' + '\n')
     fid.write('**' + '\n')
     
+    
+#%%
+def spring1(fid,elset,element_nodenumber,dofno,springstiffness):
+
+    '''
+    *ELEMENT, TYPE=SPRING1
+    *SPRING
+    
+    Arguments
+    ------------
+    fid: file identifier
+    elset: string with element set name
+    element_nodenumber: [el,node1]
+    dofno: DOF 1-6
+    springstiffness: in N/m
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+        
+    fid.write('*ELEMENT, TYPE=SPRING1, ELSET=' + elset.upper() + '\n')
+
+    putools.txt.writematrix(fid,element_nodenumber,'',',','int')
+
+    fid.write('*SPRING, ELSET=' + elset.upper() + '\n')
+    
+    putools.txt.writematrix(fid,[dofno,dofno],'',',','int')
+
+    if putools.num.isnumeric(springstiffness):
+        putools.txt.writematrix(fid,springstiffness,5,',','e')
+    
+
+    fid.write('**' + '\n')
+    fid.write('**' + '\n')
+    
+    
+    
 #%%
 
 def springa(fid,elset,element_nodenumber,springstiffness):
@@ -2022,3 +2104,6 @@ def transverseshearstiffness(fid,k23,k13):
     
     fid.write('*TRANSVERSE SHEAR STIFFNESS' + '\n')
     putools.txt.writematrix(fid,[k23,k13],3,',','e')
+
+
+
