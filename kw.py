@@ -212,7 +212,7 @@ def beamgeneralsection(fid,elset,density,sectionproperties,direction,materialpro
     
     '''
     
-    fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + putools.num.num2strf(density,3) + '\n')
+    fid.write('*BEAM GENERAL SECTION, ELSET=' + elset.upper() + ', SECTION=GENERAL, DENSITY=' + putools.num.num2stre(density,3) + '\n')
     
     putools.txt.writematrix(fid,sectionproperties,5,', ','e')
     
@@ -390,7 +390,7 @@ def comment(fid,comment_str,logic_main=False):
 
 #%%
 
-def dload(fid,op,elset,type_id,magnitude):
+def dload(fid,op,elset,type_id,magnitude,partname=''):
 
     '''
     *DLOAD
@@ -408,6 +408,10 @@ def dload(fid,op,elset,type_id,magnitude):
     None
     
     '''
+
+    partname_str=''
+    if len(partname)>0:
+        partname_str=partname.upper() + '.'    
     
     checkarg(op,['MOD','NEW','DELETE'])
 
@@ -423,11 +427,44 @@ def dload(fid,op,elset,type_id,magnitude):
         magnitude_str=putools.num.num2stre(magnitude)
         
     fid.write('*DLOAD, OP=' + op.upper() + '\n')
-    fid.write( elset + ', ' + type_id + ', ' + magnitude_str + '\n')
+    fid.write(partname_str + elset + ', ' + type_id + ', ' + magnitude_str + '\n')
     
     fid.write('**' + '\n')
     #fid.write('**' + '\n')
     
+#%%
+    
+def dynamic(fid,time,options=''):
+
+    '''
+    *DYNAMIC    
+    
+    Arguments
+    ------------
+    fid: file identifier
+    time: string or array with [TimePeriod, InitialIncrement, MinIncrement, MaxIncrement]
+    option: SUBSPACE to choose the subspace projection method (explicit integration of the model projected onto the eigenvectors obtained in the last *FREQUENCY step preceding this step).
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    comma=', '
+    if len(options)<=1:
+        comma=''
+        options=''
+    
+    fid.write('*DYNAMIC' + comma + options.upper() + '\n')
+    
+    if putools.num.isnumeric(time):
+        putools.txt.writematrix(fid,time,'1',',','e')
+    elif isinstance(time,str):
+        fid.write(time +' \n')
+    
+    fid.write('**' + '\n')
+
 #%%
     
 def element(fid,element_nodenumber,element_type,elsetname,star=True):
@@ -483,7 +520,7 @@ def element(fid,element_nodenumber,element_type,elsetname,star=True):
 def fieldoutput(fid,id_type,variables,set_id='',options=''):
     
     '''
-    *FIELD OUTPUT
+    *OUTPUT, FIELD
     
     Arguments
     ------------
@@ -920,7 +957,7 @@ def memberjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element
     '''
     Beam member with user-defined stiffness at member joints
     
-    N1 J1     MemberEl1    MemberEl2    MemberEl3    MemberEl4    MemberEl5     J2 N2
+    N1 J1     MemberEl1    MemberEl2       ...        ...         MemberEl_N    J2 N2
     O~~~~~~O------------o-------------o------------o------------o------------O~~~~~~O
     
     Arguments
@@ -1109,7 +1146,6 @@ def memberjointc(fid,node1,node2,coord1,coord2,node_num_base,el_num_base,element
     else:
         J2_link=False
         
-        
     #Turn off for now
     J1_link=False
     J2_link=False
@@ -1274,6 +1310,44 @@ def memberprop(list_el,k,num_base):
     offset2=list_el[k][6]
     
     return el_base,node1,node2,k_type1,k_type2,offset1,offset2
+
+
+#%%
+
+def modaldynamic(fid,time,option=''):
+
+    '''
+    *MODAL DYNAMIC    
+    
+    Is linear, but the prior response can be nonlinear and stress stiffening (initial stress) effects will be included in the response if nonlinear geometric effects
+    were included in the step definition for the base state of the eigenfrequency extraction procedure
+    
+    Arguments
+    ------------
+    fid: file identifier
+    time: string or array with [Time_increment Time_period]
+    option: CONTINUE=YES to carry over the initial conditions from the end of the immediately preceding
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    comma=', '
+    if len(option)<=1:
+        comma=''
+        option=''
+
+    fid.write('*MODAL DYNAMIC' + comma + option + '\n')
+
+    if putools.num.isnumeric(time):
+        putools.txt.writematrix(fid,time,'1',',','e')
+    elif isinstance(time,str):
+        fid.write(time +'\n')
+    
+    fid.write('**' + '\n')
+
 
 
 #%%
@@ -1454,6 +1528,35 @@ def nset(fid,nsetname,nodes,option=''):
     fid.write('**' + '\n')
     
 
+#%%
+
+def output(fid,name,defi,node_data):
+
+    '''
+    *OUTPUT
+    
+    Arguments
+    ------------
+    fid: file identifier
+    def: NODES
+    
+    Returns
+    ------------
+    None
+    
+    '''
+    
+    checkarg(defi, ['nodes','coordinates'])
+    
+    fid.write('*ORIENTATION, NAME=' + name.upper() + ', DEFINITION=' + defi.upper() + '\n')
+
+    if defi.upper()=='NODES':
+        putools.txt.writematrix(fid,node_data,'',',',['int'])
+    elif defi.upper()=='COORDINATES':
+        putools.txt.writematrix(fid,node_data,5,',','e')
+        
+    fid.write('**' + '\n')
+    fid.write('**' + '\n')
 
 #%%
 
@@ -1483,6 +1586,55 @@ def orientation(fid,name,defi,node_data):
         putools.txt.writematrix(fid,node_data,5,',','e')
         
     fid.write('**' + '\n')
+    fid.write('**' + '\n')
+    
+    
+#%%
+
+def outputhistory(fid,id_type,variables,set_id,options=''):
+    
+    '''
+    *OUTPUT, HISTORY
+    
+    Arguments
+    ------------
+    fid: file identifier
+    id_type: 'NODE' or 'ELEMENT'
+    variables: response quantity, e.g. U or SF
+    set_id: name of nodeset or elset
+    options: e.g. NUMBER INTERVAL=1 or FREQUENCY=1 (for all increments)
+    
+    Returns
+    ------------
+    None
+    
+    '''
+
+    comma=', '
+    if len(options)<=1:
+        comma=''
+        options=''
+
+    fid.write('*OUTPUT, HISTORY' + comma + options.upper() + '\n')
+    
+    if id_type.upper()=='NODE':
+        if not set_id:
+            fid.write('*NODE OUTPUT \n')
+        else:
+            fid.write('*NODE OUTPUT, NSET=' + set_id.upper() + '\n')
+        
+    elif id_type.upper()=='ELEMENT':
+        if not set_id:
+            fid.write('*ELEMENT OUTPUT \n')
+        else:
+            fid.write('*ELEMENT OUTPUT, ELSET=' + set_id.upper() + '\n')
+        
+    if isinstance(variables,str):
+        variables=[variables]
+    
+    for variables_sub in variables:
+        fid.write(variables_sub + '\n')
+    
     fid.write('**' + '\n')
 
 #%%
@@ -1955,7 +2107,7 @@ def step(fid,options='',comment_str=''):
         options=''
     
     comment(fid,comment_str)
-    fid.write('*STEP ' + comma + options.upper() + '\n')
+    fid.write('*STEP' + comma + options.upper() + '\n')
     
 #%%
 
