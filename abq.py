@@ -11,6 +11,7 @@ import numpy as np
 import os
 import putools
 import time
+import subprocess
 
 #%%
 
@@ -67,7 +68,7 @@ def printerror(jobname,foldername=''):
     
 #%%
 
-def checkduplicate(inputname):
+def checkduplicate(inputname,halt=True):
     
     '''
     Check input file, alert if duplicate node or element numbers
@@ -93,7 +94,8 @@ def checkduplicate(inputname):
     input_file_lines=fid.read().splitlines()
     fid.close()
 
-    node_or_element=['*NODE,' , '*ELEMENT,']
+    node_or_element=['*NODE' , '*ELEMENT']
+    node_or_element_false=['*NODE OUTPUT' , '*ELEMENT OUTPUT']
 
     # Index of lines with star, used for finding end of node/element block
     idx_star=putools.num.listindexsub(input_file_lines,'*')
@@ -102,6 +104,9 @@ def checkduplicate(inputname):
         
         # Find all lines with *NODE or *ELEMENT
         idx_keyword=putools.num.listindexsub(input_file_lines,node_or_element[index])
+        idx_keyword_false=putools.num.listindexsub(input_file_lines,node_or_element_false[index])
+        
+        idx_keyword = list(set(idx_keyword) - set(idx_keyword_false))
         
         numbers_list=[None]*len(idx_keyword)
     
@@ -127,7 +132,9 @@ def checkduplicate(inputname):
             
             print('***** Duplicate ' + node_or_element[index] + ' numbers:')
             print(numbers_dup)
-            raise Exception('***** Duplicates not allowed, see above printed numbers')
+            
+            if halt==True:
+                raise Exception('***** Duplicates not allowed, see above printed numbers')
             
             
 #%%
@@ -197,21 +204,29 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
 
     t0=putools.timing.tic()
     #(sys_out)=os.system(system_cmd)
-    sys_out=os.popen(system_cmd).read()
+    # sys_out=os.popen(system_cmd).read()
+    
+    result = subprocess.run(system_cmd, shell=True, capture_output=True, text=True)
+    
+    print('STDERR:', result.stderr)
+    print('STDOUT:', result.stdout)
+       
+       #raise RuntimeError('Command failed, see error above')
+       
     t1=putools.timing.tocs(t0)
     
     # Change back to original folder
     os.chdir(folder_current)
     
     if echo_cmd:
-        print(sys_out)
+        print(result.stdout)
     
     # Check if job is successful
-    completed='COMPLETED' in sys_out
-    if completed:
+    completed_bool='COMPLETED' in result.stdout
+    if completed_bool:
         print('***** ABAQUS job completed in ' + putools.num.num2strf(t1,1) + ' s')
     
-    error_bool='Abaqus/Analysis exited with error' in sys_out
+    error_bool='Abaqus/Analysis exited with error' in result.stdout
 
     if error_bool:
         time.sleep(1)
@@ -220,4 +235,4 @@ def runjob(foldername,inputname,jobname='',abaqus_cmd='abaqus',cpus=4,echo_cmd=T
         if halt_error:
             raise Exception('***** Stopped due to ABAQUS errors, see message above')
             
-    return completed
+    return completed_bool
