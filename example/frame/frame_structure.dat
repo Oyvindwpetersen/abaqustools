@@ -1,0 +1,615 @@
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 11-May-2025   Time 21:54:06
+   For use by NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine NTNU08422 
+                          you are authorized to run
+                          Abaqus/Standard until 30-Sep-2025
+
+                          Your site id is: 100000000001981 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2017x                * 
+                *                                                         * 
+                *          BUILD ID: 2016_09_27-23.54.59 126836           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2017x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Node
+  *Element, type=B31
+  *Nset, nset=ASSEMBLY_FRAME_PART_FRAME_AB
+  *Nset, nset=ASSEMBLY_FRAME_PART_FRAME_BC
+  *Nset, nset=ASSEMBLY_FRAME_PART_FRAME_SUPPORT_A
+  *Nset, nset=ASSEMBLY_FRAME_PART_FRAME_SUPPORT_B
+  *Nset, nset=ASSEMBLY_FRAME_PART_FRAME_SUPPORT_C
+  *Elset, elset=ASSEMBLY_FRAME_PART_FRAME_AB
+  *Elset, elset=ASSEMBLY_FRAME_PART_FRAME_BC
+
+ ***WARNING: BUCKLE OPTION IS NOT SUPPORTED FOR ELEMENT LOOP PARALLELIZATION. 
+             IF YOU HAVE SPECIFIED ELEMENT LOOP PARALLELIZATION, IT WILL BE 
+             TURNED OFF FOR THIS ANALYSIS.
+ LINE IMAGE: *buckle, eigensolver=LANCZOS
+  *material, name=CONCRETE
+  *elastic
+  *density
+  *beamsection, elset=ASSEMBLY_FRAME_PART_FRAME_AB, material=CONCRETE, section=RECTANGULAR
+  *beamsection, elset=ASSEMBLY_FRAME_PART_FRAME_BC, material=CONCRETE, section=RECTANGULAR
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *mpc
+  *output, field
+  *output, field
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *elementoutput
+  *elementoutput
+  *elementoutput
+  *output, field
+  *output, field
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *elementoutput
+  *elementoutput
+  *elementoutput
+  *output, field
+  *output, field
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *elementoutput
+  *elementoutput
+  *elementoutput
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *output, field
+  *output, field
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *Step, name=BUCKLqING, perturbation
+  *output, field, frequency=100
+  *output, field, frequency=100
+  *Step, name=STEP_MODAL
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *Step, name=BUCKLqING, perturbation
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *output, field
+  *nodeoutput
+  *output, field
+  *elementoutput
+  *endstep
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *static
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *dload, op=NEW
+  *output, field, frequency=100
+  *nodeoutput
+  *output, field, frequency=100
+  *elementoutput
+  *endstep
+  *Step, name=BUCKLqING, perturbation
+  *buckle, eigensolver=LANCZOS
+  *dload, op=NEW
+  *output, field, frequency=100
+
+ ***WARNING: THE FREQUENCY PARAMETER IS IGNORED IN A *FREQUENCY, *COMPLEX 
+             FREQUENCY, OR *BUCKLE STEP. USE THE MODE LIST PARAMETER TO MODIFY 
+             OUTPUT REQUESTS.
+  *nodeoutput
+  *output, field, frequency=100
+
+ ***WARNING: THE FREQUENCY PARAMETER IS IGNORED IN A *FREQUENCY, *COMPLEX 
+             FREQUENCY, OR *BUCKLE STEP. USE THE MODE LIST PARAMETER TO MODIFY 
+             OUTPUT REQUESTS.
+  *elementoutput
+  *endstep
+  *Step, name=STEP_MODAL
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *frequency, normalization=DISPLACEMENT, sim=NO
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *endstep
+  *Step, nlgeom=NO, name=STEP_STATIC
+  *static
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *boundary, op=NEW
+  *endstep
+  *Step, name=BUCKLqING, perturbation
+  *buckle, eigensolver=LANCZOS
+  *buckle, eigensolver=LANCZOS
+  *endstep
+
+ ***WARNING: DEGREE OF FREEDOM 2 IS NOT ACTIVE ON NODE 2001 INSTANCE PART_FRAME 
+             - THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: Boundary conditions are specified on inactive dof of 1 nodes. The 
+             nodes have been identified in node set WarnNodeBCInactiveDof.
+
+ ***WARNING: DEGREE OF FREEDOM 2 IS NOT ACTIVE ON NODE 2001 INSTANCE PART_FRAME 
+             - THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: Boundary conditions are specified on inactive dof of 1 nodes. The 
+             nodes have been identified in node set WarnNodeBCInactiveDof.
+
+ ***WARNING: DEGREE OF FREEDOM 2 IS NOT ACTIVE ON NODE 2001 INSTANCE PART_FRAME 
+             - THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: Boundary conditions are specified on inactive dof of 1 nodes. The 
+             nodes have been identified in node set WarnNodeBCInactiveDof.
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    40
+          NUMBER OF NODES IS                                      122
+          NUMBER OF NODES DEFINED BY THE USER                      42
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        80
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                  252
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          0
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 11-May-2025   Time 21:54:09
+   For use by NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   N A T U R A L   F R E Q U E N C I E S
+
+
+
+                                                                                          
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                     20
+     HIGHEST FREQUENCY OF INTEREST                  1.00000E+18
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               35
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  7
+     THE EIGENVECTORS ARE SCALED SO THAT 
+      THE LARGEST DISPLACEMENT ENTRY IN EACH VECTOR
+      IS UNITY
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+
+
+
+                    TOTAL MASS OF MODEL
+
+                       345.6000    
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       4.500000           0.000000          -1.500000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE ORIGIN
+                           I(XX)               I(YY)               I(ZZ)
+
+                       2076.814           10373.60           8297.614    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE ORIGIN
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000           3110.400           0.000000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XX)               I(YY)               I(ZZ)
+
+                       1299.214           2597.599           1299.214    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000           777.6000           0.000000    
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         5.08E+004               19                 27
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ MODE NO      EIGENVALUE              FREQUENCY         GENERALIZED MASS   COMPOSITE MODAL DAMPING            
+                             (RAD/TIME)   (CYCLES/TIME)
+
+
+       1       450.44         21.223         3.3778         172.67         0.0000    
+       2       1097.4         33.127         5.2724         152.39         0.0000    
+       3       7181.3         84.742         13.487         171.31         0.0000    
+       4       11458.         107.04         17.036         153.16         0.0000    
+       5       36129.         190.08         30.252         168.66         0.0000    
+       6       49396.         222.25         35.373         153.02         0.0000    
+       7      1.09019E+05     330.18         52.550        0.20953         0.0000    
+       8      1.12981E+05     336.13         53.496         167.11         0.0000    
+       9      1.41802E+05     376.57         59.932         143.60         0.0000    
+      10      2.62195E+05     512.05         81.495         123.53         0.0000    
+      11      2.98709E+05     546.54         86.985         119.10         0.0000    
+      12      3.42518E+05     585.25         93.146         86.400         0.0000    
+      13      3.65822E+05     604.83         96.262         175.71         0.0000    
+      14      4.44588E+05     666.77         106.12        0.20736         0.0000    
+      15      5.70009E+05     754.99         120.16         152.13         0.0000    
+      16      6.71916E+05     819.70         130.46         160.26         0.0000    
+      17      9.77342E+05     988.61         157.34        0.20949         0.0000    
+      18      1.03654E+06     1018.1         162.04         168.57         0.0000    
+      19      1.18567E+06     1088.9         173.30         152.53         0.0000    
+      20      1.73448E+06     1317.0         209.61         179.99         0.0000    
+
+
+          P A R T I C I P A T I O N   F A C T O R S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1      0.63650        1.40243E-35   -0.63502       -5.99091E-19   -2.34319E-03   -5.28179E-19
+       2      0.64813       -1.85019E-34    0.64717       -5.42758E-18    -3.8796       -6.91073E-18
+       3      5.24227E-03    5.99318E-34    3.33578E-04   -1.15533E-17     1.8988       -8.05518E-18
+       4      7.50754E-02    1.21159E-32    6.41183E-02   -5.33859E-17   -0.39546        1.78252E-17
+       5     -0.23209       -2.45494E-32    0.20629        1.31224E-16    2.43991E-02   -1.29714E-17
+       6      0.28065       -6.83778E-32    0.25337        3.30145E-16    -1.4954       -7.10661E-17
+       7      1.49774E-13    2.18306E-16    2.64962E-14    1.83407E-14    1.54965E-12     1.2727    
+       8      5.99000E-02   -4.81389E-31    1.93209E-03   -9.61259E-18    0.92111       -2.81633E-15
+       9      0.15701       -1.56149E-31    3.87722E-02    3.14872E-16   -0.29565       -5.97504E-16
+      10      0.66843        1.23983E-31   -6.69133E-02   -6.94005E-16   -0.30523        2.96007E-17
+      11      0.62589        7.62612E-31    0.19285       -4.28836E-15   -0.67485        1.60319E-16
+      12      2.05417E-14   -3.18039E-31     1.2726        1.80872E-15    -7.6355       -4.66802E-17
+      13      0.45306       -1.87410E-30   -7.62572E-02    1.06437E-14    0.59892       -2.80944E-16
+      14     -2.12600E-12   -2.17992E-16   -4.55306E-13     1.2706        4.17678E-12   -6.61656E-14
+      15      0.13707       -7.78993E-31    2.34093E-03    5.27495E-15   -0.63018        7.30470E-16
+      16      0.16396       -1.55953E-32   -2.47059E-02   -1.57973E-17    0.11323       -1.05771E-16
+      17     -4.13026E-11   -7.24078E-17   -8.04324E-13   -6.67989E-12   -9.10783E-12   -0.42282    
+      18     -1.61520E-03   -1.35892E-30   -8.41205E-02    6.45709E-15    1.46691E-02   -8.43606E-16
+      19     -2.43965E-02   -5.62975E-29    0.10501        3.44017E-13   -0.63624        1.73535E-14
+      20     -7.33198E-02   -1.08116E-27    5.27798E-04    6.40372E-12    0.39565        1.43460E-13
+
+
+                    E F F E C T I V E   M A S S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1       69.952        3.39603E-68     69.628        6.19718E-35    9.48035E-04    4.81694E-35
+       2       64.015        5.21663E-66     63.824        4.48920E-33     2293.7        7.27785E-33
+       3      4.70787E-03    6.15318E-65    1.90625E-05    2.28662E-32     617.63        1.11157E-32
+       4      0.86326        2.24832E-62    0.62966        4.36514E-31     23.952        4.86644E-32
+       5       9.0848        1.01647E-61     7.1775        2.90425E-30    0.10041        2.83783E-32
+       6       12.053        7.15456E-61     9.8236        1.66786E-29     342.19        7.72817E-31
+       7      4.70033E-27    9.98582E-33    1.47103E-28    7.04832E-29    5.03179E-25    0.33940    
+       8      0.59960        3.87257E-59    6.23824E-04    1.54414E-32     141.78        1.32548E-27
+       9       3.5398        3.50123E-60    0.21587        1.42367E-29     12.552        5.12653E-29
+      10       55.195        1.89892E-60    0.55311        5.94990E-29     11.509        1.08240E-31
+      11       46.655        6.92631E-59     4.4294        2.19017E-27     54.239        3.06102E-30
+      12      3.64576E-26    8.73924E-60     139.92        2.82656E-28     5037.2        1.88269E-31
+      13       36.066        6.17129E-58     1.0218        1.99055E-26     63.027        1.38684E-29
+      14      9.37245E-25    9.85385E-33    4.29865E-26    0.33478        3.61750E-24    9.07800E-28
+      15       2.8581        9.23144E-59    8.33639E-04    4.23290E-27     60.413        8.11721E-29
+      16       4.3083        3.89769E-62    9.78182E-02    3.99927E-32     2.0548        1.79288E-30
+      17      3.57378E-22    1.09836E-33    1.35530E-25    9.34784E-24    1.73781E-23    3.74536E-02
+      18      4.39784E-04    3.11295E-58     1.1929        7.02847E-27    3.62738E-02    1.19968E-28
+      19      9.07870E-02    4.83445E-55     1.6819        1.80522E-23     61.747        4.59349E-26
+      20      0.96760        2.10394E-52    5.01405E-05    7.38104E-21     28.176        3.70435E-24
+
+ TOTAL         306.25        2.09380E-32     300.20        0.33478         8750.3        0.37685    
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 11-May-2025   Time 21:54:10
+   For use by NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    2  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       2     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-03
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-06
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         5.08E+004               17                 26
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 11-May-2025   Time 21:54:11
+   For use by NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    3  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       3     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   B U C K L I N G   P R E D I C T I O N
+
+
+
+                                                                                          
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                     10
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               30
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  7
+                              ONLY INITIAL STRESS EFFECTS ARE INCLUDED IN THE
+                              STIFFNESS MATRIX
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         5.08E+004               16                 25
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ BUCKLING LOAD ESTIMATE = ("DEAD" LOADS) + EIGENVALUE * ("LIVE" LOADS).
+          "DEAD" LOADS = TOTAL LOAD BEFORE  *BUCKLE STEP.
+          "LIVE" LOADS = INCREMENTAL LOAD IN *BUCKLE STEP
+
+
+ MODE NO      EIGENVALUE
+
+
+       1       2.8264    
+       2       9.1252    
+       3       19.433    
+       4       34.025    
+       5       53.168    
+       6       61.268    
+       7      -61.268    
+       8       64.922    
+       9      -64.922    
+      10       69.219    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      9 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   2.2000    
+       SYSTEM TIME (SEC)    =  0.50000    
+       TOTAL CPU TIME (SEC) =   2.7000    
+       WALLCLOCK TIME (SEC) =          3
