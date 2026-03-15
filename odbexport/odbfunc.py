@@ -123,6 +123,8 @@ def exportdisplacement(odb_id,stepnumber,framenumber=None,nodes=None):
     
     if framenumber is None:
         framenumber=range(len(step_id.frames))
+    elif framenumber=='all':
+        framenumber=range(len(step_id.frames))
     elif framenumber=='skipfirst':
         framenumber=range(1,len(step_id.frames))
     elif isinstance(framenumber,int):
@@ -397,7 +399,7 @@ def exportelsets(odb_id):
     
 #%%
 
-def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
+def save2txt(folder_save,name_save,A_matrix,atype='string',prefix='',digits=6):
     
     '''
     Export element sets
@@ -416,8 +418,10 @@ def save2txt(folder_save,name_save,A_matrix,atype='string',prefix=''):
     
     '''
     
+    format='%.' + str(digits) + 'e'
+    
     if atype=='number' or atype==1:
-        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'),A_matrix ,delimiter=',',fmt='%.6e')
+        np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'),A_matrix ,delimiter=',',fmt=format)
     elif atype=='string' or atype==2:
         np.savetxt((folder_save+'\\'+prefix+name_save+'.txt'),A_matrix ,delimiter=' ',fmt='%s')
     
