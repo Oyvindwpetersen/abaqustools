@@ -9,6 +9,7 @@ import numpy as np
 import putools
 import h5py
 from timeit import default_timer as timer
+import time
 
 #%%
 
@@ -175,6 +176,7 @@ def exportmain(folder_odb,jobname,folder_save,folder_python,variables,stepnumber
     
     # Run py-file in abaqus
     system_cmd='abaqus cae noGUI=' + folder_save + '/' + exportscript + '.py'
+    
     
     t0=timer()
     sys_out=os.popen(system_cmd).read()
@@ -424,6 +426,9 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
         framenumber_str=framenumber
         if framenumber_str=='skipfirst':
             framenumber_str='\'skipfirst\''
+        elif framenumber_str=='all':
+            framenumber_str='\'all\''            
+            
     else:
         framenumber_str=str(framenumber)
         
@@ -453,13 +458,13 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
     if 'f' in variables:
         lines.append('# Frequencies')
         lines.append('f=odbfunc.exporthistoryoutput(odb_id,stepnumber,' + '\'' + 'EIGFREQ' + '\'' +  ')')
-        lines.append('odbfunc.save2txt(folder_save,' +  '\'f\'' + ',f,atype=1,prefix=prefix)')
+        lines.append('odbfunc.save2txt(folder_save,' +  '\'f\'' + ',f,atype=1,prefix=prefix,digits=10)')
         lines.append('')
 
     if 'gm' in variables:
         lines.append('# Generalized mass')
         lines.append('gm=odbfunc.exporthistoryoutput(odb_id,stepnumber,' + '\'' + 'GM' + '\'' +  ')')
-        lines.append('odbfunc.save2txt(folder_save,' + '\'gm\'' + ',gm,atype=1,prefix=prefix)')
+        lines.append('odbfunc.save2txt(folder_save,' + '\'gm\'' + ',gm,atype=1,prefix=prefix,digits=10)')
         lines.append('')
 
     if 'phi' in variables:
@@ -519,3 +524,58 @@ def writepyscript(folder_odb,jobname,folder_save,folder_python,variables,stepnum
 
     fid.close()
 
+def import_h5(h5_name, str_len=10):
+    """
+    Import all datasets at the top level of an HDF5 file into a dict.
+    - Numeric datasets -> numpy arrays
+    - String / non-numeric datasets -> list of Python strings
+    """
+
+    mod = {}
+
+    with h5py.File(h5_name, 'r') as hf:
+        for key in hf.keys():
+            dset = hf[key]
+            arr = np.array(dset)
+
+            # Auto-detect string / non-numeric data
+            # dtype.kind:
+            #  'i','u','f','c','b' -> numeric
+            #  'S','U','O'         -> string / object
+            if arr.dtype.kind in ('S', 'U', 'O'):
+                # Convert to flat list of strings
+                mod[key] = arr.astype(f'U{str_len}').ravel().tolist()
+            else:
+                mod[key] = arr
+
+    return mod
+
+
+def print_sf_def():
+    
+    print('SF1')
+    print('Axial force.')
+    
+    print('SF2')
+    print('Transverse shear force in the local 2-direction (not available for B23, B23H, B33, B33H).')
+    
+    print('SF3')
+    print('Transverse shear force in the local 1-direction (available only for beams in space, not available for B33, B33H).')
+    
+    print('SM1')
+    print('Bending moment about the local 1-axis.')
+    
+    print('SM2')
+    print('Bending moment about the local 2-axis (available only for beams in space).')
+    
+    print('SM3')
+    print('Twisting moment about the beam axis (available only for beams in space).')
+    
+    print('Result if x-axis is along beam, y-axis is sideways, and z-axis is upwards:')
+    print('SF1 = Nx')
+    print('SF2 = Vz')
+    print('SF3 = Vy')
+    
+    print('SM1 = My')
+    print('SM2 = Mz')
+    print('SM3 = Tx')    
