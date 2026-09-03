@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abaqustools"
+version = "2.36" # Follow PEP440
+authors = [{ name="O. W. Petersen", email="oyvind.w.petersen@ntnu.no" },]
+description = "Tools for FEM software ABAQUS."
+readme = "README.md"
+requires-python = ">=3"
+keywords = ["abaqus", "export","fem","odb"]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = ["numpy", "h5py", "putools"]
+
+[project.optional-dependencies]
+plotting = ["matplotlib", "Pillow"]
+
+[project.urls]
+Homepage = "https://github.com/Oyvindwpetersen/abaqustools"
+Repository = "https://github.com/Oyvindwpetersen/abaqustools"
+Issues = "https://github.com/Oyvindwpetersen/abaqustools/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"abaqustools.odbexport" = ["info.txt"]
