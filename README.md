@@ -96,7 +96,7 @@ odbexport.export.modal(
 )
 ```
 
-More complete scripts are available in the `example/` and `odbexport_example/`
+More complete scripts are available in the `example/` and `example/odbexport/`
 directories.
 
 ## Abaqus compatibility
